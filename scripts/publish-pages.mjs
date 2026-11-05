@@ -21,11 +21,17 @@ const parentCommit=api(`git/commits/${parent}`);
 const remote=api(`git/trees/${parentCommit.tree.sha}?recursive=1`);
 if(remote.truncated)throw new Error('线上文件目录返回不完整，停止发布。');
 const existing=new Map(remote.tree.filter(x=>x.type==='blob').map(x=>[x.path,x.sha]));
+// main已包含大部分页面素材，复用仓库内相同摘要的对象，避免重复上传数百张图。
+const sourceCommit=api(`git/commits/${source}`);
+const sourceTree=api(`git/trees/${sourceCommit.tree.sha}?recursive=1`);
+if(sourceTree.truncated)throw new Error('源文件目录返回不完整，停止发布。');
+const knownBlobs=new Set([...remote.tree,...sourceTree.tree].filter(x=>x.type==='blob').map(x=>x.sha));
+let uploadedBlobs=0;
 const local=new Map();
 async function walk(dir,prefix=''){for(const f of await fs.readdir(dir,{withFileTypes:true})){const rel=prefix+f.name;if(f.isDirectory())await walk(path.join(dir,f.name),rel+'/');else if(f.isFile()){const content=await fs.readFile(path.join(dir,f.name));const sha=crypto.createHash('sha1').update(Buffer.from(`blob ${content.length}\0`)).update(content).digest('hex');local.set(rel,{content,sha});}else throw new Error('发布目录含非常规文件，停止发布。');}}
 await walk(path.join(root,'dist'));
 const changes=[];
-for(const [name,file]of local){if(existing.get(name)===file.sha)continue;const uploaded=api('git/blobs','POST',{content:file.content.toString('base64'),encoding:'base64'});if(uploaded.sha!==file.sha)throw new Error('上传后的文件摘要不一致');changes.push({path:name,mode:'100644',type:'blob',sha:file.sha});}
+for(const [name,file]of local){if(existing.get(name)===file.sha)continue;if(!knownBlobs.has(file.sha)){const uploaded=api('git/blobs','POST',{content:file.content.toString('base64'),encoding:'base64'});if(uploaded.sha!==file.sha)throw new Error('上传后的文件摘要不一致');knownBlobs.add(file.sha);uploadedBlobs++;}changes.push({path:name,mode:'100644',type:'blob',sha:file.sha});}
 for(const name of existing.keys())if(!local.has(name))changes.push({path:name,mode:'100644',type:'blob',sha:null});
 let deploymentCommit=parent;
 if(changes.length){
@@ -37,5 +43,5 @@ if(changes.length){
 const config=api('pages');
 if(config.build_type!=='legacy'||config.source?.branch!=='gh-pages')api('pages','PUT',{build_type:'legacy',source:{branch:'gh-pages',path:'/'}});
 if(changes.length)api('pages/builds','POST');
-console.log(JSON.stringify({status:'pushed',repository,sourceCommit:source,deploymentCommit,url:'https://xiaoxiao430.github.io/ai-edu-radar/',workflow:'pages build and deployment',changed:changes.length>0,changedFiles:changes.length}));
+console.log(JSON.stringify({status:'pushed',repository,sourceCommit:source,deploymentCommit,url:'https://xiaoxiao430.github.io/ai-edu-radar/',workflow:'pages build and deployment',changed:changes.length>0,changedFiles:changes.length,uploadedBlobs}));
 console.log('接下来核对该deploymentCommit对应的GitHub Pages构建成功，再确认网站内容。');
