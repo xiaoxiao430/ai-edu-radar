@@ -1,0 +1,3520 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-11-05",
+  "account": {
+    "name": "OurTeacher App",
+    "url": "https://www.douyin.com/user/MS4wLjABAAAAAq_DPKtVxWmXbAOFcv2WtcRHNbN9aMzs_LVs0fdJu70",
+    "company": "上海皑顿信息技术有限公司"
+  },
+  "scope": "按公开作品索引与原作直链整理；保留原34条资料，新增48条记录（其中44条新增官方作品、4条其他作者已筛除）。默认仅呈现实用内容组，同功能留源合并；官网工具和教程不冒充抖音作品。",
+  "coverage": {
+    "reportedAccountTotal": 2394,
+    "reportedAccountTotalContext": "用户提供的主页截图显示2394件作品；不是本轮实时拉取的作品总数。",
+    "discoveredCount": 82,
+    "originalBaselineCount": 34,
+    "newDiscoveredCount": 48,
+    "directPostCount": 76,
+    "unresolvedPostLinks": 6,
+    "includedCount": 32,
+    "mergedCount": 25,
+    "excludedCount": 25,
+    "retainedSourceCount": 57,
+    "complete": false,
+    "limitation": "主页正常请求返回空内容，未认证的公开作品列表接口返回403，封面CDN部分返回403或超时；搜索与聚合页不能证明覆盖全账号。聚合页会变动推荐条目，未把聚合页编号当成作品编号。",
+    "nextStep": "取得通过平台正常公开页面或账号合法导出得到的作品清单后，按作品ID去重导入；先核对作者和内容，补齐未覆盖作品，再做纳入、合并或排除。没有完整清单前保持“未完成全量核对”。",
+    "officialAccountRecordCount": 78,
+    "otherAuthorExcludedCount": 4,
+    "qualityReview": "纯外观、仅有题名和效果宣传不列入默认实用清单；同功能版本或装饰素材仅合并留源。数量表示资料记录，不等于独立产品或功能数。",
+    "newOfficialPostCount": 44
+  },
+  "selectionPolicy": {
+    "include": "有明确教学、班级工作或运行支持任务，能说明操作、输入输出或验收点。",
+    "merge": "同一功能的其他版本或案例，保留每条原始作品，不重复建立开发功能。",
+    "exclude": "纯宣传、仅外观更新、未核清具体功能、资源包导流或其他产品；记录原因，后续可复核。",
+    "notIncludedByDefault": "不依据点赞量、免费字样或夸大的效果描述判定教学价值。"
+  },
+  "importGuide": {
+    "acceptedSource": "正常公开作品链接清单或有权使用的账号导出文件；不需要也不保存登录密码、Cookie或验证码。",
+    "requiredColumns": [
+      "url",
+      "title"
+    ],
+    "optionalColumns": [
+      "author",
+      "publishedAt",
+      "summary",
+      "coverUrl"
+    ],
+    "deduplication": "作品直链按/video/后的作品ID去重；没有作品ID的聚合页记录保持待补，不把相同聚合URL的不同条目强行合并。",
+    "completionRule": "只有完整作品清单已取得、每条都有纳入/合并/排除记录，且统计能对上，才可以把complete改为true。"
+  },
+  "accessChecks": [
+    {
+      "endpointType": "官方账号公开主页",
+      "result": "HTTP200，响应内容长度0，未取得作品列表。"
+    },
+    {
+      "endpointType": "正常未认证公开作品列表接口",
+      "result": "HTTP403，未继续尝试签名伪造、验证码绕过或取用用户Cookie。"
+    },
+    {
+      "endpointType": "旧公开分享列表入口",
+      "result": "HTTP200，响应内容长度0，未取得作品列表。"
+    },
+    {
+      "endpointType": "公开搜索索引与聚合页",
+      "result": "可读取部分题名、作者和说明；已逐条取得新增作品的video链接。"
+    },
+    {
+      "endpointType": "公开封面CDN",
+      "result": "已发现封面URL但部分请求403或超时，未伪装为已获取真实封面。"
+    }
+  ],
+  "items": [
+    {
+      "id": "dy-video-7694244934840372534",
+      "legacyId": "D01",
+      "title": "超级方便的班务大屏，能看到课程表和值日表",
+      "url": "https://www.douyin.com/video/7694244934840372534",
+      "postId": "7694244934840372534",
+      "linkKind": "作品直链",
+      "summary": "班务大屏展示课程表、值日表",
+      "sourceType": "作品页公开索引",
+      "sourcePage": "https://www.douyin.com/video/7694244934840372534",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": "2026-10-09 06:01",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C01.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [],
+      "relatedSceneIds": [
+        "ot-scene-C01"
+      ],
+      "valueReason": "厚外借鉴建议：在已有班务大屏上补作业目标、准备事项或提交入口，先做增量衔接，减少重复录入。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "检索到标题、日期及评论；可读搜索索引",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7696100096231902518",
+      "legacyId": "D02",
+      "title": "现在的班务大屏课程表居然还能同步作业了！",
+      "url": "https://www.douyin.com/video/7696100096231902518",
+      "postId": "7696100096231902518",
+      "linkKind": "作品直链",
+      "summary": "班务大屏课程表同步作业",
+      "sourceType": "作品页公开索引",
+      "sourcePage": "https://www.douyin.com/video/7696100096231902518",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": "2026-10-13 18:59",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C01.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A202"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C01",
+        "ot-scene-C02"
+      ],
+      "valueReason": "厚外借鉴建议：在已有班务大屏上补作业目标、准备事项或提交入口，先做增量衔接，减少重复录入。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "检索到标题、日期及评论；可读搜索索引",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7612614061859065134",
+      "legacyId": "D03",
+      "title": "班级宠物积分使用教程",
+      "url": "https://www.douyin.com/video/7612614061859065134",
+      "postId": "7612614061859065134",
+      "linkKind": "作品直链",
+      "summary": "班级积分与虚拟宠物养成、升级",
+      "sourceType": "作品页公开索引",
+      "sourcePage": "https://www.douyin.com/video/7612614061859065134",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": "2026-03-02 19:10",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C06.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06"
+      ],
+      "valueReason": "基础建班与积分教程并入更完整的班级积分教程，保留本作品来源。",
+      "decision": "merge",
+      "duplicateOf": "dy-video-7617795549940822771",
+      "note": "检索到官方标题、日期及作者回复 同功能或素材版本在来源中保留，不作为额外的独立教育项目计数。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7617795549940822771",
+      "legacyId": "D04",
+      "title": "班级宠物积分使用教程",
+      "url": "https://www.douyin.com/video/7617795549940822771",
+      "postId": "7617795549940822771",
+      "linkKind": "作品直链",
+      "summary": "建班、名单批量导入、分组、成长规则、批量评价、兑换、导出记录",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/video/7617795549940822771",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C06.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06",
+        "ot-scene-C05"
+      ],
+      "valueReason": "厚外借鉴建议：从一个班级的一周规则开始，先定义具体行为、反馈与纠正流程，再考虑宠物呈现。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "聚合页中官方06:11教程AI文稿；已点击取得作品直链",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7632874006023228531",
+      "legacyId": "D05",
+      "title": "班级宠物积分隔空喊话教程",
+      "url": "https://www.douyin.com/video/7632874006023228531",
+      "postId": "7632874006023228531",
+      "linkKind": "作品直链",
+      "summary": "手机向教室大屏远程发送通知",
+      "sourceType": "作品页公开索引",
+      "sourcePage": "https://www.douyin.com/video/7632874006023228531",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": "2026-04-26 12:00",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C04.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C04"
+      ],
+      "valueReason": "厚外借鉴建议：用于轮流反馈或小组汇报，先明确任务与规则，避免用音量和抢答代替学习评价。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "检索到官方标题、日期及评论",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7644151846545657114",
+      "legacyId": "D06",
+      "title": "班级叫号神器更新啦",
+      "url": "https://www.douyin.com/video/7644151846545657114",
+      "postId": "7644151846545657114",
+      "linkKind": "作品直链",
+      "summary": "大屏通知支持学生文字回复、确认收到、老师查看已读未读",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/video/7644151846545657114",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C04.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C04"
+      ],
+      "valueReason": "厚外借鉴建议：用于轮流反馈或小组汇报，先明确任务与规则，避免用音量和抢答代替学习评价。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "聚合页官方00:42作品及AI文稿；已点击取得直链",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7637470568597425414",
+      "legacyId": "D07",
+      "title": "早读拔萝卜挑战来了",
+      "url": "https://www.douyin.com/video/7637470568597425414",
+      "postId": "7637470568597425414",
+      "linkKind": "作品直链",
+      "summary": "早读朗读互动、声音反馈型挑战",
+      "sourceType": "作品页公开索引",
+      "sourcePage": "https://www.douyin.com/video/7637470568597425414",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": "2026-05-08 22:00",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C08.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C08"
+      ],
+      "valueReason": "厚外借鉴建议：把早读或自习的具体任务、过程提醒和结束反馈连起来，不把环境声音直接当作学习效果。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "检索到官方标题、日期及麦克风相关评论",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7637847897228283178",
+      "legacyId": "D08",
+      "title": "轻松管好班级午睡",
+      "url": "https://www.douyin.com/video/7637847897228283178",
+      "postId": "7637847897228283178",
+      "linkKind": "作品直链",
+      "summary": "午睡安静目标、时长、分贝阈值、达标后奖励",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/video/7637847897228283178",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C08.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C08"
+      ],
+      "valueReason": "厚外借鉴建议：把早读或自习的具体任务、过程提醒和结束反馈连起来，不把环境声音直接当作学习效果。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "聚合页官方00:57作品及AI文稿；已点击取得直链",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7637468327308299539",
+      "legacyId": "D09",
+      "title": "班宠上线自习静音挑战来了",
+      "url": "https://www.douyin.com/video/7637468327308299539",
+      "postId": "7637468327308299539",
+      "linkKind": "作品直链",
+      "summary": "自习安静目标、麦克风检测、分贝阈值、时长和奖励池",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/video/7637468327308299539",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C08.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19",
+        "ot-tool-A204"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C08"
+      ],
+      "valueReason": "厚外借鉴建议：把早读或自习的具体任务、过程提醒和结束反馈连起来，不把环境声音直接当作学习效果。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "聚合页官方01:14作品及AI文稿；已点击取得直链",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7631166143071374592",
+      "legacyId": "D10",
+      "title": "当我完成课堂作业的时候",
+      "url": "https://www.douyin.com/video/7631166143071374592",
+      "postId": "7631166143071374592",
+      "linkKind": "作品直链",
+      "summary": "课堂任务完成情况、完成与未完成名单、批量评价",
+      "sourceType": "作品页公开索引",
+      "sourcePage": "https://www.douyin.com/video/7631166143071374592",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": "2026-04-21 21:05",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C02.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A202"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C02"
+      ],
+      "valueReason": "厚外借鉴建议：把任务发布、学生确认、完成状态和订正接起来；先检查任务结果，再决定是否记录成长积分。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "直接作品页索引有标题日期；相关聚合页官方00:25作品AI文稿有操作说明",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7655656541965520174",
+      "legacyId": "D11",
+      "title": "宠物PK内置题库上线！",
+      "url": "https://www.douyin.com/video/7655656541965520174",
+      "postId": "7655656541965520174",
+      "linkKind": "作品直链",
+      "summary": "语文汉字拼音消消乐、英语单词消消乐、单词拼写PK、按教材导入题库",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/video/7655656541965520174",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C24.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19",
+        "ot-tool-A187",
+        "ot-tool-A193",
+        "ot-tool-A394"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C24",
+        "ot-scene-C16",
+        "ot-scene-C58"
+      ],
+      "valueReason": "厚外借鉴建议：用教师自建的一组词汇任务先试，让学生独立作答、解释错误并订正，竞赛显示只是辅助。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "聚合页官方02:02作品及AI文稿；已点击取得直链",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "幼儿园"
+      ],
+      "subjects": [
+        "英语",
+        "语文",
+        "通用"
+      ],
+      "category": "英语学习",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7620748118048410886",
+      "legacyId": "D12",
+      "title": "班级宠物积分如何查看评分记录",
+      "url": "https://www.douyin.com/video/7620748118048410886",
+      "postId": "7620748118048410886",
+      "linkKind": "作品直链",
+      "summary": "学生个人及全班评分记录查询、撤回评价",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/video/7620748118048410886",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C05.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C05"
+      ],
+      "valueReason": "厚外借鉴建议：与厚外成长已有记录衔接，保留加减分事由和教师核对入口，积分不直接代替学业判断。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "聚合页官方00:43作品及AI文稿；已点击取得直链",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7641891715242118451",
+      "legacyId": "D13",
+      "title": "指标功能更新啦",
+      "url": "https://www.douyin.com/video/7641891715242118451",
+      "postId": "7641891715242118451",
+      "linkKind": "作品直链",
+      "summary": "评价指标分类、排序、新增、批量复制与删除",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/video/7641891715242118451",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C05.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C05"
+      ],
+      "valueReason": "厚外借鉴建议：与厚外成长已有记录衔接，保留加减分事由和教师核对入口，积分不直接代替学业判断。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "聚合页官方01:01作品及AI文稿；已点击取得直链",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7634511062347287849",
+      "legacyId": "D14",
+      "title": "班级宠物支持积分排行了！",
+      "url": "https://www.douyin.com/video/7634511062347287849",
+      "postId": "7634511062347287849",
+      "linkKind": "作品直链",
+      "summary": "学生与小组榜、经验值与徽章榜、日周总榜及自定义周期",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/video/7634511062347287849",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C05.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C05"
+      ],
+      "valueReason": "厚外借鉴建议：与厚外成长已有记录衔接，保留加减分事由和教师核对入口，积分不直接代替学业判断。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "聚合页官方00:50作品及AI文稿；已点击取得直链",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7638954299921304858",
+      "legacyId": "D15",
+      "title": "班级PK震撼上线了！",
+      "url": "https://www.douyin.com/video/7638954299921304858",
+      "postId": "7638954299921304858",
+      "linkKind": "作品直链",
+      "summary": "跨班邀请、指定比赛时长、积分表现比较",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/video/7638954299921304858",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": "2026-06-01 10:22",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C58.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C58"
+      ],
+      "valueReason": "厚外借鉴建议：先用同一学习目标设计个人作答、小组交流与订正，分开呈现活动得分和知识掌握。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "聚合页顶部官方作品及AI文稿；已点击取得直链",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7639293136937782568",
+      "legacyId": "D16",
+      "title": "班级PK使用教程",
+      "url": "https://www.douyin.com/video/7639293136937782568",
+      "postId": "7639293136937782568",
+      "linkKind": "作品直链",
+      "summary": "班级联动竞赛操作",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/video/7639293136937782568",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C58.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C58"
+      ],
+      "valueReason": "班级联动PK的另一个教程版本，并入已有班级PK场景，保留原作品。",
+      "decision": "merge",
+      "duplicateOf": "dy-video-7638954299921304858",
+      "note": "聚合页官方02:09条目；仅确认题名，未读独立文稿 同功能或素材版本在来源中保留，不作为额外的独立教育项目计数。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7643773291303406898",
+      "legacyId": "D17",
+      "title": "亲密度是什么",
+      "url": "https://www.douyin.com/video/7643773291303406898",
+      "postId": "7643773291303406898",
+      "linkKind": "作品直链",
+      "summary": "宠物喂食、徽章兑换、亲密度与奖励",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/video/7643773291303406898",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C06.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06",
+        "ot-scene-C59"
+      ],
+      "valueReason": "积分奖励的玩法或呈现补充，合并进班级积分规则，不作为独立教学开发方向。",
+      "decision": "merge",
+      "duplicateOf": "dy-video-7617795549940822771",
+      "note": "聚合页官方00:54作品及AI文稿；已点击取得直链；本轮按教学价值进一步归并。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "幼儿园"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7638952838915214619",
+      "legacyId": "D18",
+      "title": "班级宠物积分使用小妙招来了",
+      "url": "https://www.douyin.com/video/7638952838915214619",
+      "postId": "7638952838915214619",
+      "linkKind": "作品直链",
+      "summary": "语音输入评价、毕业宠物查询、奖状生成与下载、快速批量评价",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/video/7638952838915214619",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C07.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19",
+        "ot-tool-A416"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C07",
+        "ot-scene-C05"
+      ],
+      "valueReason": "厚外借鉴建议：先做评价量规、记录和学生反馈，再借鉴抽奖等展示；不让随机奖励决定学业结果。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "聚合页官方02:25作品及AI文稿；已点击取得直链",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7655235671971433780",
+      "legacyId": "D19",
+      "title": "班宠大头贴无法开启相机怎么办",
+      "url": "https://www.douyin.com/video/7655235671971433780",
+      "postId": "7655235671971433780",
+      "linkKind": "作品直链",
+      "summary": "班级宠物合影及相机权限说明",
+      "sourceType": "作品页公开索引",
+      "sourcePage": "https://www.douyin.com/video/7655235671971433780",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": "2026-06-25 15:44",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C06.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06"
+      ],
+      "valueReason": "仅确认相机排障题名，未取得具体步骤；资料待补，不直接排开发。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "检索到官方标题、日期及评论",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7644831567025687814",
+      "legacyId": "D20",
+      "title": "六一儿童节主题乐园上线啦",
+      "url": "https://www.douyin.com/video/7644831567025687814",
+      "postId": "7644831567025687814",
+      "linkKind": "作品直链",
+      "summary": "儿童节主题宠物乐园与节日奖励展示",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/video/7644831567025687814",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C59.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C59"
+      ],
+      "valueReason": "节日换主题属于既有奖励动画的素材补充，并入主题奖励，不单列教学开发项目。",
+      "decision": "merge",
+      "duplicateOf": "dy-video-7617795549940822771",
+      "note": "聚合页官方01:04条目；另有预告文稿；已点击取得直链 同功能或素材版本在来源中保留，不作为额外的独立教育项目计数。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7645363254668231858",
+      "legacyId": "D21",
+      "title": "宠物对战消消乐更新了！",
+      "url": "https://www.douyin.com/video/7645363254668231858",
+      "postId": "7645363254668231858",
+      "linkKind": "作品直链",
+      "summary": "宠物对战消消乐课堂互动",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/video/7645363254668231858",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C24.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19",
+        "ot-tool-A413"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C24",
+        "ot-scene-C58"
+      ],
+      "valueReason": "厚外借鉴建议：用教师自建的一组词汇任务先试，让学生独立作答、解释错误并订正，竞赛显示只是辅助。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "聚合页官方00:59条目；仅确认题名，未读独立文稿",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "英语",
+        "通用"
+      ],
+      "category": "英语学习",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-index-D22",
+      "legacyId": "D22",
+      "title": "新学期你需要这个",
+      "url": "https://www.douyin.com/shipin/7617311502772750336",
+      "postId": null,
+      "linkKind": "聚合页定位，非独立作品直链",
+      "summary": "可移动座位表、课堂抽奖扭蛋机、作文批改、课件转AI赋能课",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/shipin/7617311502772750336",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C56.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19",
+        "ot-tool-A27",
+        "ot-tool-A30"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C56",
+        "ot-scene-C28",
+        "ot-scene-C49",
+        "ot-scene-C59"
+      ],
+      "valueReason": "厚外借鉴建议：复用班级名单和座次配置，为课堂协作、任务分配服务，避免重复维护学生信息。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "搜索索引中官方00:34条目及AI文稿；未提取作品直链；聚合页会更新推荐顺序，定位页不等同于作品直链。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中",
+        "幼儿园"
+      ],
+      "subjects": [
+        "通用",
+        "英语"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-index-D23",
+      "legacyId": "D23",
+      "title": "教师专用批量改作文",
+      "url": "https://www.douyin.com/video/7477529011367841074",
+      "postId": "7477529011367841074",
+      "linkKind": "作品直链",
+      "summary": "语文/英语作文批量批改",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/shipin/7478489612638242826",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": "2025-03-06 08:39",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C21.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A27",
+        "ot-tool-A30"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C21",
+        "ot-scene-C28"
+      ],
+      "valueReason": "厚外借鉴建议：先选一个教材单元，串联习作要求、教师审阅、学生二次修改与作品保留。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "已补齐原作直链；原聚合定位页另保留，未完整播放本作品。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "语文",
+        "英语"
+      ],
+      "category": "语文与阅读",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。",
+      "originalLocatorUrl": "https://www.douyin.com/shipin/7478489612638242826"
+    },
+    {
+      "id": "dy-video-7509036070424579339",
+      "legacyId": "D24",
+      "title": "ourteacher 使用教程",
+      "url": "https://www.douyin.com/video/7509036070424579339",
+      "postId": "7509036070424579339",
+      "linkKind": "作品直链",
+      "summary": "教师AI与幼师AI应用操作",
+      "sourceType": "作品页公开索引",
+      "sourcePage": "https://www.douyin.com/video/7509036070424579339",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": "2025-05-27 16:17",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C10.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A12",
+        "ot-tool-A143"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C10",
+        "ot-scene-C42"
+      ],
+      "valueReason": "只核到通用使用教程题名，没有本条可独立验收的具体功能说明；先留原始记录。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "检索到官方题名、日期及评论；正文open为空",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中",
+        "幼儿园"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "备课与作业",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7468499354442042662",
+      "legacyId": "D25",
+      "title": "DeepSeek教师专用版",
+      "url": "https://www.douyin.com/video/7468499354442042662",
+      "postId": "7468499354442042662",
+      "linkKind": "作品直链",
+      "summary": "面向教师的AI助手宣传",
+      "sourceType": "作品页公开索引",
+      "sourcePage": "https://www.douyin.com/video/7468499354442042662",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": "2025-02-07 10:34:17",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C55.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [],
+      "relatedSceneIds": [
+        "ot-scene-C55"
+      ],
+      "valueReason": "仅有通用AI助手宣传，未取得具体教育操作内容。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "检索到官方题名与日期；正文open为空",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "教师与学校发展",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7577679973301964074",
+      "legacyId": "D26",
+      "title": "教师主理人的年度爱用",
+      "url": "https://www.douyin.com/video/7577679973301964074",
+      "postId": "7577679973301964074",
+      "linkKind": "作品直链",
+      "summary": "教师备课应用汇总宣传",
+      "sourceType": "作品页公开索引",
+      "sourcePage": "https://www.douyin.com/video/7577679973301964074",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": "2025-11-29 12:00",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C10.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A12"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C10"
+      ],
+      "valueReason": "年度爱用汇总宣传，未取得可单独验收的具体能力。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "检索到官方题名、日期；正文open为空",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "备课与作业",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-index-D27",
+      "legacyId": "D27",
+      "title": "你们班有变成蛋的孩子们",
+      "url": "https://www.douyin.com/shipin/7617323735774791716",
+      "postId": null,
+      "linkKind": "聚合页定位，非独立作品直链",
+      "summary": "积分为负后的努力卡、加分倍数及规则自定义",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/shipin/7617323735774791716",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": "2026-04-22 19:47",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C06.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06"
+      ],
+      "valueReason": "厚外借鉴建议：从一个班级的一周规则开始，先定义具体行为、反馈与纠正流程，再考虑宠物呈现。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "聚合页顶部官方作品及AI文稿；未提取作品直链；聚合页会更新推荐顺序，定位页不等同于作品直链。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-index-D28",
+      "legacyId": "D28",
+      "title": "班级宠物积分宠物pk教程",
+      "url": "https://www.douyin.com/shipin/7622092307336202240",
+      "postId": null,
+      "linkKind": "聚合页定位，非独立作品直链",
+      "summary": "教师自建选择题库、学生抢答PK、赛后加分",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/shipin/7622092307336202240",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": "2026-03-28 08:11",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C58.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C58"
+      ],
+      "valueReason": "厚外借鉴建议：先用同一学习目标设计个人作答、小组交流与订正，分开呈现活动得分和知识掌握。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "聚合页顶部官方作品及AI文稿；未提取作品直链；聚合页会更新推荐顺序，定位页不等同于作品直链。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-index-D29",
+      "legacyId": "D29",
+      "title": "家庭版宠物积分使用教程",
+      "url": "https://www.douyin.com/shipin/7617323735774791716",
+      "postId": null,
+      "linkKind": "聚合页定位，非独立作品直链",
+      "summary": "家长身份与家庭成员宠物积分管理",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/shipin/7617323735774791716",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C60.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [],
+      "relatedSceneIds": [
+        "ot-scene-C60"
+      ],
+      "valueReason": "厚外借鉴建议：先围绕一项家校共同任务约定记录与反馈方式，减少单纯打分和重复打卡。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "相关官方04:41条目及开头操作文稿；另有07:04同类教程；聚合页会更新推荐顺序，定位页不等同于作品直链。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7637844728439917860",
+      "legacyId": "D30",
+      "title": "课堂倒计时工具上线啦",
+      "url": "https://www.douyin.com/video/7637844728439917860",
+      "postId": "7637844728439917860",
+      "linkKind": "作品直链",
+      "summary": "课堂倒计时、秒表、分段计时、全屏",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/shipin/7629539961678743567",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C03.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A203"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C03"
+      ],
+      "valueReason": "厚外借鉴建议：用于任务限时、轮流发言与独立作答，给学生充分思考时间，不只做点名或计时动画。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "聚合页官方00:50条目及AI文稿",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-index-D31",
+      "legacyId": "D31",
+      "title": "幼师注意（首句，完整题名未取得）",
+      "url": "https://www.douyin.com/shipin/7634731236929554475",
+      "postId": null,
+      "linkKind": "聚合页定位，非独立作品直链",
+      "summary": "幼儿朗读挑战、视频生成观察记录、表征小人生成器",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/shipin/7634731236929554475",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C41.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A120",
+        "ot-tool-A143",
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C41",
+        "ot-scene-C42",
+        "ot-scene-C08"
+      ],
+      "valueReason": "厚外借鉴建议：将幼儿活动片段转为待教师确认的观察记录，保留具体行为描述，不凭生成结果给孩子贴标签。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "聚合页作者标为OurTeacher App、55赞条目AI文稿；题名未完整保留；聚合页会更新推荐顺序，定位页不等同于作品直链。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "幼儿发展",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7680535581441634395",
+      "legacyId": "D32",
+      "title": "老师你更喜欢哪一个",
+      "url": "https://www.douyin.com/video/7680535581441634395",
+      "postId": "7680535581441634395",
+      "linkKind": "作品直链",
+      "summary": "集体成长主题海底两万里/海底探险内容线索",
+      "sourceType": "作品页公开索引",
+      "sourcePage": "https://www.douyin.com/video/7680535581441634395",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": "2026-09-01 20:00",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C06.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06"
+      ],
+      "valueReason": "主题偏好展示，未核到具体学习任务，不单独纳入开发候选。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "检索到官方题名、日期；作者在评论中确认教师百宝箱可打开",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-index-D33",
+      "legacyId": "D33",
+      "title": "班级宠物随机点名上线了！",
+      "url": "https://www.douyin.com/shipin/7634731236929554475",
+      "postId": null,
+      "linkKind": "聚合页定位，非独立作品直链",
+      "summary": "单人或多人随机点名、点名记录与批量评价",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/shipin/7634731236929554475",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C03.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19",
+        "ot-tool-A184"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C03"
+      ],
+      "valueReason": "厚外借鉴建议：用于任务限时、轮流发言与独立作答，给学生充分思考时间，不只做点名或计时动画。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "聚合页官方01:28条目及AI文稿；聚合页会更新推荐顺序，定位页不等同于作品直链。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7636730176151342372",
+      "legacyId": "D34",
+      "title": "宠物主题动画来了",
+      "url": "https://www.douyin.com/video/7636730176151342372",
+      "postId": "7636730176151342372",
+      "linkKind": "作品直链",
+      "summary": "将宠物主题动画作为课堂任务或早读达标奖励",
+      "sourceType": "聚合页官方条目",
+      "sourcePage": "https://www.douyin.com/shipin/7646246756606511158",
+      "author": "OurTeacher App",
+      "authorStatus": "原公开索引中标明作者，非同名账号推断",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "公开索引或条目文字已核；未逐条播放或实际试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C59.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C59"
+      ],
+      "valueReason": "积分奖励的玩法或呈现补充，合并进班级积分规则，不作为独立教学开发方向。",
+      "decision": "merge",
+      "duplicateOf": "dy-video-7617795549940822771",
+      "note": "聚合页官方00:34条目及AI文稿；本轮按教学价值进一步归并。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7637845190186683711",
+      "legacyId": null,
+      "title": "班级午休静不下来 我是这样做的",
+      "url": "https://www.douyin.com/video/7637845190186683711",
+      "postId": "7637845190186683711",
+      "linkKind": "作品直链",
+      "summary": "安静午休功能的使用场景宣传，未增加独立操作步骤。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/video/7637845190186683711",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": "2026-05-11 06:00",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C08.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A204"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C08"
+      ],
+      "valueReason": "已有安静午休教程覆盖功能，保留应用场景来源，不重复做功能卡。",
+      "decision": "merge",
+      "duplicateOf": "dy-video-7637847897228283178",
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。 同功能或素材版本在来源中保留，不作为额外的独立教育项目计数。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7639336026163312283",
+      "legacyId": null,
+      "title": "这样的班级宠物虽卷但绝",
+      "url": "https://www.douyin.com/video/7639336026163312283",
+      "postId": "7639336026163312283",
+      "linkKind": "作品直链",
+      "summary": "集合通知、PK、自习、任务完成等现有能力的短宣传。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7629539961678743567",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": "2026-05-14 08:57",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06"
+      ],
+      "valueReason": "重复功能合集宣传，未带来新的具体操作或验收目标。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7634503306257141046",
+      "legacyId": null,
+      "title": "宠物房子上线了！",
+      "url": "https://www.douyin.com/video/7634503306257141046",
+      "postId": "7634503306257141046",
+      "linkKind": "作品直链",
+      "summary": "用徽章兑换宠物房子，并由教师调整兑换价格。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7629539961678743567",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C06.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06",
+        "ot-scene-C59"
+      ],
+      "valueReason": "房子作为积分兑换的装饰奖励子项，并入已有宠物激励与兑换规则，不单列教育项目。",
+      "decision": "merge",
+      "duplicateOf": "dy-video-7617795549940822771",
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。 同功能或素材版本在来源中保留，不作为额外的独立教育项目计数。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "幼儿园"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7634510628111109439",
+      "legacyId": null,
+      "title": "班级隔空喊话神器",
+      "url": "https://www.douyin.com/video/7634510628111109439",
+      "postId": "7634510628111109439",
+      "linkKind": "作品直链",
+      "summary": "介绍手机与网页连接、锁定界面后发布通知的操作。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7629539961678743567",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C04.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C04"
+      ],
+      "valueReason": "补充连接与锁屏操作，并入远程通知，不另开发同一套功能。",
+      "decision": "merge",
+      "duplicateOf": "dy-video-7632874006023228531",
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。 同功能或素材版本在来源中保留，不作为额外的独立教育项目计数。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7631512015257339058",
+      "legacyId": null,
+      "title": "班级宠物积分使用教程（04:08版）",
+      "url": "https://www.douyin.com/video/7631512015257339058",
+      "postId": "7631512015257339058",
+      "linkKind": "作品直链",
+      "summary": "覆盖建班、规则、成长、兑换、荣誉及记录入口。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7629539961678743567",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C06.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19",
+        "ot-tool-A192",
+        "ot-tool-A416"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06",
+        "ot-scene-C05",
+        "ot-scene-C07"
+      ],
+      "valueReason": "作为完整教程的另一版本保留，不把相同建班、积分功能重复计数。",
+      "decision": "merge",
+      "duplicateOf": "dy-video-7617795549940822771",
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。 同功能或素材版本在来源中保留，不作为额外的独立教育项目计数。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7638956311731883299",
+      "legacyId": null,
+      "title": "任务完成情况更新了！",
+      "url": "https://www.douyin.com/video/7638956311731883299",
+      "postId": "7638956311731883299",
+      "linkKind": "作品直链",
+      "summary": "新增限时完成标记、多任务切换、任务导出和完成名单转移。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7629539961678743567",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C02.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A202"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C02"
+      ],
+      "valueReason": "厚外借鉴建议：把任务发布、学生确认、完成状态和订正接起来；先检查任务结果，再决定是否记录成长积分。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7637472608291720490",
+      "legacyId": null,
+      "title": "一键全班带甲上阵！",
+      "url": "https://www.douyin.com/video/7637472608291720490",
+      "postId": "7637472608291720490",
+      "linkKind": "作品直链",
+      "summary": "公开索引目前只核到题名及作者。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7629539961678743567",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06"
+      ],
+      "valueReason": "缺具体内容，暂不凭宣传题名排开发；取得说明后可重审。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7632873696323773083",
+      "legacyId": null,
+      "title": "班级宠物积分隔空喊话上线了！",
+      "url": "https://www.douyin.com/video/7632873696323773083",
+      "postId": "7632873696323773083",
+      "linkKind": "作品直链",
+      "summary": "电脑开启遥控后，从手机发布全屏或弹窗文字通知。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7629539961678743567",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C04.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C04"
+      ],
+      "valueReason": "与已有通知教程合并，原作品保留。",
+      "decision": "merge",
+      "duplicateOf": "dy-video-7632874006023228531",
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。 同功能或素材版本在来源中保留，不作为额外的独立教育项目计数。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7634510752149179667",
+      "legacyId": null,
+      "title": "班宠支持隔空喊话了！",
+      "url": "https://www.douyin.com/video/7634510752149179667",
+      "postId": "7634510752149179667",
+      "linkKind": "作品直链",
+      "summary": "公开索引确认远程喊话主题，尚未取得该条独立操作文稿。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7629539961678743567",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C04.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C04"
+      ],
+      "valueReason": "同功能来源归并；未取得独立说明的细节不作为确定规格。",
+      "decision": "merge",
+      "duplicateOf": "dy-video-7632874006023228531",
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。 同功能或素材版本在来源中保留，不作为额外的独立教育项目计数。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7698955179697196338",
+      "legacyId": null,
+      "title": "班级宠物积分 大教程",
+      "url": "https://www.douyin.com/video/7698955179697196338",
+      "postId": "7698955179697196338",
+      "linkKind": "作品直链",
+      "summary": "公开索引确认07:03教程题名及官方作者。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7617323735774791716",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C06.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06"
+      ],
+      "valueReason": "保留新版教程入口；未取得独立内容，不由时长推断新增能力。",
+      "decision": "merge",
+      "duplicateOf": "dy-video-7617795549940822771",
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。 同功能或素材版本在来源中保留，不作为额外的独立教育项目计数。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7621020916318883123",
+      "legacyId": null,
+      "title": "班级宠物积分桌面端下载教程",
+      "url": "https://www.douyin.com/video/7621020916318883123",
+      "postId": "7621020916318883123",
+      "linkKind": "作品直链",
+      "summary": "介绍Windows桌面端及悬浮球入口。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7617323735774791716",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C06.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06"
+      ],
+      "valueReason": "厚外借鉴建议：从一个班级的一周规则开始，先定义具体行为、反馈与纠正流程，再考虑宠物呈现。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。 原视频中有关关闭安全软件的建议没有作为本平台开发或使用指令采纳。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7699071691363749163",
+      "legacyId": null,
+      "title": "班宠可以按照座位表加分了",
+      "url": "https://www.douyin.com/video/7699071691363749163",
+      "postId": "7699071691363749163",
+      "linkKind": "作品直链",
+      "summary": "手机调整座次，网页切换座次视图后按位置评价。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7617323735774791716",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C56.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C56",
+        "ot-scene-C05"
+      ],
+      "valueReason": "厚外借鉴建议：复用班级名单和座次配置，为课堂协作、任务分配服务，避免重复维护学生信息。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "mappingNote": "来源实际展示班宠按座次加分，关联班级宠物功能；不据此认为已有独立座位表工具。 学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长"
+    },
+    {
+      "id": "dy-video-7699461125217819291",
+      "legacyId": null,
+      "title": "宠物社区来了",
+      "url": "https://www.douyin.com/video/7699461125217819291",
+      "postId": "7699461125217819291",
+      "linkKind": "作品直链",
+      "summary": "当前仅核到官方题名，具体参与方式和教学用途未核。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7617323735774791716",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06"
+      ],
+      "valueReason": "缺具体教学用途与使用边界，先留资料，不进入开发优先清单。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7642289094441192754",
+      "legacyId": null,
+      "title": "星云飞车上线",
+      "url": "https://www.douyin.com/video/7642289094441192754",
+      "postId": "7642289094441192754",
+      "linkKind": "作品直链",
+      "summary": "当前仅核到主题更新题名。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7646246756606511158",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C59"
+      ],
+      "valueReason": "主题外观更新，未取得新的教学流程，不单独排开发。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7637125893365979547",
+      "legacyId": null,
+      "title": "宠物服饰会随着升级变化了！",
+      "url": "https://www.douyin.com/video/7637125893365979547",
+      "postId": "7637125893365979547",
+      "linkKind": "作品直链",
+      "summary": "宠物升级后的服饰外观变化。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7646246756606511158",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C59"
+      ],
+      "valueReason": "外观变化并未带来新的教学操作，归为装饰更新。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7646028478060435054",
+      "legacyId": null,
+      "title": "让班级氛围更活跃",
+      "url": "https://www.douyin.com/video/7646028478060435054",
+      "postId": "7646028478060435054",
+      "linkKind": "作品直链",
+      "summary": "班级积分与养宠的氛围宣传。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7646246756606511158",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06"
+      ],
+      "valueReason": "没有取得新功能或具体操作，不重复放入精选。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7696841389518146825",
+      "legacyId": null,
+      "title": "班级宠物积分再升级！",
+      "url": "https://www.douyin.com/video/7696841389518146825",
+      "postId": "7696841389518146825",
+      "linkKind": "作品直链",
+      "summary": "仅取得升级题名及官方作者，未取得具体更新说明。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7617323735774791716",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": "2026-10-29 19:39",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06"
+      ],
+      "valueReason": "资料待补；不能把“升级”直接当作值得开发的新能力。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7620655196271676708",
+      "legacyId": null,
+      "title": "希沃白板班级宠物积分教程",
+      "url": "https://www.douyin.com/video/7620655196271676708",
+      "postId": "7620655196271676708",
+      "linkKind": "作品直链",
+      "summary": "在白板课件形状中添加官网链接，授课时点击打开。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7617323735774791716",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C06.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06"
+      ],
+      "valueReason": "厚外借鉴建议：从一个班级的一周规则开始，先定义具体行为、反馈与纠正流程，再考虑宠物呈现。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7622980332064607503",
+      "legacyId": null,
+      "title": "家庭版宠物积分使用教程来咯",
+      "url": "https://www.douyin.com/video/7622980332064607503",
+      "postId": "7622980332064607503",
+      "linkKind": "作品直链",
+      "summary": "介绍家庭成员、行为指标、成长规则、兑换和评价记录。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7617323735774791716",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C60.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [],
+      "relatedSceneIds": [
+        "ot-scene-C60"
+      ],
+      "valueReason": "并入家庭共同目标场景，采用家长和孩子可协商的目标，不把班级排名搬到家庭。",
+      "decision": "merge",
+      "duplicateOf": "dy-index-D29",
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。 同功能或素材版本在来源中保留，不作为额外的独立教育项目计数。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7696075384219127055",
+      "legacyId": null,
+      "title": "班级宠物空白、错误页面强制刷新教程（8秒版）",
+      "url": "https://www.douyin.com/video/7696075384219127055",
+      "postId": "7696075384219127055",
+      "linkKind": "作品直链",
+      "summary": "介绍空白处长按后触发强制刷新。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7617323735774791716",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C06.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06"
+      ],
+      "valueReason": "厚外借鉴建议：从一个班级的一周规则开始，先定义具体行为、反馈与纠正流程，再考虑宠物呈现。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7699392756015205695",
+      "legacyId": null,
+      "title": "班级宠物空白、错误页面强制刷新教程（10秒版）",
+      "url": "https://www.douyin.com/video/7699392756015205695",
+      "postId": "7699392756015205695",
+      "linkKind": "作品直链",
+      "summary": "同一强制刷新方法的另一条短教程。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7617323735774791716",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C06.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06"
+      ],
+      "valueReason": "与8秒版合并，保留来源，不重复建设。",
+      "decision": "merge",
+      "duplicateOf": "dy-video-7696075384219127055",
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。 同功能或素材版本在来源中保留，不作为额外的独立教育项目计数。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7697220228513631498",
+      "legacyId": null,
+      "title": "班上娃都抢着帮我做事",
+      "url": "https://www.douyin.com/video/7697220228513631498",
+      "postId": "7697220228513631498",
+      "linkKind": "作品直链",
+      "summary": "当前只核到题名及官方作者。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7617323735774791716",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06"
+      ],
+      "valueReason": "未取得具体操作或可检验的教学内容，不依据效果宣传推荐。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7629274340441312547",
+      "legacyId": null,
+      "title": "批量操作和快速操作有什么不一样",
+      "url": "https://www.douyin.com/video/7629274340441312547",
+      "postId": "7629274340441312547",
+      "linkKind": "作品直链",
+      "summary": "按姓名或等级定位学生、反选，并记录徽章发放原因。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7617323735774791716",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C05.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C05",
+        "ot-scene-C06"
+      ],
+      "valueReason": "厚外借鉴建议：与厚外成长已有记录衔接，保留加减分事由和教师核对入口，积分不直接代替学业判断。",
+      "decision": "include",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7643798329873694538",
+      "legacyId": null,
+      "title": "班级喊话神器教程来了！",
+      "url": "https://www.douyin.com/video/7643798329873694538",
+      "postId": "7643798329873694538",
+      "linkKind": "作品直链",
+      "summary": "手机遥控向班级大屏发文字、图片或语音，并查看确认。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/shipin/7646246756606511158",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C04.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/",
+          "notOriginalVideoImage": true
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C04"
+      ],
+      "valueReason": "保留多种通知形式和确认操作说明，并入同一通知场景。",
+      "decision": "merge",
+      "duplicateOf": "dy-video-7632874006023228531",
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。 同功能或素材版本在来源中保留，不作为额外的独立教育项目计数。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7618908094123771785",
+      "legacyId": null,
+      "title": "班级宠物积分免费了！",
+      "url": "https://www.douyin.com/video/7618908094123771785",
+      "postId": "7618908094123771785",
+      "linkKind": "作品直链",
+      "summary": "以免费使用为主题的产品宣传。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/video/7618908094123771785",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": "2026-03-20 15:00",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C06"
+      ],
+      "valueReason": "价格宣传不能代替教学功能说明，当前收费条件也未实际核对。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7632286639754136873",
+      "legacyId": null,
+      "title": "班级宠物春游篇",
+      "url": "https://www.douyin.com/video/7632286639754136873",
+      "postId": "7632286639754136873",
+      "linkKind": "作品直链",
+      "summary": "宠物春游主题展示，未取得教学组织操作。",
+      "sourceType": "官方公开索引及具体条目链接",
+      "sourcePage": "https://www.douyin.com/video/7632286639754136873",
+      "author": "OurTeacher App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": "2026-04-26 06:00",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [],
+      "relatedToolIds": [
+        "ot-tool-W19"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C59"
+      ],
+      "valueReason": "动画题材不等于户外研学流程，不单独列成研学开发需求。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7640674839872091897",
+      "legacyId": null,
+      "title": "《云七宝库》班级宠物乐园来了",
+      "url": "https://www.douyin.com/video/7640674839872091897",
+      "postId": "7640674839872091897",
+      "linkKind": "作品直链",
+      "summary": "引导经其他资源包取得软件的下载宣传。",
+      "sourceType": "公开聚合页中的其他作者条目",
+      "sourcePage": "https://www.douyin.com/shipin/7646246756606511158",
+      "author": "黑郁金香",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [],
+      "relatedToolIds": [],
+      "relatedSceneIds": [],
+      "valueReason": "作者为黑郁金香，非OurTeacher官方；内容主要为资源包导流。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [],
+      "subjects": [],
+      "category": "范围外资料",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7621886494004841728",
+      "legacyId": null,
+      "title": "永久免费班级宠物积分神器全教程",
+      "url": "https://www.douyin.com/video/7621886494004841728",
+      "postId": "7621886494004841728",
+      "linkKind": "作品直链",
+      "summary": "同类积分产品的教程。",
+      "sourceType": "公开聚合页中的其他作者条目",
+      "sourcePage": "https://www.douyin.com/shipin/7630667752050690098",
+      "author": "批改邦 App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [],
+      "relatedToolIds": [],
+      "relatedSceneIds": [],
+      "valueReason": "作者为批改邦App，不能因为关键词相似归入OurTeacher。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [],
+      "subjects": [],
+      "category": "范围外资料",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7641949365816331561",
+      "legacyId": null,
+      "title": "班级宠物积分｜猜猜我是谁",
+      "url": "https://www.douyin.com/video/7641949365816331561",
+      "postId": "7641949365816331561",
+      "linkKind": "作品直链",
+      "summary": "另一产品的宠物猜谜宣传。",
+      "sourceType": "公开聚合页中的其他作者条目",
+      "sourcePage": "https://www.douyin.com/shipin/7617323735774791716",
+      "author": "批改邦 App",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [],
+      "relatedToolIds": [],
+      "relatedSceneIds": [],
+      "valueReason": "作者为批改邦App，不属于本公司官方内容。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [],
+      "subjects": [],
+      "category": "范围外资料",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7618896245454076131",
+      "legacyId": null,
+      "title": "班级宠物积分系统介绍（第三方账号）",
+      "url": "https://www.douyin.com/video/7618896245454076131",
+      "postId": "7618896245454076131",
+      "linkKind": "作品直链",
+      "summary": "第三方账号介绍班级积分养宠。",
+      "sourceType": "公开聚合页中的其他作者条目",
+      "sourcePage": "https://www.douyin.com/video/7618896245454076131",
+      "author": "橙子教育技术",
+      "authorStatus": "在公开页面逐条核对作者文字",
+      "publishedAt": "2026-03-19 17:28",
+      "verifiedAt": "2026-11-05",
+      "reviewStatus": "已核公开题名、作者与作品链接；有文稿的条目另核功能摘要，未逐条播放或试用",
+      "images": [],
+      "relatedToolIds": [],
+      "relatedSceneIds": [],
+      "valueReason": "作者为橙子教育技术；本轮仅收官方资料，不能当作公司自有作品计数。",
+      "decision": "exclude",
+      "duplicateOf": null,
+      "note": "图片为相关教学示意，不是该作品封面；封面公开CDN请求返回403或超时，未绕过访问限制。",
+      "trialStatus": "未登录试用，非课堂效果验证",
+      "stages": [],
+      "subjects": [],
+      "category": "范围外资料",
+      "mappingNote": "学段、学科、场景归类为厚外教学改造建议，未表示各学段已经运行或验证。 关联工具用于找到相应教学开发方向；未把题名相近的官网工具当作本抖音视频界面已经实测。"
+    },
+    {
+      "id": "dy-video-7472334030034242867",
+      "postId": "7472334030034242867",
+      "title": "你准备好了吗！",
+      "url": "https://www.douyin.com/video/7472334030034242867",
+      "author": "OurTeacher App",
+      "authorStatus": "公开聚合页逐条显示OurTeacher App作者标识，并已点击条目取得作品直链",
+      "sourcePage": "https://www.douyin.com/shipin/7469609883932035109",
+      "valueReason": "作文宣传题名和标签，归入既有作文批改来源，不据此写新的能力或效果。",
+      "relatedSceneIds": [
+        "ot-scene-C21"
+      ],
+      "relatedToolIds": [
+        "ot-tool-A27"
+      ],
+      "publishedAt": null,
+      "reviewStatus": "已核题名、作者及原作链接；独立视频页面正文为空，未完整播放",
+      "newCapabilityVerified": false,
+      "note": "已核公开索引的题名、作者及原作链接；未完整观看，不把效率宣传当作验收要求。",
+      "decision": "merge",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "公开聚合页作者与原作直链核对",
+      "linkKind": "作品直链",
+      "duplicateOf": "dy-index-D23",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C21.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/"
+        }
+      ],
+      "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
+      "summary": "作文宣传题名和标签，归入既有作文批改来源，不据此写新的能力或效果。"
+    },
+    {
+      "id": "dy-video-7480508224186125594",
+      "postId": "7480508224186125594",
+      "title": "半节课就能改完！",
+      "url": "https://www.douyin.com/video/7480508224186125594",
+      "author": "OurTeacher App",
+      "authorStatus": "公开聚合页逐条显示OurTeacher App作者标识，并已点击条目取得作品直链",
+      "sourcePage": "https://www.douyin.com/shipin/7469609883932035109",
+      "valueReason": "效率宣传版本并入作文批改；“半节课”未实测，不作为厚外验收指标。",
+      "relatedSceneIds": [
+        "ot-scene-C21"
+      ],
+      "relatedToolIds": [
+        "ot-tool-A27"
+      ],
+      "publishedAt": null,
+      "reviewStatus": "已核题名、作者及原作链接；独立视频页面正文为空，未完整播放",
+      "newCapabilityVerified": false,
+      "note": "已核公开索引的题名、作者及原作链接；未完整观看，不把效率宣传当作验收要求。",
+      "decision": "merge",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "公开聚合页作者与原作直链核对",
+      "linkKind": "作品直链",
+      "duplicateOf": "dy-index-D23",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C21.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/"
+        }
+      ],
+      "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
+      "summary": "效率宣传版本并入作文批改；“半节课”未实测，不作为厚外验收指标。"
+    },
+    {
+      "id": "dy-video-7473455377074425098",
+      "postId": "7473455377074425098",
+      "title": "我杀一个给你看看",
+      "url": "https://www.douyin.com/video/7473455377074425098",
+      "author": "OurTeacher App",
+      "authorStatus": "公开聚合页逐条显示OurTeacher App作者标识，并已点击条目取得作品直链",
+      "sourcePage": "https://www.douyin.com/shipin/7469609883932035109",
+      "valueReason": "仅取得宣传题名和作文标签，未取得具体教学操作。",
+      "relatedSceneIds": [
+        "ot-scene-C21"
+      ],
+      "relatedToolIds": [
+        "ot-tool-A27"
+      ],
+      "publishedAt": null,
+      "reviewStatus": "已核题名、作者及原作链接；独立视频页面正文为空，未完整播放",
+      "newCapabilityVerified": false,
+      "note": "已核公开索引的题名、作者及原作链接；未完整观看，不把效率宣传当作验收要求。",
+      "decision": "exclude",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "公开聚合页作者与原作直链核对",
+      "linkKind": "作品直链",
+      "duplicateOf": null,
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C21.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/"
+        }
+      ],
+      "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
+      "summary": "仅取得宣传题名和作文标签，未取得具体教学操作。"
+    },
+    {
+      "id": "dy-video-7485709617918414116",
+      "postId": "7485709617918414116",
+      "title": "半小时轻松改完两个班！",
+      "url": "https://www.douyin.com/video/7485709617918414116",
+      "author": "OurTeacher App",
+      "authorStatus": "公开聚合页逐条显示OurTeacher App作者标识，并已点击条目取得作品直链",
+      "sourcePage": "https://www.douyin.com/shipin/7469609883932035109",
+      "valueReason": "与既有批量作文批改归并，效率数字不作为确定能力。",
+      "relatedSceneIds": [
+        "ot-scene-C21"
+      ],
+      "relatedToolIds": [
+        "ot-tool-A27"
+      ],
+      "publishedAt": null,
+      "reviewStatus": "已核题名、作者及原作链接；独立视频页面正文为空，未完整播放",
+      "newCapabilityVerified": false,
+      "note": "已核公开索引的题名、作者及原作链接；未完整观看，不把效率宣传当作验收要求。",
+      "decision": "merge",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "公开聚合页作者与原作直链核对",
+      "linkKind": "作品直链",
+      "duplicateOf": "dy-index-D23",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C21.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/"
+        }
+      ],
+      "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
+      "summary": "与既有批量作文批改归并，效率数字不作为确定能力。"
+    },
+    {
+      "id": "dy-video-7476429341396618547",
+      "postId": "7476429341396618547",
+      "title": "用DeepSeek批量批改作文",
+      "url": "https://www.douyin.com/video/7476429341396618547",
+      "author": "OurTeacher App",
+      "authorStatus": "公开聚合页逐条显示OurTeacher App作者标识，并已点击条目取得作品直链",
+      "sourcePage": "https://www.douyin.com/shipin/7469609883932035109",
+      "valueReason": "同功能另一作品，保留原作链接，不重复列教育项目。",
+      "relatedSceneIds": [
+        "ot-scene-C21"
+      ],
+      "relatedToolIds": [
+        "ot-tool-A27"
+      ],
+      "publishedAt": null,
+      "reviewStatus": "已核题名、作者及原作链接；独立视频页面正文为空，未完整播放",
+      "newCapabilityVerified": false,
+      "note": "已核公开索引的题名、作者及原作链接；未完整观看，不把效率宣传当作验收要求。",
+      "decision": "merge",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "公开聚合页作者与原作直链核对",
+      "linkKind": "作品直链",
+      "duplicateOf": "dy-index-D23",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C21.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/"
+        }
+      ],
+      "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
+      "summary": "同功能另一作品，保留原作链接，不重复列教育项目。"
+    },
+    {
+      "id": "dy-video-7439633472714591498",
+      "postId": "7439633472714591498",
+      "title": "作文批改试用指南",
+      "url": "https://www.douyin.com/video/7439633472714591498",
+      "author": "OurTeacher App",
+      "authorStatus": "公开聚合页逐条显示OurTeacher App作者标识，并已点击条目取得作品直链",
+      "sourcePage": "https://www.douyin.com/shipin/7478489612638242826",
+      "valueReason": "试用入口题名已核，独立操作说明待补，归到已有作文场景。",
+      "relatedSceneIds": [
+        "ot-scene-C21"
+      ],
+      "relatedToolIds": [
+        "ot-tool-A27"
+      ],
+      "publishedAt": null,
+      "reviewStatus": "已核题名、作者及原作链接；独立视频页面正文为空，未完整播放",
+      "newCapabilityVerified": false,
+      "note": "已核公开索引的题名、作者及原作链接；未完整观看，不把效率宣传当作验收要求。",
+      "decision": "merge",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "公开聚合页作者与原作直链核对",
+      "linkKind": "作品直链",
+      "duplicateOf": "dy-index-D23",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C21.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/"
+        }
+      ],
+      "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
+      "summary": "试用入口题名已核，独立操作说明待补，归到已有作文场景。"
+    },
+    {
+      "id": "dy-video-7433711851172531483",
+      "postId": "7433711851172531483",
+      "title": "用AI批量批改作文吧",
+      "url": "https://www.douyin.com/video/7433711851172531483",
+      "author": "OurTeacher App",
+      "authorStatus": "公开聚合页逐条显示OurTeacher App作者标识，并已点击条目取得作品直链",
+      "sourcePage": "https://www.douyin.com/shipin/7478489612638242826",
+      "valueReason": "批量作文批改的另一版本，具体操作待补。",
+      "relatedSceneIds": [
+        "ot-scene-C21"
+      ],
+      "relatedToolIds": [
+        "ot-tool-A27"
+      ],
+      "publishedAt": null,
+      "reviewStatus": "已核题名、作者及原作链接；独立视频页面正文为空，未完整播放",
+      "newCapabilityVerified": false,
+      "note": "已核公开索引的题名、作者及原作链接；未完整观看，不把效率宣传当作验收要求。",
+      "decision": "merge",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "公开聚合页作者与原作直链核对",
+      "linkKind": "作品直链",
+      "duplicateOf": "dy-index-D23",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C21.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/"
+        }
+      ],
+      "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
+      "summary": "批量作文批改的另一版本，具体操作待补。"
+    },
+    {
+      "id": "dy-video-7475258716300889394",
+      "postId": "7475258716300889394",
+      "title": "紧扣教材，自动填充",
+      "url": "https://www.douyin.com/video/7475258716300889394",
+      "author": "OurTeacher App",
+      "authorStatus": "公开聚合页逐条显示OurTeacher App作者标识，并已点击条目取得作品直链",
+      "sourcePage": "https://www.douyin.com/shipin/7478489612638242826",
+      "valueReason": "厚外借鉴建议：先选一个教材单元，串联习作要求、教师审阅、学生二次修改与作品保留。",
+      "relatedSceneIds": [
+        "ot-scene-C21"
+      ],
+      "relatedToolIds": [
+        "ot-tool-A127"
+      ],
+      "publishedAt": null,
+      "reviewStatus": "作品题名、作者、链接已核；同功能官网教程另核，未完整观看本抖音",
+      "newCapabilityVerified": false,
+      "note": "本抖音仅核对题名、作者与链接；教学流程另由同功能官方操作教程核对。没有将本抖音写成已完整观看。",
+      "decision": "include",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "公开聚合页作者与原作直链核对",
+      "linkKind": "作品直链",
+      "duplicateOf": null,
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-00-0.jpg",
+          "type": "同功能官方教程参考图",
+          "caption": "同功能官方教程参考画面，非本抖音作品画面；官方教程 32.0 秒：选择教材单元并显示习作要求；画面是语文工具。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/c850fd39/video_ourteacher%E8%AF%9D%E9%A2%98_%E4%BD%9C%E6%96%87%E6%89%B9..._0.mp4",
+          "timeSeconds": 32.0
+        },
+        {
+          "src": "assets/images/tutorials/source-00-1.jpg",
+          "type": "同功能官方教程参考图",
+          "caption": "同功能官方教程参考画面，非本抖音作品画面；官方教程 97.6 秒：批改内容选择与班级名单入口。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/c850fd39/video_ourteacher%E8%AF%9D%E9%A2%98_%E4%BD%9C%E6%96%87%E6%89%B9..._0.mp4",
+          "timeSeconds": 97.6
+        }
+      ],
+      "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
+      "summary": "可借鉴的教学流程：教程实际展示选择年级和单元、设置报告内容，以及逐篇或班级批改入口。操作画面来自另附官方教程，非本抖音截帧。",
+      "supportingTutorialIds": [
+        "ot-tutorial-A127"
+      ]
+    },
+    {
+      "id": "dy-video-7472978101979434267",
+      "postId": "7472978101979434267",
+      "title": "半小时搞定英语默写卡",
+      "url": "https://www.douyin.com/video/7472978101979434267",
+      "author": "OurTeacher App",
+      "authorStatus": "公开聚合页逐条显示OurTeacher App作者标识，并已点击条目取得作品直链",
+      "sourcePage": "https://www.douyin.com/shipin/7478489612638242826",
+      "valueReason": "英语默写卡主题来源；效率数字未实测，归入同类默写卡批改。",
+      "relatedSceneIds": [
+        "ot-scene-C25"
+      ],
+      "relatedToolIds": [
+        "ot-tool-A179"
+      ],
+      "publishedAt": null,
+      "reviewStatus": "已核题名、作者及原作链接；独立视频页面正文为空，未完整播放",
+      "newCapabilityVerified": false,
+      "note": "已核公开索引的题名、作者及原作链接；未完整观看，不把效率宣传当作验收要求。",
+      "decision": "merge",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "公开聚合页作者与原作直链核对",
+      "linkKind": "作品直链",
+      "duplicateOf": "dy-video-7472669821574843699",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C25.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/"
+        }
+      ],
+      "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
+      "summary": "英语默写卡主题来源；效率数字未实测，归入同类默写卡批改。"
+    },
+    {
+      "id": "dy-video-7473787931472301363",
+      "postId": "7473787931472301363",
+      "title": "英语课文默写批改！",
+      "url": "https://www.douyin.com/video/7473787931472301363",
+      "author": "OurTeacher App",
+      "authorStatus": "公开聚合页逐条显示OurTeacher App作者标识，并已点击条目取得作品直链",
+      "sourcePage": "https://www.douyin.com/shipin/7478489612638242826",
+      "valueReason": "同类英语默写批改作品，建议并入A179对应教学流程。",
+      "relatedSceneIds": [
+        "ot-scene-C25"
+      ],
+      "relatedToolIds": [
+        "ot-tool-A179"
+      ],
+      "publishedAt": null,
+      "reviewStatus": "已核题名、作者及原作链接；独立视频页面正文为空，未完整播放",
+      "newCapabilityVerified": false,
+      "note": "已核公开索引的题名、作者及原作链接；未完整观看，不把效率宣传当作验收要求。",
+      "decision": "merge",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "公开聚合页作者与原作直链核对",
+      "linkKind": "作品直链",
+      "duplicateOf": "dy-video-7472669821574843699",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C25.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/"
+        }
+      ],
+      "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
+      "summary": "同类英语默写批改作品，建议并入A179对应教学流程。"
+    },
+    {
+      "id": "dy-video-7471117852875984155",
+      "postId": "7471117852875984155",
+      "title": "英语老师无痛开学",
+      "url": "https://www.douyin.com/video/7471117852875984155",
+      "author": "OurTeacher App",
+      "authorStatus": "公开聚合页逐条显示OurTeacher App作者标识，并已点击条目取得作品直链",
+      "sourcePage": "https://www.douyin.com/shipin/7478489612638242826",
+      "valueReason": "公开标签指向英语作文批改，归并已有英语写作反馈；不把宣传语作为规格。",
+      "relatedSceneIds": [
+        "ot-scene-C28"
+      ],
+      "relatedToolIds": [
+        "ot-tool-A30"
+      ],
+      "publishedAt": null,
+      "reviewStatus": "已核题名、作者及原作链接；独立视频页面正文为空，未完整播放",
+      "newCapabilityVerified": false,
+      "note": "已核公开索引的题名、作者及原作链接；未完整观看，不把效率宣传当作验收要求。",
+      "decision": "merge",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "公开聚合页作者与原作直链核对",
+      "linkKind": "作品直链",
+      "duplicateOf": "dy-index-D23",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C28.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/"
+        }
+      ],
+      "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
+      "summary": "公开标签指向英语作文批改，归并已有英语写作反馈；不把宣传语作为规格。"
+    },
+    {
+      "id": "dy-video-7433748168786922778",
+      "postId": "7433748168786922778",
+      "title": "作文想批多少就批多少",
+      "url": "https://www.douyin.com/video/7433748168786922778",
+      "author": "OurTeacher App",
+      "authorStatus": "公开聚合页逐条显示OurTeacher App作者标识，并已点击条目取得作品直链",
+      "sourcePage": "https://www.douyin.com/shipin/7478489612638242826",
+      "valueReason": "同批量作文批改功能，数量不限的宣传未核，不作为确定能力。",
+      "relatedSceneIds": [
+        "ot-scene-C21"
+      ],
+      "relatedToolIds": [
+        "ot-tool-A27"
+      ],
+      "publishedAt": null,
+      "reviewStatus": "已核题名、作者及原作链接；独立视频页面正文为空，未完整播放",
+      "newCapabilityVerified": false,
+      "note": "已核公开索引的题名、作者及原作链接；未完整观看，不把效率宣传当作验收要求。",
+      "decision": "merge",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "公开聚合页作者与原作直链核对",
+      "linkKind": "作品直链",
+      "duplicateOf": "dy-index-D23",
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C21.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/"
+        }
+      ],
+      "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
+      "summary": "同批量作文批改功能，数量不限的宣传未核，不作为确定能力。"
+    },
+    {
+      "id": "dy-video-7434488374662040882",
+      "postId": "7434488374662040882",
+      "title": "改的要快，要好，要不加班！",
+      "url": "https://www.douyin.com/video/7434488374662040882",
+      "author": "OurTeacher App",
+      "authorStatus": "公开聚合页逐条显示OurTeacher App作者标识，并已点击条目取得作品直链",
+      "sourcePage": "https://www.douyin.com/shipin/7478489612638242826",
+      "valueReason": "仅效率诉求，没有取得新的具体流程或功能。",
+      "relatedSceneIds": [
+        "ot-scene-C21"
+      ],
+      "relatedToolIds": [
+        "ot-tool-A27"
+      ],
+      "publishedAt": null,
+      "reviewStatus": "已核题名、作者及原作链接；独立视频页面正文为空，未完整播放",
+      "newCapabilityVerified": false,
+      "note": "已核公开索引的题名、作者及原作链接；未完整观看，不把效率宣传当作验收要求。",
+      "decision": "exclude",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "公开聚合页作者与原作直链核对",
+      "linkKind": "作品直链",
+      "duplicateOf": null,
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C21.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/"
+        }
+      ],
+      "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
+      "summary": "仅效率诉求，没有取得新的具体流程或功能。"
+    },
+    {
+      "id": "dy-video-7472669821574843699",
+      "postId": "7472669821574843699",
+      "title": "如何让AI帮你批改英语默写卡",
+      "url": "https://www.douyin.com/video/7472669821574843699",
+      "author": "OurTeacher App",
+      "authorStatus": "公开聚合页逐条显示OurTeacher App作者标识，并已点击条目取得作品直链",
+      "sourcePage": "https://www.douyin.com/shipin/7478489612638242826",
+      "valueReason": "厚外借鉴建议：先用一张英语默写卡完成答案核对、教师复核、学生订正与再测，保留原作答记录。",
+      "relatedSceneIds": [
+        "ot-scene-C25"
+      ],
+      "relatedToolIds": [
+        "ot-tool-A179"
+      ],
+      "publishedAt": null,
+      "reviewStatus": "作品题名、作者、链接已核；同功能官网教程另核，未完整观看本抖音",
+      "newCapabilityVerified": false,
+      "note": "本抖音仅核对题名、作者与链接；教学流程另由同功能官方操作教程核对。没有将本抖音写成已完整观看。",
+      "decision": "include",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "公开聚合页作者与原作直链核对",
+      "linkKind": "作品直链",
+      "duplicateOf": null,
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-10-0.jpg",
+          "type": "同功能官方教程参考图",
+          "caption": "同功能官方教程参考画面，非本抖音作品画面；官方教程 16.6 秒：英语默写卡批改的学生作答上传入口。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250219/6439d75a9d6b2fb3d5577a8a4d940197.mp4",
+          "timeSeconds": 16.6
+        },
+        {
+          "src": "assets/images/tutorials/source-10-2.jpg",
+          "type": "同功能官方教程参考图",
+          "caption": "同功能官方教程参考画面，非本抖音作品画面；官方教程 75.7 秒：教程展示的识别与批改文字。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250219/6439d75a9d6b2fb3d5577a8a4d940197.mp4",
+          "timeSeconds": 75.7
+        }
+      ],
+      "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
+      "summary": "可借鉴的教学流程：官方操作流程要求分别准备答案卡、空白卡和学生作答图，教程展示批量输入与结果。操作画面来自另附官方教程，非本抖音截帧。",
+      "supportingTutorialIds": [
+        "ot-tutorial-A179"
+      ]
+    },
+    {
+      "id": "dy-video-7473823254478638362",
+      "postId": "7473823254478638362",
+      "title": "语文老师速看",
+      "url": "https://www.douyin.com/video/7473823254478638362",
+      "author": "OurTeacher App",
+      "authorStatus": "公开聚合页逐条显示OurTeacher App作者标识，并已点击条目取得作品直链",
+      "sourcePage": "https://www.douyin.com/shipin/7478489612638242826",
+      "valueReason": "仅题名，没有取得该作品的具体内容，不依据标题推荐。",
+      "relatedSceneIds": [
+        "ot-scene-C21"
+      ],
+      "relatedToolIds": [
+        "ot-tool-A27"
+      ],
+      "publishedAt": null,
+      "reviewStatus": "已核题名、作者及原作链接；独立视频页面正文为空，未完整播放",
+      "newCapabilityVerified": false,
+      "note": "已核公开索引的题名、作者及原作链接；未完整观看，不把效率宣传当作验收要求。",
+      "decision": "exclude",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "公开聚合页作者与原作直链核对",
+      "linkKind": "作品直链",
+      "duplicateOf": null,
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C21.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/"
+        }
+      ],
+      "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
+      "summary": "仅题名，没有取得该作品的具体内容，不依据标题推荐。"
+    },
+    {
+      "id": "dy-video-7478251125376945458",
+      "postId": "7478251125376945458",
+      "title": "改作文这事啊",
+      "url": "https://www.douyin.com/video/7478251125376945458",
+      "author": "OurTeacher App",
+      "authorStatus": "公开聚合页逐条显示OurTeacher App作者标识，并已点击条目取得作品直链",
+      "sourcePage": "https://www.douyin.com/shipin/7478489612638242826",
+      "valueReason": "仅题名与标签，缺少独立操作内容。",
+      "relatedSceneIds": [
+        "ot-scene-C21"
+      ],
+      "relatedToolIds": [
+        "ot-tool-A27"
+      ],
+      "publishedAt": null,
+      "reviewStatus": "已核题名、作者及原作链接；独立视频页面正文为空，未完整播放",
+      "newCapabilityVerified": false,
+      "note": "已核公开索引的题名、作者及原作链接；未完整观看，不把效率宣传当作验收要求。",
+      "decision": "exclude",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "公开聚合页作者与原作直链核对",
+      "linkKind": "作品直链",
+      "duplicateOf": null,
+      "images": [
+        {
+          "src": "assets/images/ourteacher/C21.svg",
+          "type": "教学用法示意图",
+          "caption": "相关教学流程示意，非本抖音作品封面或截帧；原作品画面待补。",
+          "sourceUrl": "https://www.ourteacher.cc/"
+        }
+      ],
+      "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
+      "summary": "仅题名与标签，缺少独立操作内容。"
+    },
+    {
+      "id": "dy-video-7470822753596132634",
+      "postId": "7470822753596132634",
+      "title": "真正的DeepSeek教师模式",
+      "url": "https://www.douyin.com/video/7470822753596132634",
+      "author": "OurTeacher App",
+      "authorStatus": "公开聚合页逐条显示OurTeacher App作者标识，并已点击条目取得作品直链",
+      "sourcePage": "https://www.douyin.com/shipin/7478489612638242826",
+      "valueReason": "通用模式宣传，未取得可独立验收的具体教学流程。",
+      "relatedSceneIds": [],
+      "relatedToolIds": [],
+      "publishedAt": null,
+      "reviewStatus": "已核题名、作者及原作链接；独立视频页面正文为空，未完整播放",
+      "newCapabilityVerified": false,
+      "note": "已核公开索引的题名、作者及原作链接；未完整观看，不把效率宣传当作验收要求。",
+      "decision": "exclude",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "公开聚合页作者与原作直链核对",
+      "linkKind": "作品直链",
+      "duplicateOf": null,
+      "images": [],
+      "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
+      "summary": "通用模式宣传，未取得可独立验收的具体教学流程。"
+    },
+    {
+      "id": "dy-video-7470109705583463706",
+      "postId": "7470109705583463706",
+      "title": "DeepSeek教师王炸组合升级版！",
+      "url": "https://www.douyin.com/video/7470109705583463706",
+      "author": "OurTeacher App",
+      "authorStatus": "公开聚合页逐条显示OurTeacher App作者标识，并已点击条目取得作品直链",
+      "sourcePage": "https://www.douyin.com/shipin/7478489612638242826",
+      "valueReason": "通用升级宣传，未取得具体新增内容。",
+      "relatedSceneIds": [],
+      "relatedToolIds": [],
+      "publishedAt": null,
+      "reviewStatus": "已核题名、作者及原作链接；独立视频页面正文为空，未完整播放",
+      "newCapabilityVerified": false,
+      "note": "已核公开索引的题名、作者及原作链接；未完整观看，不把效率宣传当作验收要求。",
+      "decision": "exclude",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "公开聚合页作者与原作直链核对",
+      "linkKind": "作品直链",
+      "duplicateOf": null,
+      "images": [],
+      "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
+      "summary": "通用升级宣传，未取得具体新增内容。"
+    }
+  ],
+  "researchRounds": [
+    {
+      "round": "追加语英备课教研定向检索",
+      "queryCount": 12,
+      "newOfficialPostLinks": 18,
+      "recoveredExistingLinks": 1,
+      "scope": "追加一轮语文作文、英语听写口语、备课课件、学情分析、教师教研公开检索；未访问此前403账号接口，未修改data文件。"
+    }
+  ]
+}
