@@ -35,7 +35,7 @@ python3 -m http.server 8000
 node scripts/publish-pages.mjs
 ```
 
-脚本会再次检查、生成快照，并以正常快进提交发布gh-pages，不强制覆盖分支历史。然后核对GitHub Pages构建成功与网站内容。
+脚本会再次检查、生成快照，通过现有gh授权的GitHub API正常快进发布gh-pages，不强制覆盖分支历史。然后核对GitHub Pages构建成功与网站内容。若上传main的Git连接超时，可执行`node scripts/push-via-api.mjs`；它同样使用现有gh授权，核对文件和提交摘要，不输出或另存令牌。
 
 ## 每日更新
 
