@@ -97,7 +97,10 @@ export async function pushViaApi(options = {}) {
   const ensureBlob = async sha => {
     if (!uploadedBlobs.has(sha)) uploadedBlobs.set(sha, (async () => {
       const content = await gitBuffer(['cat-file', 'blob', sha]);
-      const result = await api('POST', `repos/${repo}/git/blobs`, { content: content.toString('base64'), encoding: 'base64' });
+      // 文本按原字节无损转UTF-8，缩小请求；二进制继续使用Base64。
+      const utf8 = content.toString('utf8');
+      const payload = Buffer.from(utf8).equals(content) ? { content: utf8, encoding: 'utf-8' } : { content: content.toString('base64'), encoding: 'base64' };
+      const result = await api('POST', `repos/${repo}/git/blobs`, payload);
       if (result.sha !== sha) throw new Error(`blob SHA不一致：${sha}`);
       stats.blobs++; return sha;
     })());

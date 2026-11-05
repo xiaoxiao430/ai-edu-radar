@@ -31,7 +31,7 @@ const local=new Map();
 async function walk(dir,prefix=''){for(const f of await fs.readdir(dir,{withFileTypes:true})){const rel=prefix+f.name;if(f.isDirectory())await walk(path.join(dir,f.name),rel+'/');else if(f.isFile()){const content=await fs.readFile(path.join(dir,f.name));const sha=crypto.createHash('sha1').update(Buffer.from(`blob ${content.length}\0`)).update(content).digest('hex');local.set(rel,{content,sha});}else throw new Error('发布目录含非常规文件，停止发布。');}}
 await walk(path.join(root,'dist'));
 const changes=[];
-for(const [name,file]of local){if(existing.get(name)===file.sha)continue;if(!knownBlobs.has(file.sha)){const uploaded=api('git/blobs','POST',{content:file.content.toString('base64'),encoding:'base64'});if(uploaded.sha!==file.sha)throw new Error('上传后的文件摘要不一致');knownBlobs.add(file.sha);uploadedBlobs++;}changes.push({path:name,mode:'100644',type:'blob',sha:file.sha});}
+for(const [name,file]of local){if(existing.get(name)===file.sha)continue;if(!knownBlobs.has(file.sha)){const utf8=file.content.toString('utf8');const payload=Buffer.from(utf8).equals(file.content)?{content:utf8,encoding:'utf-8'}:{content:file.content.toString('base64'),encoding:'base64'};const uploaded=api('git/blobs','POST',payload);if(uploaded.sha!==file.sha)throw new Error('上传后的文件摘要不一致');knownBlobs.add(file.sha);uploadedBlobs++;}changes.push({path:name,mode:'100644',type:'blob',sha:file.sha});}
 for(const name of existing.keys())if(!local.has(name))changes.push({path:name,mode:'100644',type:'blob',sha:null});
 let deploymentCommit=parent;
 if(changes.length){
