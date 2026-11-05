@@ -1,0 +1,76 @@
+{
+  "checkedAt": "2026-11-05",
+  "scope": "项目公开图像，仅用于本库项目说明和评论；页面代码许可不替代图像及原项目各自许可。",
+  "images": [
+    {
+      "path": "assets/images/picks-excalidraw.png",
+      "project": "excalidraw/excalidraw",
+      "type": "官方README截图",
+      "caption": "官方白板界面示例；图中的产品设计稿不是本校课例。",
+      "source": "https://excalidraw.nyc3.cdn.digitaloceanspaces.com/github%2Fproduct_showcase.png"
+    },
+    {
+      "path": "assets/images/picks-slidev.png",
+      "project": "slidevjs/slidev",
+      "type": "官方文档截图",
+      "caption": "官方演讲者视图：课件、备注和控制区。",
+      "source": "https://sli.dev/screenshots/presenter-mode.png"
+    },
+    {
+      "path": "assets/images/picks-anki.png",
+      "project": "ankitects/anki",
+      "type": "官方手册截图",
+      "caption": "官方学习概览：牌组内的新学、学习与复习数量。",
+      "source": "https://docs.ankiweb.net/manual/studying"
+    },
+    {
+      "path": "assets/images/picks-h5p.svg",
+      "project": "tunapanda/h5p-standalone",
+      "type": "教学用法示意图",
+      "caption": "自制教学流程示意，内部界面待补；不是项目操作截图。",
+      "source": "https://github.com/tunapanda/h5p-standalone"
+    },
+    {
+      "path": "assets/images/picks-hypothesis.png",
+      "project": "hypothesis/h",
+      "type": "官方演示动图截帧",
+      "caption": "官方网页中选择原文并高亮的演示帧，未在本校材料上实测。",
+      "source": "https://web.hypothes.is/wp-content/uploads/2025/03/comment.gif"
+    },
+    {
+      "path": "assets/images/picks-jupyterlite.png",
+      "project": "jupyterlite/jupyterlite",
+      "type": "官方README截图",
+      "caption": "官方JupyterLite演示：Notebook、图表与浏览器内核；不是本校实验。",
+      "source": "https://github.com/jupyterlite/jupyterlite/assets/591645/8cd26a4e-59db-4b34-bf9b-cd2e9cbc7f98"
+    },
+    {
+      "path": "assets/images/picks-frappe-lms.png",
+      "project": "frappe/lms",
+      "type": "官方README截图",
+      "caption": "官方课程测验示例；示例课程与人物来自项目公开演示。",
+      "source": "https://raw.githubusercontent.com/frappe/lms/develop/.github/quiz.png"
+    },
+    {
+      "path": "assets/images/picks-anythingllm.png",
+      "project": "Mintplex-Labs/anything-llm",
+      "type": "官方README演示动图截帧",
+      "caption": "官方桌面端文档问答演示帧；未使用本校资料。",
+      "source": "https://github.com/Mintplex-Labs/anything-llm/releases/download/v1.11.2/AnythingLLM720p.gif"
+    },
+    {
+      "path": "assets/images/picks-tesseract.png",
+      "project": "naptha/tesseract.js",
+      "type": "官方README演示动图截帧",
+      "caption": "官方英文印刷体OCR演示帧；不代表中文、手写或公式识别效果。",
+      "source": "https://raw.githubusercontent.com/naptha/tesseract.js/master/docs/images/demo.gif"
+    },
+    {
+      "path": "assets/images/picks-dify.png",
+      "project": "langgenius/dify",
+      "type": "官方仓库功能截图",
+      "caption": "官方工作流与Agent配置示例；图中模型为原示例，不是本次选定配置。",
+      "source": "https://raw.githubusercontent.com/langgenius/dify/main/images/describe.png"
+    }
+  ]
+}

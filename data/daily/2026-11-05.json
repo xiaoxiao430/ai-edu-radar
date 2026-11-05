@@ -1,0 +1,987 @@
+{
+  "date": "2026-11-05",
+  "verifiedAt": "2026-11-05T22:01:38+08:00",
+  "selectionNote": "首期基础精选：从仍可核对的成熟项目中，按跨学部教学适配、可小步验证和资料可追溯筛选10项。不是当日新发布榜，也不是本校实测排名。推荐次序为本次判断，项目原生功能与教学改造建议分别说明。",
+  "projects": [
+    {
+      "id": "repo:excalidraw/excalidraw",
+      "type": "project",
+      "title": "Excalidraw · 把思考过程画出来",
+      "repository": "excalidraw/excalidraw",
+      "url": "https://github.com/excalidraw/excalidraw",
+      "reviewStatus": "已核官方仓库、功能资料与许可；未在本校课堂实测",
+      "checkedAt": "2026-11-05",
+      "publicationType": "首期基础精选",
+      "summary": "开源图解白板，可改成历史因果图、地理关系图和小组解释任务。",
+      "category": "课堂互动",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "历史",
+        "地理",
+        "语文",
+        "综合实践"
+      ],
+      "priority": "建议先试",
+      "priorityReason": "可复用现有课堂大屏，先补学生解释与修改过程，投入比重建白板小。",
+      "effort": "中",
+      "why": [
+        "现有班级大屏已经能展示，补一块可保存的图解区即可支持学生上台解释。",
+        "初中历史可画事件因果链，地理可画气候与人类活动关系，贴合已选学科。",
+        "小学可用图片与箭头表达，高中增加依据与反例，能够共用同一工具底座。"
+      ],
+      "teaching": "学生先独立画一张关系图，讨论后在原图修改，并口头解释哪条关系发生了变化。",
+      "existing": "复用班务屏和课堂任务入口；将图解作为学习作品保存，不替换现有成长记录。",
+      "mvp": [
+        "教师从因果图、比较图、流程图三种模板开始一课任务。",
+        "学生或小组填写图形与箭头，保存初稿和修改稿。",
+        "导出PNG与原始图文件，附一段学生解释。"
+      ],
+      "acceptance": [
+        "一份图稿关闭页面后可以恢复，PNG与原始文件均可重新打开。",
+        "能并排查看初稿和修改稿，解释与对应图稿绑定。",
+        "触屏点选、撤销、中文输入和大屏缩放可用。"
+      ],
+      "limitations": [
+        "编辑器组件与官网整站能力不同，实时协作不能仅安装组件就视为完成。",
+        "本轮只核官方展示；尚未验证教室触控、中文输入与大班协作。"
+      ],
+      "commercial": "可积累分学科图解模板与教师带练服务，先验证学生解释质量的变化。",
+      "capabilities": [
+        "无限画布",
+        "图形与箭头",
+        "图片与图形库",
+        "导出PNG/SVG/原始图文件"
+      ],
+      "dependencies": [
+        "集成组件需要React与@excalidraw/excalidraw",
+        "多人同步需另行实现或采用对应整站方案"
+      ],
+      "promptNotes": [
+        "先检查既有大屏的组件框架和学习作品保存方式，再决定嵌入位置。",
+        "首版实现本机图稿与文件导出，暂不实现跨设备实时协作。",
+        "用历史因果链、地理关系图各一份示例验收，不能只交付空白画布。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C02",
+        "ot-scene-C34",
+        "ot-scene-C35"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "title": "官方仓库与功能说明",
+          "url": "https://github.com/excalidraw/excalidraw",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "组件集成文档",
+          "url": "https://docs.excalidraw.com/docs/@excalidraw/excalidraw/installation",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "许可原文",
+          "url": "https://github.com/excalidraw/excalidraw/blob/master/LICENSE",
+          "date": "2026-11-05"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/picks-excalidraw.png",
+          "type": "官方README截图",
+          "caption": "官方白板界面示例；图中的产品设计稿不是本校课例。",
+          "sourceUrl": "https://excalidraw.nyc3.cdn.digitaloceanspaces.com/github%2Fproduct_showcase.png"
+        }
+      ]
+    },
+    {
+      "id": "repo:slidevjs/slidev",
+      "type": "project",
+      "title": "Slidev · 可交互的学科课件",
+      "repository": "slidevjs/slidev",
+      "url": "https://github.com/slidevjs/slidev",
+      "reviewStatus": "已核官方仓库、功能资料与许可；未在本校课堂实测",
+      "checkedAt": "2026-11-05",
+      "publicationType": "首期基础精选",
+      "summary": "用Markdown与Vue制作网页课件，把图表、提问、板书和演示放进同一节课。",
+      "category": "备课与课件",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "英语",
+        "地理",
+        "历史",
+        "数学"
+      ],
+      "priority": "建议先试",
+      "priorityReason": "适合先做一节可复用的教学样课，已有学科平台能承接课件入口。",
+      "effort": "中",
+      "why": [
+        "初中英语、地理、历史已有先行方向，可先把一节课做成完整网页课例。",
+        "互动组件能放入原课件，避免老师在多个工具之间反复切换。",
+        "相同课件骨架可以换成小学图文任务或高中推理任务，教学内容分层、程序复用。"
+      ],
+      "teaching": "教师按任务展示材料，学生先答后看讲解；地理图表、历史时序和英语句式练习各作为一个可操作组件。",
+      "existing": "优先嵌入现有学科入口与大屏，不另建课件管理平台。",
+      "mvp": [
+        "一份含目标、材料、学生任务、讲评和出口题的课件。",
+        "加入一个可操作图表或答案揭示组件。",
+        "静态导出后通过现有网页入口打开，保留课件源文件。"
+      ],
+      "acceptance": [
+        "部署在子路径后图片、翻页、组件与刷新均正常。",
+        "每个互动环节有清楚的学生任务与反馈，不只展示动画。",
+        "课件源文件可修改，教师能用同模板制作第二课。"
+      ],
+      "limitations": [
+        "原生项目面向开发者，首次需要技术人员搭好模板。",
+        "静态课件本身不等于多人答题与成绩回传系统。"
+      ],
+      "commercial": "沉淀经试教的学科互动课件与制作培训，后续再考虑资源服务。",
+      "capabilities": [
+        "Markdown课件",
+        "嵌入Vue组件",
+        "演讲者视图",
+        "绘画批注",
+        "数学公式与图表",
+        "静态导出"
+      ],
+      "dependencies": [
+        "Node.js与构建环境",
+        "Vue组件",
+        "部署时配置正确的静态资源基础路径"
+      ],
+      "promptNotes": [
+        "首版只制作一节样课和可复用模板，不建设账号或课程商城。",
+        "先核对现有教学站点入口及部署子路径，避免资源路径失效。",
+        "交付源文件、静态页面和教师替换内容说明；界面统一微软雅黑。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C10",
+        "ot-scene-C32",
+        "ot-scene-C49",
+        "ot-scene-C53"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "title": "官方仓库与特性",
+          "url": "https://github.com/slidevjs/slidev",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "官方界面说明",
+          "url": "https://sli.dev/guide/ui",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "许可原文",
+          "url": "https://github.com/slidevjs/slidev/blob/main/LICENSE",
+          "date": "2026-11-05"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/picks-slidev.png",
+          "type": "官方文档截图",
+          "caption": "官方演讲者视图：课件、备注和控制区。",
+          "sourceUrl": "https://sli.dev/screenshots/presenter-mode.png"
+        }
+      ]
+    },
+    {
+      "id": "repo:ankitects/anki",
+      "type": "project",
+      "title": "Anki · 从听写延伸到间隔复习",
+      "repository": "ankitects/anki",
+      "url": "https://github.com/ankitects/anki",
+      "reviewStatus": "已核官方仓库、功能资料与许可；未在本校课堂实测",
+      "checkedAt": "2026-11-05",
+      "publicationType": "首期基础精选",
+      "summary": "成熟的间隔重复闪卡工具，适合借鉴为英语词汇、历史概念与错题复测。",
+      "category": "学科练习",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "英语",
+        "历史",
+        "语文",
+        "生物"
+      ],
+      "priority": "建议先试",
+      "priorityReason": "能承接现有听写与订正，先做少量优质卡片与复测记录即可验证。",
+      "effort": "低",
+      "why": [
+        "初中英语的词汇与句式能接在听写订正之后，减少一次完成后不再回看的情况。",
+        "历史与语文可以用概念解释、原文回忆卡，复用同一复习流程。",
+        "首版可导出CSV到现有Anki使用，无需重做成熟桌面软件。"
+      ],
+      "teaching": "先从真实易错词句挑20张卡，要求学生回忆后再揭示答案，隔日用新语境小题检查是否会用。",
+      "existing": "复用现有作业和复测流程；只增加卡片生成、教师审校与复习反馈。",
+      "mvp": [
+        "教师录入或导入词句、释义、例句和来源，审校后生成复习卡。",
+        "导出兼容Anki的CSV，并附学校自用的简单复习清单。",
+        "记录掌握与未掌握项，生成下一次复测所需题目清单。"
+      ],
+      "acceptance": [
+        "CSV导入Anki后中文、换行与例句列正确。",
+        "回忆与揭示答案分开，未掌握条目能再次出现。",
+        "卡片复习与新的纸笔题目分别记录，不把点选会了等同学会。"
+      ],
+      "limitations": [
+        "Anki主体是桌面程序，不是可直接嵌入网页的教学组件。",
+        "卡片质量和复习安排仍需教师审核；本轮未验证本校学习效果。",
+        "不同移动端产品与服务的费用和功能应另行核对。"
+      ],
+      "commercial": "先形成分单元词汇、概念与错题卡片资源，加教师复习指导服务。",
+      "capabilities": [
+        "问答卡片",
+        "间隔重复",
+        "图片与音频卡片",
+        "牌组管理",
+        "扩展插件"
+      ],
+      "dependencies": [
+        "使用现有Anki桌面端验证导入",
+        "若复用其源码需核对AGPL与附属组件许可"
+      ],
+      "promptNotes": [
+        "优先做卡片内容管线与CSV导出，不fork整套桌面客户端。",
+        "用一组英语词句与一组历史概念示例验收。",
+        "复习算法若另做简版须明确规则，不能冒称完整复刻Anki算法。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C17",
+        "ot-scene-C23",
+        "ot-scene-C25",
+        "ot-scene-C47"
+      ],
+      "license": "AGPL-3.0-or-later；部分组件另有许可",
+      "sources": [
+        {
+          "title": "官方桌面端仓库",
+          "url": "https://github.com/ankitects/anki",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "官方复习手册",
+          "url": "https://docs.ankiweb.net/manual/studying",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "许可与附属组件说明",
+          "url": "https://github.com/ankitects/anki/blob/main/LICENSE",
+          "date": "2026-11-05"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/picks-anki.png",
+          "type": "官方手册截图",
+          "caption": "官方学习概览：牌组内的新学、学习与复习数量。",
+          "sourceUrl": "https://docs.ankiweb.net/manual/studying"
+        }
+      ]
+    },
+    {
+      "id": "repo:tunapanda/h5p-standalone",
+      "type": "project",
+      "title": "H5P Standalone · 视频和练习嵌进课堂",
+      "repository": "tunapanda/h5p-standalone",
+      "url": "https://github.com/tunapanda/h5p-standalone",
+      "reviewStatus": "已核官方仓库、功能资料与许可；未在本校课堂实测",
+      "checkedAt": "2026-11-05",
+      "publicationType": "首期基础精选",
+      "summary": "在网页里播放H5P互动内容，可借鉴为带提问的视频、测验和课前学习任务。",
+      "category": "课堂互动",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "英语",
+        "历史",
+        "科学",
+        "综合实践"
+      ],
+      "priority": "建议先试",
+      "priorityReason": "可把已有视频材料改成有作答与反馈的任务，静态播放器适合小范围试用。",
+      "effort": "中",
+      "why": [
+        "班务大屏和教学网页已有入口，可先嵌入一个互动学习内容。",
+        "英语视频可停下来听辨和作答，历史材料可加入解释问题，内容更贴近教学目标。",
+        "同一播放器可跨学段使用，主要变化在内容难度和教师反馈。"
+      ],
+      "teaching": "给一段短视频设置两个关键问题，让学生先作答，再按反馈回看，课上解释自己的判断。",
+      "existing": "把互动任务嵌到现有学科页面，任务结果先本机保存或导出。",
+      "mvp": [
+        "使用一个来源清楚、可使用的H5P内容包完成网页播放。",
+        "收集关键作答事件并生成本机学习记录。",
+        "给教师提供换内容包、重置与导出说明。"
+      ],
+      "acceptance": [
+        "自托管内容包和依赖资源加载完整，页面子路径可用。",
+        "一次互动完成后可查看题目、作答和反馈，重复播放不混淆旧记录。",
+        "离线或资源缺失时明确提示具体问题。"
+      ],
+      "limitations": [
+        "该仓库是播放器，不包含完整课件编辑器和学校学习管理系统。",
+        "H5P内容及内容类型库有各自许可，播放器MIT不能代表所有素材许可。",
+        "云端进度保存需要自有后端；首版不承诺跨设备进度同步。"
+      ],
+      "commercial": "积累配套教学任务、互动内容制作与教师培训服务。",
+      "capabilities": [
+        "无需H5P应用服务器的内容播放",
+        "解压内容包加载",
+        "xAPI事件",
+        "可配置学习状态接口"
+      ],
+      "dependencies": [
+        "合法可用且依赖齐全的H5P内容包",
+        "播放器JS/CSS资源",
+        "若需持久化云端进度需另建接口"
+      ],
+      "promptNotes": [
+        "首版采用现成内容包与静态播放器，不开发完整H5P编辑器。",
+        "只用本机记录或导出验证作答流程，不把示例后端地址当已接入。",
+        "H5P实际截图暂缺，不能把本卡教学示意图视作项目界面。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C02",
+        "ot-scene-C26",
+        "ot-scene-C50"
+      ],
+      "license": "MIT（播放器）；内容包与内容类型另核",
+      "sources": [
+        {
+          "title": "项目仓库及使用说明",
+          "url": "https://github.com/tunapanda/h5p-standalone",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "H5P互动视频功能说明",
+          "url": "https://h5p.org/interactive-video",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "播放器许可原文",
+          "url": "https://github.com/tunapanda/h5p-standalone/blob/master/LICENSE",
+          "date": "2026-11-05"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/picks-h5p.svg",
+          "type": "教学用法示意图",
+          "caption": "自制教学流程示意，内部界面待补；不是项目操作截图。",
+          "sourceUrl": "https://github.com/tunapanda/h5p-standalone"
+        }
+      ]
+    },
+    {
+      "id": "repo:hypothesis/h",
+      "type": "project",
+      "title": "Hypothesis · 把共读变成可讨论的批注",
+      "repository": "hypothesis/h",
+      "url": "https://github.com/hypothesis/h",
+      "reviewStatus": "已核官方仓库、功能资料与许可；未在本校课堂实测",
+      "checkedAt": "2026-11-05",
+      "publicationType": "首期基础精选",
+      "summary": "网页与文档批注系统，适合借鉴到英语精读、历史史料分析和教师共同备课。",
+      "category": "阅读与写作",
+      "stages": [
+        "小学",
+        "初中",
+        "高中",
+        "职教大学"
+      ],
+      "subjects": [
+        "英语",
+        "历史",
+        "语文",
+        "地理"
+      ],
+      "priority": "建议先试",
+      "priorityReason": "与英语、历史的材料阅读紧密相关，先做一篇材料的批注任务即可观察。",
+      "effort": "中",
+      "why": [
+        "英语精读可让学生标出支持答案的原句，老师能看到判断依据。",
+        "历史史料可按事实、观点和疑问做批注，贴合论证训练。",
+        "教师也能在同一材料上共备，学生版与教研版复用底层锚定与回复逻辑。"
+      ],
+      "teaching": "每人选择一处原文、写出解释或疑问，再回复一位同学，课后根据讨论修改自己的结论。",
+      "existing": "先接现有英语与历史材料页，保留材料来源与已有班级入口。",
+      "mvp": [
+        "一篇材料支持选中文本并添加批注、标签和回复。",
+        "教师能筛选未解释清楚的问题，展示典型讨论。",
+        "保存材料版本与批注锚点，导出一课讨论记录。"
+      ],
+      "acceptance": [
+        "同一处文本的批注能正确定位，页面刷新后仍能恢复。",
+        "同伴回复与原批注关系清楚，不把批注次数当学习质量分数。",
+        "材料改版导致定位失效时保留原文片段并提示待重连。"
+      ],
+      "limitations": [
+        "h是服务端/API项目，完整界面还涉及hypothesis/client，不能只部署h就视作完整教学页。",
+        "自托管群组、身份与材料访问方式需要明确；首版可先做本机演示。",
+        "官方平台面向高校的产品与收费功能，不等于本校免费可直接全用。"
+      ],
+      "commercial": "先积累学科共读任务与教师引导方法，再评估阅读教学服务。",
+      "capabilities": [
+        "网页批注API",
+        "文本高亮",
+        "批注讨论",
+        "配套浏览器客户端"
+      ],
+      "dependencies": [
+        "完整集成需核对hypothesis/client",
+        "多人使用需身份、群组与数据保存",
+        "原文内容和版本保持稳定"
+      ],
+      "promptNotes": [
+        "先做一篇英语材料与一篇历史史料的本机样例，不直接替换整套网站。",
+        "区分原文、学生批注和AI建议；AI扩展不在原仓库能力中默认成立。",
+        "导出保留原文片段、定位信息、批注与回复，不只导出一串评论。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C18",
+        "ot-scene-C27",
+        "ot-scene-C35",
+        "ot-scene-C48"
+      ],
+      "license": "BSD-2-Clause（h仓库）；其他组件另核",
+      "sources": [
+        {
+          "title": "官方服务端仓库",
+          "url": "https://github.com/hypothesis/h",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "配套客户端仓库",
+          "url": "https://github.com/hypothesis/client",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "官方功能介绍",
+          "url": "https://web.hypothes.is/",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "许可原文",
+          "url": "https://github.com/hypothesis/h/blob/main/LICENSE",
+          "date": "2026-11-05"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/picks-hypothesis.png",
+          "type": "官方演示动图截帧",
+          "caption": "官方网页中选择原文并高亮的演示帧，未在本校材料上实测。",
+          "sourceUrl": "https://web.hypothes.is/wp-content/uploads/2025/03/comment.gif"
+        }
+      ]
+    },
+    {
+      "id": "repo:jupyterlite/jupyterlite",
+      "type": "project",
+      "title": "JupyterLite · 浏览器里的数据探究实验室",
+      "repository": "jupyterlite/jupyterlite",
+      "url": "https://github.com/jupyterlite/jupyterlite",
+      "reviewStatus": "已核官方仓库、功能资料与许可；未在本校课堂实测",
+      "checkedAt": "2026-11-05",
+      "publicationType": "首期基础精选",
+      "summary": "在浏览器中运行Notebook，可把地理、数学和科学数据做成可操作探究任务。",
+      "category": "学科探究",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "地理",
+        "数学",
+        "科学",
+        "信息技术",
+        "物理"
+      ],
+      "priority": "第二批",
+      "priorityReason": "适合概念与数据探究，但需要先准备好学生任务和浏览器兼容样例。",
+      "effort": "中",
+      "why": [
+        "地理课可以让学生改变数据、观察图表，再解释区域或气候关系。",
+        "高中自学候选场景可提供分步Notebook，让学生边预测边验证。",
+        "浏览器运行减少机房逐台安装的负担，教师可把同一实验换成不同学段任务。"
+      ],
+      "teaching": "给学生一份标注为教学示例的数据，先预测关系，再改参数、画图并写结论，教师用新数据检查迁移。",
+      "existing": "作为现有地理与理科站点中的一个实验入口，不重建课程管理。",
+      "mvp": [
+        "提供一个带说明、数据、可改参数与结论框的Notebook。",
+        "保留重置原始实验与下载成果功能。",
+        "静态托管并验证目标教室浏览器。"
+      ],
+      "acceptance": [
+        "首次加载、内核准备、运行和下载有明确状态。",
+        "刷新或误操作后可恢复或重新下载成果。",
+        "示例包在目标浏览器可运行，不依赖未支持的系统扩展。"
+      ],
+      "limitations": [
+        "并非所有Jupyter/Python包都能在浏览器内运行，需逐包核对。",
+        "初次下载内核与包可能较大，离线使用需单独准备缓存。",
+        "代码能运行不代表学生理解，需要配套预测、解释与迁移任务。"
+      ],
+      "commercial": "可发展学科探究实验与教师实施培训，先积累一组经试教的实验。",
+      "capabilities": [
+        "浏览器内Notebook",
+        "Wasm/Python内核",
+        "交互图表",
+        "本机文件保存与下载",
+        "静态托管"
+      ],
+      "dependencies": [
+        "支持WebAssembly的浏览器",
+        "选定并验证的内核和Python包",
+        "静态资源与首轮下载网络"
+      ],
+      "promptNotes": [
+        "首版用一份简小CSV和一个绘图实验，不建设完整Python教学平台。",
+        "将数据明确标注为教学示例，不伪装实测天气或学生数据。",
+        "交付可重置、可下载Notebook，以及目标浏览器兼容记录。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C32",
+        "ot-scene-C33",
+        "ot-scene-C34",
+        "ot-scene-C47"
+      ],
+      "license": "BSD-3-Clause",
+      "sources": [
+        {
+          "title": "官方仓库与兼容说明",
+          "url": "https://github.com/jupyterlite/jupyterlite",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "官方静态部署文档",
+          "url": "https://jupyterlite.readthedocs.io/en/stable/quickstart/deploy.html",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "许可原文",
+          "url": "https://github.com/jupyterlite/jupyterlite/blob/main/LICENSE",
+          "date": "2026-11-05"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/picks-jupyterlite.png",
+          "type": "官方README截图",
+          "caption": "官方JupyterLite演示：Notebook、图表与浏览器内核；不是本校实验。",
+          "sourceUrl": "https://github.com/jupyterlite/jupyterlite/assets/591645/8cd26a4e-59db-4b34-bf9b-cd2e9cbc7f98"
+        }
+      ]
+    },
+    {
+      "id": "repo:frappe/lms",
+      "type": "project",
+      "title": "Frappe Learning · 课程任务与阶段检查",
+      "repository": "frappe/lms",
+      "url": "https://github.com/frappe/lms",
+      "reviewStatus": "已核官方仓库、功能资料与许可；未在本校课堂实测",
+      "checkedAt": "2026-11-05",
+      "publicationType": "首期基础精选",
+      "summary": "开源学习管理系统，可借鉴其课程、测验、作业与学习进度的组织方式。",
+      "category": "自主学习",
+      "stages": [
+        "初中",
+        "高中",
+        "职教大学"
+      ],
+      "subjects": [
+        "英语",
+        "地理",
+        "历史",
+        "综合实践"
+      ],
+      "priority": "第二批",
+      "priorityReason": "适合高一自学与教师研修借鉴，但应先验证一个单元，不迁入整套平台。",
+      "effort": "高",
+      "why": [
+        "高一AI自学候选场景需要清楚的任务、检查和周进度，可参考它的课程层级。",
+        "教师研修也可把课例、练习和作业放进同一学习路径。",
+        "与现有成长平台衔接时只增加学习任务与验收，避免重新建立学生台账。"
+      ],
+      "teaching": "一个单元拆成少量学习任务，每个任务有材料、独立作答与教师反馈，单元结束做独立验收。",
+      "existing": "保留现有班级、成长与作业入口，先借鉴课程组织和测验流程。",
+      "mvp": [
+        "一个单元的章节、任务与学习要求。",
+        "一份小测和一次需教师评价的作业。",
+        "一页周进度与未完成任务提示，使用虚构示例身份。"
+      ],
+      "acceptance": [
+        "任务进度与实际完成条件对应，不以打开页面就算掌握。",
+        "作答、评分与教师反馈能对应到同一学习目标。",
+        "已有身份与记录如何对接在文档中明确，不重复录入。"
+      ],
+      "limitations": [
+        "整套Frappe Learning需要服务端及运维，不是GitHub Pages可直接运行的静态应用。",
+        "官方课程示例与效果不能直接当成本校实践结果。",
+        "源码使用与对外服务前需核对AGPL及依赖许可。"
+      ],
+      "commercial": "可评估学校学习路径实施、校本课程组织与教师培训服务。",
+      "capabilities": [
+        "课程章节",
+        "学习批次",
+        "测验与作业",
+        "课程进度",
+        "证书模板"
+      ],
+      "dependencies": [
+        "完整系统依赖Frappe Framework与数据库等服务",
+        "身份、课程与现有数据的接口映射",
+        "自托管或托管服务运维"
+      ],
+      "promptNotes": [
+        "首版制作单元学习路径原型，先不部署整个LMS。",
+        "用现有教学目标设计验收题，明确AI协助与学生独立完成的环节。",
+        "不得把学习进度直接换算为六好能力评分。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C11",
+        "ot-scene-C15",
+        "ot-scene-C45",
+        "ot-scene-C47"
+      ],
+      "license": "AGPL-3.0",
+      "sources": [
+        {
+          "title": "官方仓库与功能",
+          "url": "https://github.com/frappe/lms",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "官方文档",
+          "url": "https://docs.frappe.io/learning",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "许可原文",
+          "url": "https://github.com/frappe/lms/blob/develop/license.txt",
+          "date": "2026-11-05"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/picks-frappe-lms.png",
+          "type": "官方README截图",
+          "caption": "官方课程测验示例；示例课程与人物来自项目公开演示。",
+          "sourceUrl": "https://raw.githubusercontent.com/frappe/lms/develop/.github/quiz.png"
+        }
+      ]
+    },
+    {
+      "id": "repo:mintplex-labs/anything-llm",
+      "type": "project",
+      "title": "AnythingLLM · 有出处的教材与教研资料问答",
+      "repository": "Mintplex-Labs/anything-llm",
+      "url": "https://github.com/Mintplex-Labs/anything-llm",
+      "reviewStatus": "已核官方仓库、功能资料与许可；未在本校课堂实测",
+      "checkedAt": "2026-11-05",
+      "publicationType": "首期基础精选",
+      "summary": "将文档放进工作区后检索与问答，可改成教师资料助手或受教师控制的自学入口。",
+      "category": "自主学习",
+      "stages": [
+        "初中",
+        "高中",
+        "职教大学"
+      ],
+      "subjects": [
+        "英语",
+        "地理",
+        "历史",
+        "综合教研"
+      ],
+      "priority": "第二批",
+      "priorityReason": "适合资料检索与自学候选，但须先验证引用、资料范围和教师控制。",
+      "effort": "中",
+      "why": [
+        "教师共备资料较多，可先让工具定位原文与相关段落，减少反复找材料。",
+        "初中英语、地理、历史可以分别建少量已审资料，避免混合不同学科语境。",
+        "高一自学可采用提示、资料定位与独立验收流程，先验证后开放给学生。"
+      ],
+      "teaching": "学生先提出问题，工具给出相关资料与提示，学生回到原文形成回答，教师再用独立题检查。",
+      "existing": "先作为现有学科站点中的资料助手，不取代教师审核和原有成长反馈。",
+      "mvp": [
+        "用少量公开或已授权资料建立一个学科工作区。",
+        "回答保留原文引用，并在资料不足时明确说出。",
+        "教师维护资料清单，能撤下旧文件并重新验证回答。"
+      ],
+      "acceptance": [
+        "每个关键回答能打开对应原文位置或明确的文件出处。",
+        "资料中没有的知识不被伪装成资料结论。",
+        "删除或替换资料后重新检查，旧资料不继续误被引用。"
+      ],
+      "limitations": [
+        "问答需要已配置的模型与嵌入方案；本轮没有新增或调用付费API。",
+        "可本地部署不自动意味着所有配置都不出网，需逐项核对所选提供方。",
+        "检索命中与回答有出处仍不等于适合学生，需要教师审核。"
+      ],
+      "commercial": "先形成学科资料整理与教师支持服务，再评估校本知识库的部署维护。",
+      "capabilities": [
+        "文档工作区",
+        "检索增强问答",
+        "多模型连接",
+        "本地或自托管部署",
+        "引用与资料管理"
+      ],
+      "dependencies": [
+        "选定模型与嵌入提供方或本地模型",
+        "合法可用的学科文档",
+        "资料更新与访问范围管理"
+      ],
+      "promptNotes": [
+        "先做固定资料与引用流程原型，模型提供方、费用和凭据未明确前不自动接通API。",
+        "优先核对本校已有资料和学科入口，避免重复搭建通用聊天页。",
+        "给出资料充分、资料不足、相互冲突三组验收问题。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C09",
+        "ot-scene-C27",
+        "ot-scene-C47",
+        "ot-scene-C55"
+      ],
+      "license": "MIT",
+      "sources": [
+        {
+          "title": "官方仓库与功能",
+          "url": "https://github.com/Mintplex-Labs/anything-llm",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "官方文档",
+          "url": "https://docs.anythingllm.com/",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "许可原文",
+          "url": "https://github.com/Mintplex-Labs/anything-llm/blob/master/LICENSE",
+          "date": "2026-11-05"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/picks-anythingllm.png",
+          "type": "官方README演示动图截帧",
+          "caption": "官方桌面端文档问答演示帧；未使用本校资料。",
+          "sourceUrl": "https://github.com/Mintplex-Labs/anything-llm/releases/download/v1.11.2/AnythingLLM720p.gif"
+        }
+      ]
+    },
+    {
+      "id": "repo:naptha/tesseract.js",
+      "type": "project",
+      "title": "Tesseract.js · 先把印刷题干变成可编辑文字",
+      "repository": "naptha/tesseract.js",
+      "url": "https://github.com/naptha/tesseract.js",
+      "reviewStatus": "已核官方仓库、功能资料与许可；未在本校课堂实测",
+      "checkedAt": "2026-11-05",
+      "publicationType": "首期基础精选",
+      "summary": "浏览器可运行的OCR组件，可辅助整理印刷体讲义和练习图片，教师校对后再使用。",
+      "category": "作业与反馈",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "英语",
+        "语文",
+        "历史",
+        "地理"
+      ],
+      "priority": "第二批",
+      "priorityReason": "可减少教师重复录入印刷资料，但必须先验证中文与题目排版的识别质量。",
+      "effort": "中",
+      "why": [
+        "教师已有纸质讲义和图片练习时，可先做识别、校对与题目整理。",
+        "英语印刷材料与历史史料片段较适合小范围试用。",
+        "整理出的文字能进入现有备课与分层练习流程，不需另建批改系统。"
+      ],
+      "teaching": "教师上传一张印刷体练习图，识别后逐段校对，再形成可编辑题干和课堂任务；学生答案仍由既有流程处理。",
+      "existing": "兼容现有批阅工具；首版只补资料录入，不替换批改或评分。",
+      "mvp": [
+        "上传单张印刷体图片，显示识别进度与原图。",
+        "识别文字与原图对照校改，保留人工修改。",
+        "导出文本或题目草稿，并标明待核公式与表格。"
+      ],
+      "acceptance": [
+        "图片识别失败或语言资源未加载时给出明确状态。",
+        "人工修改不会被下一次识别悄悄覆盖。",
+        "用中文、英文、带公式三类样本分别说明准确与未覆盖部分。"
+      ],
+      "limitations": [
+        "不是手写作文评分器，不能把OCR直接说成会批改、会判断学业。",
+        "PDF需另外拆页，复杂表格和公式识别要专项验证。",
+        "官方动图为英文印刷体演示，本轮未测试本校中文材料。"
+      ],
+      "commercial": "可积累教师资料数字化与题目整理服务，先测净节省时间。",
+      "capabilities": [
+        "JavaScript OCR",
+        "多语言识别",
+        "浏览器Worker",
+        "文字与布局相关输出"
+      ],
+      "dependencies": [
+        "Wasm与Worker资源",
+        "所需语言模型文件",
+        "PDF拆页或公式处理需另选组件"
+      ],
+      "promptNotes": [
+        "严格限定首版为单张印刷体图片OCR，不自动扩成手写批改平台。",
+        "原图、识别草稿和教师修订三个层次分别保存。",
+        "只用合成练习图做开发样本，给出语言资源加载与内存失败处理。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C45",
+        "ot-scene-C49",
+        "ot-scene-C55"
+      ],
+      "license": "Apache-2.0",
+      "sources": [
+        {
+          "title": "官方仓库与能力限制",
+          "url": "https://github.com/naptha/tesseract.js",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "官方API说明",
+          "url": "https://github.com/naptha/tesseract.js/blob/master/docs/api.md",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "许可原文",
+          "url": "https://github.com/naptha/tesseract.js/blob/master/LICENSE.md",
+          "date": "2026-11-05"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/picks-tesseract.png",
+          "type": "官方README演示动图截帧",
+          "caption": "官方英文印刷体OCR演示帧；不代表中文、手写或公式识别效果。",
+          "sourceUrl": "https://raw.githubusercontent.com/naptha/tesseract.js/master/docs/images/demo.gif"
+        }
+      ]
+    },
+    {
+      "id": "repo:langgenius/dify",
+      "type": "project",
+      "title": "Dify · 把教师高频工作串成可复用流程",
+      "repository": "langgenius/dify",
+      "url": "https://github.com/langgenius/dify",
+      "reviewStatus": "已核官方仓库、功能资料与许可；未在本校课堂实测",
+      "checkedAt": "2026-11-05",
+      "publicationType": "首期基础精选",
+      "summary": "可视化AI应用与工作流平台，适合借鉴材料读取、任务生成、教师审校与输出的流程。",
+      "category": "教师与教研",
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中",
+        "高中",
+        "职教大学"
+      ],
+      "subjects": [
+        "综合教研",
+        "英语",
+        "地理",
+        "历史"
+      ],
+      "priority": "第二批",
+      "priorityReason": "流程复用价值较高，但应从一个教师高频任务开始，并先核对模型和许可条件。",
+      "effort": "高",
+      "why": [
+        "备课、作业设计与课后反馈能拆成清楚步骤，避免教师每次重新输入整段要求。",
+        "同一流程可以按学段替换教材、模板和评价标准，适合跨学部共备。",
+        "你后续做服务时可积累流程与教师培训方法，先验证具体任务是否省时可用。"
+      ],
+      "teaching": "先选‘一份教材材料生成任务单’：读取材料、生成草稿、教师审校、输出学生任务与验收题。",
+      "existing": "先承接现有教师工作台中的一个任务入口；已有工具能完成的步骤继续复用。",
+      "mvp": [
+        "定义一个固定输入模板和输出格式。",
+        "以可视化流程串起材料处理、草稿生成和教师确认。",
+        "保存一次运行的输入、草稿、修订与输出，便于教研复盘。"
+      ],
+      "acceptance": [
+        "缺教材信息时要求补齐，不自行编造教材事实。",
+        "教师确认前输出保持草稿状态，能修改与重新生成。",
+        "模型或节点失败时保留已完成内容，说明失败位置及费用范围。"
+      ],
+      "limitations": [
+        "完整平台需要服务端与模型配置，不能直接当静态网页组件。",
+        "Dify使用附加条件许可，多租户服务与品牌展示限制需在商业化前核准。",
+        "本轮未接模型或做学校业务实测，不能依据官方截图承诺效果。"
+      ],
+      "commercial": "先验证教师工作流模板与实施培训，再评估合适的部署和许可路线。",
+      "capabilities": [
+        "可视化工作流",
+        "检索增强流程",
+        "模型连接",
+        "应用发布接口",
+        "运行日志与调试"
+      ],
+      "dependencies": [
+        "服务端与运维环境",
+        "明确的模型与检索配置",
+        "工作流输入输出规范",
+        "自托管与商业服务许可核对"
+      ],
+      "promptNotes": [
+        "首版只设计并验证一个教师高频工作流，不搭通用教育Agent市场。",
+        "模型提供方和费用未选定前采用桩数据验证流程，不把密钥写入网页。",
+        "保留教师审校节点，并对实际部署版本重新核对许可和文档。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C10",
+        "ot-scene-C15",
+        "ot-scene-C48",
+        "ot-scene-C52"
+      ],
+      "license": "Dify Open Source License（基于Apache-2.0并含附加条件）",
+      "sources": [
+        {
+          "title": "官方仓库与功能",
+          "url": "https://github.com/langgenius/dify",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "官方工作流文档",
+          "url": "https://docs.dify.ai/en/guides/workflow",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "当前许可原文",
+          "url": "https://github.com/langgenius/dify/blob/main/LICENSE",
+          "date": "2026-11-05"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/picks-dify.png",
+          "type": "官方仓库功能截图",
+          "caption": "官方工作流与Agent配置示例；图中模型为原示例，不是本次选定配置。",
+          "sourceUrl": "https://raw.githubusercontent.com/langgenius/dify/main/images/describe.png"
+        }
+      ]
+    }
+  ]
+}

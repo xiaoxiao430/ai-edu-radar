@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "lastSuccessAt": "2026-11-05T13:56:49.314Z",
+  "latestDate": "2026-11-05",
+  "status": "ok",
+  "message": "首期基础精选；OurTeacher参考库保留原始核对日期。",
+  "dates": [
+    {
+      "date": "2026-11-05",
+      "path": "data/daily/2026-11-05.json",
+      "count": 10
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+  <rect width="1280" height="800" fill="#f5f1e9"/>
+  <g font-family="Microsoft YaHei" fill="#23372f">
+    <rect x="48" y="40" width="230" height="42" rx="6" fill="#e8ded0"/>
+    <text x="67" y="68" font-size="21">教学用法示意图</text>
+    <text x="48" y="133" font-size="37" font-weight="700">让视频学习有任务，也有反馈</text>
+    <text x="49" y="176" font-size="22" fill="#58675e">H5P Standalone 的教学改造思路 · 内部界面待补</text>
+    <rect x="48" y="218" width="710" height="399" rx="14" fill="#203c34"/>
+    <path d="M 348 355 L 348 474 L 449 414 Z" fill="#f5f1e9"/>
+    <text x="80" y="266" font-size="25" fill="#f5f1e9">一段短视频</text>
+    <text x="80" y="580" font-size="23" fill="#d4dfd7">听辨信息 / 观察现象 / 理解材料</text>
+    <rect x="793" y="218" width="438" height="399" rx="14" fill="#ffffff"/>
+    <text x="826" y="268" font-size="27" font-weight="700">停下来，先独立作答</text>
+    <text x="826" y="317" font-size="22">根据刚才的材料，你的判断是？</text>
+    <rect x="826" y="349" width="369" height="58" rx="7" fill="#e7eee9"/>
+    <circle cx="851" cy="378" r="10" fill="none" stroke="#607568" stroke-width="2"/>
+    <text x="875" y="386" font-size="21">选一个答案，并说出理由</text>
+    <rect x="826" y="424" width="369" height="112" rx="7" fill="#fcf3e7"/>
+    <text x="845" y="460" font-size="22" fill="#96521f">反馈后回看关键片段</text>
+    <text x="845" y="500" font-size="21" fill="#6f614f">课上再解释，教师检查理解</text>
+    <path d="M 139 678 H 1128" stroke="#b3beb4" stroke-width="3"/>
+    <g fill="#bc6636"><circle cx="139" cy="678" r="12"/><circle cx="460" cy="678" r="12"/><circle cx="791" cy="678" r="12"/><circle cx="1128" cy="678" r="12"/></g>
+    <g font-size="23"><text x="83" y="730">观看材料</text><text x="401" y="730">独立作答</text><text x="731" y="730">反馈重看</text><text x="1068" y="730">解释迁移</text></g>
+    <text x="48" y="780" font-size="18" fill="#6d786d">此图为自制教学流程，不是项目操作截图；实际能力以项目文档和内容包为准。</text>
+  </g>
+</svg>
