@@ -7,13 +7,15 @@ const read = async rel => JSON.parse(await fs.readFile(path.join(root, rel), 'ut
 const ourteacher = await read('data/ourteacher.json');
 const manifest = await read('data/manifest.json');
 const tutorials = await read('data/tutorials.json');
+const teachingMap = await read('data/teaching-map.json');
+const douyinCatalog = await read('data/douyin-catalog.json');
 const latestRef = manifest.dates.find(ref => ref.date === manifest.latestDate);
 if (!latestRef) throw new Error('manifest缺少latestDate对应的日报，不能制作快照。');
 const latestDaily = await read(latestRef.path);
 const snapshotNote = `本离线快照仅包含${manifest.latestDate}这一期精选及完整OurTeacher参考库；历史精选请打开在线网站。`;
 const snapshotManifest = { ...manifest, dates: [latestRef], snapshotScope: 'latest-edition', message: snapshotNote };
 const dailies = [{ ...latestDaily, selectionNote: `${latestDaily.selectionNote || ''}\n${snapshotNote}`.trim() }];
-const bundle = { ourteacher, tutorials, manifest: snapshotManifest, dailies };
+const bundle = { ourteacher, tutorials, teachingMap, douyinCatalog, manifest: snapshotManifest, dailies };
 const mimeTypes = { '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.gif': 'image/gif', '.avif': 'image/avif' };
 const imageCache = new Map();
 
@@ -35,6 +37,7 @@ async function inlineData(value) {
   if (value && typeof value === 'object') {
     const result = {};
     for (const [key, item] of Object.entries(value)) result[key] = typeof item === 'string' && (key === 'src' || key === 'icon') ? await inlineImage(item) : await inlineData(item);
+    if(typeof value.src==='string' && /^\.?\/?assets\/images\//.test(value.src)) result.originalSrc=value.src;
     return result;
   }
   return value;

@@ -183,6 +183,60 @@ if (manifest) {
   }
 }
 
+const teachingMap = await readJson('data/teaching-map.json');
+if (teachingMap) {
+  assert(teachingMap.schemaVersion === 1, '教学关系schemaVersion应为1');
+  assert(isText(teachingMap.scope), '教学关系缺少改造建议范围');
+  const knownIds = new Set([...(ourteacher?.scenes || []), ...(ourteacher?.tools || []), ...(ourteacher?.supplemental || [])].map(x => x.id));
+  for (const ref of manifest?.dates || []) {
+    const raw = await readJson(ref.path);
+    for (const r of raw?.projects || []) knownIds.add(r.id);
+  }
+  const sceneIds = new Set((ourteacher?.scenes || []).map(x => x.id));
+  const keys = new Set(), mapped = new Set();
+  assert(Array.isArray(teachingMap.placements), '教学位置应为数组');
+  for (const p of teachingMap.placements || []) {
+    assert(knownIds.has(p.recordId), `教学关系引用不存在的内容${p.recordId}`);
+    assert(sceneIds.has(p.sceneId), `教学关系引用不存在的场景${p.sceneId}`);
+    assert(stages.has(p.stage) && teachingMap.stageSubjects?.[p.stage]?.includes(p.subject), `${p.recordId}学科不属于对应学段`);
+    assert(p.sceneId !== 'ot-scene-C57' && p.sceneId !== 'ot-scene-C62', `${p.recordId}不应强行分配待核场景`);
+    const key = [p.recordId, p.stage, p.subject, p.sceneId].join('|');
+    assert(!keys.has(key), `教学关系重复${key}`); keys.add(key); mapped.add(p.recordId);
+    for (const k of ['goal','teacherAction','studentAction','output','basis']) assert(isText(p[k]), `${key}缺少${k}`);
+    assert(Array.isArray(p.acceptance) && p.acceptance.length && p.acceptance.every(isText), `${key}缺少验收建议`);
+  }
+  for (const r of ourteacher?.tools || []) assert(mapped.has(r.id), `${r.id}缺少教学位置关系`);
+  for (const [stage, profile] of Object.entries(teachingMap.stageProfiles || {})) {
+    assert(stages.has(stage), `未知学段${stage}`);
+    for (const k of ['goal','process','assessment']) assert(isText(profile[k]), `${stage}缺少教学差异${k}`);
+  }
+}
+const douyinCatalog = await readJson('data/douyin-catalog.json');
+if (douyinCatalog) {
+  assert(douyinCatalog.schemaVersion === 1, '抖音整理schemaVersion应为1');
+  assert(Array.isArray(douyinCatalog.items), '抖音整理items应为数组');
+  assert(isText(douyinCatalog.verifiedAt) && isText(douyinCatalog.scope), '抖音整理缺少核对日期或范围');
+  const items=douyinCatalog.items || [], c=douyinCatalog.coverage || {}, ids=new Set(), postIds=new Set();
+  const sceneIds=new Set((ourteacher?.scenes || []).map(x=>x.id));
+  const toolIds=new Set((ourteacher?.tools || []).map(x=>x.id));
+  for (const item of items) {
+    assert(isText(item.id) && !ids.has(item.id), '抖音记录ID缺少或重复'); ids.add(item.id);
+    assert(isText(item.title) && /^https?:\/\//.test(item.url || ''), `${item.id}缺少题名或公开来源`);
+    assert(['include','merge','exclude'].includes(item.decision), `${item.id}缺少筛选判断`);
+    if(item.postId){assert(/^\d+$/.test(item.postId) && !postIds.has(item.postId), `${item.id}原作品ID缺少或重复`);postIds.add(item.postId);}
+    if(item.decision==='include')assert(isText(item.valueReason) && item.relatedSceneIds?.length, `${item.id}缺少教学价值或场景关联`);
+    if(item.decision==='merge')assert(items.some(x=>x.id===item.duplicateOf&&x.decision==='include'), `${item.id}未合并到有效实用内容`);
+    for(const id of item.relatedToolIds || [])assert(toolIds.has(id), `${item.id}工具关联失效`);
+    for(const id of item.relatedSceneIds || [])assert(sceneIds.has(id), `${item.id}场景关联失效`);
+    for(const [i,im] of (item.images || []).entries())await validateImage(im, `${item.id}配图${i+1}`);
+  }
+  assert(c.discoveredCount===items.length,'抖音发现总数不对应记录');
+  for(const [key,decision] of [['includedCount','include'],['mergedCount','merge'],['excludedCount','exclude']])assert(c[key]===items.filter(x=>x.decision===decision).length, `抖音${key}计数不符`);
+  assert(typeof c.complete==='boolean', '抖音是否全量核对必须明确');
+  if(c.complete)assert(c.fullInventory && isText(c.fullInventory.source) && Number.isInteger(c.fullInventory.totalPosts) && c.fullInventory.totalPosts>0 && c.fullInventory.reviewedPosts===c.fullInventory.totalPosts, '全量核对须有完整作品清单来源及逐条对齐统计');
+  if(!c.complete)assert(isText(c.limitation) && isText(c.nextStep), '抖音未全量核对须说明范围及补齐方式');
+}
+
 for (const rel of ['index.html', 'style.css', 'app.js', 'README.md', 'DAILY_UPDATE.md']) {
   try { scan(await fs.readFile(path.join(root, rel), 'utf8'), rel); }
   catch { fail(`缺少文件：${rel}`); }
@@ -192,7 +246,7 @@ if (errors.length) {
   console.error(`检查未通过（${errors.length}项）：\n${errors.map(e => `- ${e}`).join('\n')}`);
   process.exitCode = 1;
 } else {
-  console.log(JSON.stringify({ status: 'ok', scenes: 62, mainTools: 338, supplemental: 48, media: 34, excludedTests: 2, dailyProjects: dailyCount, tutorials: tutorials?.items?.length || 0, warningCount: warnings.length }));
+  console.log(JSON.stringify({ status: 'ok', scenes: 62, mainTools: 338, supplemental: 48, media: 34, excludedTests: 2, dailyProjects: dailyCount, tutorials: tutorials?.items?.length || 0, teachingPlacements: teachingMap?.placements?.length || 0, douyinDiscovered: douyinCatalog?.items?.length || 0, warningCount: warnings.length }));
 }
 if (warnings.length) console.log([...new Set(warnings)].slice(0, 12).map(x => `提示：${x}`).join('\n'));
 
