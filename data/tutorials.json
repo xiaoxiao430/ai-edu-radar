@@ -1,0 +1,1012 @@
+{
+  "verifiedAt": "2026-11-05",
+  "scope": "本轮补充 22 条官方图文资料，来自官网公开工具帮助区链接的教程、模板和效果示例；不计入 338 项主目录，也不代表新增 22 项产品。已核对画面并合并共用教程。抖音维持原有 34 条公开索引资料；账号截图显示的 2394 件作品未完整获取。",
+  "coverage": {
+    "tutorialCount": 22,
+    "imageCount": 34,
+    "douyinFullArchive": false,
+    "douyinNote": "普通作品与分享页在本轮访问中返回校验页面，未绕过登录或访问限制，未获取全账号作品。",
+    "sourceNote": "日期表示本次核对日期；date 为 null 表示原始发布时间未取得，不用 CDN 路径日期代替发布时间。"
+  },
+  "items": [
+    {
+      "id": "ot-tutorial-A127",
+      "title": "语文同步作文批改：单元要求与批量入口",
+      "url": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/c850fd39/video_ourteacher%E8%AF%9D%E9%A2%98_%E4%BD%9C%E6%96%87%E6%89%B9..._0.mp4",
+      "summary": "教程实际展示选择年级和单元、设置报告内容，以及逐篇或班级批改入口。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方操作教程",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-00-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 32.0 秒：选择教材单元并显示习作要求；画面是语文工具。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/c850fd39/video_ourteacher%E8%AF%9D%E9%A2%98_%E4%BD%9C%E6%96%87%E6%89%B9..._0.mp4",
+          "timeSeconds": 32.0
+        },
+        {
+          "src": "assets/images/tutorials/source-00-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 97.6 秒：批改内容选择与班级名单入口。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/c850fd39/video_ourteacher%E8%AF%9D%E9%A2%98_%E4%BD%9C%E6%96%87%E6%89%B9..._0.mp4",
+          "timeSeconds": 97.6
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A127"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C21"
+      ],
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "语文"
+      ],
+      "why": "厚外可先在一个语文单元接入“教师审阅—学生修改—再次提交”，复用现有成长记录；小学与初高中分别设置写作目标，先保留教师决定权。",
+      "steps": [
+        "按本学期单元确定评价要求",
+        "用合成作文核对报告结构",
+        "教师修改意见后安排二次写作"
+      ],
+      "note": "多个语文、英语作文入口共用这一教程，画面明确为“语文同步作文批改”，因此图片只关联 A127；不能据此确认其他作文工具界面。未登录试用。",
+      "sourcePage": "https://www.ourteacher.cc/bot/127",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=127",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A204",
+      "title": "教室分贝管家：自习安静挑战与课件入口",
+      "url": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250423/b407f72496fc55ecf2efd157831b362c.mp4",
+      "summary": "教程画面展示自习安静挑战，以及通过课件超链接打开网页的方式。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方操作教程",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-02-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 45.5 秒：自习安静挑战页面；不是单词游戏画面。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250423/b407f72496fc55ecf2efd157831b362c.mp4",
+          "timeSeconds": 45.5
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A204"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C08"
+      ],
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "why": "厚外已有班务屏，可把它作为课堂秩序与学生自主管理的补充入口；先由班级讨论合适的安静标准，避免只比较音量。",
+      "steps": [
+        "核对教室麦克风与浏览器权限",
+        "设定一段自习观察时长",
+        "比较教师提醒次数并听取学生感受"
+      ],
+      "note": "官网多种教具链接到同一教程，实际核心画面为教室分贝/安静挑战。本条只关联 A204，不把画面当作单词 PK、点名或体育队列图。未实测分贝准确性。",
+      "sourcePage": "https://www.ourteacher.cc/bot/204",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=204",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A432",
+      "title": "AI 单词卡：场景图与词汇一起呈现",
+      "url": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/4ae79ac4/1111.jpg",
+      "summary": "官方帮助区提供带动作、人物和英语词汇的场景卡示例。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方效果示例",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-03.jpg",
+          "type": "官方效果示例图",
+          "caption": "官方展示的场景化单词卡效果；不是点读操作截图。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/4ae79ac4/1111.jpg"
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A432"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C23"
+      ],
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "英语"
+      ],
+      "why": "厚外英语学科可用已有单元词表制作可核对的情境卡；低年级认读，高年级描述场景，跨学部复用素材和教师审校流程。",
+      "steps": [
+        "选一组本单元核心词",
+        "逐个核对词形与图中含义",
+        "补一项口头描述或检索练习"
+      ],
+      "note": "示例只能确认官方展示的图片样式；点读交互、发音准确性和生成稳定性尚未实际试用。",
+      "sourcePage": "https://www.ourteacher.cc/bot/432",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=432",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A235",
+      "title": "历次考试质量分析：同学科多次成绩模板",
+      "url": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250428/1fc3d1754ad12f1254f793091b062257.png",
+      "summary": "官方图说明多次考试成绩怎样按列准备和上传。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方模板说明",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-04.png",
+          "type": "官方输入模板说明图",
+          "caption": "官方成绩输入模板说明；不是分析结果页。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250428/1fc3d1754ad12f1254f793091b062257.png"
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A235"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C46"
+      ],
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "why": "厚外跨学部可统一成绩导入格式，再由各学科解释变化；先复用现有教研数据，只分析同口径考试。",
+      "steps": [
+        "对齐考试名称和学生编号",
+        "用合成成绩验证缺考与重复数据",
+        "将变化转成一个后续教学行动"
+      ],
+      "note": "只核对了官方模板图片和适用说明，未上传成绩。不同试卷难度不能直接当作同一量尺比较。",
+      "sourcePage": "https://www.ourteacher.cc/bot/235",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=235",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A236",
+      "title": "多学科质量分析：一次考试的多科模板",
+      "url": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250428/c6451dcc878d68e0cf7a287e17272399.png",
+      "summary": "官方图展示多学科成绩整理的列结构和填写要求。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方模板说明",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-05.png",
+          "type": "官方输入模板说明图",
+          "caption": "官方多学科成绩模板标注；不是工具输出界面。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250428/c6451dcc878d68e0cf7a287e17272399.png"
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A236"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C46"
+      ],
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "why": "厚外年级组可用同一份结构讨论学生的学科差异；先服务教师会商，不给学生贴固定标签。",
+      "steps": [
+        "使用合成数据对应各学科字段",
+        "标明各科满分及缺考状态",
+        "给出教师可核对的学科支持建议"
+      ],
+      "note": "模板可核；多科分析指标、图表与解释质量尚未登录核对。",
+      "sourcePage": "https://www.ourteacher.cc/bot/236",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=236",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A240",
+      "title": "班级间质量分析：班级与成绩字段",
+      "url": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250428/432117d460cf1a527ffec209ac73ae1f.png",
+      "summary": "官方模板图说明单个或多个班级的同学科成绩如何整理。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方模板说明",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-06.png",
+          "type": "官方输入模板说明图",
+          "caption": "官方班级间比较的成绩输入模板说明。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250428/432117d460cf1a527ffec209ac73ae1f.png"
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A240"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C46"
+      ],
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "why": "厚外跨学部统筹可以复用同一导入和核对流程；班级比较须结合生源、进度和试卷情况，服务备课调整。",
+      "steps": [
+        "先核对同学科同次考试口径",
+        "检查班级人数与缺考",
+        "把差异对应到具体知识与教学安排"
+      ],
+      "note": "只核对输入模板；未验证统计实现。不把均分差异直接解释为教师教学质量。",
+      "sourcePage": "https://www.ourteacher.cc/bot/240",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=240",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A393",
+      "title": "高中质量分析：上线统计的输入示例",
+      "url": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/00cbd269/%E9%AB%98%E4%B8%AD%E8%B4%A8%E9%87%8F%E5%88%86%E6%9E%90%E7%A4%BA%E4%BE%8B.png",
+      "summary": "官方图提供高中成绩字段及相关设置示例，页面说明包含上线统计。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方模板说明",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-07.png",
+          "type": "官方输入模板说明图",
+          "caption": "官方高中质量分析输入示例；不是完整分析报告。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/00cbd269/%E9%AB%98%E4%B8%AD%E8%B4%A8%E9%87%8F%E5%88%86%E6%9E%90%E7%A4%BA%E4%BE%8B.png"
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A393"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C46"
+      ],
+      "stages": [
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "why": "厚外高中可先围绕一次考试核对分数线设置与统计人数；跨学部保留统一导入框架，高中单独配置指标。",
+      "steps": [
+        "明确本次考试的统计口径",
+        "用合成成绩手算上线人数",
+        "核对缺考、选科和边界分数"
+      ],
+      "note": "仅核对官方示例和功能说明，未实际上传或验证统计结果。",
+      "sourcePage": "https://www.ourteacher.cc/bot/393",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=393",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A100",
+      "title": "逐字稿：从已有教案到授课草稿",
+      "url": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241028/21bc6699faa7571da20fb175c5636bfa.mp4",
+      "summary": "视频展示上传教学资料、填写学科年级与时长，并展示生成的授课文字。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方操作教程",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-08-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 44.9 秒：逐字稿表单：学科、年级、资料上传和时长。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241028/21bc6699faa7571da20fb175c5636bfa.mp4",
+          "timeSeconds": 44.9
+        },
+        {
+          "src": "assets/images/tutorials/source-08-2.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 66.9 秒：教程中的逐字稿输出示例。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241028/21bc6699faa7571da20fb175c5636bfa.mp4",
+          "timeSeconds": 66.9
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A100"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C49"
+      ],
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "why": "厚外教研可复用已有教案和示范课资料，为新教师提供试讲草稿，再由导师审阅；减少重复录入，不替代教师备课。",
+      "steps": [
+        "上传一份已经审阅的样例教案",
+        "核对教学目标与讲授顺序",
+        "试讲后调整提问和学生回应"
+      ],
+      "note": "视频被“逐字稿”和“公开课逐字稿”共用，截图工具标题为“逐字稿”，只关联 A100。教程字幕和输入值可能存在差异，实际时长控制需核对。",
+      "sourcePage": "https://www.ourteacher.cc/bot/100",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=100",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A10",
+      "title": "大单元教学：输入课程内容与形成草稿",
+      "url": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240913/6f9e956c58c34d94ab703bad443a1d8b.mp4",
+      "summary": "教程以数学周长内容展示输入单元资料和生成大单元设计的过程。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方操作教程",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-09-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 24.5 秒：大单元输入表单与单元内容。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240913/6f9e956c58c34d94ab703bad443a1d8b.mp4",
+          "timeSeconds": 24.5
+        },
+        {
+          "src": "assets/images/tutorials/source-09-2.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 111.4 秒：教程中生成的大单元教学设计片段。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240913/6f9e956c58c34d94ab703bad443a1d8b.mp4",
+          "timeSeconds": 111.4
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A10"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C11"
+      ],
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "why": "厚外可用同一套“目标—学习任务—评价”结构推进跨学部教研；先试一个真实单元，保留教师对教材进度和学生基础的判断。",
+      "steps": [
+        "提供本单元教材与学情",
+        "核对单元任务和评价是否对应",
+        "由备课组审阅后试教一课时"
+      ],
+      "note": "已核对官方公开教程画面；未登录操作，未做真实课堂试用。画面为教程录制时版本，当前功能和使用条件需再核。",
+      "sourcePage": "https://www.ourteacher.cc/bot/10",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=10",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A179",
+      "title": "英语默写卡批改：答案、空白卡与学生作答",
+      "url": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250219/6439d75a9d6b2fb3d5577a8a4d940197.mp4",
+      "summary": "官方操作流程要求分别准备答案卡、空白卡和学生作答图，教程展示批量输入与结果。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方操作教程",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-10-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 16.6 秒：英语默写卡批改的学生作答上传入口。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250219/6439d75a9d6b2fb3d5577a8a4d940197.mp4",
+          "timeSeconds": 16.6
+        },
+        {
+          "src": "assets/images/tutorials/source-10-2.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 75.7 秒：教程展示的识别与批改文字。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250219/6439d75a9d6b2fb3d5577a8a4d940197.mp4",
+          "timeSeconds": 75.7
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A179"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C25",
+        "ot-scene-C45"
+      ],
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "英语"
+      ],
+      "why": "厚外英语组可以围绕统一默写纸，先验证识别准确率，再把错误词回到后续练习；学生端保留订正和重测环节。",
+      "steps": [
+        "用合成答卷准备三类图片",
+        "逐题比对人工判定与识别结果",
+        "仅把确认后的错词用于再次练习"
+      ],
+      "note": "已核对教程和三类图片要求；未验证真实手写识别准确率，不把示例结果当作准确率保证。",
+      "sourcePage": "https://www.ourteacher.cc/bot/179",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=179",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A21",
+      "title": "高情商回复：围绕具体沟通情境起草",
+      "url": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240909/020312a4ce58d537c8990c3dd6b9d70e.mp4",
+      "summary": "教程展示输入角色、接收对象和需要回复的内容，再生成候选回复。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方操作教程",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-11-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 13.0 秒：输入教师身份、沟通对象与原消息。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240909/020312a4ce58d537c8990c3dd6b9d70e.mp4",
+          "timeSeconds": 13.0
+        },
+        {
+          "src": "assets/images/tutorials/source-11-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 39.8 秒：官方教程中的候选回复片段。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240909/020312a4ce58d537c8990c3dd6b9d70e.mp4",
+          "timeSeconds": 39.8
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A21"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C44"
+      ],
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "why": "厚外班主任可先用于家校沟通草稿，衔接已确认的学生情况和下一步安排；各学部调整表达与沟通边界。",
+      "steps": [
+        "写清真实情况和已确认事实",
+        "生成一份简短候选回复",
+        "教师检查事实、承诺与语气后再使用"
+      ],
+      "note": "候选文字需要教师审阅；本平台不会自动向家长或其他人发送消息。",
+      "sourcePage": "https://www.ourteacher.cc/bot/21",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=21",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A440",
+      "title": "试卷转课件：官方使用说明",
+      "url": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/6eddc7b0/5.png",
+      "summary": "官方帮助图片介绍从试卷材料形成讲评课件的用法和输入材料范围。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方使用说明",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-12.png",
+          "type": "官方使用说明图",
+          "caption": "官方使用说明图，介绍材料与用法；不是生成后的课件截图。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/6eddc7b0/5.png"
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A440"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C49"
+      ],
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "why": "厚外学科组可复用现有试卷讲评材料，先抽取一道题检查题干、答案与解析，再决定是否扩展成整课。",
+      "steps": [
+        "只选一页不含学生信息的试卷",
+        "逐题核对图形、公式和答案",
+        "按教学目标调整讲评顺序"
+      ],
+      "note": "只确认公开帮助图，不确认所有格式均可稳定转换；公式、图形和答案需要人工复核。",
+      "sourcePage": "https://www.ourteacher.cc/bot/440",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=440",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A201",
+      "title": "AI 融合公开课：先上传教案，再选应用",
+      "url": "https://cos-file-cdn.ourschool.cc/uploads/mn/e/nkop4/20250507/02228e3b9e0dd3c75224955540d3e260.mp4",
+      "summary": "视频展示输入学科和已有教案，再衔接其他 AI 教学应用的流程。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方操作教程",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-13-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 11.7 秒：AI 融合公开课的学科与教案上传表单。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/mn/e/nkop4/20250507/02228e3b9e0dd3c75224955540d3e260.mp4",
+          "timeSeconds": 11.7
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A201"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C50"
+      ],
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "why": "厚外可在现有公开课教研中逐个讨论“哪一环节需要 AI”，先补一个真实教学难点，再由学科组观察学生表现。",
+      "steps": [
+        "提供已有教案和一项待改进环节",
+        "核对推荐应用与教学目标",
+        "预演并记录学生任务和教师判断"
+      ],
+      "note": "视频后段进入其他教具并出现生成中状态；本条只展示可明确核对的输入环节，不以生成中画面证明成品效果。",
+      "sourcePage": "https://www.ourteacher.cc/bot/201",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=201",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A154",
+      "title": "批量学生评语：表格输入与教师核对",
+      "url": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241202/a8f08402f2343163f8343f1982cf1c45.mp4",
+      "summary": "教程展示按模板准备学生特点、上传表格，并生成批量评语的过程。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方操作教程",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-14-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 65.2 秒：批量学生评语的文件上传界面。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241202/a8f08402f2343163f8343f1982cf1c45.mp4",
+          "timeSeconds": 65.2
+        },
+        {
+          "src": "assets/images/tutorials/source-14-2.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 97.1 秒：教程中的批量评语结果表。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241202/a8f08402f2343163f8343f1982cf1c45.mp4",
+          "timeSeconds": 97.1
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A154"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C05",
+        "ot-scene-C44"
+      ],
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "why": "厚外已有成长记录，可先选取经教师确认的行为记录作为输入；同一结构跨学部复用，评语体现具体进步和下一步建议。",
+      "steps": [
+        "保留模板表头，用合成学生数据核对",
+        "每条评语对应一项具体记录",
+        "教师逐条修改后导出"
+      ],
+      "note": "官网建议电脑操作，帮助区建议一次最多 45 条。仅核对公开教程；示例数量不代表已实测处理能力。",
+      "sourcePage": "https://www.ourteacher.cc/bot/154",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=154",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A12",
+      "title": "教案设计：围绕课题、年级与目标",
+      "url": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240910/2c856b9b4efa958c069a585b9592844b.mp4",
+      "summary": "教程展示填写课题和目标、提供教材内容，形成可继续调整的教案草稿。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方操作教程",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-15-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 25.3 秒：教案设计输入年级、目标和教材内容。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240910/2c856b9b4efa958c069a585b9592844b.mp4",
+          "timeSeconds": 25.3
+        },
+        {
+          "src": "assets/images/tutorials/source-15-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 77.3 秒：教程生成的教案草稿片段。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240910/2c856b9b4efa958c069a585b9592844b.mp4",
+          "timeSeconds": 77.3
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A12"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C10"
+      ],
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "why": "厚外备课组可以先统一课时目标和学生活动模板，再用已有优秀教案检查生成结果；不同学部各自维护难度和学情。",
+      "steps": [
+        "输入本课真实教学目标",
+        "核对活动是否让学生完成目标",
+        "由学科教师补材料和评价方式"
+      ],
+      "note": "已核对官方公开教程画面；未登录操作，未做真实课堂试用。画面为教程录制时版本，当前功能和使用条件需再核。",
+      "sourcePage": "https://www.ourteacher.cc/bot/12",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=12",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A120",
+      "title": "视频生观察记录：从活动片段整理观察",
+      "url": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241126/c322cab8b62be5d605bc541569b7bcf8.mp4",
+      "summary": "教程实际界面为“视频生观察记录”，展示观察目的、地点、模板和视频上传字段。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方操作教程",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-16-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 27.8 秒：视频生观察记录的观察目标与视频上传入口。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241126/c322cab8b62be5d605bc541569b7bcf8.mp4",
+          "timeSeconds": 27.8
+        },
+        {
+          "src": "assets/images/tutorials/source-16-2.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 126.5 秒：教程中的观察记录草稿。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241126/c322cab8b62be5d605bc541569b7bcf8.mp4",
+          "timeSeconds": 126.5
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A120"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C41"
+      ],
+      "stages": [
+        "幼儿园"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "why": "厚外户外成长已有基础，可先把教师选定的一段活动片段整理为可核对的观察草稿；幼小关注行为过程，中学可用于项目合作反思。",
+      "steps": [
+        "教师先选有明确观察目的的片段",
+        "把可见行为与解释分开记录",
+        "逐句对照片段并补后续支持"
+      ],
+      "note": "该视频被多种幼教观察工具共用，实际标题为视频生观察记录，因此只关联 A120。公开教程显示视频长度和大小要求，当前限制需再核。不自动推断儿童性格或发展结论。",
+      "sourcePage": "https://www.ourteacher.cc/bot/120",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=120",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A117",
+      "title": "活动教案：补充材料并生成活动草稿",
+      "url": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241125/ddf917e5dcc33ff270c2aa6ae48372fe.mp4",
+      "summary": "教程展示以活动名称、年龄段和具体材料辅助形成活动教案。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方操作教程",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-17-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 16.2 秒：活动教案的输入与材料提示。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241125/ddf917e5dcc33ff270c2aa6ae48372fe.mp4",
+          "timeSeconds": 16.2
+        },
+        {
+          "src": "assets/images/tutorials/source-17-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 49.5 秒：官方教程生成的活动流程片段。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241125/ddf917e5dcc33ff270c2aa6ae48372fe.mp4",
+          "timeSeconds": 49.5
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A117"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C42"
+      ],
+      "stages": [
+        "幼儿园"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "why": "厚外幼小活动与户外成长可先复用已有活动材料；跨学部统一目标、材料、学生任务和反馈结构，各自调整活动难度。",
+      "steps": [
+        "确定年龄段与可用材料",
+        "核对安全安排和学生实际任务",
+        "活动后补真实观察并修改方案"
+      ],
+      "note": "已核对官方公开教程画面；未登录操作，未做真实课堂试用。画面为教程录制时版本，当前功能和使用条件需再核。",
+      "sourcePage": "https://www.ourteacher.cc/bot/117",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=117",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A427",
+      "title": "故事生视频：三种官方成品示例",
+      "url": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/9ccb965c/1%E7%81%B0%E5%A7%91%E5%A8%98.mp4",
+      "summary": "官方展示灰姑娘、乌鸦喝水、后羿射日三段不同视觉风格的故事视频。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方生成效果示例",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-19-1.jpg",
+          "type": "官方生成效果视频截图",
+          "caption": "官方教程 29.3 秒：灰姑娘（水彩风）官方示例画面。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/9ccb965c/1%E7%81%B0%E5%A7%91%E5%A8%98.mp4",
+          "timeSeconds": 29.3
+        },
+        {
+          "src": "assets/images/tutorials/source-20-1.jpg",
+          "type": "官方生成效果视频截图",
+          "caption": "官方教程 29.5 秒：乌鸦喝水（线稿风）官方示例画面。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/148d9e87/1%E4%B9%8C%E9%B8%A6%E5%96%9D%E6%B0%B4.mp4",
+          "timeSeconds": 29.5
+        },
+        {
+          "src": "assets/images/tutorials/source-21-1.jpg",
+          "type": "官方生成效果视频截图",
+          "caption": "官方教程 29.6 秒：后羿射日（水墨风）官方示例画面。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/afaccf26/2%E5%90%8E%E7%BE%BF%E5%B0%84%E6%97%A5.mp4",
+          "timeSeconds": 29.6
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A427"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C54"
+      ],
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "why": "厚外语文与英语可把视频作为复述、改写和多模态表达的材料；先由教师核对故事内容，再安排学生比较文字与画面的差异。",
+      "steps": [
+        "选择短篇故事和明确学习目标",
+        "核对情节、人物与旁白",
+        "安排复述、改写或分镜比较任务"
+      ],
+      "note": "三个视频是同一工具的不同样例，合并为一条资料，未按三项工具重复计数。仅确认官方示例，不保证每次生成效果；需核对版权和素材可用范围。",
+      "sourcePage": "https://www.ourteacher.cc/bot/427",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=427",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A436",
+      "title": "简笔画多种画法：同一主题的不同表达",
+      "url": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/0b2cc015/%E5%A4%A7%E6%A0%914.jpg",
+      "summary": "官方示例用大树展示几种结构和着色方式。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方效果示例",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-22.jpg",
+          "type": "官方效果示例图",
+          "caption": "官方大树多种画法示例；不是操作界面。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/0b2cc015/%E5%A4%A7%E6%A0%914.jpg"
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A436"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C39"
+      ],
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "美术"
+      ],
+      "why": "厚外美术与低年级课程可用于观察比较和自主选择；结合户外成长中的真实植物观察，让学生先看实物再创作。",
+      "steps": [
+        "选择校园可观察的主题",
+        "比较几种结构与细节",
+        "学生独立画出自己的版本"
+      ],
+      "note": "仅核对示例图；不同主题的生成质量尚未试用。",
+      "sourcePage": "https://www.ourteacher.cc/bot/436",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=436",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A437",
+      "title": "简笔画分步骤教程：把绘画过程拆开",
+      "url": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/7b3f3215/hua2.jpg",
+      "summary": "官方示例把一朵花拆成连续绘画步骤。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方效果示例",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-23.jpg",
+          "type": "官方效果示例图",
+          "caption": "官方花朵分步绘画示例；不是操作截图。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/7b3f3215/hua2.jpg"
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A437"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C39"
+      ],
+      "stages": [
+        "幼儿园",
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "美术"
+      ],
+      "why": "厚外幼小美术可以用于分步示范，完成后再让学生改变花瓣、颜色或构图；跨学部可复用图解表达的方法。",
+      "steps": [
+        "核对每步是否清楚可完成",
+        "由学生试着复述步骤",
+        "增加一步自主变化"
+      ],
+      "note": "示例用于观察步骤组织，不把临摹完成度等同于美术素养。",
+      "sourcePage": "https://www.ourteacher.cc/bot/437",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=437",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A438",
+      "title": "英语课本点读：先把上传照片拍清楚",
+      "url": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/7bb20ce7/111.jpg",
+      "summary": "官方图给出教材页面拍摄样例，帮助准备点读输入材料。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方输入说明",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-24.jpg",
+          "type": "官方上传材料示例",
+          "caption": "官方教材上传照片示例，只展示输入材料；不是点读完成页。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/7bb20ce7/111.jpg"
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A438"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C23"
+      ],
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "英语"
+      ],
+      "why": "厚外英语学科可围绕现有教材准备一页试点材料，先核对朗读与单词对应，再进入学生自主练习。",
+      "steps": [
+        "准备清楚且完整的一页教材",
+        "逐句核对识别和朗读",
+        "教师确认后设计跟读或听辨任务"
+      ],
+      "note": "该图片只能说明上传拍摄方式，不证明点读交互或发音质量。教材内容使用范围需由教师核对。",
+      "sourcePage": "https://www.ourteacher.cc/bot/438",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=438",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    },
+    {
+      "id": "ot-tutorial-A447",
+      "title": "人物故事模拟器：三打白骨精情境示例",
+      "url": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/7b2a733c/%E4%B8%89%E6%89%93%E7%99%BD%E9%AA%A8%E7%B2%BE.mp4",
+      "summary": "官方示例展示以课文人物和情节构成的互动情境，并呈现体验结束界面。",
+      "date": null,
+      "verifiedAt": "2026-11-05",
+      "sourceType": "官方互动效果示例",
+      "images": [
+        {
+          "src": "assets/images/tutorials/source-25-1.jpg",
+          "type": "官方互动效果视频截图",
+          "caption": "官方教程 65.6 秒：三打白骨精情境中的人物与选择画面。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/7b2a733c/%E4%B8%89%E6%89%93%E7%99%BD%E9%AA%A8%E7%B2%BE.mp4",
+          "timeSeconds": 65.6
+        },
+        {
+          "src": "assets/images/tutorials/source-25-2.jpg",
+          "type": "官方互动效果视频截图",
+          "caption": "官方教程 97.7 秒：官方情境示例的体验结束页面。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/7b2a733c/%E4%B8%89%E6%89%93%E7%99%BD%E9%AA%A8%E7%B2%BE.mp4",
+          "timeSeconds": 97.7
+        }
+      ],
+      "relatedToolIds": [
+        "ot-tool-A447"
+      ],
+      "relatedSceneIds": [
+        "ot-scene-C35"
+      ],
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "历史"
+      ],
+      "why": "厚外语文组可先选一段情节，让学生说明人物选择的文本依据；结合课前阅读和课后讨论，避免只完成点击。",
+      "steps": [
+        "选择情节清楚的短文本",
+        "为每次选择写出原文依据",
+        "体验后讨论叙述和人物判断"
+      ],
+      "note": "只核对官方录屏，未实际操作互动。官方说明提到下载后可编辑，编辑格式与稳定性尚待试用。",
+      "sourcePage": "https://www.ourteacher.cc/bot/447",
+      "sourceApi": "https://api.ourteacher.cc/api/ai_app/get_ai_app?id=447",
+      "trialStatus": "仅公开资料与画面核对，非实际试用"
+    }
+  ]
+}

@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#173d32">
-  <meta name="description" content="每天精选AI教育项目。看图、比较、选择教学场景，整理优先顺序，生成可复制的开发Prompt。">
-  <title>AI教育项目精选库 · 开发选择台</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='18' width='64' height='64' fill='%23173d32'/%3E%3Cpath d='M16 19h14v28H16zm18 0h14v28H34z' fill='%23e8d7a8'/%3E%3Cpath d='M20 25h6m12 0h6' stroke='%23173d32' stroke-width='3'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#B22A30">
+  <meta name="description" content="厚外AI教育项目精选平台：每日10精选、338项教学功能参考与62类教育场景，图文比较、勾选排期、生成开发Prompt。">
+  <title>厚外AI教育项目精选平台 · 项目大全与开发选择</title>
+  <link rel="icon" type="image/png" href="assets/images/brand/houwai-emblem.png">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <a class="skip-link" href="#content">跳到内容</a>
   <header class="masthead">
-    <a href="#today" class="brand" aria-label="AI教育项目精选库首页"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span><strong>AI教育项目精选库</strong><small>看项目 · 选场景 · 开始开发</small></span></a>
+    <a href="#catalog" class="brand" aria-label="厚外AI教育项目精选平台首页"><img class="brand-logo" src="assets/images/brand/houwai-emblem.png" alt="厚外校徽"><span><strong>厚外<span class="brand-ai">AI</span>教育项目精选平台</strong><small>做懂的教育 · 从课堂需要出发</small></span></a>
     <nav class="top-nav" aria-label="主导航">
-      <a href="#today" data-nav="today">今日10精选</a><a href="#scenes" data-nav="scenes">教育场景</a><a href="#library" data-nav="library">OurTeacher参考库</a><a href="#queue" data-nav="queue">我的开发清单 <span id="nav-count">0</span></a>
+      <a href="#catalog" data-nav="catalog">项目大全</a><a href="#today" data-nav="today">今日10精选</a><a href="#scenes" data-nav="scenes">62类教育场景</a><a href="#library" data-nav="library">OurTeacher图文库</a><a href="#queue" data-nav="queue">我的开发清单 <span id="nav-count">0</span></a>
     </nav>
     <button class="plain icon-button" id="settings-button" aria-label="设置与备份" title="设置与备份">设置与备份</button>
   </header>
   <div id="storage-warning" class="notice error" hidden role="alert"></div>
   <main id="content" tabindex="-1">
     <section class="hero" id="hero"></section>
+    <div class="brand-strip" aria-label="厚外育人理念"><strong>厚外六好</strong><span>品德好</span><span>学习好</span><span>身心好</span><span>气质好</span><span>劳动好</span><span>特长好</span><small>让学业与综合素质共同成长</small></div>
     <section class="workspace" aria-label="项目浏览与选择">
       <aside class="filters" id="filters"></aside>
       <div class="results-area">
@@ -29,9 +30,9 @@
         <div id="pagination"></div>
       </div>
     </section>
-    <footer class="site-footer"><div><strong>从一节真实的课开始。</strong><p>把工具放进教学过程，再观察学生与教师的变化。</p></div><div class="footer-links"><button id="refresh-button" class="text-button">刷新内容</button><button id="update-request-button" class="text-button">复制补更请求</button><a href="./downloads/ai-edu-radar.html" download>下载HTML快照</a><a href="https://github.com/xiaoxiao430/ai-edu-radar" target="_blank" rel="noopener noreferrer">GitHub</a></div><p class="footer-note" id="update-status">每日精选安排在北京时间08:30，由当前Mac与Codex运行。</p></footer>
+    <footer class="site-footer"><div><strong>厚外 · 做懂的教育</strong><p>把工具放进教学过程，再观察学生与教师的变化。</p></div><div class="footer-links"><button id="refresh-button" class="text-button">刷新内容</button><button id="update-request-button" class="text-button">复制补更请求</button><a href="./downloads/ai-edu-radar.html" download>下载HTML快照</a><a href="https://github.com/xiaoxiao430/ai-edu-radar" target="_blank" rel="noopener noreferrer">GitHub</a></div><p class="footer-note" id="update-status">每日精选安排在北京时间08:30，由当前Mac与Codex运行。</p></footer>
   </main>
-  <section class="selection-dock" aria-label="已选内容"><div><span class="dock-dot"></span><strong id="dock-count">还没有选择内容</strong><span id="dock-caption">先勾选感兴趣的项目或场景</span></div><div><button id="export-button" class="secondary">导出选择</button><button id="prompt-button" class="primary">生成开发Prompt <span aria-hidden="true">↗</span></button></div></section>
+  <section class="selection-dock" aria-label="已选内容"><div><span class="dock-dot"></span><strong id="dock-count">还没有选择内容</strong><span id="dock-caption">从项目大全中勾选，整理厚外开发计划</span></div><div><button id="export-button" class="secondary">导出选择</button><button id="prompt-button" class="primary">生成开发Prompt <span aria-hidden="true">↗</span></button></div></section>
   <dialog id="detail-dialog" class="detail-dialog" aria-label="内容详情"><button class="dialog-close" data-close="detail-dialog" aria-label="关闭详情">×</button><div id="detail-content"></div></dialog>
   <dialog id="prompt-dialog" class="prompt-dialog" aria-label="开发Prompt"><div class="dialog-heading"><div><small>根据当前选择整理</small><h2>把想法交给开发工具</h2></div><button class="dialog-close" data-close="prompt-dialog" aria-label="关闭Prompt">×</button></div><div id="prompt-context"></div><textarea id="prompt-output" spellcheck="false" aria-label="可编辑的开发Prompt"></textarea><div class="dialog-actions"><button id="copy-prompt" class="primary">复制Prompt</button><button id="download-prompt" class="secondary">下载Markdown</button><span>可以直接交给Codex、Claude或Cursor；不会自动执行开发。</span></div></dialog>
   <dialog id="image-dialog" class="image-dialog" aria-label="查看大图"><button class="dialog-close" data-close="image-dialog" aria-label="关闭图片">×</button><img id="large-image" alt=""><p id="large-image-caption"></p><a id="large-image-source" target="_blank" rel="noopener noreferrer">查看图片来源</a></dialog>
@@ -39,6 +40,7 @@
   <input id="import-file" type="file" accept="application/json,.json" hidden>
   <div id="toast" role="status" aria-live="polite"></div>
   <noscript><p class="notice">请启用JavaScript以使用筛选、勾选和Prompt生成。你的选择仅保存在当前浏览器。</p></noscript>
+  <template id="brand-art"><img class="brand-mascot" src="assets/images/brand/houde-mascot.png" alt="厚外厚德娃欢迎你"></template>
   <script src="./app.js" defer></script>
 </body>
 </html>
