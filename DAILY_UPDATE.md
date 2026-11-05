@@ -16,7 +16,7 @@
 6. 图片优先采用README实图、公开演示界面或官方教程封面，下载至 `assets/images/`。尽量使用静态截图，按展示尺寸适当压缩并保持文字可读，目标单图不超过200KB；确需较大尺寸的复杂实图可放宽到500KB。演示动图截取实际关键帧并标明，不保存大GIF或未引用的研究原图。保留来源与类型；没有实图时使用明确标注的教学用法示意，注明内部界面待补。Logo仅作小标识。
 7. 写入当日JSON，完整检查后再更新manifest。继续保留所有历史日报；当天重跑更新同一份文件，不增加重复日期。
 8. 运行校验、构建及相关浏览器检查。通过后仅提交公开页面、资料、配图、发布脚本；不提交个人选择、私有目录、真实师生信息或凭据。
-9. 提交并使用`git push -4 origin main`推送源文件；Git传输超时可改用`node scripts/push-via-api.mjs`，它通过现有gh授权正常快进提交main，逐一核对文件与提交摘要，不读出或显示令牌。源文件上传成功后执行`node scripts/publish-pages.mjs`，通过同一GitHub API通道发布gh-pages，由GitHub内置的“pages build and deployment”Actions上线。等待输出deploymentCommit对应的工作流成功，核对上线页面的日期和新增项目。发布失败时不要把失败记成成功；保留原有有效版本，说明失败环节。不要向.github/workflows写入模板，当前授权不含自定义workflow写权限。
+9. 提交后优先使用`node scripts/push-via-api.mjs`上传源文件main；它通过现有gh授权正常快进提交，逐一核对文件与提交摘要，文字按无损UTF-8传输，不读出或显示令牌。当前Git直推存在传输或commit_refs_rules异常，不把它作为默认通道。源文件上传成功后执行`node scripts/publish-pages.mjs`，通过同一GitHub API通道发布gh-pages，由GitHub内置的“pages build and deployment”Actions上线。等待输出deploymentCommit对应的工作流成功，核对上线页面的日期和新增项目。发布失败时不要把失败记成成功；保留原有有效版本，说明失败环节。不要向.github/workflows写入模板，当前授权不含自定义workflow写权限。
 
 首次创建每日任务由主交付流程完成；以后复用同一个自动化任务，不再创建重名任务，不改动其他用途的自动化。
 
