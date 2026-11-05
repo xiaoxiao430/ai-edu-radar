@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="864" height="486" viewBox="0 0 864 486" role="img" aria-label="考后反思与AI自学教学用法示意图">
+    <rect width="864" height="486" fill="#f4f2ec"/>
+    <g font-family="Microsoft YaHei" fill="#263b3c"><rect x="48" y="28" width="130" height="28" rx="14" fill="#436b50"/><text x="113" y="47" text-anchor="middle" fill="white" font-size="13">教学用法示意图</text>
+    <text x="816" y="47" text-anchor="end" font-size="13" fill="#697775">C47 · 学情与自主学习</text><text x="48" y="91" font-size="26" font-weight="700">考后反思与AI自学</text>
+    <text x="48" y="150" font-size="15" fill="#697775">初中 / 高中 · 从具体学习任务到反馈改进</text>
+    <g><rect x="48" y="195" width="232" height="162" rx="16" fill="white" stroke="#436b50" stroke-opacity=".23"/>
+        <circle cx="82" cy="234" r="16" fill="#436b50"/><text x="82" y="240" text-anchor="middle" fill="white" font-size="15">1</text>
+        <text x="71" y="282" font-size="19" font-weight="700">按目标先自学</text>
+        <text x="71" y="308" font-size="17" fill="#6b7475">先有明确任务</text>
+        <path d="M 72 330 h 90 m 12 0 h 30" stroke="#436b50" stroke-opacity=".27" stroke-width="5" stroke-linecap="round"/></g><path d="M 285 274 h 10 m -4 -5 l 5 5 -5 5" fill="none" stroke="#436b50" stroke-width="2"/><g><rect x="300" y="195" width="232" height="162" rx="16" fill="white" stroke="#436b50" stroke-opacity=".23"/>
+        <circle cx="334" cy="234" r="16" fill="#436b50"/><text x="334" y="240" text-anchor="middle" fill="white" font-size="15">2</text>
+        <text x="323" y="282" font-size="19" font-weight="700">分步求助与练习</text>
+        <text x="323" y="308" font-size="17" fill="#6b7475">保留实际过程</text>
+        <path d="M 324 330 h 90 m 12 0 h 30" stroke="#436b50" stroke-opacity=".27" stroke-width="5" stroke-linecap="round"/></g><path d="M 537 274 h 10 m -4 -5 l 5 5 -5 5" fill="none" stroke="#436b50" stroke-width="2"/><g><rect x="552" y="195" width="232" height="162" rx="16" fill="white" stroke="#436b50" stroke-opacity=".23"/>
+        <circle cx="586" cy="234" r="16" fill="#436b50"/><text x="586" y="240" text-anchor="middle" fill="white" font-size="15">3</text>
+        <text x="575" y="282" font-size="19" font-weight="700">独立验收并复盘</text>
+        <text x="575" y="308" font-size="17" fill="#6b7475">回看学习变化</text>
+        <path d="M 576 330 h 90 m 12 0 h 30" stroke="#436b50" stroke-opacity=".27" stroke-width="5" stroke-linecap="round"/></g>
+    <path d="M48 426 H816" stroke="#d7dcd4"/><text x="48" y="456" font-size="13" fill="#6c7772">根据公开目录与教学建议绘制，非 OurTeacher 操作截图</text>
+    <text x="816" y="456" text-anchor="end" font-size="13" fill="#436b50">内部界面待补</text></g></svg>

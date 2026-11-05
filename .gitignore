@@ -1,0 +1,14 @@
+node_modules/
+dist/
+downloads/
+qa/
+.DS_Store
+.env
+.env.*
+*.log
+*.tmp
+selection*.json
+*-selection-backup.json
+private/
+local-state/
+

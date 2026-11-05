@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173d32">
+  <meta name="description" content="每天精选AI教育项目。看图、比较、选择教学场景，整理优先顺序，生成可复制的开发Prompt。">
+  <title>AI教育项目精选库 · 开发选择台</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='18' width='64' height='64' fill='%23173d32'/%3E%3Cpath d='M16 19h14v28H16zm18 0h14v28H34z' fill='%23e8d7a8'/%3E%3Cpath d='M20 25h6m12 0h6' stroke='%23173d32' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">跳到内容</a>
+  <header class="masthead">
+    <a href="#today" class="brand" aria-label="AI教育项目精选库首页"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span><strong>AI教育项目精选库</strong><small>看项目 · 选场景 · 开始开发</small></span></a>
+    <nav class="top-nav" aria-label="主导航">
+      <a href="#today" data-nav="today">今日10精选</a><a href="#scenes" data-nav="scenes">教育场景</a><a href="#library" data-nav="library">OurTeacher参考库</a><a href="#queue" data-nav="queue">我的开发清单 <span id="nav-count">0</span></a>
+    </nav>
+    <button class="plain icon-button" id="settings-button" aria-label="设置与备份" title="设置与备份">设置与备份</button>
+  </header>
+  <div id="storage-warning" class="notice error" hidden role="alert"></div>
+  <main id="content" tabindex="-1">
+    <section class="hero" id="hero"></section>
+    <section class="workspace" aria-label="项目浏览与选择">
+      <aside class="filters" id="filters"></aside>
+      <div class="results-area">
+        <div class="results-toolbar"><div id="result-summary" role="status"></div><div class="view-toggle" aria-label="显示方式"><button data-view="cards" aria-pressed="true">图文</button><button data-view="table" aria-pressed="false">表格</button></div></div>
+        <div id="results" aria-live="polite"><div class="loading">正在整理项目与场景…</div></div>
+        <div id="pagination"></div>
+      </div>
+    </section>
+    <footer class="site-footer"><div><strong>从一节真实的课开始。</strong><p>把工具放进教学过程，再观察学生与教师的变化。</p></div><div class="footer-links"><button id="refresh-button" class="text-button">刷新内容</button><button id="update-request-button" class="text-button">复制补更请求</button><a href="./downloads/ai-edu-radar.html" download>下载HTML快照</a><a href="https://github.com/xiaoxiao430/ai-edu-radar" target="_blank" rel="noopener noreferrer">GitHub</a></div><p class="footer-note" id="update-status">每日精选安排在北京时间08:30，由当前Mac与Codex运行。</p></footer>
+  </main>
+  <section class="selection-dock" aria-label="已选内容"><div><span class="dock-dot"></span><strong id="dock-count">还没有选择内容</strong><span id="dock-caption">先勾选感兴趣的项目或场景</span></div><div><button id="export-button" class="secondary">导出选择</button><button id="prompt-button" class="primary">生成开发Prompt <span aria-hidden="true">↗</span></button></div></section>
+  <dialog id="detail-dialog" class="detail-dialog" aria-label="内容详情"><button class="dialog-close" data-close="detail-dialog" aria-label="关闭详情">×</button><div id="detail-content"></div></dialog>
+  <dialog id="prompt-dialog" class="prompt-dialog" aria-label="开发Prompt"><div class="dialog-heading"><div><small>根据当前选择整理</small><h2>把想法交给开发工具</h2></div><button class="dialog-close" data-close="prompt-dialog" aria-label="关闭Prompt">×</button></div><div id="prompt-context"></div><textarea id="prompt-output" spellcheck="false" aria-label="可编辑的开发Prompt"></textarea><div class="dialog-actions"><button id="copy-prompt" class="primary">复制Prompt</button><button id="download-prompt" class="secondary">下载Markdown</button><span>可以直接交给Codex、Claude或Cursor；不会自动执行开发。</span></div></dialog>
+  <dialog id="image-dialog" class="image-dialog" aria-label="查看大图"><button class="dialog-close" data-close="image-dialog" aria-label="关闭图片">×</button><img id="large-image" alt=""><p id="large-image-caption"></p><a id="large-image-source" target="_blank" rel="noopener noreferrer">查看图片来源</a></dialog>
+  <dialog id="settings-dialog" class="settings-dialog" aria-label="设置与备份"><div class="dialog-heading"><div><small>只保存在当前浏览器</small><h2>你的教学背景与选择备份</h2></div><button class="dialog-close" data-close="settings-dialog" aria-label="关闭设置">×</button></div><label for="school-context">生成Prompt时带入的背景</label><textarea id="school-context" rows="5"></textarea><p class="muted">可写已有系统、优先学段与学科。这里的修改、备注和勾选不会上传到GitHub，也不会自动在另一台设备同步。</p><div class="dialog-actions"><button id="save-context" class="primary">保存背景</button><button id="settings-export" class="secondary">导出选择备份</button><button id="import-button" class="secondary">导入备份</button></div><hr><p>更换设备时，先在原设备导出，再在新设备导入。导入会合并选择，同一条目以备份内容为准。</p><p id="font-status" class="muted"></p></dialog>
+  <input id="import-file" type="file" accept="application/json,.json" hidden>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="notice">请启用JavaScript以使用筛选、勾选和Prompt生成。你的选择仅保存在当前浏览器。</p></noscript>
+  <script src="./app.js" defer></script>
+</body>
+</html>
