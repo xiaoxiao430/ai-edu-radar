@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { spawn } from 'node:child_process';
+import { spawn, spawnSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -56,10 +56,10 @@ export async function pushViaApi(options = {}) {
   const gitBuffer = (args) => run('git', args);
   const git = async (args) => (await gitBuffer(args)).toString('utf8').trim();
   const api = async (method, endpoint, body) => {
-    const args = ['api', '--hostname', 'github.com', '--method', method, '-H', 'Accept: application/vnd.github+json', '-H', 'X-GitHub-Api-Version: 2026-03-10', endpoint];
-    if (body !== undefined) args.push('--input', '-');
-    const data = await run('gh', args, body === undefined ? undefined : JSON.stringify(body));
-    return JSON.parse(data.toString('utf8'));
+    const args=['api',endpoint,'-X',method,...(body!==undefined?['--input','-']:[])];
+    const result=spawnSync('gh',args,{cwd,encoding:'utf8',input:body===undefined?undefined:JSON.stringify(body),timeout:60000,maxBuffer:150*1024*1024});
+    if(result.status!==0)throw new Error(`gh API未完成：${result.stderr||result.error?.message||'空响应'}`);
+    return JSON.parse(result.stdout);
   };
   await git(['check-ref-format', `refs/heads/${branch}`]);
   if (await git(['rev-parse', '--show-object-format']) !== 'sha1') throw new Error('GitHub Git数据库API需要SHA-1仓库。');
