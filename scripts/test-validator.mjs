@@ -36,6 +36,7 @@ try {
     stats: { scenes: 62, mainTools: 338, supplemental: 48, media: 34, excludedTests: 2 },
   };
   await write('data/ourteacher.json', data);
+  await write('data/tutorials.json', {verifiedAt:'2026-07-01',scope:'合成公开教程资料',items:[{id:'tutorial-test',title:'合成教程',summary:'合成教学操作画面',url:'https://example.org/tutorial',images:scenes[0].images,relatedToolIds:[tools[0].id],relatedSceneIds:[scenes[0].id]}]});
   const dates = ['2026-07-01', '2026-08-30', '2026-07-16'];
   const manifest = {
     schemaVersion: 1, lastSuccessAt: '2026-08-30T08:30:00+08:00', latestDate: '2026-08-30', status: 'ok',
@@ -80,6 +81,8 @@ try {
   assert.equal(offline.dailies[0].date, manifest.latestDate, '离线内容须为最新一期');
   assert.equal(offline.ourteacher.scenes.length, 62, '离线快照保留完整场景库');
   assert.equal(offline.ourteacher.tools.length, 338, '离线快照保留完整工具库');
+  assert.equal(offline.tutorials.items.length, 1, '离线快照保留图文教程');
+  assert(offline.tutorials.items[0].images[0].src.startsWith('data:image/'), '教程配图内联');
   assert(offline.dailies[0].selectionNote.includes('本离线快照仅包含'), '快照应明确说明本期范围');
   assert(snapshot.includes('data:image/svg+xml;base64,'), '本地图片须内联');
   assert(!snapshot.includes('href="style.css"') && !snapshot.includes('src="app.js"'), '样式和脚本须内联');

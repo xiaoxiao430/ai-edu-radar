@@ -6,13 +6,14 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = async rel => JSON.parse(await fs.readFile(path.join(root, rel), 'utf8'));
 const ourteacher = await read('data/ourteacher.json');
 const manifest = await read('data/manifest.json');
+const tutorials = await read('data/tutorials.json');
 const latestRef = manifest.dates.find(ref => ref.date === manifest.latestDate);
 if (!latestRef) throw new Error('manifest缺少latestDate对应的日报，不能制作快照。');
 const latestDaily = await read(latestRef.path);
 const snapshotNote = `本离线快照仅包含${manifest.latestDate}这一期精选及完整OurTeacher参考库；历史精选请打开在线网站。`;
 const snapshotManifest = { ...manifest, dates: [latestRef], snapshotScope: 'latest-edition', message: snapshotNote };
 const dailies = [{ ...latestDaily, selectionNote: `${latestDaily.selectionNote || ''}\n${snapshotNote}`.trim() }];
-const bundle = { ourteacher, manifest: snapshotManifest, dailies };
+const bundle = { ourteacher, tutorials, manifest: snapshotManifest, dailies };
 const mimeTypes = { '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.gif': 'image/gif', '.avif': 'image/avif' };
 const imageCache = new Map();
 
@@ -44,7 +45,7 @@ let html = await fs.readFile(path.join(root, 'index.html'), 'utf8');
 let css = await fs.readFile(path.join(root, 'style.css'), 'utf8');
 const js = await fs.readFile(path.join(root, 'app.js'), 'utf8');
 css = await replaceAsync(css, /url\((['"]?)(\.?\/?assets\/images\/[^)'"\s]+)\1\)/g, async (_full, _quote, src) => `url("${await inlineImage(src)}")`);
-html = await replaceAsync(html, /(<img\b[^>]*\bsrc=["'])(\.?\/?assets\/images\/[^"']+)(["'])/gi, async (_full, before, src, after) => `${before}${await inlineImage(src)}${after}`);
+html = await replaceAsync(html, /(<(?:img|link)\b[^>]*\b(?:src|href)=["'])(\.?\/?assets\/images\/[^"']+)(["'])/gi, async (_full, before, src, after) => `${before}${await inlineImage(src)}${after}`);
 
 const stylesheetPattern = /<link\b(?=[^>]*\brel=["']stylesheet["'])(?=[^>]*\bhref=["'](?:\.\/)?style\.css["'])[^>]*>/i;
 if (!stylesheetPattern.test(html)) throw new Error('index.html需引用style.css，才能制作离线快照。');

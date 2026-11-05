@@ -116,6 +116,27 @@ if (ourteacher) {
   for (const scene of scenes) for (const id of scene.relatedTools || []) assert(toolIds.has(id), `${scene.id}引用了不存在的工具${id}`);
 }
 
+// 教程为额外资料，不改变既有338项、34条媒体的数量基线。
+const tutorials = await readJson('data/tutorials.json');
+if (tutorials) {
+  assert(isText(tutorials.verifiedAt), '图文教程缺少核对日期');
+  assert(isText(tutorials.scope), '图文教程缺少可访问范围说明');
+  assert(Array.isArray(tutorials.items), '图文教程items应为数组');
+  const tutorialIds = new Set();
+  const mainToolIds = new Set((ourteacher?.tools || []).map(x => x.id));
+  const sceneIds = new Set((ourteacher?.scenes || []).map(x => x.id));
+  for (const item of tutorials.items || []) {
+    assert(isText(item.id) && !tutorialIds.has(item.id), '图文教程ID缺少或重复');
+    tutorialIds.add(item.id);
+    assert(isText(item.title) && isText(item.summary), `${item.id}教程缺少标题或简介`);
+    assert(/^https?:\/\//.test(item.url || ''), `${item.id}教程缺少公开原始来源`);
+    assert(Array.isArray(item.images) && item.images.length > 0, `${item.id}教程缺少配图`);
+    for (const [i, image] of (item.images || []).entries()) await validateImage(image, `${item.id}教程配图${i + 1}`);
+    for (const id of item.relatedToolIds || []) assert(mainToolIds.has(id), `${item.id}关联了不存在的主目录工具${id}`);
+    for (const id of item.relatedSceneIds || []) assert(sceneIds.has(id), `${item.id}关联了不存在的场景${id}`);
+  }
+}
+
 let dailyCount = 0;
 if (manifest) {
   assert(manifest.schemaVersion === 1, 'manifest.schemaVersion应为1');
@@ -171,7 +192,7 @@ if (errors.length) {
   console.error(`检查未通过（${errors.length}项）：\n${errors.map(e => `- ${e}`).join('\n')}`);
   process.exitCode = 1;
 } else {
-  console.log(JSON.stringify({ status: 'ok', scenes: 62, mainTools: 338, supplemental: 48, media: 34, excludedTests: 2, dailyProjects: dailyCount, warningCount: warnings.length }));
+  console.log(JSON.stringify({ status: 'ok', scenes: 62, mainTools: 338, supplemental: 48, media: 34, excludedTests: 2, dailyProjects: dailyCount, tutorials: tutorials?.items?.length || 0, warningCount: warnings.length }));
 }
 if (warnings.length) console.log([...new Set(warnings)].slice(0, 12).map(x => `提示：${x}`).join('\n'));
 
