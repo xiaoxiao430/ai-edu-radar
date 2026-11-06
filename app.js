@@ -80,12 +80,12 @@
     document.querySelectorAll('input[data-select]').forEach(el=>{el.checked=choiceChecked(el.dataset.select);});
     if(currentDetailId===id){const btn=$('detail-dialog').querySelector('[data-detail-select]');if(btn)btn.textContent=choiceChecked(id)?'已加入 · 移除此处':position?'加入此教学位置':'加入开发清单';}
   }
-  function matchingPlacements(){return teachingMap.placements.filter(p=>!pathState.recordId||p.recordId===pathState.recordId);}
+  function matchingPlacements(){return teachingMap.placements.filter(p=>(records.has(p.recordId)||state.selections[p.recordId]?.snapshot)&&(!pathState.recordId||p.recordId===pathState.recordId));}
   function pathReady(){return !!(pathState.stage&&pathState.subject&&pathState.sceneId);}
   function pathItems(){
     if(!pathReady())return [];
     const ids=new Set(matchingPlacements().filter(p=>p.stage===pathState.stage&&p.subject===pathState.subject&&p.sceneId===pathState.sceneId).map(p=>p.recordId));
-    return [...records.values()].filter(r=>ids.has(r.id)).sort((a,b)=>(recommendationRank[a.priority]??9)-(recommendationRank[b.priority]??9)||a.title.localeCompare(b.title,'zh-CN'));
+    return [...ids].map(getRecord).filter(Boolean).sort((a,b)=>(recommendationRank[a.priority]??9)-(recommendationRank[b.priority]??9)||a.title.localeCompare(b.title,'zh-CN'));
   }
   function sceneTitle(id,stage=pathState.stage,subject=pathState.subject){return teachingMap.placements.find(p=>p.sceneId===id&&p.stage===stage&&p.subject===subject&&p.sceneLabel)?.sceneLabel||getRecord(id)?.title||id;}
   function positionTitle(p){return `${p.stage} · ${p.subject} · ${sceneTitle(p.sceneId,p.stage,p.subject)}`;}

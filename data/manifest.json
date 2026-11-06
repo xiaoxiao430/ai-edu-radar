@@ -1,15 +1,20 @@
 {
   "schemaVersion": 1,
-  "lastSuccessAt": "2026-11-05T16:03:05+00:00",
-  "latestDate": "2026-11-05",
+  "lastSuccessAt": "2026-11-06T13:42:35+08:00",
+  "latestDate": "2026-11-06",
   "status": "ok",
-  "message": "按学段、学科、场景双向选择，4051条教学适配关系；抖音82条记录筛为32组实用内容，账号全量尚待核对。",
+  "message": "11月6日10项首次精选已核官方资料；历史精选与教学位置保留，OurTeacher82条继续按公开范围整理。",
   "dates": [
+    {
+      "date": "2026-11-06",
+      "path": "data/daily/2026-11-06.json",
+      "count": 10
+    },
     {
       "date": "2026-11-05",
       "path": "data/daily/2026-11-05.json",
       "count": 10
     }
   ],
-  "revision": 4
+  "revision": 5
 }

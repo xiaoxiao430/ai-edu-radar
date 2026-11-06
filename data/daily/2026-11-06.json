@@ -1,0 +1,1120 @@
+{
+  "date": "2026-11-06",
+  "verifiedAt": "2026-11-06T13:42:35+08:00",
+  "selectionNote": "本期10项为成熟基础项目的教学改造参考，并非今日新发布或已在校内实测。优先补课堂板书、离线任务、错因反馈与口头表达记录，再看概念图、时间线、电路探究、互动作品、协作写作与课程管理。资料均核官方来源；OurTeacher公开补查未取得可核新增作品，保留现82条与未全量标记。",
+  "projects": [
+    {
+      "id": "repo:openboard-org/openboard",
+      "type": "project",
+      "title": "OpenBoard · 让板书留下学生的解释",
+      "repository": "OpenBoard-org/OpenBoard",
+      "url": "https://github.com/OpenBoard-org/OpenBoard",
+      "reviewStatus": "仅核官方资料与公开演示画面；未安装测试、未进行课堂实测",
+      "checkedAt": "2026-11-06",
+      "verifiedAt": "2026-11-06",
+      "publicationType": "成熟基础项目·本期首次收录",
+      "summary": "面向课堂的桌面互动白板及网页挂件；可借鉴为地理读图、史料批注和课中纠错，先做一个能复用的小挂件。",
+      "category": "课堂互动",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "语文",
+        "数学",
+        "英语",
+        "历史",
+        "地理",
+        "跨学科"
+      ],
+      "priority": "建议先试",
+      "effort": "中",
+      "priorityReason": "已有班务屏可继续用；先做一项网页挂件与课堂批注流程，验证触控和课后留存，不重建整套白板。",
+      "why": [
+        "厚外已有班务大屏，适合补“学生标注—解释—修改”这一教学环节，原班级名单和成长入口可继续使用。",
+        "初中地理可比较地图标注，历史可标注史料中的时间、人物与论据；原图和修改后的解释一起保留。",
+        "小学侧重图形与口头解释，初高中增加依据和反例；挂件可共用，任务材料和验收要求分别设置。"
+      ],
+      "teaching": "教师提供一张自有地图或史料图片与一个问题，学生先标注并解释，同伴追问后修改，课后将板书和解释作为学习作品保存。",
+      "existing": "沿用厚外现有课堂大屏和学习作品入口；OpenBoard先作为备选宿主，不替换已做的班务信息展示。",
+      "learningGoal": "通过可回看的标注和修改，说明自己如何从材料形成判断。",
+      "teacherAction": "准备一张材料与追问，组织学生批注，核对其解释和修改依据。",
+      "studentAction": "在材料上标注、口头解释，在追问后修改并保留修改理由。",
+      "dataOutput": "原始材料、批注图、学生解释和一次修改记录。",
+      "mvp": [
+        "做一个地理读图或历史史料批注网页挂件，支持导入自备图片、添加可编辑标注与学生解释。",
+        "先在普通浏览器独立预览，再按官方.wgt目录和config.xml规范打包；宿主接口留作实机核对。",
+        "保存原材料、批注结果与解释；课后可从现有任务或成长作品入口找到。"
+      ],
+      "acceptance": [
+        "用一张虚构地理读图材料完成导入、标注、解释、修改和再次打开，原图不被覆盖。",
+        "教师能比较修改前后，学生解释与对应批注绑定，触屏常用操作无需精细鼠标定位。",
+        "挂件在普通浏览器可演示；与OpenBoard宿主的拖入、保存和中文触控另列实机检查结果。"
+      ],
+      "capabilities": [
+        "桌面手写与高亮批注",
+        "图片、文字及媒体素材支持",
+        "素材库与桌面批注模式",
+        "可拖入白板的HTML/JavaScript网页挂件"
+      ],
+      "dependencies": [
+        "现成OpenBoard安装包；修改桌面程序时需核对C++/Qt构建环境",
+        "网页挂件使用HTML/CSS/JavaScript与官方.wgt结构，宿主API需要实机验证",
+        "课堂材料应为教师自有或已获准使用的图片与文本"
+      ],
+      "limitations": [
+        "它是桌面白板，不是安装到现有网页就能获得的React组件；现有班务屏与宿主需要分别验证。",
+        "官网照片仅展示设备与板书界面，不代表本校硬件兼容、当前版本细节或课堂效果。",
+        "主程序为GPLv3，COPYRIGHT另列OpenSSL链接例外；第三方组件及改编分发条件须随选定版本核对。",
+        "本体不是生成式AI工具，首版不接付费模型或自动识别学生笔迹。"
+      ],
+      "commercial": "先积累分学科板书模板、轻量课堂挂件与教师带练服务；是否进一步做产品化，由真实课堂使用后决定。",
+      "promptNotes": [
+        "先检查现有班务屏的课中工具、学习作品和导出能力，只补缺口，不复制班级管理。",
+        "把挂件自身状态与OpenBoard宿主接口分开；普通浏览器使用本机样例，缺失宿主API时给出清楚提示。",
+        "首版只做一个材料批注任务，使用虚构班级和教师自有材料；不扩展全套云课件、账号和实时协作。",
+        "先核对官方网页挂件结构和API，再实现打包与保存；不要声称现有大屏已经兼容所有触控设备。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C53",
+        "ot-scene-C34",
+        "ot-scene-C35",
+        "ot-scene-C10"
+      ],
+      "license": "GPL-3.0；COPYRIGHT列明OpenSSL链接例外，组件条件另核",
+      "sources": [
+        {
+          "title": "官方仓库与课堂白板说明",
+          "url": "https://github.com/OpenBoard-org/OpenBoard",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "官网功能与设备使用说明",
+          "url": "https://openboard.ch/en",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "官方网页挂件与文档入口",
+          "url": "https://openboard.ch/en/documentation",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "GPLv3许可原文",
+          "url": "https://github.com/OpenBoard-org/OpenBoard/blob/master/LICENSE",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "版权与OpenSSL链接例外",
+          "url": "https://github.com/OpenBoard-org/OpenBoard/blob/master/COPYRIGHT",
+          "date": "2026-11-06"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-06/openboard-official.jpg",
+          "type": "官方设备与界面示例照片",
+          "caption": "官网笔屏和板书界面示例照片；并非本校教室或本轮软件实测，具体版本与硬件效果待核。",
+          "sourceUrl": "https://openboard.ch/images/openboard-wacom.jpg"
+        }
+      ]
+    },
+    {
+      "id": "repo:learningequality/kolibri",
+      "type": "project",
+      "repository": "learningequality/kolibri",
+      "url": "https://github.com/learningequality/kolibri",
+      "title": "Kolibri · 把一课资源带到离线环境",
+      "summary": "离线优先的学习平台，可借鉴资源编排、分组分发与进度报告，先做一个离线学习任务包。",
+      "category": "资源与自主学习",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "英语",
+        "地理",
+        "历史"
+      ],
+      "effort": "中",
+      "priority": "建议先试",
+      "checkedAt": "2026-11-06",
+      "verifiedAt": "2026-11-06",
+      "publicationType": "成熟基础项目参考，非今日新发布",
+      "reviewStatus": "已核官方仓库、许可及文档；未运行本地部署，未在本校课堂实测",
+      "priorityReason": "已有课堂大屏和成长入口可复用，先补资源包与离线任务，不同时重建账号和课程平台。",
+      "why": [
+        "初中英语可把阅读、音频和练习排成一次任务；地理与历史可整理地图、史料和观察问题。资料内容需另行选择，不默认原平台已有校本教材。",
+        "适合把校内课堂延伸到户外研学或网络不稳定的使用环境；已做的班务屏继续承担入口，不另建一套通知页。",
+        "小学用短任务和教师确认，高中增加独立完成与再测；资源包结构、完成记录和摘要导出可以跨学部复用。"
+      ],
+      "teaching": "教师按目标选择少量可合法使用的资源并安排顺序，学生在同一任务包内阅读、作答和记录困难；回到课堂后教师核对作答，安排订正与补充学习。",
+      "existing": "从既有班务大屏打开学习任务；只有经过教师确认的作品或学习摘要才衔接厚外成长记录，不直接把浏览时长当作成长分数。",
+      "mvp": [
+        "先制作一个英语阅读或地理研学主题任务包，包含资源清单、任务顺序和五道教师自编检查题。",
+        "用模拟班级展示任务分组、未开始／进行中／待帮助状态；离线原型只在本机保存。",
+        "导出一份完成摘要与困难清单，保留原作答；原平台账号、数据交换接口另行核对。"
+      ],
+      "acceptance": [
+        "预先准备资源后，断开外网仍可打开任务材料并保存本机作答；注明首次下载资源仍需可用来源。",
+        "恢复页面后能读回同一份记录，重复提交不产生多份摘要。",
+        "教师能看到哪道题或哪个资源需要帮助；查看资源和答对检查题分别记录。"
+      ],
+      "limitations": [
+        "离线使用仍需要预先导入内容；设备、局域网部署和真实并发能力未在本校核验。",
+        "代码MIT许可不等于资源渠道中的所有课程、视频或图片也按MIT授权，具体素材需逐项核对。",
+        "浏览、完成和用时报告不能直接证明掌握程度；自建语文、英语或史地内容的教学质量仍需教师审核。"
+      ],
+      "commercial": "先积累校本离线任务包、资源整理方法和教师培训课例，实际使用后再评估部署与服务价值。",
+      "capabilities": [
+        "离线优先的学习资源访问",
+        "按班级或学习组编排和分发课程资源",
+        "配置测验并查看学习进度与困难问题",
+        "部分教练报告支持打印及CSV导出"
+      ],
+      "dependencies": [
+        "若采用原项目，按官方安装包或Python安装说明准备设备；跨设备访问需核对局域网与设备条件。",
+        "离线材料需事先导入，并核对每项内容的使用条件。",
+        "接入厚外现有账号、名单和成长档案需单独设计，不默认存在兼容接口。"
+      ],
+      "promptNotes": [
+        "先检查现有班务屏和学习任务入口，只增加一个离线任务包的演示流程。",
+        "把资源清单、资源是否已准备、作答记录、待帮助标记与教师确认摘要分开存储。",
+        "原型先使用示例材料与虚构名单；不要自动同步真实师生数据。",
+        "以一份英语阅读或史地研学包验收，测试断网、刷新恢复、重复提交与恢复联网；不将结果自动记为六好积分。"
+      ],
+      "learningGoal": "让学生用预先准备的资源完成一项学习任务，并暴露具体困难供教师跟进。",
+      "teacherAction": "编排资源顺序、设置检查题与学习组，查看作答后确认需要补充学习的环节。",
+      "studentAction": "按顺序使用材料、独立完成检查题，记录不理解处并在教师反馈后订正。",
+      "dataOutput": "资源清单、原作答、本机进度、困难标记与教师确认后的学习摘要。",
+      "relatedScenes": [
+        "ot-scene-C15",
+        "ot-scene-C27",
+        "ot-scene-C34",
+        "ot-scene-C35",
+        "ot-scene-C37"
+      ],
+      "license": "MIT（代码）；导入课程与资源的许可需另核",
+      "sources": [
+        {
+          "title": "官方README：离线优先定位与安装入口",
+          "url": "https://github.com/learningequality/kolibri/blob/develop/README.md",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "教练课程编排与报告教程",
+          "url": "https://kolibri.readthedocs.io/en/latest/coach/lessons.html",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "测验与困难问题报告教程",
+          "url": "https://kolibri.readthedocs.io/en/latest/coach/quizzes.html",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "MIT许可原文",
+          "url": "https://github.com/learningequality/kolibri/blob/develop/LICENSE",
+          "date": "2026-11-06"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-06/kolibri-lessons.png",
+          "type": "官方用户文档截图",
+          "caption": "官方文档的课程列表与进度示例；不是本校部署或课堂实测。",
+          "sourceUrl": "https://raw.githubusercontent.com/learningequality/kolibri-docs/develop/docs/img/lessons-home.png"
+        }
+      ]
+    },
+    {
+      "id": "repo:oppia/oppia",
+      "type": "project",
+      "repository": "oppia/oppia",
+      "url": "https://github.com/oppia/oppia",
+      "title": "Oppia · 按学生回答给出下一步提示",
+      "summary": "用预设交互、答案规则与针对性反馈组织探究学习，可借鉴“错因—提示—重试”的小课流程。",
+      "category": "分支反馈与自主学习",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "数学",
+        "英语",
+        "地理",
+        "历史"
+      ],
+      "effort": "中",
+      "priority": "建议先试",
+      "checkedAt": "2026-11-06",
+      "verifiedAt": "2026-11-06",
+      "publicationType": "成熟基础项目参考，非今日新发布",
+      "reviewStatus": "已核官方仓库、许可及文档；未运行本地部署，未在本校课堂实测",
+      "priorityReason": "先借鉴一项知识点的分支反馈结构，可用小原型验证；整套平台的部署与内容制作投入较高。",
+      "why": [
+        "与只展示答案相比，可以在现有课堂任务中补一段“学生先答—收到针对性提示—再次解释”的过程。",
+        "初中英语可围绕语法或阅读误解设计反馈，地理可围绕读图误判，历史可围绕史料解释；这些是厚外改造方向，不宣称官方已有对应课程。",
+        "小学以图形和短提示为主，初高中增加解释和反例；共用状态结构，但各学部单独编写目标、错因与验收题。"
+      ],
+      "teaching": "教师先为一个知识点列出常见误解与对应提示，学生独立作答后进入匹配的反馈分支，再修改答案，最后完成一道同知识点新题。",
+      "existing": "把分支小课嵌入既有学习任务或班务屏入口；保存学生原作答、所见提示和再测结果，教师确认后再把学习作品写入成长档案。",
+      "mvp": [
+        "只实现一个知识点、三道检查题和两类典型错因，提供教师预览与学生作答视图。",
+        "将题目、规则、反馈、下一步与结束条件写成可检查的配置，保留完整作答路径。",
+        "实现重试和重新开始，并区分“看过提示后的答对”与“新题独立作答”。"
+      ],
+      "acceptance": [
+        "正确答案、两类典型错误和未匹配答案各能进入预期分支；没有规则时回到教师配置的兜底提示。",
+        "学生不能靠反复点击完成状态就被判为掌握；一份独立再测记录与练习记录分开。",
+        "教师能预览每条分支，发现死循环、遗漏终点或直接泄露答案的提示。"
+      ],
+      "limitations": [
+        "交互式对话外观不等于接入了自由对话模型；本期采用教师可审核的预设规则，不承诺开放式自动答疑。",
+        "官方README以基础数学课程为主要现有内容；英语、地理和历史等校本课需自行设计并审核。",
+        "官方wiki截图为开发环境中的西班牙语题目示例，不代表当前线上课程或本校已实现内容。"
+      ],
+      "commercial": "可积累可解释的学科错因与提示模板、教师共创小课及教研服务，先看学生订正质量再谈推广。",
+      "capabilities": [
+        "创建与分享可交互的exploration学习活动",
+        "用答案规则和针对性反馈引导学习",
+        "组织主题、故事与探索活动的内容结构",
+        "官方项目提供基础数学学习内容"
+      ],
+      "dependencies": [
+        "完整原项目采用Python、Angular与Google App Engine相关架构；部署前按官方安装文档核对环境。",
+        "首版可先在现有技术栈内做小规模规则原型，实际复用源码时保留许可与归属信息。",
+        "题干、错因、反馈和再测题需要学科教师提供或确认，不由模型自由补全后直接投用。"
+      ],
+      "promptNotes": [
+        "先检查已有课堂任务的数据结构，以一个知识点做独立小原型，不重建整个平台。",
+        "定义state、answerRule、feedback、nextState和结束条件，并检查每条分支可达且无循环。",
+        "为同一工具分别配置小学与初高中的语言、解释要求和验收题；不要只换学段标签。",
+        "用正确、典型错误、无匹配回答、重复提交和刷新恢复五类情况验收，不自动启用付费模型。"
+      ],
+      "learningGoal": "通过与具体错因对应的提示，促使学生修改解释，并以新题独立作答检查是否掌握。",
+      "teacherAction": "为一个概念配置题目、答案规则和提示，预览各分支并检查是否给出合适的下一步。",
+      "studentAction": "先独立回答并说明理由，按匹配提示修改，再完成一道同知识点的新题。",
+      "dataOutput": "初次回答、命中的规则、所见提示、修改回答和独立再测记录。",
+      "relatedScenes": [
+        "ot-scene-C13",
+        "ot-scene-C27",
+        "ot-scene-C32",
+        "ot-scene-C34",
+        "ot-scene-C35",
+        "ot-scene-C47"
+      ],
+      "license": "Apache-2.0（代码）；课程内容、图片及品牌使用另核",
+      "sources": [
+        {
+          "title": "官方README：探索活动、反馈与技术架构",
+          "url": "https://github.com/oppia/oppia/blob/develop/.github/README.md",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "官方课程创作指南",
+          "url": "https://github.com/oppia/oppia/wiki/Lesson-Creation-Guide",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "官方wiki：交互播放器开发示例与截图",
+          "url": "https://github.com/oppia/oppia/wiki/Tutorial-Learn-how-to-Implement-UI-Improvements",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Apache-2.0许可原文",
+          "url": "https://github.com/oppia/oppia/blob/develop/LICENSE",
+          "date": "2026-11-06"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-06/oppia-player.png",
+          "type": "官方开发文档界面截图",
+          "caption": "官方wiki中的西班牙语动词练习开发示例，地址栏为开发环境；不是本校运行或当前线上课程实测。",
+          "sourceUrl": "https://raw.githubusercontent.com/wiki/oppia/oppia/images/TutorialUIImprovements/ExplorationPlayer.png"
+        }
+      ]
+    },
+    {
+      "id": "repo:alphacep/vosk-api",
+      "type": "project",
+      "title": "Vosk · 英语口头复述的本地转写与订正",
+      "repository": "alphacep/vosk-api",
+      "url": "https://github.com/alphacep/vosk-api",
+      "publicationType": "成熟基础项目，本期首次收录",
+      "checkedAt": "2026-11-06",
+      "reviewStatus": "已核官方README、安装文档、代码许可与模型许可表；未运行工具或课堂实测",
+      "summary": "离线语音识别工具包，可借鉴为口头复述后的转写、教师标注和再次表达；原项目不是口语评分平台。",
+      "category": "英语口语与表达",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "英语",
+        "地理",
+        "历史"
+      ],
+      "priority": "建议先试",
+      "priorityReason": "能补已有课堂任务的口头表达记录；首版只验证短录音转写与人工订正，目标清楚。",
+      "effort": "中",
+      "why": [
+        "小学英语先做短句复述，初中英语围绕语篇复述，高中增加论证与反例；共用音频、转写和订正结构。",
+        "已有班务屏可以发布任务，转写稿与再次表达结果再关联成长记录，避免另建班级管理入口。",
+        "地理现象解释、历史人物观点陈述也可保留说话原稿，教师核对内容依据，而不是只看最终文字。"
+      ],
+      "learningGoal": "学生听回自己的短录音，识别表达遗漏，依据教师反馈重新组织并再次表达。",
+      "teacherAction": "设置复述任务，核对音频与候选文字，只标注一到两处与本课目标有关的问题。",
+      "studentAction": "先独立口述，再听回并订正，最后重新表达并说明改进点。",
+      "dataOutput": "原音频、可修改的候选转写、教师确认的反馈与第二次表达记录。",
+      "capabilities": [
+        "离线语音识别和流式转写",
+        "支持英语、中文等多语言模型",
+        "提供Python、Node.js等语言绑定",
+        "可配置词汇范围；模型需单独准备"
+      ],
+      "license": "代码Apache-2.0；官方模型逐项另列许可，不能把代码许可套用到全部模型",
+      "dependencies": [
+        "本机或校内设备运行Vosk绑定与单独下载的语言模型",
+        "首版按官方样例接收PCM 16kHz、16bit、单声道音频；其他格式转换另行检查",
+        "网页采集、音频回放、任务管理与保存界面需要自己开发，纯静态HTML不能直接视为完整识别服务"
+      ],
+      "limitations": [
+        "本轮只核公开资料，未测教室噪声、学生口音与校内终端性能。",
+        "转写错误可能来自模型、录音和环境，不能将识别率直接当作口语或发音成绩。",
+        "模型许可各不相同；部署或再分发前核对实际选用的模型、依赖及声明。"
+      ],
+      "existing": "优先接已有学科任务入口和班务屏；成长记录只接教师确认的作品，不自动保存所有录音或创建新账号系统。",
+      "mvp": [
+        "用一份教师提供或虚构的30秒英语复述样例验证音频导入与本地识别。",
+        "并排展示可回放音频与可编辑转写，保留识别原稿和人工订正稿。",
+        "教师只标一到两个反馈点，学生提交第二次表达，并导出可追溯的任务记录。"
+      ],
+      "acceptance": [
+        "同一段短录音可反复播放，识别原稿与修改稿分开保存，不覆盖原始材料。",
+        "空音频、格式不符和模型未就绪时有清楚提示，不伪造识别结果。",
+        "教师可手动改正识别错误，学生能说明第二次表达的具体改进；不生成未经校准的自动分数。"
+      ],
+      "commercial": "可积累分学段复述任务、人工反馈量规与校内实施服务；先验证教学流程，再讨论收费或规模。",
+      "promptNotes": [
+        "先检查已有英语任务和成长作品的数据结构，再增量接音频与两次表达记录。",
+        "第一版只用一门语言、短录音和本地样例；不加入真人声音识别、自动口语评分或付费模型接口。",
+        "把识别服务是否可用与教学内容是否正确分别验收；识别失败时仍允许人工转写。",
+        "界面保留录音回放和原稿，不让系统自动改写为学生从未说出的内容。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C26",
+        "ot-scene-C34",
+        "ot-scene-C35"
+      ],
+      "sources": [
+        {
+          "title": "官方仓库与能力说明",
+          "url": "https://github.com/alphacep/vosk-api",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "官方安装和音频样例要求",
+          "url": "https://alphacephei.com/vosk/install",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "代码许可原文",
+          "url": "https://github.com/alphacep/vosk-api/blob/master/COPYING",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "官方语言模型及逐项许可表",
+          "url": "https://alphacephei.com/vosk/models",
+          "date": "2026-11-06"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-06/vosk-teaching.svg",
+          "type": "教学用法示意图",
+          "caption": "厚外英语复述流程设计，非Vosk产品操作截图；内部界面待补。",
+          "sourceUrl": "https://github.com/alphacep/vosk-api"
+        }
+      ],
+      "teaching": "教师发布一项短复述任务，学生独立口述；本地生成候选转写后先核对录音，教师只标本课一到两处反馈，学生再次表达并保存改进说明。"
+    },
+    {
+      "id": "repo:markmap/markmap",
+      "type": "project",
+      "title": "Markmap · 从阅读大纲到可展开脑图",
+      "repository": "markmap/markmap",
+      "url": "https://github.com/markmap/markmap",
+      "checkedAt": "2026-11-06",
+      "publicationType": "成熟基础项目精选",
+      "summary": "把Markdown标题和列表转为可展开的脑图，可改造为英语语篇结构、史料分类和地理概念梳理任务。",
+      "category": "阅读与写作",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "英语",
+        "语文",
+        "历史",
+        "地理"
+      ],
+      "priority": "建议先试",
+      "effort": "低",
+      "reviewStatus": "已核官方仓库、MIT许可与文档，已浏览官网默认演示；未本机部署或课堂实测",
+      "priorityReason": "可先嵌入已有课堂任务或大屏，只做大纲与图稿的保存反馈，依赖较轻。",
+      "why": [
+        "已有班务大屏可直接展示可展开脑图，先增加课内任务和作品入口，无须再建一套展示系统。",
+        "初中英语可按人物、事件、转折和依据句整理语篇；历史按主张与材料分类，地理按概念层级梳理，贴合既有学科方向。",
+        "小学提供半成品大纲，初中要求学生解释层级，高中补充对分类局限的说明；共用渲染底座，任务难度分别配置。"
+      ],
+      "teaching": "教师给出一段真实教材材料和少量层级提示，学生先独立填大纲，再查看脑图，解释一处分类关系并依据讨论修改；保存初稿与修改稿。",
+      "existing": "接入现有课堂任务或班务屏的学习作品区；先以Markdown与导出件衔接成长记录，真实系统保存接口待接。",
+      "learningGoal": "把材料组织为有理由的层级结构，并能解释和修改自己的分类。",
+      "teacherAction": "选择一段教材材料，给出分类提示，抽核节点与原文的对应关系。",
+      "studentAction": "独立填写大纲，解释一个层级关系，再对照讨论结果修改。",
+      "dataOutput": "原材料、大纲初稿、修改稿、可展开脑图与一段学生说明。",
+      "mvp": [
+        "先做英语语篇结构、史料分类、地理概念三类可编辑大纲模板。",
+        "支持Markdown编辑、脑图预览、节点展开与收起，保留初稿和修改稿。",
+        "保存原Markdown并导出交互HTML；首版使用纯文字节点和少量标签。"
+      ],
+      "acceptance": [
+        "同一份大纲刷新恢复后层级一致，导出的Markdown重新载入可还原图稿。",
+        "学生能指出一个分类或层级错误，并说明修改理由，不能只交一张漂亮图。",
+        "用一份英语阅读材料和一份历史材料核对中文、长词、展开收起与大屏缩放。"
+      ],
+      "limitations": [
+        "脑图主要表达层级，复杂多对多关系或因果网络需要另选图形；图的结构不自动保证知识正确。",
+        "教材概念、分类理由与材料出处由师生提供；协作批注、自动提炼和学习评价需另行开发。",
+        "复杂排版、图片节点与导出兼容性尚未验证，本期先用纯文字样例。"
+      ],
+      "commercial": "可积累分学科大纲模板、阅读结构任务包与教师带练服务，先观察学生分类和解释是否更清楚。",
+      "capabilities": [
+        "将Markdown内的标题、列表层级转为互动脑图",
+        "脑图节点展开收起与画面缩放",
+        "官网演示提供交互HTML及SVG下载入口",
+        "可使用markmap-lib与markmap-view集成渲染"
+      ],
+      "dependencies": [
+        "集成时需要Markdown处理与Markmap渲染包，并锁定实际采用的版本。",
+        "离线版本需本地打包所用脚本和样式；复杂插件和外部资源另核。"
+      ],
+      "promptNotes": [
+        "先检查现有任务和作品存储方式，再接入Markmap，不重复维护班级或学生名单。",
+        "首版只围绕所选学段、学科和一个阅读场景；模板大纲不是固定答案，允许学生给不同合理分类。",
+        "同时保存原材料、大纲和学生解释，初稿与修改稿分别保留。",
+        "解析错误显示到具体输入位置；空大纲和超长节点有可理解的提示，正文与新增图中文字用微软雅黑。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C18",
+        "ot-scene-C27",
+        "ot-scene-C34",
+        "ot-scene-C35",
+        "ot-scene-C53"
+      ],
+      "license": "MIT（已核原许可；保留版权及许可声明）",
+      "sources": [
+        {
+          "title": "官方仓库与README",
+          "url": "https://github.com/markmap/markmap",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "官方功能及集成说明",
+          "url": "https://markmap.js.org/docs/markmap",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "官方可交互演示",
+          "url": "https://markmap.js.org/repl",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "许可原文",
+          "url": "https://github.com/markmap/markmap/blob/master/LICENSE",
+          "date": "2026-11-06"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-06/general-markmap.jpg",
+          "type": "官方演示站截图",
+          "caption": "官网默认Markdown与脑图演示，非厚外课例；已浏览演示，未部署项目或验证教学效果。",
+          "sourceUrl": "https://markmap.js.org/repl"
+        }
+      ]
+    },
+    {
+      "id": "repo:mermaid-js/mermaid",
+      "type": "project",
+      "title": "Mermaid · 用时间线和流程图解释关系",
+      "repository": "mermaid-js/mermaid",
+      "url": "https://github.com/mermaid-js/mermaid",
+      "checkedAt": "2026-11-06",
+      "publicationType": "成熟基础项目精选",
+      "summary": "把结构化文字渲染为时间线、流程图等图形，可用于历史事件排序、地理过程解释和项目任务安排。",
+      "category": "课堂互动",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "历史",
+        "地理",
+        "科学",
+        "综合实践"
+      ],
+      "priority": "建议先试",
+      "effort": "低",
+      "reviewStatus": "已核官方仓库、MIT许可及时间线文档图例；未本机部署或厚外课堂实测",
+      "priorityReason": "适合补已有大屏的关系解释与版本对照，首版只选两种图形，避免重建复杂绘图工具。",
+      "why": [
+        "班务大屏已能呈现内容，可增加教师确认后的时间线或流程图，学生修改后作为学习作品保存。",
+        "初中历史用事件、时间和史料出处核对先后；地理用过程和条件解释变化，能直接形成两类课例。",
+        "小学先排列少量事件，初中增加关系标签，高中要求说明条件与反例；模板共用，验收标准按学段分开。"
+      ],
+      "teaching": "学生先根据材料填事件表或过程表，检查时间与出处后生成图，再解释一条连线或时间段的意义，并修改不成立的关系。",
+      "existing": "复用课堂任务入口、现有大屏与学习作品保存流程；先将图稿原文和导出SVG作为附件，不先改动原有成长评价体系。",
+      "learningGoal": "核对事件先后或过程条件，用清楚的关系标签解释图稿，而不把时间相邻直接当成因果。",
+      "teacherAction": "提供一组史料或地理材料，检查时间、关系标签及材料出处。",
+      "studentAction": "整理事件或过程表，生成图，解释一条关系并修订不准确之处。",
+      "dataOutput": "原材料、事件或过程表、图形源文、导出图与学生解释。",
+      "mvp": [
+        "首版只提供时间线和流程图两种教学模板，使用表单辅助填写事件、日期与关系。",
+        "保留源文、预览、解析错误提示和修改前后版本。",
+        "导出SVG及源文本，供大屏展示和作品归档；不一次加入全部图种。"
+      ],
+      "acceptance": [
+        "用一份历史事件材料生成时间线，时间与事件逐项能对回输入表。",
+        "用一份地理过程材料生成流程图，学生能解释至少一条关系的条件。",
+        "错误语法可定位修改，超长中文不会遮盖关键标签，导出源文能再次载入。"
+      ],
+      "limitations": [
+        "渲染器负责把定义画成图，不验证史料、日期或因果关系，内容仍由教师与学生核对。",
+        "复杂图可能影响投屏阅读；首版限制图种和节点规模，尚未验证所有终端与导出效果。",
+        "官网开源文档与额外商业编辑服务分别存在，本清单只采用开源渲染能力。"
+      ],
+      "commercial": "可形成历史时间线、地理过程图和跨学科任务模板库，先用课例验证解释与修订的质量。",
+      "capabilities": [
+        "用Markdown风格的文本定义生成图形",
+        "提供时间线、流程图、时序图等多种图形类型",
+        "可通过JavaScript渲染器集成到网页",
+        "官方文档提供图种语法与可查看图例"
+      ],
+      "dependencies": [
+        "需要锁定Mermaid包版本；本期只装载实际使用的图种和所需资源。",
+        "作品保存、版本对照与教师确认流程由现有应用或本次原型另行实现。"
+      ],
+      "promptNotes": [
+        "先定位现有大屏和学习作品接口，再增加时间线与流程图入口。",
+        "首版用事件表和关系表辅助录入，源文编辑作为可选展开区域，避免要求所有学生先学完整语法。",
+        "图形渲染配置限制任意HTML与可执行内容；用明确错误提示替代空白画面。",
+        "保留材料出处、源文、导出图和学生说明；验收包括时间正确但因果不成立的反例。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C34",
+        "ot-scene-C35",
+        "ot-scene-C38",
+        "ot-scene-C53"
+      ],
+      "license": "MIT（已核主仓库原许可；保留版权及许可声明）",
+      "sources": [
+        {
+          "title": "官方仓库与README",
+          "url": "https://github.com/mermaid-js/mermaid",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "官方功能介绍",
+          "url": "https://mermaid.ai/open-source/intro/",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "官方时间线文档及图例",
+          "url": "https://mermaid.js.org/syntax/timeline.html",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "主仓库许可原文",
+          "url": "https://github.com/mermaid-js/mermaid/blob/develop/LICENSE",
+          "date": "2026-11-06"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-06/general-mermaid.jpg",
+          "type": "官方文档图例截图",
+          "caption": "官网时间线文档的语法图例；图内名称与年份仅作示例，不作为历史教材事实，非厚外课例。",
+          "sourceUrl": "https://mermaid.js.org/syntax/timeline.html"
+        }
+      ]
+    },
+    {
+      "id": "repo:pfalstad/circuitjs1",
+      "type": "project",
+      "title": "CircuitJS1 · 把电路猜想变成对照实验",
+      "repository": "pfalstad/circuitjs1",
+      "url": "https://github.com/pfalstad/circuitjs1",
+      "reviewStatus": "仅核官方资料与公开演示画面；未安装测试、未进行课堂实测",
+      "checkedAt": "2026-11-06",
+      "verifiedAt": "2026-11-06",
+      "publicationType": "成熟基础项目·本期首次收录",
+      "summary": "浏览器电路模拟器，可把“先预测—改一个变量—观察曲线—解释差异”做成初高中物理探究任务。",
+      "category": "学科探究",
+      "stages": [
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "物理",
+        "综合实践"
+      ],
+      "priority": "第二批",
+      "effort": "中",
+      "priorityReason": "适合物理实验前的变量控制与现象解释；先做一个探究任务外层，模拟结果不能替代真实实验。",
+      "why": [
+        "已有班级大屏可直接呈现电路与曲线，补一份学生预测和观察记录就能形成完整课堂任务。",
+        "初中从简单直流电路、连接方式和一个变量开始；高中可增加定量关系与模型假设，共用记录结构但分别验收。",
+        "将探究说明、修改和教师反馈留在现有成长作品或学科任务中，不必先建立新的模拟器平台。"
+      ],
+      "teaching": "学生先预测改变一个电路参数后的结果，在教师指定的模拟任务中观察，记录对照条件与曲线，再解释预测和观察的差异。",
+      "existing": "复用现有课堂大屏与作业记录入口；模拟器作为学科工具，外层负责题目、预测、观察和反馈。",
+      "learningGoal": "控制变量、区分预测与观察，并说明电路模型的适用范围。",
+      "teacherAction": "准备两组只差一个变量的电路，要求先预测，追问曲线与电路结构之间的关系。",
+      "studentAction": "写出预测与理由，观察对照结果，记录差异并修改原解释。",
+      "dataOutput": "电路初始配置、预测理由、观察记录、对照截图与修改后的解释。",
+      "mvp": [
+        "开发一个物理探究任务外层，提供教师核对后的两组电路入口、预测框和观察记录表。",
+        "按官方文档使用电路URL参数或iframe，不读取跨域iframe内部状态；题目和作答在外层保存。",
+        "保留初始配置、观察截图与前后解释，能重置到教师指定的起点。"
+      ],
+      "acceptance": [
+        "两组电路仅改变题目指定的一个变量，教师能核对初始值并重置，学生先提交预测再填写观察。",
+        "关闭并重新打开后，外层任务记录仍对应同一电路配置和版本。",
+        "初中用简单电路说明连接与现象；高中增加定量比较、模型假设和真实实验待验证项。"
+      ],
+      "capabilities": [
+        "浏览器内电路模拟",
+        "元件与示例电路",
+        "电压、电流等示波曲线",
+        "文档列出的电路URL参数、iframe和JavaScript接口示例"
+      ],
+      "dependencies": [
+        "当前源码README已使用TypeScript与Vite构建，按ts目录与选定提交核对依赖",
+        "外层任务页面、经过教师核对的电路样例与本机记录；需要自动读状态时先验证同源部署和接口",
+        "通过外部URL载入电路时需要目标支持CORS；不默认接Dropbox或短网址服务"
+      ],
+      "limitations": [
+        "模拟基于元件模型与参数，不能证明真实电路安全、器材表现或学生实际实验操作能力。",
+        "本轮仅查看官方默认LRC示例画面；未测试参数、嵌入或本校设备，初中简单电路样例仍需教师制作与核对。",
+        "官方开发版与演示站可能对应不同发布进度，选定版本后核对文档，不沿用旧GWT构建说明。",
+        "许可为GPL-2.0-or-later；再分发改造版本需核对源码及第三方组件条件，不默认可以闭源打包。"
+      ],
+      "commercial": "先形成电路探究任务包、分学段教师带练与实验前后对照课例，再评估可复用的课程服务。",
+      "promptNotes": [
+        "先在现有学科任务入口增加预测、观察、解释和版本记录，不重写电路求解器。",
+        "按官方cct、ctz或startCircuit文档准备可重置样例，明确外部载入的CORS条件。",
+        "首版只用已说明的链接或iframe能力；需要读写模拟状态时，先验证同源部署与官方JS接口，不抓跨域DOM。",
+        "截图中的LRC是官方默认样例，不据此声称已完成初中串并联课例或真实实验验收。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C33",
+        "ot-scene-C38"
+      ],
+      "license": "GPL-2.0-or-later（官方README和About注明第2版或后续版本）",
+      "sources": [
+        {
+          "title": "当前官方仓库、构建与嵌入文档",
+          "url": "https://github.com/pfalstad/circuitjs1",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "官方演示与许可说明",
+          "url": "https://www.falstad.com/circuit/about.html",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "GPLv2许可原文",
+          "url": "https://github.com/pfalstad/circuitjs1/blob/master/COPYING.txt",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "官方模拟器入口",
+          "url": "https://www.falstad.com/circuit/circuitjs.html",
+          "date": "2026-11-06"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-06/circuitjs1-official.jpg",
+          "type": "官方在线演示截图",
+          "caption": "官方模拟器默认LRC电路与曲线画面；仅查看界面，未进行参数测试，非本校真实实验。",
+          "sourceUrl": "https://www.falstad.com/circuit/circuitjs.html"
+        }
+      ]
+    },
+    {
+      "id": "repo:scratchfoundation/scratch-editor",
+      "type": "project",
+      "title": "Scratch Editor · 用作品解释知识与规则",
+      "repository": "scratchfoundation/scratch-editor",
+      "url": "https://github.com/scratchfoundation/scratch-editor",
+      "reviewStatus": "仅核官方资料与公开演示画面；未安装测试、未进行课堂实测",
+      "checkedAt": "2026-11-06",
+      "verifiedAt": "2026-11-06",
+      "publicationType": "成熟基础项目·本期首次收录",
+      "summary": "积木编程编辑器可用于互动故事和学科模型；当前主仓库已迁入scratch-editor，适合先做任务与作品提交外层。",
+      "category": "跨学科项目",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "信息科技",
+        "信息技术",
+        "综合实践",
+        "英语"
+      ],
+      "priority": "第二批",
+      "effort": "中",
+      "priorityReason": "课堂题材与作品评价可先试；直接改造整套编辑器投入更高，且必须按迁移后的仓库和许可核对。",
+      "why": [
+        "厚外成长已有作品和点评基础，可把编程工程、演示图与解释放回同一学习记录，不必先重做编辑器。",
+        "英语可先做一段有条件分支的互动对话；学生既要说明表达内容，也要解释程序为什么这样响应。",
+        "小学以事件和顺序表达为主，初中增加条件、循环与调试说明，高中可做学科模型并讨论适用边界。"
+      ],
+      "teaching": "教师给一项小任务和明确学科目标，学生先写流程再搭积木，观察结果并调试，提交工程、演示与一次修改说明。",
+      "existing": "复用现有任务发布、作品展示与教师反馈入口；首版只连接作品，不直接把Scratch社区账号同步到校内系统。",
+      "learningGoal": "把学科内容转成有规则的交互作品，并解释程序逻辑与修改原因。",
+      "teacherAction": "明确学科目标和作品约束，观察学生的调试过程，以作品解释而非界面复杂度评价。",
+      "studentAction": "先画流程，再搭积木、观察结果、定位错误并提交修改说明。",
+      "dataOutput": ".sb3工程文件、演示截图、作品说明与一次调试修改记录。",
+      "mvp": [
+        "开发一个课程任务外层：教师发布一项互动英语故事任务，列出必要表达与交互要求。",
+        "学生打开官方编辑器或经验证的自部署入口，下载.sb3工程，再上传到现有作品入口并补写解释。",
+        "展示初稿、修改稿与教师反馈；先手动核对文件与说明，不做自动理解代码或自动评分。"
+      ],
+      "acceptance": [
+        "用虚构学生完成任务阅读、工程提交、教师反馈、再提交的完整流程，两个版本不互相覆盖。",
+        "工程文件能由对应编辑器重新打开，演示图与该版本的学生解释绑定。",
+        "验收分别检查学科表达、程序逻辑与调试说明，不以积木数量或特效多少自动给分。"
+      ],
+      "capabilities": [
+        "React图形编辑界面",
+        "积木程序与运行虚拟机",
+        "角色、背景及造型编辑模块",
+        "保存.sb3工程的源码实现"
+      ],
+      "dependencies": [
+        "当前scratch-editor monorepo及其GUI、VM、渲染等工作区；按根package.json和.nvmrc核对Node与构建方式",
+        "浏览器图形能力和作品文件保存入口；嵌入、同源及存储接口需另行验证",
+        "首版可先使用官方编辑器加校内作品提交外层，避免立即分叉整套编辑器"
+      ],
+      "limitations": [
+        "原scratch-gui仓库已归档，迁移后的部分工作区说明仍保留旧路径，不能直接照抄旧仓库安装命令。",
+        "本轮只查看官方在线编辑器画面，未对工程运行、构建和校内设备进行功能测试。",
+        "AGPL-3.0-only与TRADEMARK分别有要求；改编分发或对外服务前须核对义务，不能默认闭源或以Scratch品牌作衍生产品背书。",
+        "本体不是生成式AI；不假设校内系统已能自动分析代码、同步Scratch社区或保存真实学生资料。"
+      ],
+      "commercial": "可积累教师自制的学科项目包、课程指导和作品评价服务；后续编辑器改造和对外服务先核对源码、素材与品牌条件。",
+      "promptNotes": [
+        "先复用现有成长作品和作业版本记录，新增.sb3文件类型与作品说明，不另建学生账号体系。",
+        "开发依据迁移后的scratch-editor根仓库，不将归档scratch-gui当成当前维护入口。",
+        "第一期不改编辑器核心，不做社区同步、跨域读编辑器内部状态或自动编程评分；需要集成时先验证公开模块接口。",
+        "为小学英语互动故事与初中信息科技条件分支各准备一份自制样例，分别写目标和验收。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C38",
+        "ot-scene-C39",
+        "ot-scene-C02"
+      ],
+      "license": "AGPL-3.0-only（根package与LICENSE已核）；TRADEMARK另有品牌使用条件",
+      "sources": [
+        {
+          "title": "当前编辑器monorepo与模块说明",
+          "url": "https://github.com/scratchfoundation/scratch-editor",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "旧GUI仓库迁移及归档说明",
+          "url": "https://github.com/scratchfoundation/scratch-gui",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "当前根package许可与工作区声明",
+          "url": "https://github.com/scratchfoundation/scratch-editor/blob/develop/package.json",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "AGPL许可原文",
+          "url": "https://github.com/scratchfoundation/scratch-editor/blob/develop/LICENSE",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "GUI商标说明",
+          "url": "https://github.com/scratchfoundation/scratch-editor/blob/develop/packages/scratch-gui/TRADEMARK",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "工程下载源码",
+          "url": "https://github.com/scratchfoundation/scratch-editor/blob/develop/packages/scratch-gui/src/containers/sb3-downloader.jsx",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "官方在线编辑器",
+          "url": "https://scratch.mit.edu/projects/editor/",
+          "date": "2026-11-06"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-06/scratch-editor-official.jpg",
+          "type": "官方在线编辑器截图",
+          "caption": "官方编辑器初始界面，仅用于说明积木、舞台与角色区；未创建或测试作品，非本校学生作业。",
+          "sourceUrl": "https://scratch.mit.edu/projects/editor/"
+        }
+      ]
+    },
+    {
+      "id": "repo:cryptpad/cryptpad",
+      "type": "project",
+      "title": "CryptPad · 共同写作与课例批注",
+      "repository": "cryptpad/cryptpad",
+      "url": "https://github.com/cryptpad/cryptpad",
+      "checkedAt": "2026-11-06",
+      "publicationType": "成熟基础项目精选",
+      "summary": "端到端加密的协作办公套件，可借鉴富文本共同编辑、评论和访问控制，组织小组写作与跨学部教研。",
+      "category": "教师与教研",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "语文",
+        "英语",
+        "综合实践",
+        "教师发展"
+      ],
+      "priority": "第二批",
+      "effort": "高",
+      "reviewStatus": "已核当前官方仓库、README许可声明、部署文档和官方截图；未安装、未登录试用或课堂实测",
+      "priorityReason": "写作和联合教研用途清楚，但正式协作需要持续运行的服务及运维，宜在课堂任务流程确认后再做。",
+      "why": [
+        "可围绕现有一份教案或学生合成习作开展批注与修改，成果再回到厚外成长或现有教研资料入口，不要求重建整个办公体系。",
+        "初中语文和英语可组织同伴提出一条可执行修改意见，教师确认后学生修订；教研可复用同样的课例批注流程。",
+        "小学由教师引导或代录，初中关注可执行反馈，高中增加意见取舍说明；跨学部共同保留同一任务的确认稿。"
+      ],
+      "teaching": "教师提供一份任务文本或合成习作，小组分别留下具体批注，作者选择一条修改并说明理由，教师核对后导出确认稿；教研场景改为教师共同修订课例。",
+      "existing": "现有平台保存任务入口和教师确认后的成果摘要或导出件，协作会话由独立服务承担；真实登录与成果接口待接，原型先用示例材料与文件导出衔接。",
+      "learningGoal": "提出可执行的反馈，说明意见取舍，并将反馈落实到共同作品的修改。",
+      "teacherAction": "设置一份任务材料、参与角色和可执行反馈标准，核对讨论与修改稿。",
+      "studentAction": "阅读材料、提出一条具体意见，作者修改并解释采纳或未采纳的理由。",
+      "dataOutput": "任务原稿、批注讨论、修改稿、取舍说明及教师确认后的导出件。",
+      "mvp": [
+        "只围绕富文本共同编辑与评论设计一份课堂写作任务或联合备课任务。",
+        "用虚构角色区分可编辑与只读入口，明确批注、回复和解决的使用顺序。",
+        "保存教师确认稿并导出HTML或Markdown，验证能回到现有资料或作品入口。"
+      ],
+      "acceptance": [
+        "两名虚构参与者能在同一文档看到修改与评论，角色入口符合预设。",
+        "一条批注可形成回复、修改和处理结果，能说明它对应哪处文本。",
+        "导出的确认稿可再打开；刷新与重新访问后的内容、权限和评论状态按所用服务实际核对。"
+      ],
+      "limitations": [
+        "正式服务需要后端、HTTPS、域名配置和持久化存储；不能仅放到GitHub Pages就视为完整多人协作。",
+        "端到端加密的内容管理方式与普通明文资料库不同，现有平台若需检索、审核或归档必须另定衔接方式。",
+        "主项目为AGPL-3.0-or-later，修改后通过网络提供互动时需遵循相应源码提供要求；附带组件与可选办公扩展许可另核。",
+        "本轮没有验证学校网络、大班同时编辑、统一登录或数据恢复。"
+      ],
+      "commercial": "可积累共同写作任务、同伴反馈量规和联合备课服务；对外运营前先核清实际部署与许可要求。",
+      "capabilities": [
+        "实时同步的协作文档与浏览器端加密",
+        "富文本编辑器中的评论、回复与解决评论",
+        "分享与访问设置入口",
+        "富文本支持HTML、Markdown导入及HTML、DOC、Markdown导出"
+      ],
+      "dependencies": [
+        "生产部署需Node.js环境或官方Docker方案、HTTPS与两个域名或子域名等配置。",
+        "需要专人维护服务、持久化数据与升级；首期不依赖可选OnlyOffice扩展。"
+      ],
+      "promptNotes": [
+        "先检查厚外现有资料、权限和作品入口，区分外部协作会话与教师确认后归档内容。",
+        "首版只做富文本批注和确认稿回收，不把整个办公套件搬进成长平台。",
+        "使用虚构班级与合成文本，先核对编辑、只读、评论与导出，再讨论真实系统接入。",
+        "不要把公开分享链接等同学校统一登录；缺少接口时写清待接项并保留文件导出流程。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C21",
+        "ot-scene-C28",
+        "ot-scene-C38",
+        "ot-scene-C48",
+        "ot-scene-C51"
+      ],
+      "license": "AGPL-3.0-or-later（官方README明示；附带组件与可选办公扩展另核）",
+      "sources": [
+        {
+          "title": "当前官方仓库与README；旧xwiki-labs入口已迁移",
+          "url": "https://github.com/cryptpad/cryptpad",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "旧仓库入口（跳转到当前项目）",
+          "url": "https://github.com/xwiki-labs/cryptpad",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "富文本操作、评论与导入导出文档",
+          "url": "https://docs.cryptpad.org/en/user_guide/apps/richtext.html",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "正式部署条件与OnlyOffice可选说明",
+          "url": "https://docs.cryptpad.org/en/admin_guide/installation.html",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "许可原文",
+          "url": "https://github.com/cryptpad/cryptpad/blob/main/LICENSE",
+          "date": "2026-11-06"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-06/general-cryptpad.png",
+          "type": "官方文档操作截图",
+          "caption": "官方富文本编辑器截图，包含公开示例文字与评论；非厚外学生资料或实测课例。",
+          "sourceUrl": "https://docs.cryptpad.org/en/_images/app-richtext-preview.png"
+        }
+      ]
+    },
+    {
+      "id": "repo:moodle/moodle",
+      "type": "project",
+      "repository": "moodle/moodle",
+      "url": "https://github.com/moodle/moodle",
+      "title": "Moodle · 作业提交、反馈和再次修改",
+      "summary": "成熟开源学习平台，可重点借鉴任务要求、提交状态、教师批注和重新提交的闭环。",
+      "category": "作业与反馈",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "语文",
+        "英语",
+        "地理",
+        "历史",
+        "综合实践"
+      ],
+      "effort": "高",
+      "priority": "第二批",
+      "checkedAt": "2026-11-06",
+      "verifiedAt": "2026-11-06",
+      "publicationType": "成熟基础项目参考，非今日新发布",
+      "reviewStatus": "已核官方仓库、许可及文档；未运行本地部署，未在本校课堂实测",
+      "priorityReason": "完整LMS会带来账号、课程、存储与运维投入；厚外已有成长入口，先借鉴一个作业闭环，暂不整体替换。",
+      "why": [
+        "初中英语写作、历史短论证和地理材料分析都需要“交上来之后怎样改”，这一流程比单纯收文件更贴近教学。",
+        "可以衔接现有班务屏发布作业和成长档案保存作品，保留一稿、教师意见与修改稿，不让不同入口重复建班。",
+        "小学可用图文作品和教师代确认，初高中增加自主提交、量规和修改说明；共用状态与版本结构，分开设置任务难度。"
+      ],
+      "teaching": "教师写清任务、提交方式和评价量规；学生提交初稿，教师反馈后允许按规则修改或重交，最后由学生说明改动并由教师确认。",
+      "existing": "先在既有作业入口补提交状态、批注与版本对照；班务屏只显示待办摘要，教师确认后的作品再衔接厚外成长。",
+      "mvp": [
+        "只做一个班级的一项英语写作或史地论证作业，提供任务要求、在线文字或一个附件的示例提交。",
+        "明确草稿、已提交、待反馈、需修改与已确认五种状态，保留每次提交及教师意见。",
+        "生成一页一稿与修改稿对照和学生修改说明；不接真实名单、不搬迁整校课程。"
+      ],
+      "acceptance": [
+        "同一学生的草稿保存与正式提交状态不同；重复提交不会覆盖原版本或重复生成记录。",
+        "教师给出反馈后，学生按允许条件重交；没有开放重交时给出清楚说明。",
+        "班务屏摘要、教师详情和成长档案候选作品的状态一致，须经教师确认后才归档。"
+      ],
+      "limitations": [
+        "Moodle是完整学习平台，不能把代码仓库当成可直接嵌入现有静态网页的单一组件。",
+        "本次只读查看官方演示首页及官方作业文档，未登录使用批改功能、未部署或验证本校工作流。",
+        "官方演示站说明有AI功能未开启；本期不把AI生成、自动评分或第三方模型服务当作已核定能力。",
+        "实际使用需要维护权限、附件存储、备份和版本升级；代码GPL-3.0许可及名称商标要求应在选用时分别核对。"
+      ],
+      "commercial": "先积累按学段编写的作业量规、反馈与修改模板、教师培训和实施方法；是否采用整套平台另作选型。",
+      "capabilities": [
+        "课程内布置与收集在线文字或文件作业",
+        "依据配置提供教师反馈、量规和批注",
+        "管理提交状态与允许条件下的重新提交",
+        "按活动完成条件记录进度并在课程报告中查看"
+      ],
+      "dependencies": [
+        "完整部署需PHP运行环境、数据库及Web服务器，具体版本按选定发行版安装文档核对。",
+        "PDF在线批注等能力依赖服务器相关组件与设置；首版不默认全部可用。",
+        "原型接入既有成长档案、名单和统一身份需单独核对接口，演示先用合成数据。"
+      ],
+      "promptNotes": [
+        "先检查厚外现有作业和成长记录实现，以增量方式补闭环，不先安装整套LMS。",
+        "为Task、SubmissionVersion、TeacherFeedback、RevisionNote与ArchiveApproval分开建模，保留原稿。",
+        "交付一份英语写作和一份史地材料分析样例；评分标准由教师确认，反馈与最终判断分开。",
+        "测试草稿恢复、重复提交、附件不合法、禁止重交和教师确认归档；本期不接模型、支付或全校迁移。"
+      ],
+      "learningGoal": "让学生依据明确反馈完成一次有理由的修改，并留下可比较的一稿和修改稿。",
+      "teacherAction": "发布任务与量规，审阅初稿，开放必要的修改机会并确认最终作品。",
+      "studentAction": "提交初稿、阅读教师反馈、修改后重交，说明修改理由和仍待解决的问题。",
+      "dataOutput": "任务要求、提交状态、各版作品、教师意见、学生修改说明与教师归档确认。",
+      "relatedScenes": [
+        "ot-scene-C15",
+        "ot-scene-C21",
+        "ot-scene-C28",
+        "ot-scene-C35",
+        "ot-scene-C38"
+      ],
+      "license": "GPL-3.0（官方README与COPYING已核）；Moodle名称商标另有说明",
+      "sources": [
+        {
+          "title": "官方README：平台定位、文档与演示入口",
+          "url": "https://github.com/moodle/moodle/blob/main/README.md",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "官方作业活动说明",
+          "url": "https://docs.moodle.org/501/en/Assignment_activity",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "提交、反馈与重交的官方使用说明",
+          "url": "https://docs.moodle.org/501/en/Using_Assignment",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "官方公开演示站；本轮只读查看访客首页",
+          "url": "https://school.moodledemo.net/",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "GPL-3.0许可原文",
+          "url": "https://github.com/moodle/moodle/blob/main/COPYING.txt",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "名称商标说明",
+          "url": "https://github.com/moodle/moodle/blob/main/TRADEMARK.txt",
+          "date": "2026-11-06"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-06/moodle-demo.jpg",
+          "type": "官方演示站首页截图",
+          "caption": "2026-11-06访客模式截取的Mount Orange演示首页；不是教师批改界面或本校部署，图中大学建筑为演示站配图。",
+          "sourceUrl": "https://school.moodledemo.net/"
+        }
+      ]
+    }
+  ]
+}
