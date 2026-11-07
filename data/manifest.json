@@ -1,10 +1,15 @@
 {
   "schemaVersion": 1,
-  "lastSuccessAt": "2026-11-06T13:42:35+08:00",
-  "latestDate": "2026-11-06",
+  "lastSuccessAt": "2026-11-07T20:38:22+08:00",
+  "latestDate": "2026-11-07",
   "status": "ok",
-  "message": "11月6日10项首次精选已核官方资料；历史精选与教学位置保留，OurTeacher82条继续按公开范围整理。",
+  "message": "11月7日10项教学改造参考已核官方来源，累计30项精选；原有选择与历史保留。",
   "dates": [
+    {
+      "date": "2026-11-07",
+      "path": "data/daily/2026-11-07.json",
+      "count": 10
+    },
     {
       "date": "2026-11-06",
       "path": "data/daily/2026-11-06.json",
@@ -16,5 +21,5 @@
       "count": 10
     }
   ],
-  "revision": 5
+  "revision": 6
 }
