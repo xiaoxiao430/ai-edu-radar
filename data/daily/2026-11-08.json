@@ -1,0 +1,1276 @@
+{
+  "date": "2026-11-08",
+  "verifiedAt": "2026-11-08T11:10:34+08:00",
+  "selectionNote": "本期10项是成熟项目的首次教学改造参考，不是当日新发布或本校实测榜单。补充英语分支对话与口头表达、随堂反馈、气候数据探究、历史史料自学包、小学数量表示、天气气候辨析、昼长比较、循环纹样与代码作业反馈。每项配官方界面实图，历史版本和示例日期分别注明；软件代码、课程素材和托管服务许可分开核对。投入仅对应所列最小原型，先检查既有入口再衔接。OurTeacher公开补查的官方教程已在现82条中，未取得可核新增作品，仍未完成账号全量核对。",
+  "projects": [
+    {
+      "type": "project",
+      "checkedAt": "2026-11-08",
+      "verifiedAt": "2026-11-08",
+      "publicationType": "成熟基础项目首次收录",
+      "reviewStatus": "已核官方README、当前许可、官方参考手册与教程实图；未安装或运行项目，未进行课堂实测",
+      "id": "repo:klembot/twinejs",
+      "repository": "klembot/twinejs",
+      "url": "https://github.com/klembot/twinejs",
+      "title": "Twine · 把英语选择题变成可修改的对话",
+      "summary": "可视化分支叙事编辑器，可发布为浏览器可读的HTML；先做六个段落的英语求助对话，让学生比较回应、说明选择，再改写一段。",
+      "category": "英语与情境表达",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "英语"
+      ],
+      "priority": "建议先试",
+      "effort": "低",
+      "priorityReason": "教师可先用链接与短文本制作一课，无需先改编辑器或接AI接口。估算英语教师半天整理六段对话，网页支持人员半天核对发布、字体和原有提交入口；不含学生账号与自动采集开发。",
+      "why": [
+        "初中英语常需要判断在具体场合怎样求助、追问和回应。把三处选择放进同一段交际情境，比孤立选句更便于讨论表达是否清楚、得体以及遗漏了什么信息。",
+        "班务屏显示同一情境，学生先独立选择再两人演读；成长档案只保存改写前后句子和教师反馈，不把走到某个结局当成英语能力分。",
+        "小学高段可由教师给定词句并安排两处选择，初中要求追问信息，高中增加语气与不同对象的表达比较；复用分支结构，分别调整语言材料，不将小学高段归为高中。"
+      ],
+      "teaching": "教师提供自编的校园活动求助情境：学生需要确认活动地点和时间。学生先独立走一遍六段对话，记录一处选择及理由，再两人交换角色演读；比较一次信息不足或语气欠妥的回应，改写后在新场景中口头完成求助。",
+      "existing": "班务屏和原有课堂任务页链接到导出的HTML；作答理由、改写文本和教师确认通过厚外原入口或任务单提交。Twine本体不替代现有成长档案，也不自带校内成绩回传。",
+      "learningGoal": "根据交际对象和信息缺口选择合适的英语求助与追问表达，并能解释和修改一处不清楚或不够得体的回应。",
+      "teacherAction": "编写并核对六个短段落，设置三处有明确比较理由的选择，组织角色演读，用信息完整和表达得体两项标准反馈。",
+      "studentAction": "独立作出选择并记录理由，和同伴演读不同路径，改写一段回应，在新的求助情境中独立表达。",
+      "dataOutput": "故事HTML、可继续编辑的备份或Twee源码、段落与链接清单；另由厚外入口保存选择理由、修改前后文本和教师确认，不默认自动记录学生路径。",
+      "mvp": [
+        "只做一个自编校园求助场景、六个短段落与三处选择，用Twine段落链接连接；先不用音频、外链图片、变量积分或随机剧情。",
+        "固定一个故事格式与版本，发布为HTML并保留编辑备份；本期优先选择已核许可的SugarCube 2.37.3，不混用Harlowe和SugarCube宏语法。",
+        "另附一张包含首次选择、理由、同伴建议和修改稿的任务单；将导出故事链接放入原课堂入口，不在首版开发路径追踪、AI评分或全班账号。"
+      ],
+      "acceptance": [
+        "逐条检查三处选择和所有分支，六个段落均可到达，结束处可重新开始；故意不合适的选项有可讨论的语境与反馈，不用羞辱性结局代替教学。",
+        "导出HTML可在目标班务屏和手机浏览器打开，断网后仍可读取本期纯文本故事；编辑备份能导回，原版与修订版分别保留。",
+        "学生的首次选择、具体理由和修改句分别可读；换一个求助对象后能独立完成口头表达。完成页面和点击次数不直接判为达标。",
+        "所有自编故事、任务单与新增页面文字均指定微软雅黑；故事格式、版本和所需许可声明随交付保留。"
+      ],
+      "capabilities": [
+        "用段落卡片及连线查看故事分支",
+        "通过文本链接组织非线性阅读和对话",
+        "发布HTML、导出备份及Twee文本",
+        "所选故事格式可提供变量、条件与样式，具体语法由格式决定"
+      ],
+      "dependencies": [
+        "教师使用官方浏览器版或相应桌面版编辑，学生阅读导出的HTML无需安装Twine；本期不安装或执行仓库。",
+        "锁定Twine及故事格式版本；若自行构建，当前package.json列出Node.js >=20、npm >=10，普通制课不必从源码构建。",
+        "英语教师核对情境、语言难度和反馈；原有任务提交入口或纸质任务单负责学习记录。",
+        "采用本地文字可减少外网依赖；额外图片、音频和托管服务需分别核对权利与访问情况。"
+      ],
+      "limitations": [
+        "浏览器编辑库保存在本机浏览器存储，不等于上传到云端；清理存储、换浏览器或共用终端可能影响保留，必须另存编辑备份。",
+        "官方文档明确不支持多人同时编辑同一个故事；跨学部先交换有版本号的文件，不把同步文件夹当协同编辑。",
+        "Twine是创作工具，发布后的交互由故事格式处理；自动保存学生答案、全班进度、账号管理和成长档案接口需另做。",
+        "本轮官网首页访问返回403，已通过官方GitHub源文件、可检索官方手册和官方Cookbook核对；未验证本校网络或设备的真实可用性。",
+        "配图为官方Cookbook较早版本的Twine 2连线教程，不能据此认定当前2.12系列全部按钮布局相同。",
+        "编辑器GPL-3.0、故事格式和教学文本是不同许可对象；本期已核仓库附带SugarCube 2.37.3的BSD-2-Clause式声明，其他格式不自动沿用。"
+      ],
+      "license": "Twine编辑器GPL-3.0；本期候选SugarCube 2.37.3为BSD-2-Clause；官方Cookbook图文CC BY-SA 4.0；教学文本与素材另核",
+      "commercial": "可先沉淀自编英语情境、分支设计模板与教师培训服务。若改编或分发Twine编辑器须履行GPL相应义务；导出作品需保留所用故事格式声明，并分别确认文本和素材权利，不把编辑器许可简单套到全部课程内容。官方Cookbook图文复用遵守CC BY-SA 4.0。",
+      "promptNotes": [
+        "以现有英语课堂入口为起点，只创建一份六段纯文本分支故事和配套任务单；先列出段落ID、每个选项去向与交际目标，再生成文字。",
+        "锁定SugarCube 2.37.3及其文档；首版只用基础链接，不混抄其他格式宏。教师确认所有选项与反馈，不将AI编写内容当成教材原文。",
+        "把阅读路径、学生解释和语言质量分开；本期不实现自动路径采集，学习记录由原入口或任务单承担。",
+        "保留可导入的编辑备份与发布HTML，修改前先存新版本；所有自编可见文字用微软雅黑，检查手机字号与重新开始入口。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C26",
+        "ot-scene-C27",
+        "ot-scene-C28"
+      ],
+      "sources": [
+        {
+          "title": "官方README：浏览器、Electron版与故事格式分仓",
+          "url": "https://github.com/klembot/twinejs/blob/develop/README.md",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "当前编辑器GPL-3.0许可",
+          "url": "https://github.com/klembot/twinejs/blob/develop/LICENSE",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方基础概念：本地库与故事格式的分工",
+          "url": "https://twinery.org/reference/en/getting-started/basic-concepts.html",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方发布HTML操作",
+          "url": "https://twinery.org/reference/en/publishing/publishing.html",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方协作限制源文档",
+          "url": "https://github.com/klembot/twinejs/blob/develop/docs/en/src/limitations/collaborating.md",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "仓库附带SugarCube 2.37.3许可",
+          "url": "https://github.com/klembot/twinejs/blob/develop/public/story-formats/sugarcube-2.37.3/LICENSE",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方Cookbook及图文CC BY-SA 4.0许可",
+          "url": "https://github.com/iftechfoundation/twine-cookbook/blob/master/README.md",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方Cookbook：创建段落链接",
+          "url": "https://github.com/iftechfoundation/twine-cookbook/blob/master/pages/starting/twine2/creatinglinks.md",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "当前package.json：版本与源码构建依赖",
+          "url": "https://github.com/klembot/twinejs/blob/develop/package.json",
+          "date": "2026-11-08"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-08/author-twine-official.png",
+          "type": "官方教程历史版本界面图",
+          "caption": "Twine Cookbook中Twine 2段落连线教程实图，作者为Cookbook贡献者，图文按CC BY-SA 4.0；是较早版本界面，非本期英语原型或本校实测。",
+          "sourceUrl": "https://raw.githubusercontent.com/iftechfoundation/twine-cookbook/master/pages/starting/twine2/images/starting-linked.png"
+        }
+      ]
+    },
+    {
+      "type": "project",
+      "checkedAt": "2026-11-08",
+      "verifiedAt": "2026-11-08",
+      "publicationType": "成熟基础项目首次收录",
+      "reviewStatus": "已核官方README、当前许可、文档、公开实践资料与官方界面配图；未安装或运行项目，未进行课堂实测",
+      "id": "repo:audacity/audacity",
+      "repository": "audacity/audacity",
+      "url": "https://github.com/audacity/audacity",
+      "title": "Audacity · 听见口头表达修改前后的差别",
+      "summary": "桌面多轨录音与编辑工具；先做一份英语复述的两次录音与自评，保留原声和修改理由，不自动评价发音。",
+      "category": "英语与声音表达",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "英语",
+        "语文"
+      ],
+      "priority": "建议先试",
+      "effort": "低",
+      "priorityReason": "一课可用现成桌面录音与导出流程完成，首版通过文件衔接成长档案；无需先开发语音评分或购买模型服务。",
+      "why": [
+        "初中英语复述可让学生听回自己的停顿、漏述和语义表达，选择一处具体问题再录一次；教师比较内容、连贯与听者理解，不把波形大小当发音质量。",
+        "成长档案已有作品记录基础，可保存原录音、修改后录音与简短自评；班务屏播放获准展示的短片段，讨论“哪里更清楚”，避免另造口语积分。",
+        "小学以20秒图片介绍起步，初中做45秒语篇复述，高中扩展到90秒观点陈述或访谈；语文朗读和综合实践声音访谈可借用流程，但评价要求、素材与展示范围分别设定。"
+      ],
+      "teaching": "教师给一份自编短材料和两项观察点，学生先录一遍，再听回并标出一处要改的表达，简要说明原因后重新录制。教师依据任务内容和表达量规作反馈，原声保留；剪辑后的作品与连续表达练习分开判断。",
+      "existing": "以音频文件与教师确认单接到成长档案，首版人工上传；班务屏只承担授权片段播放。Audacity不提供现成学生档案、班级管理或评价接口，真实文件上传能力待核。",
+      "learningGoal": "围绕材料清楚表达主要意思，能听出并改进自己的一处表达问题，说明修改带来的变化。",
+      "teacherAction": "准备有使用权的短材料和表达量规，示范录音与回听，核对两次录音和修改理由，确认可归档、可展示的片段。",
+      "studentAction": "录制首次复述，回听并记录一处具体问题，按目标重新录制，比较两次表达并提交简短自评。",
+      "dataOutput": "任务编号、素材出处、首次与再次录音、录制日期、对应时间段、自评与修改理由、教师反馈及归档和展示状态。",
+      "mvp": [
+        "先做一份初中英语45秒复述任务，使用教师自编文本与成人示范录音；只教录音、回听、选择片段和导出，不接自动转写、发音评分或云端账户。",
+        "保留首次原录音与完整再次录音，另填一份“要改哪里、为什么、改后怎样”的记录；编辑只用于学习定位或制作单独成品，不剪成虚假的一次连续口述。",
+        "导出通用WAV或MP3及所选版本对应的可编辑工程，先人工归档。投入估算为半天至一天的设备检查和任务模板准备，另需教师备课；不含定制网页、全班设备或归档接口开发。"
+      ],
+      "acceptance": [
+        "一名成人示范者完成录制、停止、回听、另存和导出；两个音频能在班务屏浏览器及教师电脑播放，音量可听且无明显削波失真。",
+        "两次录音与自评时间段一一对应，原录音不被覆盖；编辑成品另存并标明剪辑，不能替代原始连续表达。",
+        "教师能按量规指明一处改进与一处仍需练习之处；文件命名、任务编号和展示状态明确，无授权或未确认作品不进入公开播放清单。",
+        "可编辑工程能由相应版本重新打开；至少保留一份通用音频副本，工程文件不直接当作浏览器可播放音频。"
+      ],
+      "limitations": [
+        "本体是录音编辑软件，不自带可靠的英语发音评分、学生能力诊断或成长档案同步；波形、时长、音量和降噪效果不能代替语言表现评价。",
+        "当前README仍提示master进行Audacity 4的结构与界面改造，官网已提供4版入门教程；落地前核定安装包版本、工程格式及对应文档，未验证当前master的课堂可用性。",
+        "Audacity 3与4的界面、快捷键和工程格式存在差别；本期配图来自4版官方教程，不能当作所有既有机房版本的操作画面。",
+        "需要桌面电脑、麦克风和合适录音环境；同一教室多人同时录制可能互相干扰，应先安排轮换与短时段试录，未验证本校设备兼容性。",
+        "部分导入格式需要FFmpeg；首版用常见WAV或MP3，额外编解码器、插件、云保存和素材授权分别核对。",
+        "公开大学声音项目资料可供教学设计参考，不证明本校初中口语提升；降噪和拼接也可能改变原声，评价须回到保留的原录音。"
+      ],
+      "commercial": "可沉淀分学段的英语复述、朗读和声音访谈任务包，以及教师培训和设备流程服务。当前整体按GPLv3发布，分发软件或修改版须遵守对应源码与许可义务；多数源文件另标GPLv2-or-later，第三方代码另核，文档为CC-BY 3.0（另有说明除外）。课程文本、音频、品牌和学生作品权利独立，不将开源代码许可当作素材授权。",
+      "capabilities": [
+        "桌面多轨录音、播放与波形观察",
+        "片段选择、剪切、移动与撤销",
+        "音量和效果处理",
+        "保留可编辑工程",
+        "导出WAV、MP3等通用音频"
+      ],
+      "dependencies": [
+        "适配学校电脑系统的官方桌面安装包、麦克风、耳机和可用存储；实施前锁定版本与相应手册。",
+        "教师自编或获准使用的文本和音频、简明表达量规、录音轮换安排与展示确认流程。",
+        "首版采用本地文件，不需云账户或模型API；特定格式可能另需FFmpeg，档案上传与班务屏播放按实际能力核对。"
+      ],
+      "promptNotes": [
+        "先用现有软件完成一课两次录音，不重建音频编辑器；围绕内容表达、回听、自评和教师反馈设计任务，不虚构自动发音评价。",
+        "为首次原录音、再次完整录音和剪辑成品设置不同文件类型与记录，修改理由关联明确时间段，不用后期拼接代替连续表达练习。",
+        "按实际安装版本编写步骤，不混用Audacity 3和4的工程格式与快捷键；保存可编辑工程之外另导出浏览器可播放音频。",
+        "成长档案衔接先用文件与确认单；只播放获准片段，新增任务单、确认单及网页可见文字统一微软雅黑。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C17",
+        "ot-scene-C26"
+      ],
+      "license": "当前整体GPLv3；多数源文件GPLv2-or-later，第三方部分另核；文档CC-BY 3.0（另有说明除外），录音与素材权利独立",
+      "sources": [
+        {
+          "title": "当前官方README：录音编辑定位、4版改造与许可说明",
+          "url": "https://github.com/audacity/audacity/blob/master/README.md",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "当前LICENSE：整体GPLv3、源文件与文档许可",
+          "url": "https://github.com/audacity/audacity/blob/master/LICENSE.txt",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方4版入门教程：录音、编辑、工程与音频导出",
+          "url": "https://www.audacityteam.org/manual/getting-started/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方首次录音教程与单轨界面图",
+          "url": "https://www.audacityteam.org/manual/getting-started/make-your-first-recording/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方编辑教程：选择、剪辑、速度与FFmpeg格式边界",
+          "url": "https://www.audacityteam.org/manual/getting-started/basic-audio-editing/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方3到4版迁移说明：工程格式与界面变化",
+          "url": "https://www.audacityteam.org/manual/new-in-audacity-4/audacity-3-to-4-transition-guide/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "Chico State教学发展中心：课堂声音项目与学生播客实践参考",
+          "url": "https://www.csuchico.edu/fdev/fdev-teaching-guides/teachingguide-8.shtml",
+          "date": "2026-11-08"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-08/feedback-audacity-official.webp",
+          "type": "官方4版教程单轨录音界面图",
+          "caption": "Audacity 4官方首次录音手册的单轨录音界面图，展示录音与波形；Audacity Manual／Muse Group & contributors，文档CC-BY 3.0（具体另有说明除外），原图未改。非本校机房版本、学生声音或本轮实测。",
+          "sourceUrl": "https://www.audacityteam.org/_astro/SceneFirstTake.3hkoDa3f_Z160tU0.webp"
+        }
+      ]
+    },
+    {
+      "type": "project",
+      "checkedAt": "2026-11-08",
+      "verifiedAt": "2026-11-08",
+      "publicationType": "成熟基础项目首次收录",
+      "reviewStatus": "已核官方README、当前许可、文档、公开实践资料与官方界面配图；未安装或运行项目，未进行课堂实测",
+      "id": "repo:mawoka-myblock/classquiz",
+      "repository": "mawoka-myblock/ClassQuiz",
+      "url": "https://github.com/mawoka-myblock/ClassQuiz",
+      "title": "ClassQuiz · 用随堂选择题安排分层复习",
+      "summary": "可自托管的实时答题平台；先做五题英语辨析与讨论，再依据具体错题安排补练，不把抢答排名写成成长成绩。",
+      "category": "课堂互动与评价",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "英语"
+      ],
+      "priority": "第二批",
+      "effort": "中",
+      "priorityReason": "已有班务屏可承担题目展示，但自托管涉及多项服务与维护；先由一位教师核定五题和结果下载流程，再考虑接入成长档案。",
+      "why": [
+        "初中英语可用五道词义、搭配或语篇判断题定位两类常见误解，答题后让学生说明理由，再由教师给不同补练；地理读图、历史材料判断可复用流程，但题干和干扰项须重新核定。",
+        "班务屏负责展示与课堂转换，ClassQuiz负责一轮实时作答；成长档案只接收教师确认的错题解释与再练作品，不把速度、名次或参与次数直接换算为六好评价。",
+        "小学先做图片与短词辨析，初中加入语境和理由；跨学部复用题目编号、下载记录和复盘模板，分别调整阅读量、设备使用方式与评价标准。"
+      ],
+      "teaching": "教师准备五题及干扰项对应的常见误解，学生先独立选择，再用一句话解释其中一题。教师结合答题结果安排基础辨析或迁移补练，课末再问一题相同概念的新情境；补练与解释由厚外另行设计。",
+      "existing": "班务屏打开教师展示页，学生使用受控设备参与；结果先由教师下载核对，通过单独的整理表与原系统交接。现有账号、名单和成长档案接口待核，不假定可直接同步。",
+      "learningGoal": "在具体语境或材料中作出选择，并能解释错误选项为什么不合适，完成一次有针对性的再练。",
+      "teacherAction": "核定题目与干扰项，主持作答和理由讨论，下载并核对结果，为不同错因安排补练并确认订正。",
+      "studentAction": "按课堂约定参与五题作答，说明一题的判断理由，根据反馈完成补练并写出修改原因。",
+      "dataOutput": "原生答题结果下载文件；厚外另记题目编号、概念标签、化名、理由、补练题、前后作答及教师确认状态，具体原生导出字段待部署核对。",
+      "mvp": [
+        "只做一位初中英语教师的一课五题，使用自编题和虚构参与者；先确认创建、加入、教师展示、作答与下载结果这条流程。",
+        "围绕两类常见错误另备基础、迁移两组补练和一份理由记录表；教师依据具体回答分配，首版不声称本体具备自适应分层或AI错因诊断。",
+        "在独立测试环境锁定提交和服务版本，先以人工文件交接衔接成长档案；投入估算为3—5个开发工作日加一轮教师备题，限单课原型，不含全校运维与账号集成。"
+      ],
+      "acceptance": [
+        "五题的正确项、干扰项说明与教师底稿一致；教师端展示和学生选择记录逐题对应，断连或漏答明确标记，不填成错误答案。",
+        "下载结果可打开，并核对五名虚构参与者的记录；整理后的数据保留原文件和题目版本，重复导入不重复新增，未核身份不自动关联学生档案。",
+        "至少完成一份“首次回答—理由—补练—教师确认”的样例；再练题检查同一概念，不复制原题答案。班务屏与一台学生手机的文字、触控与网络表现须另行实测。"
+      ],
+      "limitations": [
+        "原项目包含竞赛与排名；速度、名次及一次选择不能证明概念掌握，也不能作为学生综合评价或跨班排名依据。",
+        "下载结果不等于已接通厚外接口；分层规则、理由记录、归档和去重需要另做，导出实际字段尚未运行核对。",
+        "官方自托管依赖多项服务且要求HTTPS；README与当前Compose的缓存实现描述有差别，当前Compose使用Valkey，实施时按锁定版本逐项核对。",
+        "自定义加入字段没有验证且可能保留上次值；首版用虚构编号并明确清除，不凭该字段确认真实身份。官网托管服务的网络延迟和可用性未在本校验证。",
+        "作者2025-11-01文章提到代码复杂、维护时间与资金压力；这是当时情况，不能据此认定当前已停更，部署前仍需检查当前提交、依赖与维护安排。",
+        "公共题库、导入的Kahoot题目和其中图片不因项目开源而获得再分发许可；首版只用自编且获准使用的材料。"
+      ],
+      "commercial": "可先提供校本题目、错因补练、教师培训与受控部署服务。MPL-2.0允许商业利用，分发受覆盖代码及其修改时须依许可提供相应源码并保留声明；浏览器前端分发也应纳入检查。独立文件边界、依赖、品牌、题库和图片分别核清，不把公开题库打包售卖。",
+      "capabilities": [
+        "教师创建题目与题库编辑",
+        "实时课堂答题、结果和排名显示",
+        "答题结果下载",
+        "教师展示页的异设备遥控",
+        "自托管及可配置加入字段"
+      ],
+      "dependencies": [
+        "Docker Compose、Git与HTTPS；SvelteKit前端、FastAPI后端、PostgreSQL、Redis兼容缓存（当前Compose为Valkey）、Meilisearch、Caddy及后台任务服务。",
+        "本地或S3兼容图片存储、数据库持久化与备份；验证码、第三方登录和错误日志服务可选，不能把官方示例配置直接当生产配置。",
+        "教师核定的五题与分层补练、可用学生设备和课堂网络；结果整理及成长档案交接由厚外另做。"
+      ],
+      "promptNotes": [
+        "先核班务屏入口与成长档案字段，使用ClassQuiz作独立课堂答题服务；不重建积分商城，不自动把竞赛分写入六好评价。",
+        "先拿五名虚构参与者跑通下载文件，明确真实字段后再编写整理逻辑；原始作答、教师错因判断和补练结果分别保存。",
+        "只用教师自编题，不抓取或搬运Kahoot和公共题库；分层补练属于新增教学流程，不能写成本体已有的AI功能。",
+        "锁定提交与服务版本，列出维护与备份责任；所有新增整理页面和表格可见文字统一微软雅黑。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C02",
+        "ot-scene-C15",
+        "ot-scene-C24",
+        "ot-scene-C58"
+      ],
+      "license": "MPL-2.0（仓库代码）；依赖、题库、导入内容、图片与品牌权利另核",
+      "sources": [
+        {
+          "title": "官方README：定位、技术栈与许可声明",
+          "url": "https://github.com/mawoka-myblock/ClassQuiz/blob/master/README.md",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "当前MPL-2.0许可原文",
+          "url": "https://github.com/mawoka-myblock/ClassQuiz/blob/master/LICENSE",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方首页：编辑、作答、结果下载与界面配图",
+          "url": "https://classquiz.de/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方自托管教程：服务、存储与HTTPS要求",
+          "url": "https://classquiz.de/docs/self-host",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "当前Compose：服务与Valkey缓存配置",
+          "url": "https://github.com/mawoka-myblock/ClassQuiz/blob/master/docker-compose.yml",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方加入字段实践：导出、无验证与值保留限制",
+          "url": "https://classquiz.de/docs/features/custom-field",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方教师遥控展示实践",
+          "url": "https://classquiz.de/docs/features/remote-control",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "作者2025-11-01项目维护情况说明，非今日状态",
+          "url": "https://mawoka.eu/blog/state-of-classquiz",
+          "date": "2026-11-08"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-08/feedback-classquiz-editor-official.webp",
+          "type": "官方首页题库编辑界面截图",
+          "caption": "ClassQuiz官网公开的Country Quiz题库编辑界面，展示题目列表与编辑区域；示例内容非本校英语课例，未进行软件运行或课堂实测。",
+          "sourceUrl": "https://classquiz.de/_app/immutable/assets/edit.C6O7F-of.webp"
+        }
+      ]
+    },
+    {
+      "id": "repo:concord-consortium/codap",
+      "type": "project",
+      "repository": "concord-consortium/codap",
+      "url": "https://github.com/concord-consortium/codap",
+      "title": "CODAP · 在表与图之间核对气候判断",
+      "summary": "面向学习者的浏览器数据分析平台，表格与多张图可以关联选中同一条记录；先做两地模拟月气温、降水数据的比较任务。",
+      "category": "地理与数据探究",
+      "stages": [
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "地理",
+        "数学"
+      ],
+      "priority": "建议先试",
+      "effort": "中",
+      "checkedAt": "2026-11-08",
+      "verifiedAt": "2026-11-08",
+      "publicationType": "成熟基础项目首次收录，非当日新发布",
+      "reviewStatus": "已核官方README、当前仓库许可、导入与联动教程、课程目录及公开界面图；未安装运行仓库，未部署，未进行课堂实测",
+      "priorityReason": "先借用现成表图联动，开发工作集中在任务说明、解释与修订留存；官网资源和代码许可存在不同范围的说明，收费复刻暂不作承诺。",
+      "why": [
+        "初中地理比较两地气温与降水时，学生容易只看曲线高低而漏掉月份、单位或异常值；关联选择能把图上的点带回原表逐条核对。",
+        "厚外班务屏可沿用课堂任务入口，成长档案只收教师确认的图、解释和修改稿；不把拖动图表或点击次数折算成六好评价分。",
+        "本期面向初高中地理与数学的读图任务：初中找出季节变化和反例，高中补充数据来源、统计口径与结论限制。小学高段以后可另做简单分类表任务，本期不机械加入小学地理。"
+      ],
+      "teaching": "教师提供明确标为教学合成的A、B两地各12个月均温与降水表，学生先判断差异，再在图中选择支持或挑战判断的月份，回到表格核对数值，修改说明。合成数据只练读表、比较与解释，不据此判断现实城市的气候。",
+      "existing": "班务屏放任务入口和教师示范；CODAP承担数据探索，原有成长档案接收图表与简短解释。首版通过本地文件交接，校内账号和归档接口仍待核。",
+      "learningGoal": "在月份、单位和数据范围一致的条件下比较两组数据，能指出具体记录支持判断，也能根据反例修订结论。",
+      "teacherAction": "核定合成表与单位，示范一次表图联动，追问结论对应哪些月份，并检查学生是否误把模拟数据说成现实气候。",
+      "studentAction": "先写判断，再制作或读取两张图，选中关键月份回表核对，记录一条反例，提交修改后的解释。",
+      "dataOutput": "任务编号、合成CSV与字段单位、CODAP文档或图表文件、关键月份清单、首次判断、修订说明和教师确认状态；学习记录由校本外层保存。",
+      "mvp": [
+        "只做24条合成月记录，字段为地点代号、月份、均温℃、降水mm；提供原表和字段说明，不导入师生个人资料。",
+        "在CODAP中准备一张表与两张分别表示均温、降水的图，统一月份编码，以地点区分数据；不假设内置完整的双轴气候统计图模板。",
+        "另做一页“判断—关键月份—反例—修改”记录表，保存图表和解释；先不开发插件、不接云端名单、不自动写入成长分。",
+        "投入按单课原型估算：教师核表与任务约半天，开发整理文件入口和导出衔接约1—3个工作日；自托管、插件或账号接入另行估算，均未排期验证。"
+      ],
+      "acceptance": [
+        "24条记录完整导入，月份按数值顺序显示，缺值不自动当作0，单位始终可见；选中某月份时，表与相关图选中相同记录。",
+        "至少核对两条支持判断的记录与一条反例；图表中的地点、数值、轴标题能回查原表，不用图形外观替代数值核对。",
+        "一份文档和解释导出后可重新打开；首次判断与修改稿分别保留，成长归档前显示教师确认状态。",
+        "合成标识在表、图和提交说明中保留；替换为真实气候资料前另核观测年份、长期平均口径与数据许可。"
+      ],
+      "capabilities": [
+        "手工录入或从CSV、JSON、CODAP、TXT等文件导入数据",
+        "表格、图与地图对同一数据记录关联选中",
+        "拖放属性生成数据图与探索不同表示",
+        "可通过Data Interactive API扩展数据交互；本期不开发插件"
+      ],
+      "dependencies": [
+        "桌面浏览器、教师核定的合成CSV与任务说明；首轮用独立文件，不依赖地图底图服务。",
+        "官方托管应用依赖外网及服务条款；计划自托管时需另行核对所选CODAP版本、构建资源和依赖，不能把v2、v3开发资料混用。",
+        "任务解释、教师确认、文件交接由厚外外层承担；校内真实接口、中文显示和触屏表现尚未验证。"
+      ],
+      "limitations": [
+        "公开教程展示数据导入和表图联动，不等于已验证本校设备、学生理解或教学效果；本轮未实际操作应用。",
+        "CODAP不自带本校任务评价和成长档案接口，图表操作本身不能证明学生已会比较数据。",
+        "仓库LICENSE.md明确MIT；官方2026-08-06说明将托管应用及课程资源列为CC BY-NC 4.0，而FAQ另有MIT Media表述。资料的授权范围存在差异，不能把代码MIT推及官网所有内容与服务。",
+        "首版不使用在线地图、人口或天气插件，不把第三方数据许可并入CODAP代码许可；真实气候数据需要单独核对来源和统计口径。",
+        "官方课程目录可供任务设计参考，不是厚外课程实测报告；本期合成数据不能支持对真实城市气候成因的判断。"
+      ],
+      "license": "仓库代码MIT（LICENSE.md）；官方托管应用与课程教育资源另有CC BY-NC 4.0说明，FAQ表述存在差异，商业使用范围需核清",
+      "commercial": "先积累自编的匿名数据任务、字段核对表和教师带练方法。独立使用MIT代码仍需保留声明；官网托管应用、课程、截图及第三方数据的授权范围另核，不能直接打包成收费复刻服务。",
+      "promptNotes": [
+        "先复用班务屏入口和成长作品结构，只增加一个数据探索任务；CODAP图表状态与学生解释、教师确认分开建模。",
+        "使用A/B两地24条显式合成记录，不填写真实城市名；月份为1—12，均温与降水分别带单位，不强造双轴气候图。",
+        "必须保留首次判断、关键记录、反例与修改稿；只保存截图不视为完成探究，归档需教师确认。",
+        "实现前锁定版本并核查代码、托管服务与课程素材三类条件；所有自行编写的中文界面及图表文字指定微软雅黑。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C34",
+        "ot-scene-C32",
+        "ot-scene-C38"
+      ],
+      "sources": [
+        {
+          "title": "官方README：项目定位、历史与代码许可",
+          "url": "https://github.com/concord-consortium/codap/blob/main/README.md",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "当前MIT许可原文",
+          "url": "https://github.com/concord-consortium/codap/blob/main/LICENSE.md",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方数据导入教程",
+          "url": "https://codap.concord.org/how-to/entering-importing-data-into-codap/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方表图联动教程：Four Seals示例",
+          "url": "https://codap.concord.org/how-to/multiple-linked-data-representations-in-codap/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方课程实践目录：Bootstrap、Boosting Data Fluency等",
+          "url": "https://codap.concord.org/educators/curriculum-examples/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方开发者说明：静态托管与文档存储",
+          "url": "https://codap.concord.org/developers/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方首页：产品功能、v3界面与示例入口",
+          "url": "https://codap.concord.org/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "2026-08-06官方说明：MIT代码与CC BY-NC托管应用/课程范围",
+          "url": "https://concord.org/blog/under-the-hood-of-the-new-and-improved-codap/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方使用条款入口与软件署名",
+          "url": "https://codap.concord.org/about/terms-of-use/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方FAQ：含与新版说明不同的材料许可表述",
+          "url": "https://codap.concord.org/help/faqs/",
+          "date": "2026-11-08"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-08/inquiry-codap-official.jpg",
+          "type": "官方首页功能界面图",
+          "caption": "CODAP官方首页发布的v3界面图，展示Four Seals数据卡、地图与时间控件；图来自The Concord Consortium，https://codap.concord.org。非本期气候原型或课堂实测，地图和材料权利另核。",
+          "sourceUrl": "https://codap.concord.org/wp-content/uploads/2025/11/codap3-beta-hero-border.2png-scaled.png"
+        }
+      ]
+    },
+    {
+      "type": "project",
+      "checkedAt": "2026-11-08",
+      "verifiedAt": "2026-11-08",
+      "publicationType": "成熟基础项目首次收录",
+      "reviewStatus": "已核当前官方仓库README、许可、版本说明和官方操作文档实图；未安装或运行项目，未进行课堂实测",
+      "id": "repo:exelearning/exelearning",
+      "repository": "exelearning/exelearning",
+      "url": "https://github.com/exelearning/exelearning",
+      "title": "eXeLearning · 把两则史料做成一份自学包",
+      "summary": "开放教育资源创作工具，用页面目录和互动模块组织材料并导出HTML、SCORM等格式；先做初中历史的双材料阅读、判断与修订任务。",
+      "category": "历史与课程资源",
+      "stages": [
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "历史"
+      ],
+      "priority": "第二批",
+      "effort": "中",
+      "priorityReason": "比单独拼接课件更便于保留材料目录和可编辑源项目，但需先核中文内容、样式及导出。估算历史教师半天至一天选材出题，网页支持人员一天检查一课HTML与归档交接；不含云端协作和LMS部署。",
+      "why": [
+        "初中历史可以围绕一个问题并列两则出处明确的材料，要求区分材料直接记载、作者观点和学生推断，避免自学包只堆文字与选择题。",
+        "教师保留可编辑源项目，班务屏打开同一份导出资源；学生的比较表、解释与修订通过原入口进入成长档案，不为了制课另建学习平台。",
+        "初中先检查出处、时间与材料所能支持的判断，高中再增加立场比较和材料局限；跨学部复用页面结构和资源登记方式，教材、题目与标准分别核定。"
+      ],
+      "teaching": "教师围绕本课一个历史问题选择两则可使用的真实材料，写清作者、时间和出处。学生先填两栏比较表，再做一道判断题并查看反馈；最后写一段同时引用两则材料的解释，在讨论后修订。选择题反馈只用于暴露误读，最终解释由教师核对。",
+      "existing": "复用现有班务屏资源链接、作业提交和成长作品入口；eXeLearning先作为教师独立制课工具，交付一份HTML资源包与可编辑源文件，不假定厚外已有Moodle。",
+      "learningGoal": "辨明两则历史材料的来源和可说明的内容，用材料支持自己的解释，并指出一项材料无法直接回答的问题。",
+      "teacherAction": "确定一个历史问题，选取和核对两则材料，设计误读判断与解释标准，组织比较并确认学生修订稿。",
+      "studentAction": "登记材料出处、完成对照表，说明判断理由，在反馈和讨论后写出并修订有材料支持的解释。",
+      "dataOutput": "可编辑.elpx项目、HTML资源包、素材与许可清单；学生比较表、初稿、修改理由和教师确认稿由厚外既有任务入口保存。",
+      "mvp": [
+        "只做一个历史课例的三页资源：问题与目标、两则史料及出处、比较与出口题；使用文本和一种判断互动模块，不引入大视频或整单元题库。",
+        "先用已发布的4.x版桌面作者工具制作，保留.elpx源文件和原材料备份，导出HTML用于班务屏；不把当前main源码与旧2.9手册的部署方法混用。",
+        "将比较表和修订稿提交到原入口或任务单。首版不接云端协作、第三方账号、Moodle插件或SCORM成绩回传；这些另行立项核对。"
+      ],
+      "acceptance": [
+        "两则材料均有可回查出处和准确摘录，判断题答案及反馈经历史教师核对；未核明的作者、日期或页码标待补，不补写史实。",
+        ".elpx源项目可重新打开修改，导出HTML的目录、图片、反馈和所有资源链接逐项检查；导出文件夹整体移动后资源仍能读取。",
+        "学生比较表能分开材料原话、推断与自己的解释；修订稿明确说明哪一处因材料或讨论而改变，不用点击完成替代历史理解。",
+        "本期使用本地素材时在目标班务屏验证断网阅读，所有新增页面和任务单文字指定微软雅黑；若本地字体缺失先解决，不静默换字。"
+      ],
+      "capabilities": [
+        "按层级目录组织教育资源页面",
+        "使用iDevices添加文字、多媒体及互动活动",
+        "导出HTML、SCORM和EPUB等资源格式",
+        "当前项目提供桌面版及服务器部署路线；云版支持Yjs实时协作"
+      ],
+      "dependencies": [
+        "教师端需与所选发布版本一致的桌面环境；学生阅读HTML无需安装作者工具。当前main使用Bun/Elysia/Kysely，不能照搬旧Python架构。",
+        "需要历史教师选定的合法材料、题目答案和使用说明；中文界面覆盖及字体样式需实际确认，README语言列表未承诺完整简体中文。",
+        "服务器版另需部署维护、认证及数据库选择；本期不部署。官方文档列出SQLite、MySQL或PostgreSQL等支持，不意味着静态HTML需要数据库。",
+        "如果后续接LMS，须区分普通网页、SCORM包与eXe专用插件的记录能力及版本要求；不把展示链接当成绩接口。"
+      ],
+      "limitations": [
+        "当前官方主仓库为exelearning/exelearning，代码属于重构后的4.x技术路线；本轮核到发布页v4.0.6，主分支文档可能先于发布包，落地时须锁定同一版本。",
+        "官方帮助页说明2.x/3.x资源可在4.x打开但布局可能变化，新版内容不能回旧版编辑；2.9及更早样式不兼容4.x，原课件需备份再迁移。",
+        "普通HTML资源展示不等于保存全班作答。官方Moodle文档区分网页资源、SCORM总体分与专用插件逐题记录，首版只验证展示和既有入口提交。",
+        "本轮只核文档、源码声明和官方截图，未测导出后的中文排版、移动端互动、无障碍或本校终端兼容。",
+        "AGPL-3.0-or-later约束软件；修改后对外提供网络服务及分发涉及相应源码义务。导出资源含运行时代码和第三方组件，不能笼统承诺课程包可无条件闭源再售。",
+        "课文、史料图片、配乐和外部媒体有各自权利；软件开源不等于教材及图库素材可以随包商业转售。"
+      ],
+      "license": "AGPL-3.0-or-later（当前package.json及LICENSE）；导出运行时代码、第三方组件和课程素材分别核对",
+      "commercial": "可先积累自编历史阅读包、资源格式整理与教师制课培训服务。采用或改编软件须按实际分发和网络服务方式履行AGPL义务；导出包的运行时代码、第三方声明与材料授权单列，不将开源工具包装为自有闭源平台，也不把他人史料包直接纳入收费资源。",
+      "promptNotes": [
+        "先检查既有班务屏与任务入口，只制作三页双史料阅读包和可编辑源项目；不为一个课例先部署云端作者平台。",
+        "学生要完成出处登记、材料比较、解释与修改，自动判断题只提供一次可理解的反馈；不自动给史料解释打分。",
+        "固定4.x发布版、导出格式和样式，文档按同版本核对；不生成未经规范校验的.elpx，不混用旧.elp模板与新版格式。",
+        "分别保存源项目、导出包、素材清单和学生作品。自写页面、任务单及可编辑样式统一微软雅黑；不直接移植未核许可素材。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C35",
+        "ot-scene-C13"
+      ],
+      "sources": [
+        {
+          "title": "当前官方主仓库README：项目、技术架构与导出",
+          "url": "https://github.com/exelearning/exelearning/blob/main/README.md",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "AGPL当前许可原文",
+          "url": "https://github.com/exelearning/exelearning/blob/main/LICENSE",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "package.json：AGPL-3.0-or-later及4.x说明",
+          "url": "https://github.com/exelearning/exelearning/blob/main/package.json",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方4.x帮助：桌面、协作与旧资源和样式兼容限制",
+          "url": "https://exelearning.net/en/help/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方Moodle集成文档：三种资源方式及不同记录范围",
+          "url": "https://github.com/exelearning/exelearning/blob/main/doc/plugins/moodle.md",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方版本发布v4.0.6",
+          "url": "https://github.com/exelearning/exelearning/releases/tag/v4.0.6",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "第三方声明：SCORM导出包含的MIT组件及AGPL运行时代码",
+          "url": "https://github.com/exelearning/exelearning/blob/main/THIRD-PARTY-NOTICES.md",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方功能介绍：HTML、SCORM与EPUB导出",
+          "url": "https://exelearning.net/en/home-2/",
+          "date": "2026-11-08"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-08/author-exelearning-official.png",
+          "type": "官方操作文档编辑器截图",
+          "caption": "eXeLearning当前官方仓库Moodle集成教程中的内嵌编辑器实图，画面为西班牙语判断活动；不代表厚外已部署Moodle，也非本期历史自学包或课堂实测。",
+          "sourceUrl": "https://raw.githubusercontent.com/exelearning/exelearning/main/doc/plugins/img/moodle/exelearning-editor.png"
+        }
+      ]
+    },
+    {
+      "id": "repo:gcompris/gcompris-qt",
+      "type": "project",
+      "title": "GCompris · 把低年级练习变成可解释的操作",
+      "repository": "gcompris/GCompris-qt",
+      "url": "https://github.com/gcompris/GCompris-qt",
+      "checkedAt": "2026-11-08",
+      "verifiedAt": "2026-11-08",
+      "publicationType": "成熟基础项目首次收录",
+      "reviewStatus": "已核官方README、逐文件许可索引、活动说明、学校使用说明和官方配图；未安装或运行项目，未进行课堂实测",
+      "summary": "面向2至10岁儿童的原生教育活动套件；借鉴按能力选练习的方式，先做小学数量表示与操作解释任务。",
+      "category": "小学基础学习",
+      "stages": [
+        "小学"
+      ],
+      "subjects": [
+        "数学"
+      ],
+      "priority": "第二批",
+      "effort": "中",
+      "priorityReason": "能补小学低年级的操作性练习；现有班务屏可带练，但原生Qt应用不能直接当网页嵌入，先做一项独立网页原型。",
+      "why": [
+        "小学已有成长档案和班务屏，可把一轮数量操作、学生解释与修改后作品交给教师确认，再保存为学习记录，不另起积分排名。",
+        "先用“数字与圆点数量是否对应”检查数的意义；小学高段再另立小数单位条课例，避免只展示答对次数而看不见思考。",
+        "跨学部复用任务编号、作品导出和教师评语结构，初高中仍使用适龄学科任务，不把2至10岁套件直接推广到全部学段。"
+      ],
+      "teaching": "教师给定十以内数字与圆点框，学生先预测要点几个、再操作表示数量、口头或文字解释，教师用相邻两个数追问并确认修改。活动操作是素材，解释和教师观察由厚外另做。",
+      "existing": "复用班务屏投放任务入口和成长档案作品结构；首版只导出匿名任务作品与观察单，现有系统的身份、存储和归档接口先检查后接。",
+      "learningGoal": "把十以内数字与相应数量对应起来，并能说明增加一个圆点后数量怎样变化。",
+      "teacherAction": "设置数字范围，示范操作方式，追问学生的数量解释，区分误触与概念错误并确认修改稿。",
+      "studentAction": "预测数量、点选圆点、提交解释，比较相邻数字，在教师追问后重新表示并说明变化。",
+      "dataOutput": "任务编号、虚构学习者代号、目标数字、已选圆点、首次与修改后解释、教师观察和确认状态。",
+      "mvp": [
+        "先检查已有班务屏任务入口，只新增一页十以内数字与圆点配对练习，三组自编题与虚构学习者，不复制原项目角色、音效或图片。",
+        "提供大触控圆点、撤销、提交和教师追问卡；数字范围由教师设定，解释可教师代录，不要求低年级长篇打字。",
+        "在本地保存一次练习的首次与修改稿，导出JSON和可打印观察单；首版不移植整个Qt程序、不联网上传、不做自动能力诊断。"
+      ],
+      "acceptance": [
+        "三组题的目标数字与圆点计数一致；快速重复触摸不会误计两次，撤销后数量和图形同步。",
+        "保存并重新载入后，首次操作、修改稿与教师观察仍能区分；损坏文件导入不覆盖原有作品。",
+        "大屏和390px手机均可完成点选与撤销；解释为空可提示教师补观察，但不会把未解释的答对自动记为已掌握。"
+      ],
+      "limitations": [
+        "GCompris本体是Qt Quick原生程序，不是可直接嵌进班务屏的网页组件；所列网页任务为教学方法借鉴和独立开发范围。",
+        "官方套件主要面向2至10岁；活动难度、语言语音和教材目标要按本校年级重新核对，原学校说明的课程依据不能直接代替本校课标。",
+        "当前README说明整体受AGPLv3约束、内部代码多为GPLv3+；音频、图片和其他文件在REUSE.toml分别列许可，不能视作统一素材包随意复用。",
+        "官方学校介绍和下载页对套件数量、许可措辞存在旧表述，按当前README与逐文件声明核对；不以旧页面推断全部活动或服务条款。",
+        "官方当前下载页提示macOS最新版暂未提供，不能根据支持平台名称推断所有设备都有同版本；本期没有验证本校一体机或触屏兼容性。"
+      ],
+      "commercial": "可先做适龄任务设计、教师观察单和校本带练服务；独立编写网页功能与改编分发GCompris代码是不同交付方式。若实际复用其代码或素材，应逐项核对AGPL/GPL及REUSE声明并履行相应条件，不默认原角色和音效可用于自有收费产品。",
+      "capabilities": [
+        "多种儿童教育活动的统一入口",
+        "部分活动可选择难度或数据范围",
+        "数量、读写、逻辑与计算机操作等练习",
+        "原生客户端的离线活动使用"
+      ],
+      "dependencies": [
+        "独立网页原型仅需HTML/CSS/JavaScript与自编题目；不依赖模型API。",
+        "若选用原程序则需符合系统要求的GCompris/Qt环境，版本、设备与素材包另核。",
+        "低年级教师观察与解释代录；成长归档先采用文件交接，真实接口待核。"
+      ],
+      "promptNotes": [
+        "先检查班务屏和成长作品入口，明确本期为独立的数量表示任务页，不将Qt源码写成能直接嵌入的JavaScript库。",
+        "圆点位置、目标数和学生解释分开存储；保留首次与修改稿，加入误触撤销和教师确认，不能只用得分判断掌握情况。",
+        "示例使用三组十以内数字和虚构代号；全部新增界面与观察单文字用微软雅黑，大触控目标且键盘可操作。",
+        "如后续选择改编原项目，先锁版本并检查具体文件许可与素材清单，再单独估算Qt开发；不在本期Prompt中承诺全套迁移。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C30",
+        "ot-scene-C32"
+      ],
+      "license": "已核当前README：整体AGPLv3，内部代码多为GPLv3+；素材及组件按REUSE.toml逐文件核对，GitHub未自动识别不代表无许可",
+      "sources": [
+        {
+          "title": "官方GitHub镜像README与当前许可说明",
+          "url": "https://github.com/gcompris/GCompris-qt/blob/master/README.md",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "当前逐文件许可及素材署名索引",
+          "url": "https://github.com/gcompris/GCompris-qt/blob/master/REUSE.toml",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方Learn digits与小数单位条等活动操作说明",
+          "url": "https://gcompris.net/screenshots-en.html#learn_digits",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方学校使用与分级练习说明",
+          "url": "https://gcompris.net/schools-en.html",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "当前平台下载与兼容性说明",
+          "url": "https://gcompris.net/downloads-en.html",
+          "date": "2026-11-08"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-08/gcompris-dataset-official.webp",
+          "type": "官方分级练习设置实图",
+          "caption": "GCompris官方学校页面的dataset设置图，展示选择练习范围；图源GCompris团队，经等比缩小与WebP压缩。此图不是厚外网页原型，也不表示本校已运行。",
+          "sourceUrl": "https://gcompris.net/images/dataset.png"
+        }
+      ]
+    },
+    {
+      "type": "project",
+      "checkedAt": "2026-11-08",
+      "verifiedAt": "2026-11-08",
+      "publicationType": "成熟基础项目首次收录",
+      "reviewStatus": "已核官方README、当前主仓库及网页播放器许可、官方导出教程和历史界面实图；未安装或运行项目，未进行课堂实测",
+      "id": "repo:projectestac/jclic",
+      "repository": "projectestac/jclic",
+      "url": "https://github.com/projectestac/jclic",
+      "title": "JClic · 配对后说明天气与气候的区别",
+      "summary": "成熟的互动活动作者工具，可制作配对、文本练习等活动；教师用Java版创作，网页播放另用JClic.js，先做一课地理概念辨析。",
+      "category": "地理与概念巩固",
+      "stages": [
+        "初中"
+      ],
+      "subjects": [
+        "地理"
+      ],
+      "priority": "第二批",
+      "effort": "中",
+      "priorityReason": "配对活动制作结构成熟，适合一个概念的短时诊断；Java作者环境、网页导出和触屏适配需要核对。估算地理教师半天准备八条描述，支持人员半天至一天核对一个活动包；不含成绩服务器和账号对接。",
+      "why": [
+        "初中地理常把某天现象和多年统计混淆。配对只是开始，关键是让学生说明判断涉及的时间范围，并指出描述里哪些信息仍不足。",
+        "班务屏显示短活动，学生先在任务单独立分类再上屏核对，避免全班只看一位同学拖动；成长档案保存解释与订正，不保存没有学习说明的游戏分数。",
+        "活动结构可供其他学部教师借鉴，但本期仅收初中地理天气与气候课例；英语单词配对、幼儿拼图等需另定目标与素材，未自动扩入本条映射。"
+      ],
+      "teaching": "教师给八条自编且标明为教学示例的天气或气候描述，学生先按时间范围独立分类，再用配对活动核对。讨论两条易混描述时必须说出判断理由；最后给一条新描述，学生写清属于哪类、是否还缺信息，再修改原有解释。",
+      "existing": "原班务屏链接到导出的HTML5活动，原任务入口或纸质任务单保存学生解释。教师端JClic Author与学生端网页播放器分开，不把Java Applet嵌入现有网页。",
+      "learningGoal": "区分短时天气现象与较长时期气候特征，能依据描述的时间范围作出判断，并说明信息不足时为什么不能直接归类。",
+      "teacherAction": "核对八条描述、配对关系与反馈，先收独立判断再组织展示，针对时间尺度追问，检查新描述中的迁移解释。",
+      "studentAction": "先独立分类并写理由，参与配对核对，讨论一条误判原因，最后判断新材料并订正原解释。",
+      "dataOutput": ".jclic.zip作者项目、HTML5导出文件夹与素材说明；学生首次分类、理由、新题回答和修改稿由原任务入口或纸质任务单保存，首版不自动回传分数。",
+      "mvp": [
+        "只建立一个八条描述的配对或文本辨析活动，另加两道需要解释的任务单问题；反馈指出时间范围，避免只出现正确或错误音效。",
+        "教师用JClic Author保存.jclic.zip，并按官方教程导出HTML5/SCORM；班务屏只展示HTML5文件夹，不使用现代浏览器已不支持的Java Applet。",
+        "首版不部署JClic Reports、不接Moodle或SCORM成绩库。检查导出页对JClic.js和资源地址的依赖，再决定本地托管，未核清前不承诺完全离线。"
+      ],
+      "acceptance": [
+        "八条描述与反馈经地理教师核对，材料明确是教学示例，不能把虚构气象数字写成真实天气记录；信息不充分的描述允许提出待补条件。",
+        "作者项目重新打开后配对、文字及资源完整；HTML5活动在目标班务屏和一种学生终端检查，文字可读、触摸目标可点且可重新开始。",
+        "核查导出目录中的播放器与素材实际请求地址；缺图、播放器不可达时有可用任务单，不能显示完成却没有加载题目。",
+        "每名学生有独立分类与一条新描述的解释，教师能指出其修改原因；时间、尝试次数和成功率只用于观察活动，不直接作为成长等级。"
+      ],
+      "capabilities": [
+        "JClic Author可视化编排配对、拼图、文本和填字等活动",
+        "用项目与活动序列组织素材和任务",
+        "作者工具导出HTML5和SCORM资源",
+        "JClic Player和Reports提供可选的活动结果记录；网页播放由独立JClic.js承担"
+      ],
+      "dependencies": [
+        "教师端JClic Author需要Java桌面环境；README写Java 1.7或以后，但实际使用须选择仍受支持且与安装包兼容的Java版本并测试。",
+        "学生网页端使用projectestac/jclic.js的HTML5播放器，不要求浏览器Java插件；播放器及其依赖与Java主仓库分别核对。",
+        "自编题目、必要图片及其授权说明；不直接把公共活动库所有内容视为可商业复用。",
+        "若后续收集成绩，需另核JClic Reports、Moodle模块或SCORM平台的身份、权限与记录范围；本期只用既有提交入口。"
+      ],
+      "limitations": [
+        "JClic主仓库仍是Java桌面工具集合；浏览器通用播放是另一个JClic.js项目，二者的代码许可不同，不能把主仓库写成纯JavaScript组件。",
+        "Java Applet已被现代浏览器淘汰。官网legacy页面中的Java WebStart与旧系统操作仅作历史资料，当前落地应按新版下载与HTML5导出路线核对。",
+        "本轮未安装作者工具或操作演示，未验证中文字体、触屏拖动、声音播放和离线完整性；官网配图为Mac OS X时期的历史作者界面。",
+        "配对正确可能来自排除或重复尝试，不能据此断言学生理解地理概念；需另查时间范围解释与未见材料的独立判断。",
+        "公共活动库默认建议CC BY-NC-SA，具体项目可选择其他许可；免费浏览不表示允许收费转售、去署名或改成独占资源。",
+        "普通静态活动页不自动产生完整班级报告。官方教程说明SCORM方式的记录比专用Moodle模块有限，公共作品库也不收集学生结果。"
+      ],
+      "license": "JClic主仓库GPLv2（LICENSE）；独立JClic.js播放器EUPL-1.2；活动与媒体逐项核许可，公共库默认建议CC BY-NC-SA",
+      "commercial": "可先提供自编地理辨析活动、教师制作培训和校内资源迁移服务。Java工具分发遵循GPL，网页播放器的分发或网络提供须核对EUPL义务与所用依赖；公共库含NC条款的活动不得直接打包商业转售，收费课程优先使用自编且权利清楚的材料。",
+      "promptNotes": [
+        "明确教师端Author和学生端JClic.js的边界；本期只制作一个天气与气候活动包及任务单，不移植整套桌面工具到班务网页。",
+        "先核八条描述的时间范围与答案，保留独立判断、反馈、迁移解释和订正四步；配对结果不能直接换算六好分。",
+        "先检查HTML5导出资源的URL与字体，再评估本地托管；不依赖Java Applet，不把CDN引用默认当成离线。",
+        "自编活动、反馈和任务单使用微软雅黑；保存作者源文件、素材清单与版本，浏览活动包不写入真实师生信息。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C34",
+        "ot-scene-C02",
+        "ot-scene-C13"
+      ],
+      "sources": [
+        {
+          "title": "官方主仓库README：Java组件、Applet限制与JClic.js分工",
+          "url": "https://github.com/projectestac/jclic/blob/master/README.md",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "主仓库当前GPLv2许可原文",
+          "url": "https://github.com/projectestac/jclic/blob/master/LICENSE",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "独立官方JClic.js网页播放器README与公开演示入口",
+          "url": "https://github.com/projectestac/jclic.js/blob/master/README.md",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "JClic.js当前EUPL-1.2许可原文",
+          "url": "https://github.com/projectestac/jclic.js/blob/master/LICENSE.txt",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方HTML5/SCORM发布教程及不同结果记录范围",
+          "url": "https://projectes.xtec.cat/clic/en/users/publishing-jclic-projects/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方课程与作者工具教程索引",
+          "url": "https://projectes.xtec.cat/clic/en/documents/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方活动库Creative Commons条件说明",
+          "url": "https://projectes.xtec.cat/clic/en/repo/creative-commons-licenses/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官网历史截图页：作者工具配对编辑界面",
+          "url": "https://clic.xtec.cat/legacy/en/jclic/screenshots.htm",
+          "date": "2026-11-08"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-08/author-jclic-official.jpg",
+          "type": "官网历史作者工具界面截图",
+          "caption": "JClic官网legacy截图页中的Mac OS X作者工具配对编辑实图，内容为官方动物示例；是历史版本界面，非本期地理活动或本校实测，当前Java包及HTML5播放器需另验。",
+          "sourceUrl": "https://clic.xtec.cat/legacy/img/screenshots/author_mac2.jpg"
+        }
+      ]
+    },
+    {
+      "id": "repo:stellarium/stellarium",
+      "type": "project",
+      "repository": "Stellarium/stellarium",
+      "url": "https://github.com/Stellarium/stellarium",
+      "title": "Stellarium · 比较同一地点的夏冬昼长",
+      "summary": "成熟桌面天象软件，可设地点、日期和时间，并查看日出日落与昼长；先由地理教师示范一项固定地点的季节比较。",
+      "category": "地理与天文探究",
+      "stages": [
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "地理"
+      ],
+      "priority": "第二批",
+      "effort": "低",
+      "checkedAt": "2026-11-08",
+      "verifiedAt": "2026-11-08",
+      "publicationType": "成熟基础项目首次收录，非当日新发布",
+      "reviewStatus": "已核官方README、COPYING及CREDITS、26.3用户指南、练习章节和官方文档界面图；未安装运行，未部署，未进行课堂实测",
+      "priorityReason": "不先改造桌面引擎，教师用已有设备示范，班务屏只展示任务和已核图件；是否适合本校终端仍需小范围核练。",
+      "why": [
+        "初中地理容易把“日出早晚”“白昼长短”和某个固定钟点的太阳位置混在一起；固定地点与时区、只更换日期，可以先把比较条件写清。",
+        "班务屏继续承担预测与讨论入口，成长档案保存学生的预测、昼长计算与修订，不另建天文学习后台，也不把软件画面当作真实观测照片。",
+        "初中只比较同一地点夏冬两日，高中再增加一个纬度不同地点并说明控制条件；小学科学可以另做教师带领的日影或天空观察，本期不把这项初高中地理任务自动扩展到小学。"
+      ],
+      "teaching": "教师选一个北半球中纬度公开城市，记录经纬度、海拔、时区与大气设置，分别查看同一年夏至日和冬至日的日出、日落。学生先预测，计算两日昼长后比较，再说明观察位置、日期与昼长变化的联系；地球公转与地轴倾斜的成因解释另用课内模型核对。",
+      "existing": "教师在独立桌面软件中操作，班务屏展示问题和事先核好的图件；学生解释沿用原任务入口，归档文件附软件版本、地点及日期参数。首版不开发远程控制或网页嵌入。",
+      "learningGoal": "在地点、时区和计算口径一致的条件下比较昼长，区分模拟结果、实际观测以及对季节变化的成因解释。",
+      "teacherAction": "核定地点、时区与两日日期，示范Almanac或相关日出日落功能，核对计算口径，并引导学生用地球运动模型解释。",
+      "studentAction": "先预测哪天白昼更长，读取并计算日出日落时间差，指出保持不变的条件，修订说明并标注模拟资料。",
+      "dataOutput": "软件版本、公开城市经纬度与时区、日期、大气与地平线设置、两日日出/日落及昼长表、预测和修改说明；不是实时天气或本校观测记录。",
+      "mvp": [
+        "只做一个公开城市、同一年两个日期的教师演示；手动设置位置并关闭不必要的自动定位，不使用师生位置。",
+        "记录Almanac中的Sun Rise、Set与Duration，保留设置说明和两张图；班务屏外层只呈现任务、表格与填写区。",
+        "教师准备一组不同日期的迁移问题，检查学生是否会重新比较；首版不接望远镜、卫星在线更新、Remote Control插件或网页天象引擎。",
+        "投入按课例估算：教师约半天至1天核练与核数，已有任务入口可直接放表；需要新增记录页时开发约半天至1天。上述不含终端适配，未作为排期承诺。"
+      ],
+      "acceptance": [
+        "两次比较的城市坐标、时区、海拔、大气和地平线口径保持一致，日期和软件版本清楚；不把当地时误记成北京时间。",
+        "日出日落与Duration读数经过教师核对，手算时间差与显示值在注明的取整规则内一致；不能用民用曙暮光时长替代白昼时长。",
+        "图件与表格能复原相同设置，均标注“软件模拟”；学生能指出一项控制条件并根据数据修改原预测。",
+        "在指定教师设备上实际试开和检查投屏清晰度后再安排课堂，无法运行时保留经核图件与任务单。"
+      ],
+      "capabilities": [
+        "选择地球观测位置、日期、时间与时间流速",
+        "显示地平坐标网格和太阳等天体的模拟天空位置",
+        "Almanac查看季节时刻、日出日落、白昼及曙暮光等信息",
+        "保存屏幕图像，官方指南另附天文练习与脚本说明"
+      ],
+      "dependencies": [
+        "教师电脑的官方桌面安装包与图形环境；26.3指南列有OpenGL及系统版本要求，实际选包与本校设备兼容性仍需核。",
+        "地理教师核定公开城市、日期和时间口径；通用地平线、折射与大气设置需要随结果记录。",
+        "外层表格与归档由厚外原有网页或文件承接；自编任务文字统一微软雅黑，软件原生界面图保留原样与出处。"
+      ],
+      "limitations": [
+        "这是桌面天象软件；官网链接的Stellarium Web及移动版本不是本仓库同一部署包，不能据此承诺直接嵌入班务屏。",
+        "地形遮挡、大气折射、观测位置和时间设置会影响接近地平线的结果；模型不是当天云量、天气或实际可见性的预报。",
+        "从地面看到的太阳视运动不能独立说明地球公转与地轴倾斜，仍需教师用课内模型核对原因；不把模拟数值写成本校真实观察。",
+        "代码依CREDITS为GPL-2.0-or-later，COPYING为GPLv2正文；指南为GFDL-1.3-or-later，星空文化、贴图、照片与外部数据有各自条件。",
+        "官方FAQ特别指出截图中部分素材、星空文化可能含非商业或禁止改编条件，公开或收费材料须按所用内容另核，不能用代码GPL覆盖全部图像。"
+      ],
+      "license": "代码GPL-2.0-or-later（CREDITS明示）；指南GFDL-1.3-or-later；星空文化、贴图与数据分别核对",
+      "commercial": "可先沉淀自编昼长任务单、教师演示步骤和课例培训。修改分发软件遵守GPL及源码要求；官方指南、截图、星空文化和贴图需按各自许可处理，未核清前不纳入收费资源包。",
+      "promptNotes": [
+        "先做桌面演示与班务屏记录页的文件衔接，不安装远程插件、不重写天象引擎，不把Web版当作本仓库的静态构建。",
+        "一城两日，只改变日期；把时区、位置、海拔、大气和地平线作为显式参数，不输出未经教师核对的日出日落数值。",
+        "分别保存学生预测、模拟读数、手算昼长与修改说明；说明太阳视运动和成因模型的关系，教师确认后再归档。",
+        "所有自编表格、图注和界面用微软雅黑；截图保留“模拟”、版本和出处，外部贴图及星空文化许可独立记录。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C34",
+        "ot-scene-C13"
+      ],
+      "sources": [
+        {
+          "title": "官方README：桌面天象软件定位",
+          "url": "https://github.com/Stellarium/stellarium/blob/master/README.md",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "当前COPYING：GPLv2正文",
+          "url": "https://github.com/Stellarium/stellarium/blob/master/COPYING",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方CREDITS：GPLv2或后续版本及素材署名",
+          "url": "https://github.com/Stellarium/stellarium/blob/master/CREDITS.md",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "26.3用户指南：4.1日期、4.2地点与时区、4.6.9 Almanac及素材许可",
+          "url": "https://stellarium.org/guide/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方指南练习原文：观察、手测角度及Analemma等",
+          "url": "https://github.com/Stellarium/stellarium/blob/master/guide/ch_exercises.tex",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方FAQ：截图、视频与星空文化授权限制",
+          "url": "https://github.com/Stellarium/stellarium/wiki/FAQ",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方指南Almanac界面图原件",
+          "url": "https://github.com/Stellarium/stellarium/blob/master/guide/Images/astrocalc_dialog_almanac_specifictime.jpg",
+          "date": "2026-11-08"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-08/inquiry-stellarium-official.jpg",
+          "type": "官方用户指南桌面界面截图",
+          "caption": "Stellarium官方指南的Astronomical calculations—Almanac界面，显示日出日落、昼长和曙暮光等字段；图中为2025年示例日期，非本校地点、2026年观测或本轮运行结果。来源：Stellarium用户指南，文档GFDL-1.3-or-later，素材条件另核。",
+          "sourceUrl": "https://raw.githubusercontent.com/Stellarium/stellarium/master/guide/Images/astrocalc_dialog_almanac_specifictime.jpg"
+        }
+      ]
+    },
+    {
+      "id": "repo:processing/p5.js",
+      "type": "project",
+      "repository": "processing/p5.js",
+      "url": "https://github.com/processing/p5.js",
+      "title": "p5.js · 信息技术课的循环纹样",
+      "summary": "面向创意编程的JavaScript绘图库；先用几行循环生成规则纹样，让学生预测数量、间距与角度，再修改参数并解释差异。",
+      "category": "编程与创作表达",
+      "stages": [
+        "小学",
+        "初中"
+      ],
+      "subjects": [
+        "信息科技",
+        "数学",
+        "美术"
+      ],
+      "priority": "第二批",
+      "effort": "中",
+      "checkedAt": "2026-11-08",
+      "verifiedAt": "2026-11-08",
+      "publicationType": "成熟基础项目首次收录，非当日新发布",
+      "reviewStatus": "已核官方README、当前许可、环境与循环教程、教师v2迁移指南及官方编辑器说明图；未安装运行仓库，未部署，未进行课堂实测",
+      "priorityReason": "可将积木编程之后的文本代码与可见作品联系起来，先做一份教师模板；独立代码编辑、执行隔离与成长归档仍需开发，不把绘图库当成完整课堂平台。",
+      "why": [
+        "厚外成长档案可以同时保留作品、参数和修改理由，比只放一张成品图更容易看出学生是否理解循环；班务屏用于展示同一规则的不同结果。",
+        "信息科技检查循环和变量，数学核对重复数量、间距或一周角度，美术讨论节奏与构图；本期围绕同一幅规则纹样分工，不扩展到与任务无关的学科。",
+        "小学只面向高段，由教师给定代码并改一个参数；初中再读写循环、核对边界与调试。低年级不直接安排独立文本编程，高中以后可另做专题。"
+      ],
+      "teaching": "教师给一个自编纹样模板：同一基本图形按指定次数和角度重复。学生先画草图、预测数量与分布，再运行并只改变一个参数，比较结果、解释代码行与画面的对应关系，最后独立完成一个新参数任务。",
+      "existing": "复用班务屏作品展示和成长档案文件入口；p5.js只负责绘图与交互。源码、参数、预测和教师确认由校本外层保存，首版使用本地文件，不要求学生注册官方编辑器账号。",
+      "learningGoal": "将循环次数、变量和几何变化对应到可见图形，能先预测、再核对，并通过修改与调试说明规则。",
+      "teacherAction": "准备一份原创短代码模板，限定可改参数，检查数量和角度单位，组织同伴解释，设置一个不依赖原图的新参数任务。",
+      "studentAction": "先画预测草图，读出关键循环，单独改变次数、间距或角度中的一项，比较输出并记录调试和修订理由。",
+      "dataOutput": "模板与学生源码文件、库版本、参数对象、预测草图、两版画布PNG、修改说明和教师确认状态；不以作品好看与否自动评分。",
+      "mvp": [
+        "只做一份原创循环纹样模板与两个参数版本，使用基本几何图形，不搬用官方完整示例或第三方图片。",
+        "小学高段保留教师控制的参数表；初中允许在独立预览中修改短代码。次数限定整数且有上限，提供停止、重置与文字状态说明。",
+        "保存源码、参数与两版画布文件，并填写“预测—结果—哪一行导致变化”；首版不做在线社区、学生账号、多库插件或公开作品分享。",
+        "投入按单课模板估算：教师设计与核题约半天，开发绘图页、参数记录与导出约2—4个工作日；可编辑任意代码的隔离与故障恢复需另计，未排期。"
+      ],
+      "acceptance": [
+        "对预设的3、6、12次重复，实际图形数量和参数一致；旋转任务明确采用角度还是弧度，循环边界不多画或少画一个。",
+        "修改一项参数后其余条件不变，两版源码、参数和图像能够对应；重置能回到同一模板。",
+        "提交包含原预测、一次修订与独立新参数任务解释，只能拖动参数或生成漂亮图片不算完成目标。",
+        "异常或过大次数有明确提示；编辑器若执行卡住能停止并恢复原稿，导出的PNG、源码与记录可在另一测试浏览器核对。"
+      ],
+      "capabilities": [
+        "浏览器Canvas上的2D基本形状、颜色与几何变换",
+        "用JavaScript变量、循环与函数表达重复绘图",
+        "输入事件与HTML控件协同的交互草图",
+        "画布导出与可访问描述接口可供校本外层组合使用"
+      ],
+      "dependencies": [
+        "桌面浏览器、锁定版本的p5.js资源与自编JavaScript模板；使用本地托管资源，首版不依赖摄像头、音频或AI接口。",
+        "信息科技教师核对代码，数学教师核对循环边界、坐标和角度；美术评价与程序是否正确分开。",
+        "p5.js Web Editor是另一个仓库与在线服务，云端保存涉及账号及服务条件；本期不将其当作p5.js库自带的校内后台。",
+        "学生可编辑代码时需隔离预览、限制外部访问并提供停止/恢复；不能在主班务屏页面直接执行任意粘贴脚本。"
+      ],
+      "limitations": [
+        "p5.js是绘图库，不自带题目、学生作品归档、协作评价或学习达成判断；本期教学与保存流程是厚外改造建议。",
+        "小学仅限高段的模板操作，不把文本编程能力默认覆盖小学所有年级；首轮设备、输入体验与课堂适用性尚未验证。",
+        "v1与v2在输入事件和资源加载等位置有变化；官方已有中学教师迁移指南，不能把不同版本示例混写，教程截图也不代表当前库版本。",
+        "库代码LGPL-2.1；官网版权页说明Reference与Examples为CC BY-NC-SA 4.0，网站其余部分MIT，外部库、字体和图片仍需分别核对。",
+        "源码、作品图像和学生解释应同时留存；只比较画面美观或运行次数不能判断循环概念是否掌握。"
+      ],
+      "license": "p5.js库LGPL-2.1；官网Reference与Examples为CC BY-NC-SA 4.0，网站其余部分MIT，扩展库及素材另核",
+      "commercial": "可积累原创参数模板、程序阅读任务和跨学科教师培训。采用p5.js分发时保留LGPL声明并按实际修改和组合方式履行要求；官方Reference与Examples不能直接打包成收费题库，学生作品另按取得的授权处理。",
+      "promptNotes": [
+        "围绕一幅规则纹样做单课页，不复刻整套在线编辑器；班务屏、预览画布和学习记录分别建模。",
+        "首版原创几何模板不加载外部素材，锁定p5.js版本；若用v2，输入与资源加载按v2教师指南，不混用v1代码。",
+        "次数、间距和角度分别命名，设置上限与单位；保留预测、源码、参数和两版作品，不自动生成学科能力分。",
+        "执行用户代码需独立隔离预览、停止与恢复，不能把错误拖垮主班务屏；新增界面和画布文字指定微软雅黑，同时提供HTML文字说明。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C32",
+        "ot-scene-C38",
+        "ot-scene-C39"
+      ],
+      "sources": [
+        {
+          "title": "官方README：创意编程库与生态边界",
+          "url": "https://github.com/processing/p5.js/blob/main/README.md",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "当前库许可原文LGPL-2.1",
+          "url": "https://github.com/processing/p5.js/blob/main/license.txt",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方版权页：库、网站、Reference与Examples分别授权",
+          "url": "https://p5js.org/copyright/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方实践教程Repeating with Loops：循环、变量和图形",
+          "url": "https://p5js.org/tutorials/repeating-with-loops/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方环境教程：编辑器、保存与界面说明",
+          "url": "https://p5js.org/tutorials/setting-up-your-environment/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方中学教师v2迁移指南：输入事件与资源加载",
+          "url": "https://p5js.org/tutorials/v2_transition/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方rotate参考：角度单位与几何变换",
+          "url": "https://p5js.org/reference/p5/rotate/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方saveCanvas参考：画布图像导出",
+          "url": "https://p5js.org/reference/p5/saveCanvas/",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方describe参考：可访问的画布文字描述",
+          "url": "https://p5js.org/reference/p5/describe/",
+          "date": "2026-11-08"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-08/inquiry-p5-editor-official.jpg",
+          "type": "官方教程编辑器界面标注图",
+          "caption": "p5.js官方Setting Up Your Environment教程中的Web Editor界面标注图，展示代码区、预览区和控制台；原图含旧版库版本提示，非本期纹样原型或本校学生作品。来源：p5.js贡献者与Processing Foundation，教程图的使用范围依官网版权页。",
+          "sourceUrl": "https://p5js.org/_astro/p5_editor_interface_breakdown.D5inthe8_Z2qwF84.png"
+        }
+      ]
+    },
+    {
+      "type": "project",
+      "checkedAt": "2026-11-08",
+      "verifiedAt": "2026-11-08",
+      "publicationType": "成熟基础项目首次收录",
+      "reviewStatus": "已核官方README、当前许可、文档、公开实践资料与官方界面配图；未安装或运行项目，未进行课堂实测",
+      "id": "repo:jupyter/nbgrader",
+      "repository": "jupyter/nbgrader",
+      "url": "https://github.com/jupyter/nbgrader",
+      "title": "nbgrader · 代码测试之后还要解释结果",
+      "summary": "Jupyter作业制作与批改工具；适合高中信息技术的一份数据处理任务，把代码测试、文字解释和教师反馈分开保留。",
+      "category": "信息技术与教研",
+      "stages": [
+        "高中"
+      ],
+      "subjects": [
+        "信息技术"
+      ],
+      "priority": "第二批",
+      "effort": "高",
+      "priorityReason": "自动执行测试需要Python、Jupyter服务与可隔离的内核环境；先限一份高中信息技术作业，完成教师端流程后再考虑多人课堂使用。",
+      "why": [
+        "高中信息技术可以让学生处理教师提供的合成数据，先预测输出，再写程序并解释边界情况；可执行测试检查约定行为，文字说明和分析过程仍由教师评价。",
+        "已有JupyterLite精选可用于浏览器探究，但nbgrader是另一套依赖Python和内核的批改流程，不能把静态JupyterLite页面直接说成自动判分系统。",
+        "成长档案可以保存教师确认的Notebook、反馈与修改说明；班务屏只展示不含个人信息的典型代码和讨论题。跨学部教研复用任务与评价量规，不要求低龄学生安装或运行本工具。"
+      ],
+      "teaching": "教师编制一份包含数据读取、计算和解释的Notebook，将代码测试单元与人工评价单元分开。学生先预测、再编写与运行，依据测试反馈修改；教师检查解释与方法，给出一次针对性反馈并保留再次提交版本。",
+      "existing": "复用厚外成长档案的作品入口，先导出Notebook、反馈HTML与成绩CSV人工交接；班务屏用于讨论典型解法。账号、课程与归档接口另核，首版不部署全校JupyterHub。",
+      "learningGoal": "用程序完成规定的数据处理，解释输出和异常输入，并能区分测试通过与分析结论正确之间的关系。",
+      "teacherAction": "编写任务、测试和人工量规，生成学生版本，核对自动执行结果，评价解释并确认修改后的作品。",
+      "studentAction": "先预测结果，填写代码与文字说明，在自己的学习环境中运行并提交Notebook，根据反馈修改并说明改动。",
+      "dataOutput": "题目及单元稳定编号、提交Notebook版本、测试通过或失败记录、人工分数与评语、反馈HTML、成绩CSV和另行保存的修改说明。",
+      "mvp": [
+        "制作一份高中信息技术的合成数据任务：三个可测试代码单元、一个人工解释单元、两个难度层次；只用虚构数据与提交者。",
+        "先由教师在独立Linux测试环境用文件方式收集两份样例作业，依次生成学生版、执行测试、人工复核、生成反馈和导出成绩，不先接全校账号或在线分发。",
+        "在运行学生代码前配置受限内核环境、执行超时及目录权限；投入估算为5—8个开发工作日加教师编题和测试时间，限单教师原型，不含全校服务器与长期运维。"
+      ],
+      "acceptance": [
+        "学生版不包含教师解答与应隐藏的测试内容；单元编号、题目分值和两个难度层次均能与教师底稿逐项对应。",
+        "两份虚构提交中，正确实现通过相应测试，边界错误只触发预设失败项；代码测试结果与人工解释评分分别显示，不因测试通过自动判定整份作业优秀。",
+        "一次“提交—自动测试—人工批阅—反馈—修改再交”可完成；保留前版，重跑后核对人工分数和评语不被覆盖，并按需重新人工确认。",
+        "死循环能在规定超时内停止；权限与隔离由部署方案另验。每个样例生成对应HTML反馈和CSV记录，缺交、执行失败、得零分三种状态清楚区分。"
+      ],
+      "limitations": [
+        "nbgrader批改会执行Notebook代码，本体不直接隔离危险代码；超时不能替代运行隔离，未完成内核权限、资源和网络限制前不接收真实学生提交。",
+        "需要Python运行环境、Jupyter服务扩展、可用kernel及作业目录和数据库；不是静态网页组件，也不证明纯浏览器JupyterLite已能完成服务器批改。",
+        "自动测试只能核对编写者明确列出的行为；开放解释、算法思路、图表解读和原创性仍需人工判断。隐藏测试不等于安全沙箱或防作弊。",
+        "Windows支持核心批改功能，但官方FAQ说明作业交换与文件管理相关功能有限；本期按独立Linux教师环境设计，不承诺Windows完整流程。",
+        "多课程、多人批阅与JupyterHub部署另增认证、共享目录和数据库管理，单教师原型不能推定适用于全校。",
+        "JOSE论文和官方演讲记录主要是大学使用背景；本期高中与校本教研用途属于厚外改造建议，尚无本校课堂验证。"
+      ],
+      "commercial": "可提供高中代码任务设计、测试编写、教师培训与受控部署维护服务。BSD-3-Clause允许商业改造和分发，须保留版权、条件与免责声明，不得借贡献者名义背书；Jupyter组件、容器、依赖和课程材料许可分别核对，服务投入主要在可靠测试、隔离与教研支持。",
+      "capabilities": [
+        "从含解答的教师Notebook生成学生版",
+        "定义自动测试与人工评价单元",
+        "执行Notebook并记录测试结果",
+        "formgrader人工批阅与评语",
+        "生成HTML反馈及导出成绩CSV"
+      ],
+      "dependencies": [
+        "Python、nbgrader、JupyterLab及相配套服务扩展、选定语言的kernel与课程依赖；版本组合需锁定验证。",
+        "课程目录、提交文件与SQLite等支持的数据库；多人访问与全校部署需另行设计数据库和JupyterHub。",
+        "执行学生代码的受限环境、资源和执行超时、目录权限、备份；教师编写的测试与人工量规，不依赖模型API。"
+      ],
+      "promptNotes": [
+        "先核现有JupyterLite与作品入口，只做独立教师批改试点；明确nbgrader的Python、Jupyter服务器和内核依赖，不写成JupyterLite自带能力。",
+        "Notebook按稳定单元编号区分题干、学生答案、测试与人工解释；分开保存原始提交、自动结果、教师判断和修改说明。",
+        "所有案例只用合成数据，先验证两份虚构作业；测试质量与运行隔离分开验收，不把隐藏测试描述为安全机制。",
+        "导出成绩和反馈用于教师核对，不自动推送综合素质评价；新增封面、反馈模板、导出可见文字统一微软雅黑。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C15",
+        "ot-scene-C47",
+        "ot-scene-C51"
+      ],
+      "license": "BSD-3-Clause（nbgrader代码）；Jupyter、内核、依赖及课程材料许可另核",
+      "sources": [
+        {
+          "title": "官方README：作业制作、批改与演示",
+          "url": "https://github.com/jupyter/nbgrader/blob/main/README.md",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "当前BSD-3-Clause许可原文",
+          "url": "https://github.com/jupyter/nbgrader/blob/main/LICENSE",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方创建与批改教程：单元类型、批改、反馈与成绩导出",
+          "url": "https://nbgrader.readthedocs.io/en/stable/user_guide/creating_and_grading_assignments.html",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方安装文档：JupyterLab和服务器扩展",
+          "url": "https://nbgrader.readthedocs.io/en/stable/user_guide/installation.html",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方FAQ：代码安全、超时、Windows与重新批改边界",
+          "url": "https://nbgrader.readthedocs.io/en/stable/user_guide/faq.html",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "官方高级文档：隔离内核与成绩导出",
+          "url": "https://nbgrader.readthedocs.io/en/stable/user_guide/advanced.html",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "项目作者JOSE论文：大学教学工作流实践，2019年发表",
+          "url": "https://jose.theoj.org/papers/10.21105/jose.00032",
+          "date": "2026-11-08"
+        },
+        {
+          "title": "README所链接SciPy 2017演讲与工作流演示",
+          "url": "https://www.youtube.com/watch?v=5WUm0QuJdFw",
+          "date": "2026-11-08"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-08/feedback-nbgrader-official.png",
+          "type": "官方教程测试单元界面截图",
+          "caption": "nbgrader官方教程及文档仓库中的自动测试单元界面，显示assert检查、单元编号与分值；非本校作业，未执行图中代码或进行课堂实测。",
+          "sourceUrl": "https://raw.githubusercontent.com/jupyter/nbgrader/main/nbgrader/docs/source/user_guide/images/autograder_tests_jlab.png"
+        }
+      ]
+    }
+  ]
+}
