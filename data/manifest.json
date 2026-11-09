@@ -1,10 +1,15 @@
 {
   "schemaVersion": 1,
-  "lastSuccessAt": "2026-11-08T11:10:34+08:00",
-  "latestDate": "2026-11-08",
+  "lastSuccessAt": "2026-11-09T11:31:15+08:00",
+  "latestDate": "2026-11-09",
   "status": "ok",
-  "message": "11月8日10项课程创作、课堂反馈与探究学习参考已核官方来源；累计40项精选与338项工具，原有选择与历史保留。",
+  "message": "11月9日10项教学参考已核来源，累计50项精选与338项工具；补充一条OurTeacher公开学校使用资料，原有选择与历史保留。",
   "dates": [
+    {
+      "date": "2026-11-09",
+      "path": "data/daily/2026-11-09.json",
+      "count": 10
+    },
     {
       "date": "2026-11-08",
       "path": "data/daily/2026-11-08.json",
@@ -26,5 +31,5 @@
       "count": 10
     }
   ],
-  "revision": 7
+  "revision": 8
 }
