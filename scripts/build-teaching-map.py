@@ -143,7 +143,11 @@ def subjects_for(record, scene, stage):
     if n==36:return ['体育与健康']
     if n in (37,38):
         if '信息技术' in title:return ['信息科技' if stage in ('小学','初中') else '信息技术']
-        return ['劳动','综合实践'] if n==37 else ['跨学科','科学'] if stage=='小学' else ['跨学科']
+        subjects=['劳动','综合实践'] if n==37 else ['跨学科','科学'] if stage=='小学' else ['跨学科']
+        # 项目明确标注信息学科时保留对应入口，不依赖标题是否写出“信息技术”。
+        if n==38 and record.get('type')=='project':
+            subjects += [s for s in explicit if s in ('信息科技','信息技术','通用技术') and s not in subjects]
+        return subjects
     if n==39:return [s for s in explicit if s in ('音乐','美术')] or ['音乐','美术']
     if n in (53,54):
         if explicit:return explicit
