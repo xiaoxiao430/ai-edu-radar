@@ -1,10 +1,15 @@
 {
   "schemaVersion": 1,
-  "lastSuccessAt": "2026-11-13T13:40:09+08:00",
-  "latestDate": "2026-11-13",
+  "lastSuccessAt": "2026-11-14T11:34:03+08:00",
+  "latestDate": "2026-11-14",
   "status": "partial",
-  "message": "11月13日优选9项，EduBlocks主库许可未核且用途重复，未凑数；累计75项精选与338项工具，按学段学科与场景选择，原有本机安排保留。",
+  "message": "11月14日优选8项，授权不足或教学用途重复的候选未收；累计83项精选与338项工具，原有本机选择和安排保留。",
   "dates": [
+    {
+      "date": "2026-11-14",
+      "path": "data/daily/2026-11-14.json",
+      "count": 8
+    },
     {
       "date": "2026-11-13",
       "path": "data/daily/2026-11-13.json",
@@ -46,5 +51,5 @@
       "count": 10
     }
   ],
-  "revision": 11
+  "revision": 12
 }
