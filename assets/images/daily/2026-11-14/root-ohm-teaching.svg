@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+<rect width="1200" height="680" fill="#fffaf4"/><rect x="0" y="0" width="1200" height="12" fill="#98183a"/>
+<g font-family="Microsoft YaHei" fill="#282127"><text x="54" y="75" font-size="24" font-weight="700" fill="#98183a">厚外 · 历史资料与日期筛选</text><text x="54" y="134" font-size="42" font-weight="700">地图变了，先核日期与资料</text>
+<rect x="54" y="171" width="1092" height="64" rx="10" fill="#fff0c8" stroke="#b67b13"/><text x="78" y="212" font-size="23" fill="#69460d">教学用法示意 · 内部界面待补；不是原项目截图或历史地图</text>
+<rect x="54" y="275" width="328" height="216" rx="16" fill="white" stroke="#d9b1bc"/><rect x="436" y="275" width="328" height="216" rx="16" fill="white" stroke="#d9b1bc"/><rect x="818" y="275" width="328" height="216" rx="16" fill="white" stroke="#d9b1bc"/>
+<g font-size="27" font-weight="700" fill="#98183a"><text x="80" y="321">① 固定同一区域</text><text x="462" y="321">② 切换两个日期</text><text x="844" y="321">③ 回到原始材料</text></g>
+<g font-size="24"><text x="80" y="371">同一视野与图层</text><text x="80" y="413">教师先核要素来源</text><text x="80" y="455">学生先写预测</text><text x="462" y="371">日期精度要一致</text><text x="462" y="413">记录可见与未显示</text><text x="462" y="455">不自动播放动画</text><text x="844" y="371">查开始／结束日期</text><text x="844" y="413">区分缺资料与不存在</text><text x="844" y="455">写判断及保留意见</text></g>
+<g stroke="#b67b13" stroke-width="5" fill="none"><path d="M393 384h31m-10-10 10 10-10 10"/><path d="M775 384h31m-10-10 10 10-10 10"/></g>
+<rect x="54" y="530" width="1092" height="101" rx="12" fill="#98183a"/><text x="78" y="569" fill="white" font-size="25" font-weight="700">成长作品：首次判断 → 参数与来源 → 修订理由</text><text x="78" y="608" fill="white" font-size="21">地图没有显示，不等于历史上不存在。示意流程为厚外改造建议，尚未试教。</text></g></svg>
