@@ -1,31 +1,31 @@
 {
   "schemaVersion": 1,
-  "verifiedAt": "2026-11-05",
+  "verifiedAt": "2026-11-15",
   "account": {
     "name": "OurTeacher App",
     "url": "https://www.douyin.com/user/MS4wLjABAAAAAq_DPKtVxWmXbAOFcv2WtcRHNbN9aMzs_LVs0fdJu70",
     "company": "上海皑顿信息技术有限公司"
   },
-  "scope": "按公开作品索引与原作直链整理；保留原34条资料，新增48条记录（其中44条新增官方作品、4条其他作者已筛除）。默认仅呈现实用内容组，同功能留源合并；官网工具和教程不冒充抖音作品。",
+  "scope": "保留原34条资料，另有49条补充记录（含45条官方作品和4条其他作者已筛除）。默认仅呈现实用内容组，同功能合并留源；官网工具和教程不冒充抖音作品。2026-11-15新增1条班务大屏教程直链，仅合并来源，不增加已核功能。",
   "coverage": {
     "reportedAccountTotal": 2394,
     "reportedAccountTotalContext": "用户提供的主页截图显示2394件作品；不是本轮实时拉取的作品总数。",
-    "discoveredCount": 82,
+    "discoveredCount": 83,
     "originalBaselineCount": 34,
-    "newDiscoveredCount": 48,
-    "directPostCount": 76,
+    "newDiscoveredCount": 49,
+    "directPostCount": 77,
     "unresolvedPostLinks": 6,
     "includedCount": 32,
-    "mergedCount": 25,
+    "mergedCount": 26,
     "excludedCount": 25,
-    "retainedSourceCount": 57,
+    "retainedSourceCount": 58,
     "complete": false,
     "limitation": "主页正常请求返回空内容，未认证的公开作品列表接口返回403，封面CDN部分返回403或超时；搜索与聚合页不能证明覆盖全账号。聚合页会变动推荐条目，未把聚合页编号当成作品编号。",
     "nextStep": "取得通过平台正常公开页面或账号合法导出得到的作品清单后，按作品ID去重导入；先核对作者和内容，补齐未覆盖作品，再做纳入、合并或排除。没有完整清单前保持“未完成全量核对”。",
-    "officialAccountRecordCount": 78,
+    "officialAccountRecordCount": 79,
     "otherAuthorExcludedCount": 4,
     "qualityReview": "纯外观、仅有题名和效果宣传不列入默认实用清单；同功能版本或装饰素材仅合并留源。数量表示资料记录，不等于独立产品或功能数。",
-    "newOfficialPostCount": 44
+    "newOfficialPostCount": 45
   },
   "selectionPolicy": {
     "include": "有明确教学、班级工作或运行支持任务，能说明操作、输入输出或验收点。",
@@ -68,6 +68,10 @@
     {
       "endpointType": "公开封面CDN",
       "result": "已发现封面URL但部分请求403或超时，未伪装为已获取真实封面。"
+    },
+    {
+      "endpointType": "2026-11-15账号与班务大屏教程正常请求",
+      "result": "账号HTTP200、0字节；视频直链HTTP200、72914字节空body加脚本外壳，无可读题名或封面。搜索索引能核题名、作者、日期与直链，未取得账号作品目录。"
     }
   ],
   "items": [
@@ -3506,6 +3510,42 @@
       "images": [],
       "trialStatus": "未完整播放本抖音作品；未登录试用或课堂验证",
       "summary": "通用升级宣传，未取得具体新增内容。"
+    },
+    {
+      "id": "dy-video-7702363578757680425",
+      "postId": "7702363578757680425",
+      "title": "班务大屏教程",
+      "url": "https://www.douyin.com/video/7702363578757680425",
+      "sourcePage": "https://www.douyin.com/video/7702363578757680425",
+      "author": "OurTeacher App",
+      "authorStatus": "作品页公开搜索索引标明OurTeacher App作者、题名和发布日期；未依据同名搜索推断作者",
+      "publishedAt": "2026-10-30 15:44",
+      "verifiedAt": "2026-11-15",
+      "sourceType": "作品页公开搜索索引",
+      "linkKind": "作品直链",
+      "summary": "班务大屏的另一条教程来源，与已有课程表和值日表功能合并；本次未取得可读视频正文或原始封面，不据评论推断新功能。",
+      "reviewStatus": "已核公开搜索索引的题名、作者、日期与原作直链；正常作品请求仅得空body加脚本外壳，未播放或登录试用",
+      "newCapabilityVerified": false,
+      "valueReason": "厚外已有班务屏，可在同一功能组打开这条教程作为后续操作核对入口；不另建班务屏，也不把评论中的单双周、自定义作息、作业名单等需求或作者规划写成现成功能。",
+      "relatedSceneIds": [
+        "ot-scene-C01"
+      ],
+      "relatedToolIds": [],
+      "decision": "merge",
+      "duplicateOf": "dy-video-7694244934840372534",
+      "images": [],
+      "note": "只补同功能原始来源。公开索引的评论与规划不是已经交付的能力；原作封面和完整操作待核。",
+      "trialStatus": "未播放本视频；未运行项目或本校课堂实测",
+      "stages": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "subjects": [
+        "通用"
+      ],
+      "category": "班级与成长",
+      "mappingNote": "沿用班务大屏场景作来源关联；不扩大实际教学覆盖。"
     }
   ],
   "researchRounds": [
@@ -3515,6 +3555,13 @@
       "newOfficialPostLinks": 18,
       "recoveredExistingLinks": 1,
       "scope": "追加一轮语文作文、英语听写口语、备课课件、学情分析、教师教研公开检索；未访问此前403账号接口，未修改data文件。"
+    },
+    {
+      "round": "2026-11-15公开作品补查",
+      "queryCount": 2,
+      "newOfficialPostLinks": 1,
+      "recoveredExistingLinks": 0,
+      "scope": "普通账号主页仍无作品列表；作品页公开搜索索引补得班务大屏教程1条，正常作品请求只有空body加脚本外壳。按既有功能合并留源，不把评论需求或作者规划当作现成功能，原封面与完整操作待核。"
     }
   ]
 }
