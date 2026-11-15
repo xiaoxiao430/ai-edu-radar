@@ -1,10 +1,15 @@
 {
   "schemaVersion": 1,
-  "lastSuccessAt": "2026-11-14T12:07:43+08:00",
-  "latestDate": "2026-11-14",
+  "lastSuccessAt": "2026-11-15T12:51:30+08:00",
+  "latestDate": "2026-11-15",
   "status": "partial",
-  "message": "封面改为用途标题与官方实图，重点场景新增真实教程画面；资料合并去重加速，421项参考及原有本机选择保留。",
+  "message": "新增9项教学改造参考，累计92项精选、430项项目与工具；官方实图封面与单请求资料加速已上线。OurTeacher新增1条同功能教程来源，未完成账号全量核对。",
   "dates": [
+    {
+      "date": "2026-11-15",
+      "path": "data/daily/2026-11-15.json",
+      "count": 9
+    },
     {
       "date": "2026-11-14",
       "path": "data/daily/2026-11-14.json",
@@ -51,5 +56,5 @@
       "count": 10
     }
   ],
-  "revision": 13
+  "revision": 14
 }
