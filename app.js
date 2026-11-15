@@ -18,6 +18,8 @@
   let storageOK = true, toastTimer, currentRoute = 'path', page = 1, libraryTab = 'tools';
   let ourteacher, manifest, tutorials = {items:[]}, teachingMap={stageSubjects:{},stageProfiles:{},placements:[]}, douyinCatalog={items:[],coverage:{}}, selectedDate, currentDetailId = null;
   const dailies = new Map(), records = new Map(), recordVersions = new Map();
+  let catalogCache = null;
+  const snapshotRecords = new Map(), placementIndex = new Map(), sceneLabels = new Map();
   const pathState={mode:'forward',stage:'',subject:'',sceneId:'',recordId:''};
   const filter = {q:'',category:'',stage:'',subject:'',effort:'',priority:'',kind:'',selected:false};
 
@@ -34,7 +36,7 @@
   }
   function placementKey(p){return [p.recordId,p.stage,p.subject,p.sceneId].join('|');}
   function compactSnapshot(r){
-    return {...r,images:(Array.isArray(r.images)?r.images:[]).map(im=>({...im,src:typeof im.src==='string'&&im.src.startsWith('data:')?(im.originalSrc||''):im.src})).filter(im=>im.src)};
+    return {...r,images:(Array.isArray(r.images)?r.images:[]).map(im=>({...im,src:typeof im.src==='string'&&im.src.startsWith('data:')?(im.originalSrc||''):im.src,thumbnailSrc:typeof im.thumbnailSrc==='string'&&im.thumbnailSrc.startsWith('data:')?(im.originalThumbnailSrc||''):im.thumbnailSrc})).filter(im=>im.src)};
   }
   function normalizeSelection(v, id) {
     if (!v || typeof v !== 'object' || !validId(id)) return null;
@@ -53,15 +55,24 @@
   function normalizeRecord(r,type) {
     return {...r,id:String(r.id||''),type:r.type||type,title:String(r.title||'未命名内容'),summary:String(r.summary||r.teaching||''),category:typeof r.category==='string'?r.category:'其他教学工具',stages:list(r.stages),subjects:list(r.subjects),priority:r.priority||'第二批',effort:r.effort||'待核',why:list(r.why),mvp:list(r.mvp),acceptance:list(r.acceptance),limitations:list(r.limitations),capabilities:list(r.capabilities),dependencies:list(r.dependencies),promptNotes:list(r.promptNotes),sources:Array.isArray(r.sources)?r.sources.filter(x=>x&&typeof x==='object'):[],images:Array.isArray(r.images)?r.images.filter(x=>x&&typeof x==='object'):[],relatedTools:list(r.relatedTools),relatedScenes:list(r.relatedScenes)};
   }
-  function register(items,type,version='') { return (items||[]).map(x=>normalizeRecord(x,type)).filter(x=>validId(x.id)).map(x=>{if(!records.has(x.id)||version>=(recordVersions.get(x.id)||'')){records.set(x.id,x);recordVersions.set(x.id,version);}return x;}); }
-  function getRecord(id) { const r=records.get(id) || state.selections[id]?.snapshot;return r?normalizeRecord(r,r.type):null; }
+  function register(items,type,version='') { catalogCache=null;return (items||[]).map(x=>normalizeRecord(x,type)).filter(x=>validId(x.id)).map(x=>{if(!records.has(x.id)||version>=(recordVersions.get(x.id)||'')){records.set(x.id,x);recordVersions.set(x.id,version);}return x;}); }
+  function getRecord(id) {
+    if(records.has(id))return records.get(id);
+    const snapshot=state.selections[id]?.snapshot;if(!snapshot)return null;
+    const cached=snapshotRecords.get(id);if(cached?.source===snapshot)return cached.record;
+    const record=normalizeRecord(snapshot,snapshot.type);snapshotRecords.set(id,{source:snapshot,record});return record;
+  }
+  function indexPlacements(){
+    placementIndex.clear();sceneLabels.clear();
+    for(const p of teachingMap.placements){placementIndex.set(placementKey(p),p);if(p.sceneLabel)sceneLabels.set([p.sceneId,p.stage,p.subject].join('|'),p.sceneLabel);}
+  }
   function isSelected(id) { return Object.hasOwn(state.selections,id); }
   function selectedRecords() {
     return Object.keys(state.selections).map(getRecord).filter(Boolean).sort((a,b)=>PRIORITIES.indexOf(state.selections[a.id].priority)-PRIORITIES.indexOf(state.selections[b.id].priority) || state.selections[a.id].order-state.selections[b.id].order || (recommendationRank[a.priority]??9)-(recommendationRank[b.priority]??9));
   }
   function pathPlacement(id){
     if(currentRoute!=='path'||!pathState.stage||!pathState.subject||!pathState.sceneId)return null;
-    return teachingMap.placements.find(p=>p.recordId===id&&p.stage===pathState.stage&&p.subject===pathState.subject&&p.sceneId===pathState.sceneId)||null;
+    return placementIndex.get(placementKey({...pathState,recordId:id}))||null;
   }
   function choiceChecked(id){const p=pathPlacement(id);return p?!!state.selections[id]?.placements?.some(x=>placementKey(x)===placementKey(p)):isSelected(id);}
   function toggleChoice(id,checked){
@@ -87,7 +98,7 @@
     const ids=new Set(matchingPlacements().filter(p=>p.stage===pathState.stage&&p.subject===pathState.subject&&p.sceneId===pathState.sceneId).map(p=>p.recordId));
     return [...ids].map(getRecord).filter(Boolean).sort((a,b)=>(recommendationRank[a.priority]??9)-(recommendationRank[b.priority]??9)||a.title.localeCompare(b.title,'zh-CN'));
   }
-  function sceneTitle(id,stage=pathState.stage,subject=pathState.subject){return teachingMap.placements.find(p=>p.sceneId===id&&p.stage===stage&&p.subject===subject&&p.sceneLabel)?.sceneLabel||getRecord(id)?.title||id;}
+  function sceneTitle(id,stage=pathState.stage,subject=pathState.subject){return sceneLabels.get([id,stage,subject].join('|'))||getRecord(id)?.title||id;}
   function positionTitle(p){return `${p.stage} · ${p.subject} · ${sceneTitle(p.sceneId,p.stage,p.subject)}`;}
   function navigatePath(sceneId='',recordId=''){
     pathState.mode=sceneId?'reverse':'forward';pathState.sceneId=sceneId;pathState.recordId=recordId;pathState.stage='';pathState.subject='';clearFilter();
@@ -125,7 +136,7 @@
     return `<div class="placement-list">${ps.length?ps.map((p,i)=>`<span class="placement-chip">${esc(positionTitle(p))}<button data-remove-placement="${esc(r.id)}" data-placement-index="${i}" aria-label="移除此教学位置">×</button></span>`).join(''):'<p class="muted">尚未指定学段、学科和具体场景，Prompt会先要求确认。</p>'}<button class="text-button" data-assign-placement="${esc(r.id)}">${ps.length?'添加其他教学位置':'指定学段、学科与场景'} →</button></div>`;
   }
   function placementPrompt(r,c){
-    const positions=(c.placements||[]).map(x=>teachingMap.placements.find(p=>placementKey(p)===placementKey(x))).filter(Boolean);
+    const positions=(c.placements||[]).map(x=>placementIndex.get(placementKey(x))).filter(Boolean);
     if(!positions.length)return '尚未指定教学位置。先确认一个学段、一门学科或工作领域、一个具体场景，再限定本期开发范围；不要默认同时覆盖所有标签。';
     return positions.map((p,i)=>`${i+1}. ${positionTitle(p)}\n   教学目标：${p.goal}\n   教师操作：${p.teacherAction}\n   学生任务：${p.studentAction}\n   输出记录：${p.output}\n   验收：${list(p.acceptance).join('；')}\n   适配性质：${p.basis}`).join('\n\n')+'\n\n仅开发以上已选教学位置。共用底层能力，各学段的任务、难度、教师引导与验收分别实现，不机械复制同一套活动。';
   }
@@ -135,7 +146,8 @@
     const counts={project:0,scene:0,tool:0};selected.forEach(r=>counts[r.type]=(counts[r.type]||0)+1);
     $('dock-caption').textContent=count?`${counts.project}个项目 · ${counts.scene}类场景 · ${counts.tool}项工具 · ${selected.reduce((n,r)=>n+(state.selections[r.id].placements||[]).length,0)}个教学位置`:'先勾选感兴趣的项目或场景';
   }
-  function imageOf(r) { return r.images.find(x=>safeImage(x.src)) || {src:placeholder(r.title,r.category),type:'教学用法示意图',caption:'内部界面待补',sourceUrl:''}; }
+  const isRealImage = im => !!im && !/示意|待补|图标/.test(im.type||'') && !/\.svg(?:$|[?#])/i.test(im.originalSrc||im.src||'');
+  function imageOf(r) { return r.images.find(x=>safeImage(x.src)&&isRealImage(x)) || r.images.find(x=>safeImage(x.src)) || {src:placeholder(r.title,r.category),type:'教学用法示意图',caption:'内部界面待补',sourceUrl:''}; }
   function placeholder(title,category) {
     const text=String(title).slice(0,22).replace(/[<>&]/g,'');
     return 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="800" height="460" viewBox="0 0 800 460"><rect width="800" height="460" fill="#fff4df"/><rect x="70" y="70" width="660" height="310" rx="12" fill="#ffffff" stroke="#D6B5A8"/><text x="105" y="125" font-family="Microsoft YaHei" font-size="18" fill="#71312E">教学用法示意图 · 内部界面待补</text><text x="105" y="195" font-family="Microsoft YaHei" font-size="28" fill="#281A23">${text}</text><path d="M120 280h130m40 0h130m40 0h130" stroke="#E6AC41" stroke-width="40" stroke-linecap="round"/><text x="110" y="342" font-family="Microsoft YaHei" font-size="17" fill="#534751">${String(category).replace(/[<>&]/g,'').slice(0,28)}</text></svg>`);
@@ -143,12 +155,13 @@
   function priorityClass(p){return p==='已有补强'?'existing':p==='建议先试'?'':p==='第二批'?'later':'unknown';}
   function sourceHTML(s){const url=safeUrl(s.url);return `<li>${url?`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(s.title||'查看原始来源')} ↗</a>`:esc(s.title||'资料待补')}${s.date?` <span>· ${esc(s.date)}</span>`:''}</li>`;}
   function catalogItems() {
+    if(catalogCache)return catalogCache;
     const projectMap=new Map();
     [...dailies.values()].sort((a,b)=>a.date.localeCompare(b.date)).forEach(d=>d.projects.forEach(r=>projectMap.set(r.id,r)));
     const projects=[...projectMap.values()];
     const categoryOrder=['班级与成长','备课与作业','英语学习','语文与阅读','学情与自主学习','数学与科学','地理与历史','德育与家校','综合实践与艺体','教师与学校发展','教学图文与媒体','幼儿发展'];
     const tools=[...ourteacher.tools].sort((a,b)=>(recommendationRank[a.priority]??9)-(recommendationRank[b.priority]??9)||categoryOrder.indexOf(a.category)-categoryOrder.indexOf(b.category)||a.title.localeCompare(b.title,'zh-CN'));
-    return [...projects,...tools];
+    return catalogCache=[...projects,...tools];
   }
   function getItems() {
     if(currentRoute==='path')return pathItems();
@@ -175,19 +188,33 @@
     $('filters').innerHTML=`${librarySwitch}<details class="filter-panel" ${matchMedia('(min-width: 761px)').matches?'open':''}><summary>筛选与搜索 <span>学段 · 学科 · 场景 · 投入</span></summary><div class="filter-panel-body">${fields}</div></details>`;
   }
   function renderHero(){
-    const date=selectedDate||manifest.latestDate,total=catalogItems().length,projects=total-ourteacher.tools.length,dailyCount=dailies.get(date)?.projects.length??0;
-    const text={path:['厚外教学开发 · 双向导航','先定学段和学科<br><em>再把场景做深做实</em>','从学段、学科进入具体课堂场景，也能从场景反查适用学段与学科。同一功能按不同教学位置分别设置目标、任务与验收。'],catalog:['厚外教育应用 · 项目大全',`从${total}项教学参考里<br><em>选出厚外下一步要做的</em>`,'把课堂互动、作业反馈、成长评价与教研连成完整教学流程。先看图文与适配理由，再勾选、排期，生成开发Prompt。'],today:['每日精选 / '+date,`本期${dailyCount}项新参考<br><em>让好项目走进课堂</em>`,'教育应用优先，挑选有明确用途、值得借鉴或改造的项目。所有历史精选持续保留，并汇入项目大全。'],scenes:['62类教学场景 · 按需要选择','从一节真实的课<br><em>找到值得做的功能</em>','从已有厚外成长与班务大屏出发，逐步连通备课、课堂、作业、反馈和成长。选择场景后，可以继续细选相关工具。'],library:['OurTeacher · 原始目录与图文','看清参考内容<br><em>再设计厚外的用法</em>','338项主目录、48项繁体补充与34条抖音资料分开浏览。公开来源和教学改造建议逐项保留，图片类型清楚标注。'],queue:['厚外开发计划 · 本机保存','先排轻重缓急<br><em>再让需求具体可做</em>','按场景整理所选内容，补充你的教学设想，生成包含功能、流程和验收要求的开发Prompt。跨学部复用已有基础。']}[currentRoute];
-    $('hero').innerHTML=`<div><div class="eyebrow">${text[0]}</div><h1>${text[1]}</h1><p class="hero-description">${text[2]}</p><div class="hero-primary-actions"><a class="${currentRoute==='path'?'primary':'secondary'}" href="#path" data-scroll-path>按学段学科选择 →</a><a class="primary" href="#catalog" data-scroll-catalog>浏览全部 ${total} 项 →</a><a class="secondary" href="#queue">整理我的开发清单</a></div><div class="hero-tags"><span>厚外成长 · 班务大屏衔接</span><span>跨学部统筹</span><span>勾选后生成Prompt</span></div></div><aside class="hero-aside"><div class="aside-title"><span><i class="live-dot"></i>做懂的教育 · AI服务教学</span><span>${esc(date)}</span></div><div class="brand-motto">${$('brand-art').innerHTML}<div><strong>懂孩子 · 懂教学</strong><p>从具体问题出发<br>积累可复用的厚外课例</p></div></div><div class="hero-metrics"><div><strong>${total}</strong><small>项目与功能参考</small></div><div><strong>${ourteacher.scenes.length}</strong><small>教育教学场景</small></div><div><strong>${dailies.get(date)?.projects.length??0}</strong><small>本期精选项目</small></div></div><p class="aside-note">${projects}个精选项目 + ${ourteacher.tools.length}项功能参考，按稳定编号独立选择。个人勾选与备注只留在本机。</p></aside>`;
+    const date=selectedDate||manifest.latestDate,total=catalogItems().length,n=dailies.get(date)?.projects.length??0;
+    const headings={path:['厚外教学开发','看懂用途，再选要做的','从封面看课堂怎么用，再按学段、学科和场景安排开发。'],catalog:['项目大全',`从${total}项参考中选下一步`,'先看实图、用途和厚外适配；详细功能与验收点开查看。'],today:['每日精选 / '+date,`本期${n}项新参考`,'图文看用途，勾选后生成具体的开发Prompt。'],scenes:['62类教育场景','从课堂需要找到功能','场景与具体工具分别勾选，再确定适合的学段和学科。'],library:['OurTeacher图文库','原图看功能，按需做开发','原教程、公开封面与教学建议分别标注，点图可看详情。'],queue:['我的开发清单','排好顺序，让需求具体可做','选择与备注保存在本机，可随时导出备份。']}[currentRoute];
+    $('hero').innerHTML=`<div class="hero-heading"><div class="eyebrow">${esc(headings[0])}</div><h1>${esc(headings[1])}</h1><p class="hero-description">${esc(headings[2])}</p>${currentRoute==='path'?'<a class="hero-plan-link" href="#path" data-scroll-path>按学段、学科精确选择 ↓</a>':''}</div><div class="hero-compact-aside">${$('brand-art').innerHTML}<div><strong>懂孩子 · 懂教学</strong><span>${total}项参考 · ${ourteacher.scenes.length}类场景</span><a href="#queue">查看我的清单 →</a></div></div>`;
   }
-  function catalogControls(items){
-    const counts=new Map();catalogItems().forEach(r=>counts.set(r.category,(counts.get(r.category)||0)+1));
-    const kinds=[['','全部内容',catalogItems().length],['project','精选项目',catalogItems().filter(r=>r.type==='project').length],['tool','教学功能参考',ourteacher.tools.length]];
-    return `<section class="catalog-entry"><div class="catalog-breakdown"><h2>厚外项目大全 <span>${catalogItems().length}项</span></h2><p>精选项目与教学功能参考一起选；62类场景另设入口。相近功能仍保留原始编号，数量不代表独立成熟产品。</p></div><div class="collection-tabs">${kinds.map(([kind,title,count])=>`<button class="collection-chip ${filter.kind===kind?'active':''}" data-kind="${kind}" aria-pressed="${filter.kind===kind}">${title} <b>${count}</b></button>`).join('')}</div><div class="quick-categories"><button data-category="" class="${filter.category===''?'active':''}" aria-pressed="${filter.category===''}">全部场景</button>${[...counts].map(([category,count])=>`<button data-category="${esc(category)}" class="${filter.category===category?'active':''}" aria-pressed="${filter.category===category}">${esc(category)} <b>${count}</b></button>`).join('')}</div></section>`;
+  function shortText(value,max=64){const text=String(value||'').replace(/^教学改造方向[:：]|^教学改造建议[:：]/,'').trim();return text.length>max?text.slice(0,max).replace(/[，、；：]$/,'')+'…':text;}
+  function coverLabel(img){return /封面/.test(img.type||'')?'原始封面':/渲染|示例/.test(img.type||'')?'官方示例':isRealImage(img)?'真实画面':'用途参考 · 实图待补';}
+  function coverMarkup(r,img,quick=false){
+    const title=String(r.title).split(' · '),name=title.length>1?title[0]:r.title;
+    const use=title.length>1?title.slice(1).join(' · '):r.learningGoal||r.catalogSummary||r.summary;
+    const real=isRealImage(img),source=safeImage(img.thumbnailSrc||img.src)||placeholder(r.title,r.category);
+    return `<button class="card-picture ${real?'has-real-image':'reference-cover'}" data-detail="${esc(r.id)}" aria-label="查看${esc(r.title)}详情"><span class="cover-heading"><strong>${esc(shortText(name,23))}</strong>${!quick&&title.length>1?`<span>${esc(shortText(use,34))}</span>`:''}</span><span class="cover-visual">${real?`<img src="${esc(source)}" alt="${esc(img.caption||r.title)}" loading="lazy" decoding="async" width="800" height="480">`: ''}${!real?`<span class="reference-purpose">${esc(shortText(use,46))}</span>`:''}</span><span class="image-label">${esc(coverLabel(img))}</span></button>`;
+  }
+  function pathGallery(){
+    const ids=['C01','C06','C21','C25','C03','C10','C11','C08'];
+    const scenes=ids.map(id=>getRecord('ot-scene-'+id)).filter(r=>r&&isRealImage(imageOf(r))).slice(0,6);
+    if(!scenes.length)return '';
+    return `<section class="scene-gallery"><div class="gallery-heading"><h2>先看画面，找到要做的方向</h2><a href="#scenes">全部62类场景 →</a></div><div class="scene-gallery-grid">${scenes.map(r=>`<article class="scene-cover">${coverMarkup(r,imageOf(r),true)}<button class="scene-choose" data-explore-scene="${esc(r.id)}">按这个场景选择 →</button></article>`).join('')}</div></section>`;
+  }
+  function catalogControls(){
+    const items=catalogItems(),projects=items.length-ourteacher.tools.length;
+    return `<section class="catalog-entry" aria-label="按内容类型筛选"><div class="collection-tabs">${[['','全部内容',items.length],['project','精选项目',projects],['tool','教学功能参考',ourteacher.tools.length]].map(([kind,title,n])=>`<button class="collection-chip ${filter.kind===kind?'active':''}" data-kind="${kind}" aria-pressed="${filter.kind===kind}">${title} <b>${n}</b></button>`).join('')}</div></section>`;
   }
   function card(r){
     const img=imageOf(r),selected=choiceChecked(r.id),position=pathPlacement(r.id);
-    const reason=position?`${position.goal}；${position.teacherAction}，形成${position.output}。`:r.type==='scene'?[r.existing,r.mvp[0]?'先形成：'+r.mvp[0]+'。':''].filter(Boolean).join(' '):(r.why[0]||r.existing||r.teaching||'先核对真实用途，再判断是否适合。');
-    return `<article class="project-card ${selected?'is-selected':''}" data-card-id="${esc(r.id)}"><button class="card-picture" data-detail="${esc(r.id)}" aria-label="查看${esc(r.title)}详情"><img src="${esc(safeImage(img.src)||placeholder(r.title,r.category))}" alt="${esc(img.caption||r.title)}" loading="lazy" decoding="async"><span class="image-label">${esc(img.type||'参考图片')}</span></button><div class="card-body"><div class="catalog-type">${labelType(r.type)}${r.type==='tool'?' · 教学改造参考':''}</div><div class="card-topline"><span class="category-label">${esc(r.category)}</span><span class="priority-label ${priorityClass(r.priority)}">${esc(r.priority)}</span></div><h2>${esc(r.title)}</h2><p class="card-summary">${esc(r.catalogSummary||r.summary)}</p><div class="stage-tags">${(position?[position.stage,position.subject]:list(r.stages)).slice(0,4).map(x=>`<span>${esc(x)}</span>`).join('')}${list(r.subjects).slice(0,2).map(x=>`<span>${esc(x)}</span>`).join('')}</div><div class="why-box"><b>为什么适合厚外</b><p>${esc(reason)}</p></div><div class="card-mvp"><b>先做什么</b><p>${esc(r.dataOutput?'形成可查看、可修改的'+r.dataOutput:r.mvp[0]||r.summary)}</p></div><div class="card-footnote"><span>投入：${esc(r.effort)}</span><span>${esc(r.reviewStatus||'已核公开资料，未运行')}</span></div></div><div class="card-bottom"><label class="select-label"><input type="checkbox" data-select="${esc(r.id)}" ${selected?'checked':''}><span>${selected?'已加入清单':position?'加入此教学位置':'加入开发清单'}</span></label><button class="detail-button" data-detail="${esc(r.id)}">展开对照表 <span>↗</span></button></div></article>`;
+    const reason=position?position.goal:r.type==='scene'?r.existing:r.why[0]||r.existing||r.teaching;
+    const tags=[...new Set(position?[position.stage,position.subject]:[...r.stages,...r.subjects.filter(x=>x!=='通用')])].slice(0,4);
+    return `<article class="project-card ${selected?'is-selected':''}" data-card-id="${esc(r.id)}">${coverMarkup(r,img)}<div class="card-body"><div class="card-topline"><span class="category-label">${esc(labelType(r.type))} · ${esc(r.category)}</span><span class="priority-label ${priorityClass(r.priority)}">${esc(r.priority)}</span></div><h2>${esc(r.title)}</h2><p class="card-summary">${esc(shortText(r.catalogSummary||r.summary,76))}</p><div class="stage-tags">${tags.map(x=>`<span>${esc(x)}</span>`).join('')}<span>投入${esc(r.effort)}</span></div><div class="why-box"><b>厚外怎么用</b><p>${esc(shortText(reason,86))}</p></div><p class="card-output"><b>先做</b> ${esc(shortText(r.dataOutput||r.mvp[0]||r.summary,55))}</p></div><div class="card-bottom"><label class="select-label"><input type="checkbox" data-select="${esc(r.id)}" ${selected?'checked':''}><span>${selected?'已加入清单':position?'加入此教学位置':'加入开发清单'}</span></label><button class="detail-button" data-detail="${esc(r.id)}">图文详情 ↗</button></div></article>`;
   }
   function table(items){return `<div class="comparison-wrap"><table class="comparison"><thead><tr><th>选择</th><th>图片</th><th>项目 / 场景</th><th>为什么适合</th><th>先做什么</th><th>投入与建议</th></tr></thead><tbody>${items.map(r=>{const im=imageOf(r);return `<tr class="${choiceChecked(r.id)?'selected-row':''}"><td><label aria-label="选择${esc(r.title)}"><input type="checkbox" data-select="${esc(r.id)}" ${choiceChecked(r.id)?'checked':''}></label></td><td><button class="plain" data-detail="${esc(r.id)}" aria-label="查看${esc(r.title)}图片"><img class="table-thumb" src="${esc(safeImage(im.src)||placeholder(r.title,r.category))}" alt="${esc(im.type)}" loading="lazy"></button></td><td><div class="table-title"><button data-detail="${esc(r.id)}">${esc(r.title)}</button></div><div class="table-muted">${esc(r.category)} · ${esc(r.stages.join(' / '))}</div></td><td>${esc(r.why[0]||r.existing||r.teaching)}</td><td>${esc(r.dataOutput||r.mvp[0]||r.summary)}</td><td><span class="priority-label ${priorityClass(r.priority)}">${esc(r.priority)}</span><div class="table-muted">投入：${esc(r.effort)}</div></td></tr>`;}).join('')}</tbody></table></div>`;}
   function linkDouyinSources(){
@@ -210,7 +237,7 @@
     const word=mapping.find(([key])=>title.includes(key));
     const scene=word&&ourteacher.scenes.find(x=>x.title.includes(word[1]));
     const im=scene?.images?.[0];
-    return im?{...im,type:'相关教学用法示意图',caption:'相关教学流程示意，非该视频画面；原视频请打开来源查看。'}:{src:placeholder(title,'公开教程资料'),type:'教学用法示意图',caption:'原教程画面待补；请打开原始来源查看。',sourceUrl:r.url};
+    return im?{...im,type:isRealImage(im)?'相关官方教程画面':'相关教学用法示意图',caption:'这是相关教学资料，非本视频封面或截帧；原视频请打开来源查看。'}:{src:placeholder(title,'公开教程资料'),type:'教学用法示意图',caption:'原教程画面待补；请打开原始来源查看。',sourceUrl:r.url};
   }
   function renderMedia(items){return `<div class="card-grid media-grid">${items.map(r=>{const im=mediaImage(r),merged=douyinCatalog.items.filter(x=>x.decision==='merge'&&x.duplicateOf===r.id);return `<article class="media-row"><button class="media-picture" data-preview-src="${esc(safeImage(im.src))}" data-preview-type="${esc(im.type)}" data-preview-caption="${esc(im.caption)}" data-preview-source="${esc(safeUrl(im.sourceUrl))}" aria-label="放大${esc(r.title)}配图"><img src="${esc(safeImage(im.src))}" alt="${esc(im.caption)}" loading="lazy"><span class="image-label">${esc(im.type)}</span></button><div class="media-body"><span class="category-label">${esc(r.sourceType||r.source_type||'抖音公开资料')}${r.publishedAt?' · '+esc(r.publishedAt):''}</span><h3>${esc(r.title||r.name)}</h3><p>${esc(r.function||r.summary||'')}</p>${r.why?`<div class="why-box"><b>厚外怎么用</b><p>${esc(r.why)}</p></div>`:''}${r.valueReason?`<div class="why-box"><b>为什么值得看</b><p>${esc(r.valueReason)}</p></div>`:''}<p class="media-note">${esc(r.read_status||r.note||'公开索引，未逐条运行核验')}</p>${r.relatedToolIds?.length?`<div class="stage-tags">${r.relatedToolIds.filter(id=>records.has(id)).map(id=>`<button data-detail="${esc(id)}">${esc(getRecord(id).title)} ↗</button>`).join('')}</div>`:''}${r.relatedSceneIds?.length?`<div class="stage-tags">${r.relatedSceneIds.filter(id=>records.has(id)).map(id=>`<button data-explore-scene="${esc(id)}">按“${esc(getRecord(id).title)}”规划 →</button>`).join('')}</div>`:''}${safeUrl(r.url||r.source_page)?`<a class="source-link" href="${esc(safeUrl(r.url||r.source_page))}" target="_blank" rel="noopener noreferrer">查看原始内容 ↗</a>`:''}${safeUrl(r.sourcePage)&&r.sourcePage!==r.url?`<a class="source-link" href="${esc(safeUrl(r.sourcePage))}" target="_blank" rel="noopener noreferrer">${r.sourcePage.includes('/bot/')?'官方工具入口':'来源定位页面'} ↗</a>`:''}${merged.length?`<details><summary>其他${merged.length}条同功能作品来源</summary><ul>${merged.map(x=>`<li><a href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener noreferrer">${esc(x.title)} ↗</a></li>`).join('')}</ul></details>`:''}${r.decision==='include'?`<p class="muted">同功能已合并 ${douyinCatalog.items.filter(x=>x.decision==='merge'&&x.duplicateOf===r.id).length} 条其他来源；核对：${esc(r.verifiedAt||douyinCatalog.verifiedAt)} · ${esc(r.trialStatus||r.reviewStatus)}</p>`:''}<p class="media-image-caption">${esc(im.caption)}</p></div></article>`;}).join('')}</div>`;}
   function renderQueue(items){
@@ -224,7 +251,7 @@
     const pageSize=view==='table'?40:24,totalPages=Math.max(1,Math.ceil(items.length/pageSize));page=Math.min(page,totalPages);
     $('result-summary').innerHTML=`<strong>${currentRoute==='path'?'当前教学位置内容':currentRoute==='catalog'?'项目大全':currentRoute==='queue'?'已选内容':isMedia?'公开媒体资料':currentRoute==='library'&&libraryTab==='supplemental'?'繁体补充':'浏览内容'} ${items.length}</strong><small>${items.length===all.length?`共${all.length}项`:`筛选前${all.length}项`} · ${currentRoute==='queue'?'你的安排保存在本机':`当前 ${(page-1)*pageSize+1}–${Math.min(page*pageSize,items.length)} 项 · 点击图片看详情`}</small>`;
     document.querySelectorAll('[data-view]').forEach(el=>{el.setAttribute('aria-pressed',String(el.dataset.view===state.view));el.hidden=view==='queue'||view==='media';});
-    const note=currentRoute==='path'?renderPathNavigator()+pathIntro():currentRoute==='catalog'?catalogControls(items):currentRoute==='today'?`<p class="data-note">${esc(dailies.get(selectedDate)?.selectionNote||'以公开资料判断教学改造价值，未运行的项目明确标注。')}</p>`:currentRoute==='library'?`${libraryTab==='douyin'?douyinCoverage():''}<p class="library-caption">主目录338项 · 繁体补充48项 · 抖音资料34条 · 另有官方图文教程${tutorials.items.length}条。并非抖音账号全部作品；可访问范围与配图类型逐项说明。测试项2条已排除。</p>`:'';
+    const note=currentRoute==='path'?(!pathState.stage&&pathState.mode==='forward'&&!pathState.recordId?pathGallery():'')+renderPathNavigator()+pathIntro():currentRoute==='catalog'?catalogControls():currentRoute==='today'?`<details class="data-note"><summary>本期选取说明与核对范围</summary><p>${esc(dailies.get(selectedDate)?.selectionNote||'以公开资料判断教学改造价值，未运行的项目明确标注。')}</p></details>`:currentRoute==='library'?`${libraryTab==='douyin'?douyinCoverage():''}<p class="library-caption">主目录338项 · 繁体补充48项 · 抖音资料34条 · 另有官方图文教程${tutorials.items.length}条。并非抖音账号全部作品；可访问范围与配图类型逐项说明。测试项2条已排除。</p>`:'';
     if(!items.length){$('results').innerHTML=`${note}<div class="empty-state"><h2>${currentRoute==='path'&&!pathReady()?'先选择一个教学位置':currentRoute==='queue'?'还没有符合条件的已选内容':'这里暂时没有匹配内容'}</h2><p>${currentRoute==='path'&&!pathReady()?'完成上方三步后，这里显示对应的项目、工具与教学开发建议。':currentRoute==='queue'?'先浏览项目或场景，勾选后即可在这里整理开发顺序。':'试试减少筛选条件，已经勾选的内容仍然保留。'}</p><button class="secondary" ${currentRoute==='queue'?'data-go-today':'data-reset'}>${currentRoute==='queue'?'去看今日精选':'清除筛选'}</button></div>`;$('pagination').innerHTML='';return;}
     const shown=items.slice((page-1)*pageSize,page*pageSize);
     $('results').innerHTML=note+(view==='queue'?renderQueue(items):view==='media'?renderMedia(shown):view==='table'?table(shown):`<div class="card-grid">${shown.map(card).join('')}</div>`);
@@ -273,7 +300,7 @@
     if(j<0||j>=group.length){toast('已到当前场景与优先级的边界。');return;}
     group.forEach((r,n)=>state.selections[r.id].order=n*10);const a=state.selections[id],b=state.selections[group[j].id];[a.order,b.order]=[b.order,a.order];save();renderResults();
   }
-  async function fetchJSON(file){const response=await fetch(file,{cache:'no-store'});if(!response.ok)throw new Error('资料读取失败：'+file);return response.json();}
+  async function fetchJSON(file){const response=await fetch(file,{cache:'no-cache'});if(!response.ok)throw new Error('资料读取失败：'+file);return response.json();}
   async function loadDaily(date){
     if(dailies.has(date))return;
     const info=manifest.dates.find(x=>x.date===date);if(!info)throw new Error('该日期没有日报。');
@@ -283,7 +310,6 @@
 
   document.addEventListener('click',async(event)=>{
     if(event.target.closest('[data-scroll-path]')){event.preventDefault();const scroll=()=>document.querySelector('.teaching-navigator')?.scrollIntoView({block:'start',behavior:'smooth'});if(currentRoute!=='path'){location.hash='path';setTimeout(scroll,120);}else scroll();return;}
-    if(event.target.closest('[data-scroll-catalog]')){event.preventDefault();const scroll=()=>document.querySelector('.catalog-entry')?.scrollIntoView({block:'start',behavior:'smooth'});if(currentRoute!=='catalog'){location.hash='catalog';setTimeout(scroll,120);}else scroll();return;}
     const b=event.target.closest('button, [data-close]');if(!b)return;
     if(b.dataset.close){$(b.dataset.close).close();return;}
     if(b.dataset.exploreScene){if($('detail-dialog').open)$('detail-dialog').close();navigatePath(b.dataset.exploreScene);return;}
@@ -303,7 +329,6 @@
     if(b.dataset.enlarge!==undefined){openImage(b.dataset.id,Number(b.dataset.enlarge));return;}
     if(b.dataset.view){state.view=b.dataset.view;save();page=1;renderResults();return;}
     if(b.hasAttribute('data-kind')){filter.kind=b.dataset.kind;page=1;renderFilters();renderResults();return;}
-    if(b.hasAttribute('data-category')){filter.category=b.dataset.category;page=1;renderFilters();renderResults();return;}
     if(b.dataset.library){libraryTab=b.dataset.library;clearFilter();render();return;}
     if(b.hasAttribute('data-reset')){clearFilter();render();return;}
     if(b.dataset.page){page=Number(b.dataset.page);renderResults();$('result-summary').scrollIntoView({block:'start',behavior:'smooth'});return;}
@@ -346,7 +371,58 @@
     $('import-file').value='';
   };
   $('update-request-button').onclick=()=>copyText('请按AI教育项目精选库的DAILY_UPDATE.md更新今天的精选，核对原始来源，目标10项、不凑数、不重复；检查通过后发布到xiaoxiao430/ai-edu-radar。我的勾选与备注留在本机，不要覆盖。');
-  $('refresh-button').onclick=async()=>{if(window.RADAR_BUNDLE){toast('这是离线HTML快照。要获取最新内容，请打开GitHub在线网站。');return;}try{const pendingManifest=await fetchJSON('./data/manifest.json');const ref=pendingManifest.dates?.find(x=>x.date===pendingManifest.latestDate);if(!ref)throw new Error('日期索引待补');const [pendingDaily,pendingMap,pendingDouyin]=await Promise.all([fetchJSON('./'+ref.path),fetchJSON('./data/teaching-map.json'),fetchJSON('./data/douyin-catalog.json')]);if(!Array.isArray(pendingMap.placements)||!Array.isArray(pendingDouyin.items))throw new Error('教学分类资料待核');if(!Array.isArray(pendingDaily.projects)||pendingDaily.date!==ref.date)throw new Error('日报格式待核');pendingDaily.projects=register(pendingDaily.projects,'project',ref.date);manifest=pendingManifest;teachingMap=pendingMap;douyinCatalog=pendingDouyin;linkDouyinSources();dailies.set(ref.date,pendingDaily);selectedDate=ref.date;render();setUpdateStatus();toast('公开内容已刷新，选择与备注保留。');}catch(err){toast('更新暂时无法读取，当前内容与选择保持保留。');}};
+  $('refresh-button').onclick=async()=>{
+    if(window.RADAR_BUNDLE){toast('这是离线HTML快照。要获取最新内容，请打开GitHub在线网站。');return;}
+    try{const pending=await readRuntime(true);applyBundle(pending);render();setUpdateStatus();toast('公开内容已刷新，选择与备注保留。');}
+    catch{toast('更新暂时无法读取，当前内容与选择保持保留。');}
+  };
+  async function readRuntime(fresh=false){
+    const packed=await fetchJSON('./data/runtime.json'+(fresh?'?refresh='+Date.now():''));
+    if(!window.RADAR_RUNTIME_CODEC)throw new Error('页面加载器未完成，请刷新重试。');
+    return window.RADAR_RUNTIME_CODEC.decode(packed);
+  }
+  function validateBundle(bundle){
+    const object=x=>x&&typeof x==='object'&&!Array.isArray(x);
+    const objects=(xs,label)=>{if(!Array.isArray(xs)||!xs.every(object))throw new Error(label+'资料格式待核。');};
+    if(!object(bundle)||!object(bundle.ourteacher)||!object(bundle.manifest)||!object(bundle.teachingMap))throw new Error('资料格式待核。');
+    const ot=bundle.ourteacher;
+    for(const key of ['scenes','tools','supplemental','media'])objects(ot[key],key);
+    for(const r of [...ot.scenes,...ot.tools,...ot.supplemental])if(!validId(r.id))throw new Error('参考条目编号待核。');
+    objects(bundle.manifest.dates,'日期');objects(bundle.dailies,'日报');
+    if(!bundle.manifest.dates.length)throw new Error('精选目录尚未就绪。');
+    for(const daily of bundle.dailies){objects(daily.projects,'精选');if(typeof daily.date!=='string'||daily.projects.some(r=>!validId(r.id)))throw new Error('精选编号或日期待核。');}
+    if(!bundle.dailies.some(d=>d.date===bundle.manifest.latestDate))throw new Error('本期精选资料尚未就绪。');
+    if(bundle.manifest.dates.some(ref=>!bundle.dailies.some(d=>d.date===ref.date)))throw new Error('历史精选资料尚未就绪。');
+    objects(bundle.teachingMap.placements,'教学关系');
+    if(bundle.teachingMap.placements.some(p=>['recordId','stage','subject','sceneId'].some(k=>typeof p[k]!=='string')))throw new Error('教学位置资料待核。');
+    if(!object(bundle.teachingMap.stageSubjects)||Object.values(bundle.teachingMap.stageSubjects).some(xs=>!Array.isArray(xs)||xs.some(x=>typeof x!=='string')))throw new Error('学段资料待核。');
+    if(!object(bundle.teachingMap.stageProfiles))throw new Error('学段教学说明待核。');
+    objects(bundle.tutorials?.items,'教程');objects(bundle.douyinCatalog?.items,'公开作品');
+    const media=[...bundle.tutorials.items,...bundle.douyinCatalog.items];
+    for(const item of media){
+      for(const key of ['relatedToolIds','relatedSceneIds'])if(item[key]!=null&&!Array.isArray(item[key]))throw new Error('资料关联待核。');
+      if(item.images!=null){objects(item.images,'配图');}
+    }
+  }
+  function applyBundle(bundle){
+    validateBundle(bundle);
+    records.clear();recordVersions.clear();dailies.clear();snapshotRecords.clear();catalogCache=null;
+    ourteacher=bundle.ourteacher;manifest=bundle.manifest;teachingMap=bundle.teachingMap;douyinCatalog=bundle.douyinCatalog||{items:[],coverage:{}};tutorials=bundle.tutorials||{items:[]};
+    for(const daily of bundle.dailies){daily.projects=register(daily.projects,'project',daily.date);dailies.set(daily.date,daily);}
+    ourteacher.scenes=register(ourteacher.scenes,'scene');ourteacher.tools=register(ourteacher.tools,'tool');ourteacher.supplemental=register(ourteacher.supplemental||[],'tool');ourteacher.media=ourteacher.media||[];
+    for(const tutorial of tutorials.items||[]){
+      for(const id of tutorial.relatedToolIds||[]){
+        const r=records.get(id);if(!r)continue;
+        const images=(tutorial.images||[]).filter(im=>safeImage(im.src));
+        // Source order deliberately preserves a specific cover chosen for the tool.
+        r.images=[...r.images.filter(isRealImage),...images.filter(im=>!r.images.some(x=>x.src===im.src)),...r.images.filter(im=>!isRealImage(im)&&!images.some(x=>x.src===im.src))];
+        const source={title:tutorial.title+'（官方图文资料）',url:tutorial.url,date:tutorial.verifiedAt||tutorials.verifiedAt};
+        if(!r.sources.some(x=>x.url===source.url))r.sources.push(source);
+        if(tutorial.note&&!r.limitations.includes(tutorial.note))r.limitations.push(tutorial.note);
+      }
+    }
+    selectedDate=manifest.latestDate;indexPlacements();linkDouyinSources();
+  }
   function setUpdateStatus(){
     const when=manifest.lastSuccessAt?new Date(manifest.lastSuccessAt):null;
     const label=when&&!Number.isNaN(when.getTime())?new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',dateStyle:'short',timeStyle:'short'}).format(when):'时间待核';
@@ -354,28 +430,9 @@
     if(when&&Date.now()-when.getTime()>48*3600*1000){$('update-status').classList.add('stale-note');$('update-status').textContent+=' 内容已超过两天未更新，可复制补更请求。';}
   }
   try{
-    const bundle=window.RADAR_BUNDLE;
-    if(bundle){ourteacher=bundle.ourteacher;manifest=bundle.manifest;teachingMap=bundle.teachingMap||teachingMap;douyinCatalog=bundle.douyinCatalog||douyinCatalog;tutorials=bundle.tutorials||{items:[]};for(const daily of bundle.dailies||[]){daily.projects=register(daily.projects,'project',daily.date);dailies.set(daily.date,daily);}}
-    else{[ourteacher,manifest,teachingMap]=await Promise.all([fetchJSON('./data/ourteacher.json'),fetchJSON('./data/manifest.json'),fetchJSON('./data/teaching-map.json')]);try{douyinCatalog=await fetchJSON('./data/douyin-catalog.json');}catch{}try{tutorials=await fetchJSON('./data/tutorials.json');}catch{tutorials={items:[]};}}
-    ourteacher.scenes=register(ourteacher.scenes,'scene');ourteacher.tools=register(ourteacher.tools,'tool');ourteacher.supplemental=register(ourteacher.supplemental||[],'tool');ourteacher.media=ourteacher.media||[];
-    // 仅将画面已核对、关联明确的官方教程图片放入对应工具；图示与来源标注原样保留。
-    for(const tutorial of tutorials.items||[]){
-      for(const id of tutorial.relatedToolIds||[]){
-        const r=records.get(id);if(!r)continue;
-        const images=(tutorial.images||[]).filter(im=>safeImage(im.src));
-        r.images=[...images,...r.images.filter(im=>!images.some(x=>x.src===im.src))];
-        const source={title:tutorial.title+'（官方图文资料）',url:tutorial.url,date:tutorial.verifiedAt||tutorials.verifiedAt};
-        if(!r.sources.some(x=>x.url===source.url))r.sources.push(source);
-        if(tutorial.note&&!r.limitations.includes(tutorial.note))r.limitations.push(tutorial.note);
-        r.reviewStatus='公开目录与官方图文资料已核，未登录试用';
-      }
-    }
-    if(!manifest.dates?.length)throw new Error('精选日期目录尚未准备好。');selectedDate=manifest.latestDate;
-    if(!dailies.has(selectedDate))await loadDaily(selectedDate);
-    if(!bundle)await Promise.all(manifest.dates.filter(x=>x.date!==selectedDate).map(x=>loadDaily(x.date).catch(()=>{})));
-    linkDouyinSources();
+    applyBundle(window.RADAR_BUNDLE||await readRuntime());
     // 将历史选择留在本机；公开资料更新不改变选择与备注。
-    updateCounts();render();setUpdateStatus();
+    render();setUpdateStatus();
     window.RADAR_APP={get counts(){return{catalog:catalogItems().length,projects:catalogItems().filter(r=>r.type==='project').length,tutorials:tutorials.items.length,scenes:ourteacher.scenes.length,tools:ourteacher.tools.length,supplemental:ourteacher.supplemental.length,media:ourteacher.media.length,selected:selectedRecords().length};},get douyin(){return {coverage:{...douyinCatalog.coverage},included:douyinCatalog.items.filter(r=>r.decision==='include').length};},get teaching(){return{placements:teachingMap.placements.length,path:{...pathState},selectedPositions:selectedRecords().reduce((n,r)=>n+(state.selections[r.id].placements||[]).length,0)};},getSelectedIds:()=>Object.keys(state.selections),getPrompt:()=>makePrompt(selectedRecords())};
   }catch(error){$('hero').innerHTML='<div><div class="eyebrow">资料读取暂未完成</div><h1>稍后刷新，再继续选择</h1><p class="hero-description">当前浏览器已有选择不会被删除。可先导出备份，或使用下载的HTML快照。</p></div>';$('results').innerHTML=`<div class="empty-state"><h2>暂时无法读取公开资料</h2><p>${esc(error.message)}</p><button class="secondary" onclick="location.reload()">重新读取</button></div>`;}
 })();

@@ -23,14 +23,20 @@
           "type": "官方教程操作画面",
           "caption": "官方教程 32.0 秒：选择教材单元并显示习作要求；画面是语文工具。",
           "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/c850fd39/video_ourteacher%E8%AF%9D%E9%A2%98_%E4%BD%9C%E6%96%87%E6%89%B9..._0.mp4",
-          "timeSeconds": 32.0
+          "timeSeconds": 32.0,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-00-0.webp",
+          "thumbnailWidth": 799,
+          "thumbnailHeight": 1066
         },
         {
           "src": "assets/images/tutorials/source-00-1.jpg",
           "type": "官方教程操作画面",
           "caption": "官方教程 97.6 秒：批改内容选择与班级名单入口。",
           "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/c850fd39/video_ourteacher%E8%AF%9D%E9%A2%98_%E4%BD%9C%E6%96%87%E6%89%B9..._0.mp4",
-          "timeSeconds": 97.6
+          "timeSeconds": 97.6,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-00-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
         }
       ],
       "relatedToolIds": [
@@ -71,7 +77,10 @@
           "type": "官方教程操作画面",
           "caption": "官方教程 45.5 秒：自习安静挑战页面；不是单词游戏画面。",
           "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250423/b407f72496fc55ecf2efd157831b362c.mp4",
-          "timeSeconds": 45.5
+          "timeSeconds": 45.5,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-02-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1279
         }
       ],
       "relatedToolIds": [
@@ -150,10 +159,17 @@
       "sourceType": "官方模板说明",
       "images": [
         {
-          "src": "assets/images/tutorials/source-04.png",
+          "src": "assets/images/media-refresh-A235-template.webp",
           "type": "官方输入模板说明图",
           "caption": "官方成绩输入模板说明；不是分析结果页。",
-          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250428/1fc3d1754ad12f1254f793091b062257.png"
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250428/1fc3d1754ad12f1254f793091b062257.png",
+          "originalSrc": "assets/images/tutorials/source-04.png",
+          "width": 2000,
+          "height": 1393,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-A235-template.webp",
+          "thumbnailWidth": 800,
+          "thumbnailHeight": 557
         }
       ],
       "relatedToolIds": [
@@ -191,10 +207,17 @@
       "sourceType": "官方模板说明",
       "images": [
         {
-          "src": "assets/images/tutorials/source-05.png",
+          "src": "assets/images/media-refresh-A236-template.webp",
           "type": "官方输入模板说明图",
           "caption": "官方多学科成绩模板标注；不是工具输出界面。",
-          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250428/c6451dcc878d68e0cf7a287e17272399.png"
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250428/c6451dcc878d68e0cf7a287e17272399.png",
+          "originalSrc": "assets/images/tutorials/source-05.png",
+          "width": 2000,
+          "height": 1114,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-A236-template.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 535
         }
       ],
       "relatedToolIds": [
@@ -232,10 +255,17 @@
       "sourceType": "官方模板说明",
       "images": [
         {
-          "src": "assets/images/tutorials/source-06.png",
+          "src": "assets/images/media-refresh-A240-template.webp",
           "type": "官方输入模板说明图",
           "caption": "官方班级间比较的成绩输入模板说明。",
-          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250428/432117d460cf1a527ffec209ac73ae1f.png"
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250428/432117d460cf1a527ffec209ac73ae1f.png",
+          "originalSrc": "assets/images/tutorials/source-06.png",
+          "width": 2000,
+          "height": 879,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-A240-template.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 422
         }
       ],
       "relatedToolIds": [
@@ -273,10 +303,17 @@
       "sourceType": "官方模板说明",
       "images": [
         {
-          "src": "assets/images/tutorials/source-07.png",
+          "src": "assets/images/media-refresh-A393-template.webp",
           "type": "官方输入模板说明图",
           "caption": "官方高中质量分析输入示例；不是完整分析报告。",
-          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/00cbd269/%E9%AB%98%E4%B8%AD%E8%B4%A8%E9%87%8F%E5%88%86%E6%9E%90%E7%A4%BA%E4%BE%8B.png"
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/00cbd269/%E9%AB%98%E4%B8%AD%E8%B4%A8%E9%87%8F%E5%88%86%E6%9E%90%E7%A4%BA%E4%BE%8B.png",
+          "originalSrc": "assets/images/tutorials/source-07.png",
+          "width": 2400,
+          "height": 1336,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-A393-template.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 534
         }
       ],
       "relatedToolIds": [
@@ -316,14 +353,20 @@
           "type": "官方教程操作画面",
           "caption": "官方教程 44.9 秒：逐字稿表单：学科、年级、资料上传和时长。",
           "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241028/21bc6699faa7571da20fb175c5636bfa.mp4",
-          "timeSeconds": 44.9
+          "timeSeconds": 44.9,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-08-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 720
         },
         {
           "src": "assets/images/tutorials/source-08-2.jpg",
           "type": "官方教程操作画面",
           "caption": "官方教程 66.9 秒：教程中的逐字稿输出示例。",
           "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241028/21bc6699faa7571da20fb175c5636bfa.mp4",
-          "timeSeconds": 66.9
+          "timeSeconds": 66.9,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-08-2.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 720
         }
       ],
       "relatedToolIds": [
@@ -365,14 +408,20 @@
           "type": "官方教程操作画面",
           "caption": "官方教程 24.5 秒：大单元输入表单与单元内容。",
           "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240913/6f9e956c58c34d94ab703bad443a1d8b.mp4",
-          "timeSeconds": 24.5
+          "timeSeconds": 24.5,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-09-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
         },
         {
           "src": "assets/images/tutorials/source-09-2.jpg",
           "type": "官方教程操作画面",
           "caption": "官方教程 111.4 秒：教程中生成的大单元教学设计片段。",
           "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240913/6f9e956c58c34d94ab703bad443a1d8b.mp4",
-          "timeSeconds": 111.4
+          "timeSeconds": 111.4,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-09-2.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
         }
       ],
       "relatedToolIds": [
@@ -414,14 +463,20 @@
           "type": "官方教程操作画面",
           "caption": "官方教程 16.6 秒：英语默写卡批改的学生作答上传入口。",
           "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250219/6439d75a9d6b2fb3d5577a8a4d940197.mp4",
-          "timeSeconds": 16.6
+          "timeSeconds": 16.6,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-10-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
         },
         {
           "src": "assets/images/tutorials/source-10-2.jpg",
           "type": "官方教程操作画面",
           "caption": "官方教程 75.7 秒：教程展示的识别与批改文字。",
           "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250219/6439d75a9d6b2fb3d5577a8a4d940197.mp4",
-          "timeSeconds": 75.7
+          "timeSeconds": 75.7,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-10-2.webp",
+          "thumbnailWidth": 799,
+          "thumbnailHeight": 1066
         }
       ],
       "relatedToolIds": [
@@ -464,14 +519,20 @@
           "type": "官方教程操作画面",
           "caption": "官方教程 13.0 秒：输入教师身份、沟通对象与原消息。",
           "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240909/020312a4ce58d537c8990c3dd6b9d70e.mp4",
-          "timeSeconds": 13.0
+          "timeSeconds": 13.0,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-11-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
         },
         {
           "src": "assets/images/tutorials/source-11-1.jpg",
           "type": "官方教程操作画面",
           "caption": "官方教程 39.8 秒：官方教程中的候选回复片段。",
           "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240909/020312a4ce58d537c8990c3dd6b9d70e.mp4",
-          "timeSeconds": 39.8
+          "timeSeconds": 39.8,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-11-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
         }
       ],
       "relatedToolIds": [
@@ -513,7 +574,10 @@
           "src": "assets/images/tutorials/source-12.png",
           "type": "官方使用说明图",
           "caption": "官方使用说明图，介绍材料与用法；不是生成后的课件截图。",
-          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/6eddc7b0/5.png"
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/6eddc7b0/5.png",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-12.webp",
+          "thumbnailWidth": 908,
+          "thumbnailHeight": 650
         }
       ],
       "relatedToolIds": [
@@ -555,7 +619,10 @@
           "type": "官方教程操作画面",
           "caption": "官方教程 11.7 秒：AI 融合公开课的学科与教案上传表单。",
           "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/mn/e/nkop4/20250507/02228e3b9e0dd3c75224955540d3e260.mp4",
-          "timeSeconds": 11.7
+          "timeSeconds": 11.7,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-13-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
         }
       ],
       "relatedToolIds": [
@@ -598,14 +665,20 @@
           "type": "官方教程操作画面",
           "caption": "官方教程 65.2 秒：批量学生评语的文件上传界面。",
           "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241202/a8f08402f2343163f8343f1982cf1c45.mp4",
-          "timeSeconds": 65.2
+          "timeSeconds": 65.2,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-14-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 720
         },
         {
           "src": "assets/images/tutorials/source-14-2.jpg",
           "type": "官方教程操作画面",
           "caption": "官方教程 97.1 秒：教程中的批量评语结果表。",
           "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241202/a8f08402f2343163f8343f1982cf1c45.mp4",
-          "timeSeconds": 97.1
+          "timeSeconds": 97.1,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-14-2.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 720
         }
       ],
       "relatedToolIds": [
@@ -648,14 +721,20 @@
           "type": "官方教程操作画面",
           "caption": "官方教程 25.3 秒：教案设计输入年级、目标和教材内容。",
           "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240910/2c856b9b4efa958c069a585b9592844b.mp4",
-          "timeSeconds": 25.3
+          "timeSeconds": 25.3,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-15-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
         },
         {
           "src": "assets/images/tutorials/source-15-1.jpg",
           "type": "官方教程操作画面",
           "caption": "官方教程 77.3 秒：教程生成的教案草稿片段。",
           "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240910/2c856b9b4efa958c069a585b9592844b.mp4",
-          "timeSeconds": 77.3
+          "timeSeconds": 77.3,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-15-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
         }
       ],
       "relatedToolIds": [
@@ -697,14 +776,20 @@
           "type": "官方教程操作画面",
           "caption": "官方教程 27.8 秒：视频生观察记录的观察目标与视频上传入口。",
           "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241126/c322cab8b62be5d605bc541569b7bcf8.mp4",
-          "timeSeconds": 27.8
+          "timeSeconds": 27.8,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-16-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
         },
         {
           "src": "assets/images/tutorials/source-16-2.jpg",
           "type": "官方教程操作画面",
           "caption": "官方教程 126.5 秒：教程中的观察记录草稿。",
           "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241126/c322cab8b62be5d605bc541569b7bcf8.mp4",
-          "timeSeconds": 126.5
+          "timeSeconds": 126.5,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-16-2.webp",
+          "thumbnailWidth": 799,
+          "thumbnailHeight": 1066
         }
       ],
       "relatedToolIds": [
@@ -744,14 +829,20 @@
           "type": "官方教程操作画面",
           "caption": "官方教程 16.2 秒：活动教案的输入与材料提示。",
           "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241125/ddf917e5dcc33ff270c2aa6ae48372fe.mp4",
-          "timeSeconds": 16.2
+          "timeSeconds": 16.2,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-17-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
         },
         {
           "src": "assets/images/tutorials/source-17-1.jpg",
           "type": "官方教程操作画面",
           "caption": "官方教程 49.5 秒：官方教程生成的活动流程片段。",
           "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241125/ddf917e5dcc33ff270c2aa6ae48372fe.mp4",
-          "timeSeconds": 49.5
+          "timeSeconds": 49.5,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-17-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
         }
       ],
       "relatedToolIds": [
@@ -791,21 +882,30 @@
           "type": "官方生成效果视频截图",
           "caption": "官方教程 29.3 秒：灰姑娘（水彩风）官方示例画面。",
           "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/9ccb965c/1%E7%81%B0%E5%A7%91%E5%A8%98.mp4",
-          "timeSeconds": 29.3
+          "timeSeconds": 29.3,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-19-1.webp",
+          "thumbnailWidth": 800,
+          "thumbnailHeight": 451
         },
         {
           "src": "assets/images/tutorials/source-20-1.jpg",
           "type": "官方生成效果视频截图",
           "caption": "官方教程 29.5 秒：乌鸦喝水（线稿风）官方示例画面。",
           "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/148d9e87/1%E4%B9%8C%E9%B8%A6%E5%96%9D%E6%B0%B4.mp4",
-          "timeSeconds": 29.5
+          "timeSeconds": 29.5,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-20-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 541
         },
         {
           "src": "assets/images/tutorials/source-21-1.jpg",
           "type": "官方生成效果视频截图",
           "caption": "官方教程 29.6 秒：后羿射日（水墨风）官方示例画面。",
           "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/afaccf26/2%E5%90%8E%E7%BE%BF%E5%B0%84%E6%97%A5.mp4",
-          "timeSeconds": 29.6
+          "timeSeconds": 29.6,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-21-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 541
         }
       ],
       "relatedToolIds": [
@@ -973,14 +1073,20 @@
           "type": "官方互动效果视频截图",
           "caption": "官方教程 65.6 秒：三打白骨精情境中的人物与选择画面。",
           "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/7b2a733c/%E4%B8%89%E6%89%93%E7%99%BD%E9%AA%A8%E7%B2%BE.mp4",
-          "timeSeconds": 65.6
+          "timeSeconds": 65.6,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-25-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 524
         },
         {
           "src": "assets/images/tutorials/source-25-2.jpg",
           "type": "官方互动效果视频截图",
           "caption": "官方教程 97.7 秒：官方情境示例的体验结束页面。",
           "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/7b2a733c/%E4%B8%89%E6%89%93%E7%99%BD%E9%AA%A8%E7%B2%BE.mp4",
-          "timeSeconds": 97.7
+          "timeSeconds": 97.7,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-25-2.webp",
+          "thumbnailWidth": 800,
+          "thumbnailHeight": 437
         }
       ],
       "relatedToolIds": [
