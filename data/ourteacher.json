@@ -58,6 +58,20 @@
       ],
       "images": [
         {
+          "src": "assets/images/media-refresh-classboard.webp",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关官方功能参考：OurTeacher 官方公开教程 375 秒，班务大屏：今日课表、今日作业、课前准备倒计时和值日安排。画面及字幕完整保留，仅为官方演示，非厚外班级资料。仅展示画面所示环节，不代表本场景全部功能。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/58df0f3a/%E7%8F%AD%E7%BA%A7%E5%AE%A0%E7%89%A9%E7%A7%AF%E5%88%86%E5%A4%A7%E6%95%99%E7%A8%8B%EF%BC%88%E5%8E%8B%E7%BC%A9%EF%BC%89.mp4",
+          "sourcePage": "https://www.ourteacher.cc/next/chat/19",
+          "timeSeconds": 375,
+          "width": 1920,
+          "height": 1080,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-classboard.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 540
+        },
+        {
           "src": "assets/images/ourteacher/C01.svg",
           "type": "教学用法示意图",
           "caption": "班务大屏与每日学习安排：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -138,6 +152,20 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/media-refresh-homework.webp",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关官方功能参考：OurTeacher 官方公开教程 329 秒，作业统计：未完成与已完成任务分栏。画面及字幕完整保留，仅为官方演示，非厚外班级资料。仅展示画面所示环节，不代表本场景全部功能。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/58df0f3a/%E7%8F%AD%E7%BA%A7%E5%AE%A0%E7%89%A9%E7%A7%AF%E5%88%86%E5%A4%A7%E6%95%99%E7%A8%8B%EF%BC%88%E5%8E%8B%E7%BC%A9%EF%BC%89.mp4",
+          "sourcePage": "https://www.ourteacher.cc/next/chat/19",
+          "timeSeconds": 329,
+          "width": 1920,
+          "height": 1080,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-homework.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 540
+        },
         {
           "src": "assets/images/ourteacher/C02.svg",
           "type": "教学用法示意图",
@@ -227,6 +255,20 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/media-refresh-countdown.webp",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关官方功能参考：OurTeacher 官方教具教程 59 秒：倒计时生成器的十分钟倒计时、快速选择、开始与重置按钮。保留完整原画面，非本平台生成示意。仅展示画面所示环节，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250423/b407f72496fc55ecf2efd157831b362c.mp4",
+          "sourcePage": "https://www.ourteacher.cc/bot/203",
+          "timeSeconds": 59,
+          "width": 1384,
+          "height": 1844,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-countdown.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1279
+        },
         {
           "src": "assets/images/ourteacher/C03.svg",
           "type": "教学用法示意图",
@@ -325,6 +367,20 @@
       ],
       "images": [
         {
+          "src": "assets/images/media-refresh-remote-notice.webp",
+          "type": "官方教程实拍画面",
+          "caption": "本场景相关官方功能参考：OurTeacher 官方公开教程 395 秒，远程喊话：教室大屏实际显示手机发来的通知。画面及字幕完整保留，仅为官方演示，非厚外班级资料。仅展示画面所示环节，不代表本场景全部功能。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/58df0f3a/%E7%8F%AD%E7%BA%A7%E5%AE%A0%E7%89%A9%E7%A7%AF%E5%88%86%E5%A4%A7%E6%95%99%E7%A8%8B%EF%BC%88%E5%8E%8B%E7%BC%A9%EF%BC%89.mp4",
+          "sourcePage": "https://www.ourteacher.cc/next/chat/19",
+          "timeSeconds": 395,
+          "width": 1920,
+          "height": 1080,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-remote-notice.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 540
+        },
+        {
           "src": "assets/images/ourteacher/C04.svg",
           "type": "教学用法示意图",
           "caption": "远程通知与学生确认：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -415,6 +471,28 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/tutorials/source-14-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“批量学生评语”的官方参考画面。官方教程 65.2 秒：批量学生评语的文件上传界面。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241202/a8f08402f2343163f8343f1982cf1c45.mp4",
+          "timeSeconds": 65.2,
+          "relatedToolId": "ot-tool-A154",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-14-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 720
+        },
+        {
+          "src": "assets/images/tutorials/source-14-2.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“批量学生评语”的官方参考画面。官方教程 97.1 秒：教程中的批量评语结果表。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241202/a8f08402f2343163f8343f1982cf1c45.mp4",
+          "timeSeconds": 97.1,
+          "relatedToolId": "ot-tool-A154",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-14-2.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 720
+        },
         {
           "src": "assets/images/ourteacher/C05.svg",
           "type": "教学用法示意图",
@@ -527,6 +605,20 @@
       ],
       "images": [
         {
+          "src": "assets/images/media-refresh-pet-home.webp",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关官方功能参考：OurTeacher 官方公开教程 3 秒，班级宠物首页：宠物、等级与经验条。画面及字幕完整保留，仅为官方演示，非厚外班级资料。仅展示画面所示环节，不代表本场景全部功能。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/58df0f3a/%E7%8F%AD%E7%BA%A7%E5%AE%A0%E7%89%A9%E7%A7%AF%E5%88%86%E5%A4%A7%E6%95%99%E7%A8%8B%EF%BC%88%E5%8E%8B%E7%BC%A9%EF%BC%89.mp4",
+          "sourcePage": "https://www.ourteacher.cc/next/chat/19",
+          "timeSeconds": 3,
+          "width": 1920,
+          "height": 1080,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-pet-home.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 540
+        },
+        {
           "src": "assets/images/ourteacher/C06.svg",
           "type": "教学用法示意图",
           "caption": "宠物积分与学习激励：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -608,6 +700,20 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/media-refresh-honor-board.webp",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关官方功能参考：OurTeacher 官方公开教程 247 秒，班级荣誉榜：经验值、徽章、进步榜与分类查看入口。画面及字幕完整保留，仅为官方演示，非厚外班级资料。仅展示画面所示环节，不代表本场景全部功能。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/58df0f3a/%E7%8F%AD%E7%BA%A7%E5%AE%A0%E7%89%A9%E7%A7%AF%E5%88%86%E5%A4%A7%E6%95%99%E7%A8%8B%EF%BC%88%E5%8E%8B%E7%BC%A9%EF%BC%89.mp4",
+          "sourcePage": "https://www.ourteacher.cc/next/chat/19",
+          "timeSeconds": 247,
+          "width": 1920,
+          "height": 1080,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-honor-board.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 540
+        },
         {
           "src": "assets/images/ourteacher/C07.svg",
           "type": "教学用法示意图",
@@ -708,6 +814,17 @@
       ],
       "images": [
         {
+          "src": "assets/images/tutorials/source-02-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“教室分贝管家”的官方参考画面。官方教程 45.5 秒：自习安静挑战页面；不是单词游戏画面。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250423/b407f72496fc55ecf2efd157831b362c.mp4",
+          "timeSeconds": 45.5,
+          "relatedToolId": "ot-tool-A204",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-02-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1279
+        },
+        {
           "src": "assets/images/ourteacher/C08.svg",
           "type": "教学用法示意图",
           "caption": "朗读动力与安静自习：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -789,24 +906,6 @@
           "type": "教学用法示意图",
           "caption": "教材梳理与课标目标：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
           "sourceUrl": "https://www.ourteacher.cc/"
-        },
-        {
-          "src": "assets/images/ourteacher/appstore-1.jpg",
-          "type": "官方应用截图",
-          "caption": "教师AI对话：App Store公开截图，不代表当前场景或工具的专属操作界面。",
-          "sourceUrl": "https://apps.apple.com/cn/app/our-teacher/id6532591718"
-        },
-        {
-          "src": "assets/images/ourteacher/appstore-2.jpg",
-          "type": "官方应用截图",
-          "caption": "官方应用首页：App Store公开截图，不代表当前场景或工具的专属操作界面。",
-          "sourceUrl": "https://apps.apple.com/cn/app/our-teacher/id6532591718"
-        },
-        {
-          "src": "assets/images/ourteacher/appstore-3.jpg",
-          "type": "官方应用截图",
-          "caption": "会员说明页：App Store公开截图，不代表当前场景或工具的专属操作界面。",
-          "sourceUrl": "https://apps.apple.com/cn/app/our-teacher/id6532591718"
         }
       ],
       "relatedTools": [
@@ -882,28 +981,32 @@
       ],
       "images": [
         {
+          "src": "assets/images/tutorials/source-15-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“教案设计”的官方参考画面。官方教程 25.3 秒：教案设计输入年级、目标和教材内容。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240910/2c856b9b4efa958c069a585b9592844b.mp4",
+          "timeSeconds": 25.3,
+          "relatedToolId": "ot-tool-A12",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-15-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
+          "src": "assets/images/tutorials/source-15-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“教案设计”的官方参考画面。官方教程 77.3 秒：教程生成的教案草稿片段。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240910/2c856b9b4efa958c069a585b9592844b.mp4",
+          "timeSeconds": 77.3,
+          "relatedToolId": "ot-tool-A12",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-15-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
           "src": "assets/images/ourteacher/C10.svg",
           "type": "教学用法示意图",
           "caption": "教案与课堂任务设计：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
           "sourceUrl": "https://www.ourteacher.cc/"
-        },
-        {
-          "src": "assets/images/ourteacher/appstore-1.jpg",
-          "type": "官方应用截图",
-          "caption": "教师AI对话：App Store公开截图，不代表当前场景或工具的专属操作界面。",
-          "sourceUrl": "https://apps.apple.com/cn/app/our-teacher/id6532591718"
-        },
-        {
-          "src": "assets/images/ourteacher/appstore-2.jpg",
-          "type": "官方应用截图",
-          "caption": "官方应用首页：App Store公开截图，不代表当前场景或工具的专属操作界面。",
-          "sourceUrl": "https://apps.apple.com/cn/app/our-teacher/id6532591718"
-        },
-        {
-          "src": "assets/images/ourteacher/appstore-3.jpg",
-          "type": "官方应用截图",
-          "caption": "会员说明页：App Store公开截图，不代表当前场景或工具的专属操作界面。",
-          "sourceUrl": "https://apps.apple.com/cn/app/our-teacher/id6532591718"
         }
       ],
       "relatedTools": [
@@ -978,6 +1081,28 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/tutorials/source-09-2.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“大单元教学”的官方参考画面。官方教程 111.4 秒：教程中生成的大单元教学设计片段。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240913/6f9e956c58c34d94ab703bad443a1d8b.mp4",
+          "timeSeconds": 111.4,
+          "relatedToolId": "ot-tool-A10",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-09-2.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
+          "src": "assets/images/tutorials/source-09-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“大单元教学”的官方参考画面。官方教程 24.5 秒：大单元输入表单与单元内容。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240913/6f9e956c58c34d94ab703bad443a1d8b.mp4",
+          "timeSeconds": 24.5,
+          "relatedToolId": "ot-tool-A10",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-09-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
         {
           "src": "assets/images/ourteacher/C11.svg",
           "type": "教学用法示意图",
@@ -1469,6 +1594,20 @@
       ],
       "images": [
         {
+          "src": "assets/images/media-refresh-recitation.webp",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关官方功能参考：OurTeacher 官方公开教程 370 秒，语文打卡闯关：各篇目通关记录与批量通关入口。画面及字幕完整保留，仅为官方演示，非厚外班级资料。仅展示画面所示环节，不代表本场景全部功能。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/58df0f3a/%E7%8F%AD%E7%BA%A7%E5%AE%A0%E7%89%A9%E7%A7%AF%E5%88%86%E5%A4%A7%E6%95%99%E7%A8%8B%EF%BC%88%E5%8E%8B%E7%BC%A9%EF%BC%89.mp4",
+          "sourcePage": "https://www.ourteacher.cc/next/chat/19",
+          "timeSeconds": 370,
+          "width": 1920,
+          "height": 1080,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-recitation.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 540
+        },
+        {
           "src": "assets/images/ourteacher/C17.svg",
           "type": "教学用法示意图",
           "caption": "语文朗读、听写与背诵：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -1807,6 +1946,28 @@
       ],
       "images": [
         {
+          "src": "assets/images/tutorials/source-00-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“语文同步作文批改”的官方参考画面。官方教程 32.0 秒：选择教材单元并显示习作要求；画面是语文工具。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/c850fd39/video_ourteacher%E8%AF%9D%E9%A2%98_%E4%BD%9C%E6%96%87%E6%89%B9..._0.mp4",
+          "timeSeconds": 32.0,
+          "relatedToolId": "ot-tool-A127",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-00-0.webp",
+          "thumbnailWidth": 799,
+          "thumbnailHeight": 1066
+        },
+        {
+          "src": "assets/images/tutorials/source-00-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“语文同步作文批改”的官方参考画面。官方教程 97.6 秒：批改内容选择与班级名单入口。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/c850fd39/video_ourteacher%E8%AF%9D%E9%A2%98_%E4%BD%9C%E6%96%87%E6%89%B9..._0.mp4",
+          "timeSeconds": 97.6,
+          "relatedToolId": "ot-tool-A127",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-00-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
           "src": "assets/images/ourteacher/C21.svg",
           "type": "教学用法示意图",
           "caption": "语文作文批改到再次写作：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -2066,6 +2227,20 @@
       ],
       "images": [
         {
+          "src": "assets/images/media-refresh-word-match.webp",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关官方功能参考：OurTeacher 官方教具教程 64 秒：单词配对消消乐的英文词与中文意思配对界面。保留完整原画面，非本平台生成示意。仅展示画面所示环节，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250423/b407f72496fc55ecf2efd157831b362c.mp4",
+          "sourcePage": "https://www.ourteacher.cc/bot/203",
+          "timeSeconds": 64,
+          "width": 1384,
+          "height": 1844,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-word-match.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1279
+        },
+        {
           "src": "assets/images/ourteacher/C24.svg",
           "type": "教学用法示意图",
           "caption": "英语词汇课堂小游戏：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -2157,6 +2332,28 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/tutorials/source-10-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“英语默写卡批改”的官方参考画面。官方教程 16.6 秒：英语默写卡批改的学生作答上传入口。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250219/6439d75a9d6b2fb3d5577a8a4d940197.mp4",
+          "timeSeconds": 16.6,
+          "relatedToolId": "ot-tool-A179",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-10-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
+          "src": "assets/images/tutorials/source-10-2.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“英语默写卡批改”的官方参考画面。官方教程 75.7 秒：教程展示的识别与批改文字。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250219/6439d75a9d6b2fb3d5577a8a4d940197.mp4",
+          "timeSeconds": 75.7,
+          "relatedToolId": "ot-tool-A179",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-10-2.webp",
+          "thumbnailWidth": 799,
+          "thumbnailHeight": 1066
+        },
         {
           "src": "assets/images/ourteacher/C25.svg",
           "type": "教学用法示意图",
@@ -2738,6 +2935,20 @@
       ],
       "images": [
         {
+          "src": "assets/images/media-refresh-clock.webp",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关官方功能参考：OurTeacher 官方教具教程 54 秒：时钟生成器的时钟教学示例。保留完整原画面，非本平台生成示意。仅展示画面所示环节，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250423/b407f72496fc55ecf2efd157831b362c.mp4",
+          "sourcePage": "https://www.ourteacher.cc/bot/203",
+          "timeSeconds": 54,
+          "width": 1384,
+          "height": 1844,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-clock.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1279
+        },
+        {
           "src": "assets/images/ourteacher/C32.svg",
           "type": "教学用法示意图",
           "caption": "数学概念与互动课件：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -2990,6 +3201,28 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/tutorials/source-25-1.jpg",
+          "type": "官方互动效果视频截图",
+          "caption": "本场景相关工具“人物故事模拟器”的官方参考画面。官方教程 65.6 秒：三打白骨精情境中的人物与选择画面。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/7b2a733c/%E4%B8%89%E6%89%93%E7%99%BD%E9%AA%A8%E7%B2%BE.mp4",
+          "timeSeconds": 65.6,
+          "relatedToolId": "ot-tool-A447",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-25-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 524
+        },
+        {
+          "src": "assets/images/tutorials/source-25-2.jpg",
+          "type": "官方互动效果视频截图",
+          "caption": "本场景相关工具“人物故事模拟器”的官方参考画面。官方教程 97.7 秒：官方情境示例的体验结束页面。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/7b2a733c/%E4%B8%89%E6%89%93%E7%99%BD%E9%AA%A8%E7%B2%BE.mp4",
+          "timeSeconds": 97.7,
+          "relatedToolId": "ot-tool-A447",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-25-2.webp",
+          "thumbnailWidth": 800,
+          "thumbnailHeight": 437
+        },
         {
           "src": "assets/images/ourteacher/C35.svg",
           "type": "教学用法示意图",
@@ -3503,6 +3736,28 @@
       ],
       "images": [
         {
+          "src": "assets/images/tutorials/source-16-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“视频生观察记录”的官方参考画面。官方教程 27.8 秒：视频生观察记录的观察目标与视频上传入口。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241126/c322cab8b62be5d605bc541569b7bcf8.mp4",
+          "timeSeconds": 27.8,
+          "relatedToolId": "ot-tool-A120",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-16-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
+          "src": "assets/images/tutorials/source-16-2.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“视频生观察记录”的官方参考画面。官方教程 126.5 秒：教程中的观察记录草稿。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241126/c322cab8b62be5d605bc541569b7bcf8.mp4",
+          "timeSeconds": 126.5,
+          "relatedToolId": "ot-tool-A120",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-16-2.webp",
+          "thumbnailWidth": 799,
+          "thumbnailHeight": 1066
+        },
+        {
           "src": "assets/images/ourteacher/C41.svg",
           "type": "教学用法示意图",
           "caption": "幼儿观察与学习故事：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -3618,6 +3873,28 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/tutorials/source-17-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“活动教案”的官方参考画面。官方教程 16.2 秒：活动教案的输入与材料提示。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241125/ddf917e5dcc33ff270c2aa6ae48372fe.mp4",
+          "timeSeconds": 16.2,
+          "relatedToolId": "ot-tool-A117",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-17-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
+          "src": "assets/images/tutorials/source-17-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“活动教案”的官方参考画面。官方教程 49.5 秒：官方教程生成的活动流程片段。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241125/ddf917e5dcc33ff270c2aa6ae48372fe.mp4",
+          "timeSeconds": 49.5,
+          "relatedToolId": "ot-tool-A117",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-17-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
         {
           "src": "assets/images/ourteacher/C42.svg",
           "type": "教学用法示意图",
@@ -3843,6 +4120,50 @@
       ],
       "images": [
         {
+          "src": "assets/images/tutorials/source-14-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“批量学生评语”的官方参考画面。官方教程 65.2 秒：批量学生评语的文件上传界面。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241202/a8f08402f2343163f8343f1982cf1c45.mp4",
+          "timeSeconds": 65.2,
+          "relatedToolId": "ot-tool-A154",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-14-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 720
+        },
+        {
+          "src": "assets/images/tutorials/source-14-2.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“批量学生评语”的官方参考画面。官方教程 97.1 秒：教程中的批量评语结果表。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241202/a8f08402f2343163f8343f1982cf1c45.mp4",
+          "timeSeconds": 97.1,
+          "relatedToolId": "ot-tool-A154",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-14-2.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 720
+        },
+        {
+          "src": "assets/images/tutorials/source-11-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“高情商回复”的官方参考画面。官方教程 13.0 秒：输入教师身份、沟通对象与原消息。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240909/020312a4ce58d537c8990c3dd6b9d70e.mp4",
+          "timeSeconds": 13.0,
+          "relatedToolId": "ot-tool-A21",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-11-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
+          "src": "assets/images/tutorials/source-11-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“高情商回复”的官方参考画面。官方教程 39.8 秒：官方教程中的候选回复片段。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240909/020312a4ce58d537c8990c3dd6b9d70e.mp4",
+          "timeSeconds": 39.8,
+          "relatedToolId": "ot-tool-A21",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-11-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
           "src": "assets/images/ourteacher/C44.svg",
           "type": "教学用法示意图",
           "caption": "评语、家访与家校沟通：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -3950,6 +4271,28 @@
       ],
       "images": [
         {
+          "src": "assets/images/tutorials/source-10-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“英语默写卡批改”的官方参考画面。官方教程 16.6 秒：英语默写卡批改的学生作答上传入口。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250219/6439d75a9d6b2fb3d5577a8a4d940197.mp4",
+          "timeSeconds": 16.6,
+          "relatedToolId": "ot-tool-A179",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-10-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
+          "src": "assets/images/tutorials/source-10-2.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“英语默写卡批改”的官方参考画面。官方教程 75.7 秒：教程展示的识别与批改文字。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250219/6439d75a9d6b2fb3d5577a8a4d940197.mp4",
+          "timeSeconds": 75.7,
+          "relatedToolId": "ot-tool-A179",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-10-2.webp",
+          "thumbnailWidth": 799,
+          "thumbnailHeight": 1066
+        },
+        {
           "src": "assets/images/ourteacher/C45.svg",
           "type": "教学用法示意图",
           "caption": "答题卡与多学科作业批改：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -4032,6 +4375,62 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/media-refresh-A393-template.webp",
+          "type": "官方输入模板说明图",
+          "caption": "本场景相关工具“高中质量分析”的官方参考画面。官方高中质量分析输入示例；不是完整分析报告。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/00cbd269/%E9%AB%98%E4%B8%AD%E8%B4%A8%E9%87%8F%E5%88%86%E6%9E%90%E7%A4%BA%E4%BE%8B.png",
+          "originalSrc": "assets/images/tutorials/source-07.png",
+          "width": 2400,
+          "height": 1336,
+          "uncropped": true,
+          "relatedToolId": "ot-tool-A393",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-A393-template.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 534
+        },
+        {
+          "src": "assets/images/media-refresh-A240-template.webp",
+          "type": "官方输入模板说明图",
+          "caption": "本场景相关工具“班级间质量分析”的官方参考画面。官方班级间比较的成绩输入模板说明。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250428/432117d460cf1a527ffec209ac73ae1f.png",
+          "originalSrc": "assets/images/tutorials/source-06.png",
+          "width": 2000,
+          "height": 879,
+          "uncropped": true,
+          "relatedToolId": "ot-tool-A240",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-A240-template.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 422
+        },
+        {
+          "src": "assets/images/media-refresh-A236-template.webp",
+          "type": "官方输入模板说明图",
+          "caption": "本场景相关工具“多学科质量分析”的官方参考画面。官方多学科成绩模板标注；不是工具输出界面。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250428/c6451dcc878d68e0cf7a287e17272399.png",
+          "originalSrc": "assets/images/tutorials/source-05.png",
+          "width": 2000,
+          "height": 1114,
+          "uncropped": true,
+          "relatedToolId": "ot-tool-A236",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-A236-template.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 535
+        },
+        {
+          "src": "assets/images/media-refresh-A235-template.webp",
+          "type": "官方输入模板说明图",
+          "caption": "本场景相关工具“历次考试质量分析”的官方参考画面。官方成绩输入模板说明；不是分析结果页。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250428/1fc3d1754ad12f1254f793091b062257.png",
+          "originalSrc": "assets/images/tutorials/source-04.png",
+          "width": 2000,
+          "height": 1393,
+          "uncropped": true,
+          "relatedToolId": "ot-tool-A235",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-A235-template.webp",
+          "thumbnailWidth": 800,
+          "thumbnailHeight": 557
+        },
         {
           "src": "assets/images/ourteacher/C46.svg",
           "type": "教学用法示意图",
@@ -4303,28 +4702,42 @@
       ],
       "images": [
         {
+          "src": "assets/images/tutorials/source-08-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“逐字稿”的官方参考画面。官方教程 44.9 秒：逐字稿表单：学科、年级、资料上传和时长。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241028/21bc6699faa7571da20fb175c5636bfa.mp4",
+          "timeSeconds": 44.9,
+          "relatedToolId": "ot-tool-A100",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-08-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 720
+        },
+        {
+          "src": "assets/images/tutorials/source-12.png",
+          "type": "官方使用说明图",
+          "caption": "本场景相关工具“试卷转课件”的官方参考画面。官方使用说明图，介绍材料与用法；不是生成后的课件截图。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/6eddc7b0/5.png",
+          "relatedToolId": "ot-tool-A440",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-12.webp",
+          "thumbnailWidth": 908,
+          "thumbnailHeight": 650
+        },
+        {
+          "src": "assets/images/tutorials/source-08-2.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“逐字稿”的官方参考画面。官方教程 66.9 秒：教程中的逐字稿输出示例。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241028/21bc6699faa7571da20fb175c5636bfa.mp4",
+          "timeSeconds": 66.9,
+          "relatedToolId": "ot-tool-A100",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-08-2.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 720
+        },
+        {
           "src": "assets/images/ourteacher/C49.svg",
           "type": "教学用法示意图",
           "caption": "教案、课件、逐字稿互转：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
           "sourceUrl": "https://www.ourteacher.cc/"
-        },
-        {
-          "src": "assets/images/ourteacher/appstore-1.jpg",
-          "type": "官方应用截图",
-          "caption": "教师AI对话：App Store公开截图，不代表当前场景或工具的专属操作界面。",
-          "sourceUrl": "https://apps.apple.com/cn/app/our-teacher/id6532591718"
-        },
-        {
-          "src": "assets/images/ourteacher/appstore-2.jpg",
-          "type": "官方应用截图",
-          "caption": "官方应用首页：App Store公开截图，不代表当前场景或工具的专属操作界面。",
-          "sourceUrl": "https://apps.apple.com/cn/app/our-teacher/id6532591718"
-        },
-        {
-          "src": "assets/images/ourteacher/appstore-3.jpg",
-          "type": "官方应用截图",
-          "caption": "会员说明页：App Store公开截图，不代表当前场景或工具的专属操作界面。",
-          "sourceUrl": "https://apps.apple.com/cn/app/our-teacher/id6532591718"
         }
       ],
       "relatedTools": [
@@ -4411,6 +4824,17 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/tutorials/source-13-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关工具“AI融合公开课”的官方参考画面。官方教程 11.7 秒：AI 融合公开课的学科与教案上传表单。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/mn/e/nkop4/20250507/02228e3b9e0dd3c75224955540d3e260.mp4",
+          "timeSeconds": 11.7,
+          "relatedToolId": "ot-tool-A201",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-13-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
         {
           "src": "assets/images/ourteacher/C50.svg",
           "type": "教学用法示意图",
@@ -4806,6 +5230,39 @@
       ],
       "images": [
         {
+          "src": "assets/images/tutorials/source-19-1.jpg",
+          "type": "官方生成效果视频截图",
+          "caption": "本场景相关工具“故事生视频”的官方参考画面。官方教程 29.3 秒：灰姑娘（水彩风）官方示例画面。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/9ccb965c/1%E7%81%B0%E5%A7%91%E5%A8%98.mp4",
+          "timeSeconds": 29.3,
+          "relatedToolId": "ot-tool-A427",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-19-1.webp",
+          "thumbnailWidth": 800,
+          "thumbnailHeight": 451
+        },
+        {
+          "src": "assets/images/tutorials/source-20-1.jpg",
+          "type": "官方生成效果视频截图",
+          "caption": "本场景相关工具“故事生视频”的官方参考画面。官方教程 29.5 秒：乌鸦喝水（线稿风）官方示例画面。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/148d9e87/1%E4%B9%8C%E9%B8%A6%E5%96%9D%E6%B0%B4.mp4",
+          "timeSeconds": 29.5,
+          "relatedToolId": "ot-tool-A427",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-20-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 541
+        },
+        {
+          "src": "assets/images/tutorials/source-21-1.jpg",
+          "type": "官方生成效果视频截图",
+          "caption": "本场景相关工具“故事生视频”的官方参考画面。官方教程 29.6 秒：后羿射日（水墨风）官方示例画面。仅代表所示工具及示例，不代表本场景全部功能。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/afaccf26/2%E5%90%8E%E7%BE%BF%E5%B0%84%E6%97%A5.mp4",
+          "timeSeconds": 29.6,
+          "relatedToolId": "ot-tool-A427",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-21-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 541
+        },
+        {
           "src": "assets/images/ourteacher/C54.svg",
           "type": "教学用法示意图",
           "caption": "数字人、故事视频与情境动效：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -4901,24 +5358,6 @@
           "type": "教学用法示意图",
           "caption": "通用助手与材料读取：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
           "sourceUrl": "https://www.ourteacher.cc/"
-        },
-        {
-          "src": "assets/images/ourteacher/appstore-1.jpg",
-          "type": "官方应用截图",
-          "caption": "教师AI对话：App Store公开截图，不代表当前场景或工具的专属操作界面。",
-          "sourceUrl": "https://apps.apple.com/cn/app/our-teacher/id6532591718"
-        },
-        {
-          "src": "assets/images/ourteacher/appstore-2.jpg",
-          "type": "官方应用截图",
-          "caption": "官方应用首页：App Store公开截图，不代表当前场景或工具的专属操作界面。",
-          "sourceUrl": "https://apps.apple.com/cn/app/our-teacher/id6532591718"
-        },
-        {
-          "src": "assets/images/ourteacher/appstore-3.jpg",
-          "type": "官方应用截图",
-          "caption": "会员说明页：App Store公开截图，不代表当前场景或工具的专属操作界面。",
-          "sourceUrl": "https://apps.apple.com/cn/app/our-teacher/id6532591718"
         }
       ],
       "relatedTools": [
@@ -5277,6 +5716,20 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/media-refresh-pet-dress.webp",
+          "type": "官方教程操作画面",
+          "caption": "本场景相关官方功能参考：OurTeacher 官方公开教程 164 秒，宠物装扮：徽章余额与装扮兑换入口。画面及字幕完整保留，仅为官方演示，非厚外班级资料。仅展示画面所示环节，不代表本场景全部功能。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/58df0f3a/%E7%8F%AD%E7%BA%A7%E5%AE%A0%E7%89%A9%E7%A7%AF%E5%88%86%E5%A4%A7%E6%95%99%E7%A8%8B%EF%BC%88%E5%8E%8B%E7%BC%A9%EF%BC%89.mp4",
+          "sourcePage": "https://www.ourteacher.cc/next/chat/19",
+          "timeSeconds": 164,
+          "width": 1920,
+          "height": 1080,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-pet-dress.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 540
+        },
         {
           "src": "assets/images/ourteacher/C59.svg",
           "type": "教学用法示意图",
@@ -7268,6 +7721,19 @@
       ],
       "images": [
         {
+          "src": "assets/images/media-refresh-A235-template.webp",
+          "type": "官方输入模板说明图",
+          "caption": "官方成绩输入模板说明；不是分析结果页。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250428/1fc3d1754ad12f1254f793091b062257.png",
+          "originalSrc": "assets/images/tutorials/source-04.png",
+          "width": 2000,
+          "height": 1393,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-A235-template.webp",
+          "thumbnailWidth": 800,
+          "thumbnailHeight": 557
+        },
+        {
           "src": "assets/images/ourteacher/details-A235.svg",
           "type": "教学用法示意图",
           "caption": "历次考试质量分析：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -7375,6 +7841,19 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/media-refresh-A236-template.webp",
+          "type": "官方输入模板说明图",
+          "caption": "官方多学科成绩模板标注；不是工具输出界面。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250428/c6451dcc878d68e0cf7a287e17272399.png",
+          "originalSrc": "assets/images/tutorials/source-05.png",
+          "width": 2000,
+          "height": 1114,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-A236-template.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 535
+        },
         {
           "src": "assets/images/ourteacher/details-A236.svg",
           "type": "教学用法示意图",
@@ -7484,6 +7963,19 @@
       ],
       "images": [
         {
+          "src": "assets/images/media-refresh-A240-template.webp",
+          "type": "官方输入模板说明图",
+          "caption": "官方班级间比较的成绩输入模板说明。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250428/432117d460cf1a527ffec209ac73ae1f.png",
+          "originalSrc": "assets/images/tutorials/source-06.png",
+          "width": 2000,
+          "height": 879,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-A240-template.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 422
+        },
+        {
           "src": "assets/images/ourteacher/details-A240.svg",
           "type": "教学用法示意图",
           "caption": "班级间质量分析：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -7589,6 +8081,19 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/media-refresh-A393-template.webp",
+          "type": "官方输入模板说明图",
+          "caption": "官方高中质量分析输入示例；不是完整分析报告。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/00cbd269/%E9%AB%98%E4%B8%AD%E8%B4%A8%E9%87%8F%E5%88%86%E6%9E%90%E7%A4%BA%E4%BE%8B.png",
+          "originalSrc": "assets/images/tutorials/source-07.png",
+          "width": 2400,
+          "height": 1336,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-A393-template.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 534
+        },
         {
           "src": "assets/images/ourteacher/details-A393.svg",
           "type": "教学用法示意图",
@@ -8832,6 +9337,26 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/tutorials/source-08-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 44.9 秒：逐字稿表单：学科、年级、资料上传和时长。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241028/21bc6699faa7571da20fb175c5636bfa.mp4",
+          "timeSeconds": 44.9,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-08-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 720
+        },
+        {
+          "src": "assets/images/tutorials/source-08-2.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 66.9 秒：教程中的逐字稿输出示例。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241028/21bc6699faa7571da20fb175c5636bfa.mp4",
+          "timeSeconds": 66.9,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-08-2.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 720
+        },
         {
           "src": "assets/images/ourteacher/details-A100.svg",
           "type": "教学用法示意图",
@@ -11750,6 +12275,26 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/tutorials/source-09-2.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 111.4 秒：教程中生成的大单元教学设计片段。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240913/6f9e956c58c34d94ab703bad443a1d8b.mp4",
+          "timeSeconds": 111.4,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-09-2.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
+          "src": "assets/images/tutorials/source-09-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 24.5 秒：大单元输入表单与单元内容。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240913/6f9e956c58c34d94ab703bad443a1d8b.mp4",
+          "timeSeconds": 24.5,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-09-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
         {
           "src": "assets/images/ourteacher/details-A10.svg",
           "type": "教学用法示意图",
@@ -15799,6 +16344,26 @@
       ],
       "images": [
         {
+          "src": "assets/images/tutorials/source-00-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 32.0 秒：选择教材单元并显示习作要求；画面是语文工具。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/c850fd39/video_ourteacher%E8%AF%9D%E9%A2%98_%E4%BD%9C%E6%96%87%E6%89%B9..._0.mp4",
+          "timeSeconds": 32.0,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-00-0.webp",
+          "thumbnailWidth": 799,
+          "thumbnailHeight": 1066
+        },
+        {
+          "src": "assets/images/tutorials/source-00-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 97.6 秒：批改内容选择与班级名单入口。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/c850fd39/video_ourteacher%E8%AF%9D%E9%A2%98_%E4%BD%9C%E6%96%87%E6%89%B9..._0.mp4",
+          "timeSeconds": 97.6,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-00-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
           "src": "assets/images/ourteacher/details-A127.svg",
           "type": "教学用法示意图",
           "caption": "语文同步作文批改：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -16755,6 +17320,26 @@
       ],
       "images": [
         {
+          "src": "assets/images/tutorials/source-10-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 16.6 秒：英语默写卡批改的学生作答上传入口。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250219/6439d75a9d6b2fb3d5577a8a4d940197.mp4",
+          "timeSeconds": 16.6,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-10-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
+          "src": "assets/images/tutorials/source-10-2.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 75.7 秒：教程展示的识别与批改文字。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250219/6439d75a9d6b2fb3d5577a8a4d940197.mp4",
+          "timeSeconds": 75.7,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-10-2.webp",
+          "thumbnailWidth": 799,
+          "thumbnailHeight": 1066
+        },
+        {
           "src": "assets/images/ourteacher/details-A179.svg",
           "type": "教学用法示意图",
           "caption": "英语默写卡批改：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -17397,6 +17982,26 @@
       ],
       "images": [
         {
+          "src": "assets/images/tutorials/source-11-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 13.0 秒：输入教师身份、沟通对象与原消息。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240909/020312a4ce58d537c8990c3dd6b9d70e.mp4",
+          "timeSeconds": 13.0,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-11-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
+          "src": "assets/images/tutorials/source-11-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 39.8 秒：官方教程中的候选回复片段。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240909/020312a4ce58d537c8990c3dd6b9d70e.mp4",
+          "timeSeconds": 39.8,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-11-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
           "src": "assets/images/ourteacher/details-A21.svg",
           "type": "教学用法示意图",
           "caption": "高情商回复：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -17609,6 +18214,15 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/tutorials/source-12.png",
+          "type": "官方使用说明图",
+          "caption": "官方使用说明图，介绍材料与用法；不是生成后的课件截图。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/6eddc7b0/5.png",
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-12.webp",
+          "thumbnailWidth": 908,
+          "thumbnailHeight": 650
+        },
         {
           "src": "assets/images/ourteacher/details-A440.svg",
           "type": "教学用法示意图",
@@ -17846,6 +18460,16 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/tutorials/source-13-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 11.7 秒：AI 融合公开课的学科与教案上传表单。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/mn/e/nkop4/20250507/02228e3b9e0dd3c75224955540d3e260.mp4",
+          "timeSeconds": 11.7,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-13-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
         {
           "src": "assets/images/ourteacher/details-A201.svg",
           "type": "教学用法示意图",
@@ -19032,6 +19656,26 @@
       ],
       "images": [
         {
+          "src": "assets/images/tutorials/source-14-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 65.2 秒：批量学生评语的文件上传界面。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241202/a8f08402f2343163f8343f1982cf1c45.mp4",
+          "timeSeconds": 65.2,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-14-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 720
+        },
+        {
+          "src": "assets/images/tutorials/source-14-2.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 97.1 秒：教程中的批量评语结果表。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241202/a8f08402f2343163f8343f1982cf1c45.mp4",
+          "timeSeconds": 97.1,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-14-2.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 720
+        },
+        {
           "src": "assets/images/ourteacher/details-A154.svg",
           "type": "教学用法示意图",
           "caption": "批量学生评语：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -19143,6 +19787,20 @@
       ],
       "images": [
         {
+          "src": "assets/images/media-refresh-clock.webp",
+          "type": "官方教程操作画面",
+          "caption": "OurTeacher 官方教具教程 54 秒：时钟生成器的时钟教学示例。保留完整原画面，非本平台生成示意。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250423/b407f72496fc55ecf2efd157831b362c.mp4",
+          "sourcePage": "https://www.ourteacher.cc/bot/203",
+          "timeSeconds": 54,
+          "width": 1384,
+          "height": 1844,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-clock.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1279
+        },
+        {
           "src": "assets/images/ourteacher/details-A181.svg",
           "type": "教学用法示意图",
           "caption": "时钟生成器：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -19247,6 +19905,20 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/media-refresh-countdown.webp",
+          "type": "官方教程操作画面",
+          "caption": "OurTeacher 官方教具教程 59 秒：倒计时生成器的十分钟倒计时、快速选择、开始与重置按钮。保留完整原画面，非本平台生成示意。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250423/b407f72496fc55ecf2efd157831b362c.mp4",
+          "sourcePage": "https://www.ourteacher.cc/bot/203",
+          "timeSeconds": 59,
+          "width": 1384,
+          "height": 1844,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-countdown.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1279
+        },
         {
           "src": "assets/images/ourteacher/details-A203.svg",
           "type": "教学用法示意图",
@@ -19556,6 +20228,20 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/media-refresh-word-match.webp",
+          "type": "官方教程操作画面",
+          "caption": "OurTeacher 官方教具教程 64 秒：单词配对消消乐的英文词与中文意思配对界面。保留完整原画面，非本平台生成示意。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250423/b407f72496fc55ecf2efd157831b362c.mp4",
+          "sourcePage": "https://www.ourteacher.cc/bot/203",
+          "timeSeconds": 64,
+          "width": 1384,
+          "height": 1844,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-word-match.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1279
+        },
         {
           "src": "assets/images/ourteacher/details-A187.svg",
           "type": "教学用法示意图",
@@ -23415,6 +24101,26 @@
       ],
       "images": [
         {
+          "src": "assets/images/tutorials/source-15-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 25.3 秒：教案设计输入年级、目标和教材内容。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240910/2c856b9b4efa958c069a585b9592844b.mp4",
+          "timeSeconds": 25.3,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-15-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
+          "src": "assets/images/tutorials/source-15-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 77.3 秒：教程生成的教案草稿片段。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20240910/2c856b9b4efa958c069a585b9592844b.mp4",
+          "timeSeconds": 77.3,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-15-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
           "src": "assets/images/ourteacher/details-A12.svg",
           "type": "教学用法示意图",
           "caption": "教案设计：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -26104,6 +26810,26 @@
       ],
       "images": [
         {
+          "src": "assets/images/tutorials/source-16-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 27.8 秒：视频生观察记录的观察目标与视频上传入口。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241126/c322cab8b62be5d605bc541569b7bcf8.mp4",
+          "timeSeconds": 27.8,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-16-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
+          "src": "assets/images/tutorials/source-16-2.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 126.5 秒：教程中的观察记录草稿。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241126/c322cab8b62be5d605bc541569b7bcf8.mp4",
+          "timeSeconds": 126.5,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-16-2.webp",
+          "thumbnailWidth": 799,
+          "thumbnailHeight": 1066
+        },
+        {
           "src": "assets/images/ourteacher/details-A120.svg",
           "type": "教学用法示意图",
           "caption": "视频生观察记录：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -26207,6 +26933,26 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/tutorials/source-17-0.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 16.2 秒：活动教案的输入与材料提示。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241125/ddf917e5dcc33ff270c2aa6ae48372fe.mp4",
+          "timeSeconds": 16.2,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-17-0.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
+        {
+          "src": "assets/images/tutorials/source-17-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 49.5 秒：官方教程生成的活动流程片段。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20241125/ddf917e5dcc33ff270c2aa6ae48372fe.mp4",
+          "timeSeconds": 49.5,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-17-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1280
+        },
         {
           "src": "assets/images/ourteacher/details-A117.svg",
           "type": "教学用法示意图",
@@ -29986,6 +30732,16 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/tutorials/source-02-1.jpg",
+          "type": "官方教程操作画面",
+          "caption": "官方教程 45.5 秒：自习安静挑战页面；不是单词游戏画面。",
+          "sourceUrl": "https://cos-file-cdn.ourschool.cc/uploads/g/e/ksh/20250423/b407f72496fc55ecf2efd157831b362c.mp4",
+          "timeSeconds": 45.5,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-02-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 1279
+        },
         {
           "src": "assets/images/ourteacher/details-A204.svg",
           "type": "教学用法示意图",
@@ -37223,6 +37979,36 @@
       ],
       "images": [
         {
+          "src": "assets/images/tutorials/source-19-1.jpg",
+          "type": "官方生成效果视频截图",
+          "caption": "官方教程 29.3 秒：灰姑娘（水彩风）官方示例画面。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/9ccb965c/1%E7%81%B0%E5%A7%91%E5%A8%98.mp4",
+          "timeSeconds": 29.3,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-19-1.webp",
+          "thumbnailWidth": 800,
+          "thumbnailHeight": 451
+        },
+        {
+          "src": "assets/images/tutorials/source-20-1.jpg",
+          "type": "官方生成效果视频截图",
+          "caption": "官方教程 29.5 秒：乌鸦喝水（线稿风）官方示例画面。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/148d9e87/1%E4%B9%8C%E9%B8%A6%E5%96%9D%E6%B0%B4.mp4",
+          "timeSeconds": 29.5,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-20-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 541
+        },
+        {
+          "src": "assets/images/tutorials/source-21-1.jpg",
+          "type": "官方生成效果视频截图",
+          "caption": "官方教程 29.6 秒：后羿射日（水墨风）官方示例画面。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/afaccf26/2%E5%90%8E%E7%BE%BF%E5%B0%84%E6%97%A5.mp4",
+          "timeSeconds": 29.6,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-21-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 541
+        },
+        {
           "src": "assets/images/ourteacher/details-A427.svg",
           "type": "教学用法示意图",
           "caption": "故事生视频：厚外教学改造建议，非 OurTeacher 操作截图，内部界面待补。",
@@ -38376,6 +39162,26 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/tutorials/source-25-1.jpg",
+          "type": "官方互动效果视频截图",
+          "caption": "官方教程 65.6 秒：三打白骨精情境中的人物与选择画面。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/7b2a733c/%E4%B8%89%E6%89%93%E7%99%BD%E9%AA%A8%E7%B2%BE.mp4",
+          "timeSeconds": 65.6,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-25-1.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 524
+        },
+        {
+          "src": "assets/images/tutorials/source-25-2.jpg",
+          "type": "官方互动效果视频截图",
+          "caption": "官方教程 97.7 秒：官方情境示例的体验结束页面。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/7b2a733c/%E4%B8%89%E6%89%93%E7%99%BD%E9%AA%A8%E7%B2%BE.mp4",
+          "timeSeconds": 97.7,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-source-25-2.webp",
+          "thumbnailWidth": 800,
+          "thumbnailHeight": 437
+        },
         {
           "src": "assets/images/ourteacher/details-A447.svg",
           "type": "教学用法示意图",
@@ -40023,6 +40829,20 @@
         }
       ],
       "images": [
+        {
+          "src": "assets/images/media-refresh-pet-home.webp",
+          "type": "官方教程操作画面",
+          "caption": "OurTeacher 官方公开教程 3 秒，班级宠物首页：宠物、等级与经验条。画面及字幕完整保留，仅为官方演示，非厚外班级资料。",
+          "sourceUrl": "https://otf-pub-cdn.ourteacher.cc/ourai-admin/assets/58df0f3a/%E7%8F%AD%E7%BA%A7%E5%AE%A0%E7%89%A9%E7%A7%AF%E5%88%86%E5%A4%A7%E6%95%99%E7%A8%8B%EF%BC%88%E5%8E%8B%E7%BC%A9%EF%BC%89.mp4",
+          "sourcePage": "https://www.ourteacher.cc/next/chat/19",
+          "timeSeconds": 3,
+          "width": 1920,
+          "height": 1080,
+          "uncropped": true,
+          "thumbnailSrc": "assets/images/media-refresh-thumb-pet-home.webp",
+          "thumbnailWidth": 960,
+          "thumbnailHeight": 540
+        },
         {
           "src": "assets/images/ourteacher/details-W19.svg",
           "type": "教学用法示意图",

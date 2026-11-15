@@ -4,6 +4,7 @@ import os from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import assert from 'node:assert/strict';
+import vm from 'node:vm';
 
 // 临时合成资料检验发布边界，不读取个人选择或修改实际项目数据。
 const project = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -21,8 +22,9 @@ const entry = (id, type = 'tool') => ({
 
 try {
   for (const rel of ['scripts', 'assets/images', 'data/daily']) await fs.mkdir(path.join(temp, rel), { recursive: true });
-  for (const name of ['validate.mjs', 'build-snapshot.mjs']) await fs.copyFile(path.join(project, 'scripts', name), path.join(temp, 'scripts', name));
-  await write('index.html', '<!doctype html><html><head><link rel="stylesheet" href="style.css"></head><body><img src="assets/images/test.svg"><script src="app.js"></script></body></html>');
+  for (const name of ['validate.mjs', 'build-snapshot.mjs', 'build-runtime.mjs']) await fs.copyFile(path.join(project, 'scripts', name), path.join(temp, 'scripts', name));
+  await fs.copyFile(path.join(project, 'runtime-codec.js'), path.join(temp, 'runtime-codec.js'));
+  await write('index.html', '<!doctype html><html><head><link rel="stylesheet" href="style.css"></head><body><img src="assets/images/test.svg"><script src="runtime-codec.js"></script><script src="app.js"></script></body></html>');
   await write('style.css', 'body{font-family:"Microsoft YaHei";background:url("assets/images/test.svg")}');
   await write('app.js', 'window.fixture="</script>";');
   await write('README.md', '测试公开说明');
@@ -78,9 +80,12 @@ try {
   assert.equal(build.status, 0, build.stderr);
   const snapshot = await fs.readFile(path.join(temp, 'downloads/ai-edu-radar.html'), 'utf8');
   assert(snapshot.includes('window.RADAR_BUNDLE='), '快照须包含离线数据');
-  const bundleMatch = snapshot.match(/window\.RADAR_BUNDLE=([\s\S]*?);window\.RADAR_OFFLINE/);
+  const bundleMatch = snapshot.match(/<script data-radar-bundle>([\s\S]*?)<\/script>/);
   assert(bundleMatch, '快照数据注入位置应完整');
-  const offline = JSON.parse(bundleMatch[1]);
+  const sandbox = vm.createContext({});
+  sandbox.window = sandbox;
+  vm.runInContext(bundleMatch[1], sandbox, { timeout: 5000 });
+  const offline = sandbox.RADAR_BUNDLE;
   assert.equal(offline.manifest.dates.length, 1, '离线索引仅保留最新一期');
   assert.equal(offline.manifest.dates[0].date, manifest.latestDate, '快照日期须按latestDate定位，不依赖索引排序');
   assert.equal(offline.dailies.length, 1, '离线仅内联一期日报');
@@ -93,13 +98,21 @@ try {
   assert(offline.tutorials.items[0].images[0].src.startsWith('data:image/'), '教程配图内联');
   assert(offline.dailies[0].selectionNote.includes('本离线快照仅包含'), '快照应明确说明本期范围');
   assert(snapshot.includes('data:image/svg+xml;base64,'), '本地图片须内联');
-  assert(!snapshot.includes('href="style.css"') && !snapshot.includes('src="app.js"'), '样式和脚本须内联');
+  assert(!snapshot.includes('href="style.css"') && !snapshot.includes('src="app.js"') && !snapshot.includes('src="runtime-codec.js"'), '样式和脚本须内联');
   assert(snapshot.includes('<\\/script>'), '脚本终止字串须转义');
-  assert.deepEqual((await fs.readdir(path.join(temp, 'dist'))).sort(), ['.nojekyll', 'app.js', 'assets', 'data', 'downloads', 'index.html', 'style.css']);
+  assert.deepEqual((await fs.readdir(path.join(temp, 'dist'))).sort(), ['.nojekyll', 'app.js', 'assets', 'data', 'downloads', 'index.html', 'runtime-codec.js', 'style.css']);
   const publishedManifest = JSON.parse(await fs.readFile(path.join(temp, 'dist/data/manifest.json'), 'utf8'));
   assert.equal(publishedManifest.dates.length, 3, '在线发布仍保留全部历史索引');
   assert.equal((await fs.readdir(path.join(temp, 'dist/data/daily'))).length, 3, '在线发布仍包含全部历史日报');
-  console.log(JSON.stringify({ status: 'ok', dateOrderCases: 12, privatePathRejected: true, missingImageRejected: true, offlineAssetsInlined: true, offlineLatestOnly: true, onlineHistoryRetained: true, publishAllowList: true }));
+  const runtime = JSON.parse(await fs.readFile(path.join(temp, 'dist/data/runtime.json'), 'utf8'));
+  sandbox.payload = runtime;
+  vm.runInContext('window.ONLINE_BUNDLE=window.RADAR_RUNTIME_CODEC.decode(payload)', sandbox);
+  assert.equal(sandbox.ONLINE_BUNDLE.dailies.length, 3, '单次在线资料包含全部历史日报');
+  assert.equal(sandbox.ONLINE_BUNDLE.manifest.latestDate, manifest.latestDate, '在线运行资料和日期索引保持同一版本');
+  const imageUrl = offline.tutorials.items[0].images[0].src;
+  const packed = JSON.parse(snapshot.match(/RADAR_RUNTIME_CODEC\.decode\((\{[^\n]*\})\);window\.RADAR_OFFLINE/)[1]);
+  assert.equal(packed.strings.filter(text => text === imageUrl).length, 1, '重复内联图片仅保存一份');
+  console.log(JSON.stringify({ status: 'ok', dateOrderCases: 12, privatePathRejected: true, missingImageRejected: true, offlineAssetsInlined: true, offlineImagesDeduplicated: true, offlineLatestOnly: true, onlineHistoryRetained: true, runtimeBuilt: true, publishAllowList: true }));
 } finally {
   await fs.rm(temp, { recursive: true, force: true });
 }
