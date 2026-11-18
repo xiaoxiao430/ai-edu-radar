@@ -1,10 +1,15 @@
 {
   "schemaVersion": 1,
-  "lastSuccessAt": "2026-11-15T12:51:30+08:00",
-  "latestDate": "2026-11-15",
+  "lastSuccessAt": "2026-11-18T22:01:00+08:00",
+  "latestDate": "2026-11-18",
   "status": "partial",
-  "message": "新增9项教学改造参考，累计92项精选、430项项目与工具；官方实图封面与单请求资料加速已上线。OurTeacher新增1条同功能教程来源，未完成账号全量核对。",
+  "message": "新增2项高中编程与协作课堂参考，累计94项精选；OurTeacher完整作品目录仍未取得，未发现可核实新增条目。",
   "dates": [
+    {
+      "date": "2026-11-18",
+      "path": "data/daily/2026-11-18.json",
+      "count": 2
+    },
     {
       "date": "2026-11-15",
       "path": "data/daily/2026-11-15.json",
@@ -56,5 +61,5 @@
       "count": 10
     }
   ],
-  "revision": 14
+  "revision": 15
 }

@@ -193,12 +193,12 @@
     $('hero').innerHTML=`<div class="hero-heading"><div class="eyebrow">${esc(headings[0])}</div><h1>${esc(headings[1])}</h1><p class="hero-description">${esc(headings[2])}</p>${currentRoute==='path'?'<a class="hero-plan-link" href="#path" data-scroll-path>按学段、学科精确选择 ↓</a>':''}</div><div class="hero-compact-aside">${$('brand-art').innerHTML}<div><strong>懂孩子 · 懂教学</strong><span>${total}项参考 · ${ourteacher.scenes.length}类场景</span><a href="#queue">查看我的清单 →</a></div></div>`;
   }
   function shortText(value,max=64){const text=String(value||'').replace(/^教学改造方向[:：]|^教学改造建议[:：]/,'').trim();return text.length>max?text.slice(0,max).replace(/[，、；：]$/,'')+'…':text;}
-  function coverLabel(img){return /封面/.test(img.type||'')?'原始封面':/渲染|示例/.test(img.type||'')?'官方示例':isRealImage(img)?'真实画面':'用途参考 · 实图待补';}
+  function coverLabel(img){return /示意/.test(img.type||'')?'教学示意':/封面/.test(img.type||'')?'原始封面':/渲染|示例/.test(img.type||'')?'官方示例':isRealImage(img)?'真实画面':'用途参考 · 实图待补';}
   function coverMarkup(r,img,quick=false){
     const title=String(r.title).split(' · '),name=title.length>1?title[0]:r.title;
     const use=title.length>1?title.slice(1).join(' · '):r.learningGoal||r.catalogSummary||r.summary;
-    const real=isRealImage(img),source=safeImage(img.thumbnailSrc||img.src)||placeholder(r.title,r.category);
-    return `<button class="card-picture ${real?'has-real-image':'reference-cover'}" data-detail="${esc(r.id)}" aria-label="查看${esc(r.title)}详情"><span class="cover-heading"><strong>${esc(shortText(name,23))}</strong>${!quick&&title.length>1?`<span>${esc(shortText(use,34))}</span>`:''}</span><span class="cover-visual">${real?`<img src="${esc(source)}" alt="${esc(img.caption||r.title)}" loading="lazy" decoding="async" width="800" height="480">`: ''}${!real?`<span class="reference-purpose">${esc(shortText(use,46))}</span>`:''}</span><span class="image-label">${esc(coverLabel(img))}</span></button>`;
+    const real=isRealImage(img),source=safeImage(img.thumbnailSrc||img.src)||placeholder(r.title,r.category),visual=real||(/示意/.test(img.type||'')&&/\.png(?:$|[?#])/i.test(source));
+    return `<button class="card-picture ${visual?'has-real-image':'reference-cover'}" data-detail="${esc(r.id)}" aria-label="查看${esc(r.title)}详情"><span class="cover-heading"><strong>${esc(shortText(name,23))}</strong>${!quick&&title.length>1?`<span>${esc(shortText(use,34))}</span>`:''}</span><span class="cover-visual">${visual?`<img src="${esc(source)}" alt="${esc(img.caption||r.title)}" loading="lazy" decoding="async" width="800" height="480">`: ''}${!visual?`<span class="reference-purpose">${esc(shortText(use,46))}</span>`:''}</span><span class="image-label">${esc(coverLabel(img))}</span></button>`;
   }
   function pathGallery(){
     const ids=['C01','C06','C21','C25','C03','C10','C11','C08'];

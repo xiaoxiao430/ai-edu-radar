@@ -1,0 +1,226 @@
+{
+  "date": "2026-11-18",
+  "verifiedAt": "2026-11-18T22:01:00+08:00",
+  "selectionNote": "本期精选2项，少于每日10项目标。公开资料核对后，优先收录能补高中信息科技/STEAM课堂协作和编程作业反馈的项目。LearningMap教师端没有找到可确认的实际应用入口；Windows机房监控涉及设备控制与较重隐私治理，均不为数量收录。两项只核公开源码、文档、许可与流程图，未运行、部署或厚外试教。OurTeacher公开索引已覆盖班务屏作业同步视频，本日没有确认新增作品；完整账号目录仍未取得。",
+  "projects": [
+    {
+      "id": "repo:colloq-edu/colloq",
+      "type": "project",
+      "repository": "colloq-edu/colloq",
+      "url": "https://github.com/colloq-edu/colloq",
+      "title": "Colloq · 同一份代码，全班一起改、一起解释",
+      "checkedAt": "2026-11-18",
+      "verifiedAt": "2026-11-18",
+      "publicationType": "成熟基础项目首次收录；非当日新发布",
+      "reviewStatus": "已核官方README、MIT许可、依赖与运行边界，并查看官方生成流程示意；未安装、部署或厚外试教。资料核对不等于教学实测。",
+      "summary": "教师开浏览器课堂，学生用名字加入共同Python笔记本；全班能协作编辑与运行，也可各自作答后由教师审核并选择展示。适合高中信息科技、地理数据或科学探究的“预测—运行—解释”短活动。",
+      "category": "课堂互动与编程探究",
+      "stages": [
+        "高中"
+      ],
+      "subjects": [
+        "信息科技",
+        "地理",
+        "科学"
+      ],
+      "priority": "第二批",
+      "effort": "高",
+      "priorityReason": "按公开能力与厚外现有基础给出的试作建议，时间为估算，未实际计时；须先完成账号、网络及隐私核查。",
+      "why": [
+        "厚外已有班务屏可投出讲解页，但投屏不等同于实时协作；此项目补的是共享编辑和共同讨论结果，应从课程入口打开、课后回链既有成长档案。",
+        "高中信息科技可用虚构数据练习预测、运行和解释。地理课可讨论合成气象数据的图表，不使用学生真实位置或成绩。",
+        "小学不建议直接安排学生共写代码；初中如试用应由教师控制代码，仅让学生预测和解释。",
+        "项目可配置AI Oracle，但首版建议关闭以减少外部数据流和课堂干扰。"
+      ],
+      "learningGoal": "先提出输出预测，运行后对照结果，指出一处修订并用自己的话解释。",
+      "teacherAction": "准备合成数据和短Notebook，设定哪些单元可编辑、运行及展示；课末核对作品后由教师挑选回链。",
+      "studentAction": "用课堂代号加入，先写预测；修改短代码或各自回答，再比较结果并提交一句解释。",
+      "dataOutput": "课堂任务ID、Notebook版本、精选作品及教师反馈；成长记录只存教师挑选作品和学生反思，不默认保存完整行为日志。",
+      "teaching": "高中信息科技：教师给8行虚构气象数据和折线图代码；学生预测哪段升温最快，改一个参数运行后说明图表变化。初中地理可由教师给好程序，学生只改筛选值并讨论降水分布。",
+      "existing": "用班务屏展示入口，课程通过链接进入独立试验环境；课后把教师挑选的代码成果、反思和反馈挂回已有成长档案。不新建账号、积分或学业画像。",
+      "mvp": [
+        "由技术教师在隔离测试机按官方说明部署，使用公开示例与合成数据；先检查容器、权限、备份和访问边界。",
+        "编写一个高中短活动：预测、8行虚构数据、修改一个变量、解释与退出题。",
+        "首次使用Council教师审核后展示模式，关闭Oracle、外部模型和学生自建Notebook；访问规则按单课配置。",
+        "将教师确认的成果链接回现有成长记录，不传真实师生数据。"
+      ],
+      "acceptance": [
+        "技术人员先核清运行环境、权限、备份、隔离与网络方案；本机Docker运行含学生可运行Python代码，不可未经安全评估直接公开。",
+        "教师用虚构数据演练加入、修改、提交、展示、导出；学生能解释预测与输出差异。",
+        "手机/班务屏只验收查看和投影；代码编辑须在适配浏览器和键盘的设备核验。",
+        "行为日志、提交数量不换算六好或成长分。以上均为验收要求，不是已完成试验。"
+      ],
+      "capabilities": [
+        "多人浏览器同步编辑同一Notebook并共享结果。",
+        "Council可分开呈现个人回答，教师审阅后选择匿名或具名展示；回答运行仍共享该Notebook内核，并非隔离评分沙箱。",
+        "Lecture可同步展示教师批注PDF。",
+        "可接OpenAI兼容端点的Oracle，按配置向所选模型发送上下文。"
+      ],
+      "dependencies": [
+        "Python 3.9+；运行课堂需要Docker。对外分享涉及网络/隧道和运维部署。",
+        "教师需设置编辑、运行、文件、历史与备份权限。",
+        "项目处于pre-1.0，升级前阅读变更并备份。"
+      ],
+      "limitations": [
+        "共同笔记本适合同步课堂，不是完整LMS或普适作业系统。",
+        "Council不是隔离评分沙箱，多个学生在同一课堂内核执行。",
+        "运行Python会产生代码安全风险，官方本地路径面向可信工作站；必须由学校技术人员先评估部署。",
+        "项目面向Python/数据科学，英语、地理、历史适配只是厚外改造建议，尚无厚外课例或课堂实测。"
+      ],
+      "license": "根许可MIT；依赖、模型、课程材料和学生数据另核。修改再发布遵守MIT版权与许可声明；不因此取得品牌或第三方素材权。",
+      "commercial": "可探索本地部署、教师培训、课程模板和维护服务；先测算安全与运维成本，不把项目包装成厚外自研或保证学业成效。",
+      "promptNotes": [
+        "先检查厚外成长档案与班务屏，只补课堂入口和课后精选成果回链。",
+        "用合成数据制作高中Notebook：预测—运行—解释—修订；不用任何真实师生信息。",
+        "复用Council教师审核流程，标明同一内核共享限制，不另造评分系统。",
+        "首版关闭Oracle，部署前要求提交隔离、权限、备份审查记录。",
+        "新增中文界面使用微软雅黑。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C38",
+        "ot-scene-C33"
+      ],
+      "sources": [
+        {
+          "title": "Colloq官方README：共同Notebook、课堂模式、运行要求和安全边界",
+          "url": "https://github.com/colloq-edu/colloq/blob/main/README.md",
+          "date": "2026-11-18"
+        },
+        {
+          "title": "官方MIT许可",
+          "url": "https://github.com/colloq-edu/colloq/blob/main/LICENSE",
+          "date": "2026-11-18"
+        },
+        {
+          "title": "官方Council指南：课堂回答运行规则",
+          "url": "https://colloq.cc/docs/en/council.html",
+          "date": "2026-11-18"
+        },
+        {
+          "title": "官方更新记录",
+          "url": "https://github.com/colloq-edu/colloq/blob/main/CHANGELOG.md",
+          "date": "2026-11-18"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-18/colloq-council-official.png",
+          "type": "Colloq官方README流程图的原样PNG渲染；非产品界面截图",
+          "caption": "Colloq官方生成的Council流程示意；由官方原始SVG渲染为PNG，没有改绘图中文字。展示多人分别作答、教师审核并选择展示。属于流程示意，不是软件界面截图、厚外课例或运行记录。",
+          "sourceUrl": "https://github.com/colloq-edu/colloq/blob/main/.github/assets/readme/council-light.svg"
+        }
+      ]
+    },
+    {
+      "id": "repo:foundation50/classroom50",
+      "type": "project",
+      "repository": "foundation50/classroom50",
+      "url": "https://github.com/foundation50/classroom50",
+      "title": "Classroom 50 · 自动验收编程作业，教师仍把关思路",
+      "checkedAt": "2026-11-18",
+      "verifiedAt": "2026-11-18",
+      "publicationType": "成熟基础项目首次收录；非当日新发布",
+      "reviewStatus": "已核官方README、GPL-3.0许可、作业模板和自动评分说明；官网登录需GitHub授权，本轮未登录、未安装、未运行或连接学校账号，未开展课堂试用。资料核对不等于教学实测。",
+      "summary": "经GitHub仓库发放与收集程序设计任务，教师定义正确性测试，系统处理提交并显示测试结果。厚外可用于高中信息科技小任务：自动测试给提示，教师看过程、补解释反馈。",
+      "category": "编程作业与形成性反馈",
+      "stages": [
+        "高中"
+      ],
+      "subjects": [
+        "信息科技"
+      ],
+      "priority": "建议先试",
+      "effort": "中",
+      "priorityReason": "按公开能力与厚外现有基础给出的试作建议，时间为估算，未实际计时；须先完成账号、网络及隐私核查。",
+      "why": [
+        "补充厚外可规划的高中信息科技形成性评价：把一次作业拆成测试提示、学生修订和教师解释。",
+        "成长档案只回链教师筛选的代码作品、修改说明和人工反馈；测试通过率不直接当能力或六好成绩。",
+        "可延伸地理数据清理或历史时间线小程序，但题目、史实审核和评价标准需另做。",
+        "班务大屏只作任务入口和截止提醒，不重复建设班级门户。"
+      ],
+      "learningGoal": "能根据测试提示修订程序，解释一个边界条件和一次修改理由。",
+      "teacherAction": "提供模板仓库与测试输入，课前检查用例；查看提交后补充逻辑反馈并允许修订。",
+      "studentAction": "读任务目标与示例、提交代码；根据测试结果改进并说明一个边界条件。",
+      "dataOutput": "任务/提交、测试与修订版本、教师评语；成长档案只收代表作品和反思链接。",
+      "teaching": "高中信息科技：用8行虚构校园气象CSV统计温度区间；自动测试涵盖空值、边界、正常输入，学生修复后解释边界处理。跨学科作品还要另做事实核验。",
+      "existing": "任务入口放在厚外班务屏/课程页；结束后将精选代码、任务说明和教师反馈回链成长档案。初次只用教师测试账号与虚构班级。",
+      "mvp": [
+        "先核校内GitHub账号和学生隐私政策；没确认前只做本地/教师样机，不用真实学生身份。",
+        "创建一个私人模板仓库，放任务说明、初始代码、样例输入和不暴露答案的自动测试。",
+        "只发布一道高中函数或表格处理题，允许学生看提示、修订一次。",
+        "教师确认代表作品后手动回链成长档案；不做排行或自动能力画像。"
+      ],
+      "acceptance": [
+        "测试包含正常、边界和错误输入，隐藏测试不暴露答案。",
+        "学生看到可理解提示，能提交修订；教师可查看测试与提交。",
+        "教师仍核对算法解释；测试全通过不等同于理解或迁移。",
+        "确认学生账号、仓库可见范围、Actions权限/额度和数据保存规则后才能真实试用。以上是验收要求。"
+      ],
+      "capabilities": [
+        "在GitHub生态中创建和管理编程任务仓库。",
+        "教师配置正确性测试，自动检查学生提交并管理作业。",
+        "项目含gh CLI扩展、Web前端、作业模板及可复用GitHub Actions工作流。"
+      ],
+      "dependencies": [
+        "需要GitHub身份、网络、组织/模板配置及Actions工作流；校内合规和费用额度须另核。",
+        "根许可GPL-3.0；修改后分发应遵守GPL义务。"
+      ],
+      "limitations": [
+        "只适合编程类作业，不是通用LMS或全学科批改平台。",
+        "GitHub Classroom于2026-08-28退役；本项目是替代方向，不表示已有账号迁移。",
+        "学生代码和身份可能托管于GitHub，必须先核学校政策、地区网络及年龄账号要求。",
+        "自动测试只覆盖设定情境，不能证明推理、知识迁移或独立思考。",
+        "免费开源不代表托管、Actions运行和运维没有成本。"
+      ],
+      "license": "根仓库GPL-3.0；依赖、GitHub服务条款、作业内容和课程材料另核。对外分发修改版需履行GPL要求；不借用商标暗示厚外采用。",
+      "commercial": "可探索编程任务模板、教师培训和校内维护服务；先核Actions成本与账号政策，不销售未经授权课程内容、不宣称已正式部署。",
+      "promptNotes": [
+        "先检查厚外成长档案和班务屏，只设计任务入口/代表作品回链，不再造学生名单系统。",
+        "实现高中Python CSV任务：说明、初始代码、样例和边界测试，记录修订理由与教师评语。",
+        "自动反馈只作提示；教师判断理解和迁移，不生成六好、总评或排行。",
+        "使用合成数据；账号合规没确认前只做本地演示。",
+        "完成后把精选代码版本、测试摘要、教师反馈和学生反思挂入既有成长档案。界面中文使用微软雅黑。"
+      ],
+      "relatedScenes": [
+        "ot-scene-C02",
+        "ot-scene-C38",
+        "ot-scene-C47"
+      ],
+      "sources": [
+        {
+          "title": "官方README：编程作业、正确性测试、组件与许可",
+          "url": "https://github.com/foundation50/classroom50/blob/main/README.md",
+          "date": "2026-11-18"
+        },
+        {
+          "title": "官方示例作业模板",
+          "url": "https://github.com/foundation50/classroom50/tree/main/templates/example-assignment",
+          "date": "2026-11-18"
+        },
+        {
+          "title": "官方自动评分说明",
+          "url": "https://github.com/foundation50/classroom50/wiki/Autograders",
+          "date": "2026-11-18"
+        },
+        {
+          "title": "GitHub官方：Classroom退役公告",
+          "url": "https://docs.github.com/en/education/manage-coursework-with-github-classroom/get-started-with-github-classroom/about-github-classroom",
+          "date": "2026-11-18"
+        },
+        {
+          "title": "官方Web演示入口（需GitHub授权）",
+          "url": "https://classroom50.org",
+          "date": "2026-11-18"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/daily/2026-11-18/classroom50-teaching-flow.png",
+          "type": "厚外教学用法流程示意图（非软件截图）",
+          "caption": "高中编程作业闭环改造示意，非Classroom 50产品界面。真实课堂尚未试用，内部系统截图待补。",
+          "sourceUrl": "https://github.com/foundation50/classroom50/blob/main/README.md"
+        }
+      ]
+    }
+  ]
+}
